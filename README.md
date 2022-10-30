@@ -19,6 +19,8 @@ conda activate japan-train-stations
 https://en.wikipedia.org/wiki/List_of_railway_stations_in_Japan
 ```py
 import wikipediaapi
+from time import sleep
+
 w = wikipediaapi.Wikipedia('en', extract_format=wikipediaapi.ExtractFormat.WIKI)
 index = w.page('List of railway stations in Japan')
 # index = w.page('Template:Index_Railway_Stations_Japan')
@@ -43,3 +45,9127 @@ for link in links.values():
 with open('all.txt', 'w') as fid:
   fid.write('\n'.join(f"{x['ja']},{x['en']}" for x in all_links))
 ```
+
+Output:
+- 網走駅,Abashiri Station
+- 安部駅,Abe Station
+- 安倍川駅,Abekawa Station
+- 阿倍野駅,Abeno Station
+- 安部山公園駅,Abeyamakōen Station
+- 網引駅,Abiki Station
+- 我孫子駅 (千葉県),Abiko Station (Chiba)
+- 我孫子駅 (大阪府),Abiko Station (Osaka)
+- 我孫子町駅,Abikochō Station
+- 我孫子前駅,Abikomae Station
+- None,Abikomichi Station
+- 安平駅,Abira Station
+- 網干駅,Aboshi Station
+- 阿母崎駅,Abozaki Station
+- あぶくま駅,Abukuma Station
+- 油田駅,Aburaden Station
+- 油日駅,Aburahi Station
+- 油川駅,Aburakawa Station
+- 油津駅,Aburatsu Station
+- 足立小台駅,Adachi-Odai Station
+- 安達駅,Adachi Station
+- 安曇川駅,Adogawa Station
+- 阿分駅,Afun Station
+- None,Afurijinja Station
+- 英賀保駅,Agaho Station
+- 吾野駅,Agano Station
+- 上道駅 (鳥取県),Agarimichi Station
+- 県駅,Agata Station
+- 阿川駅,Agawa Station
+- 上ゲ駅,Age Station
+- 阿下喜駅,Ageki Station
+- 上松駅,Agematsu Station
+- 上尾駅,Ageo Station
+- 阿木駅,Agi Station
+- 阿久比駅,Agui Station
+- None,Ahina Station
+- 愛別駅,Aibetsu Station
+- 愛知御津駅,Aichi-Mito Station
+- 愛知大学前駅,Aichidaigakumae Station
+- 愛・地球博記念公園駅,Aichikyūhaku-kinen-kōen Station
+- 愛大医学部南口駅,Aidai Igakubu Minamiguchi Station
+- 相賀駅,Aiga Station
+- 相原駅,Aihara Station
+- 秋鹿町駅,Aikamachi Station
+- 愛環梅坪駅,Aikan-Umetsubo Station
+- 合川駅,Aikawa Station (Akita)
+- 相川駅,Aikawa Station (Osaka)
+- 愛甲石田駅,Aikō-Ishida Station
+- 相見駅,Aimi Station
+- 藍本駅,Aimoto Station (Hyōgo)
+- 愛本駅,Aimoto Station (Toyama)
+- 藍那駅,Aina Station
+- 相野駅,Aino Station (Hyōgo)
+- 愛野駅 (長崎県),Aino Station (Nagasaki)
+- 愛野駅 (静岡県),Aino Station (Shizuoka)
+- 相ノ木駅,Ainoki Station
+- 相内駅,Ainonai Station
+- 相野々駅,Ainono Station
+- あいの里教育大駅,Ainosato-Kyōikudai Station
+- あいの里公園駅,Ainosato-kōen Station
+- 相浦駅,Ainoura Station
+- 相生駅 (岐阜県),Aioi Station (Gifu)
+- 相老駅,Aioi Station (Gunma)
+- 相生駅 (兵庫県),Aioi Station (Hyōgo)
+- 相生山駅,Aioiyama Station
+- 姶良駅,Aira Station
+- 愛山駅,Aizan Station
+- 会津荒海駅,Aizu-Arakai Station
+- 会津坂下駅,Aizu-Bange Station
+- 会津蒲生駅,Aizu-Gamō Station
+- 会津桧原駅,Aizu-Hinohara Station
+- 会津本郷駅,Aizu-Hongō Station
+- 会津川口駅,Aizu-Kawaguchi Station
+- 会津越川駅,Aizu-Kosugawa Station
+- 会津宮下駅,Aizu-Miyashita Station
+- 会津水沼駅,Aizu-Mizunuma Station
+- 会津長野駅,Aizu-Nagano Station
+- 会津中川駅,Aizu-Nakagawa Station
+- 会津西方駅,Aizu-Nishikata Station
+- 会津坂本駅,Aizu-Sakamoto Station
+- 会津山村道場駅,Aizu-Sanson-Dōjō Station
+- 会津下郷駅,Aizu-Shimogō Station
+- 会津塩沢駅,Aizu-Shiozawa Station
+- 会津田島駅,Aizu-Tajima Station
+- 会津高田駅,Aizu-Takada Station
+- 会津豊川駅,Aizu-Toyokawa Station
+- 会津若松駅,Aizu-Wakamatsu Station
+- 会津柳津駅,Aizu-Yanaizu Station
+- 会津横田駅,Aizu-Yokota Station
+- 会津大塩駅,Aizu-Ōshio Station
+- 相月駅,Aizuki Station
+- 会津高原尾瀬口駅,Aizukōgen-Ozeguchi Station
+- 逢妻駅,Aizuma Station
+- 鰺ケ沢駅,Ajigasawa Station
+- 阿字ヶ浦駅,Ajigaura Station
+- 安治川口駅,Ajikawaguchi Station
+- 安食駅,Ajiki Station
+- 味鋺駅,Ajima Station
+- 阿品駅,Ajina Station
+- 阿品東駅,Ajinahigashi Station
+- 味岡駅,Ajioka Station
+- 網代駅,Ajiro Station
+- 味坂駅,Ajisaka Station
+- 阿知須駅,Ajisu Station
+- 味美駅 (東海交通事業),Ajiyoshi Station (Johoku Line)
+- 味美駅 (名鉄),Ajiyoshi Station (Meitetsu)
+- 赤駅,Aka Station
+- 赤羽岩淵駅,Akabane-Iwabuchi Station
+- 赤羽駅,Akabane Station
+- 赤羽橋駅,Akabanebashi Station
+- 赤平駅,Akabira Station
+- 赤星駅,Akaboshi Station
+- 赤渕駅,Akabuchi Station
+- 赤土小学校前駅,Akado-shōgakkōmae Station
+- 赤川駅,Akagawa Station
+- 赤城駅,Akagi Station (Gunma)
+- 赤木駅,Akagi Station (Nagano)
+- 赤堀駅,Akahori Station
+- 赤井駅,Akai Station
+- 赤井川駅,Akaigawa Station
+- 赤池駅 (愛知県),Akaike Station (Aichi)
+- 赤池駅 (福岡県),Akaike Station (Fukuoka)
+- 赤池駅 (岐阜県),Akaike Station (Gifu)
+- 赤岩駅 (福島県),Akaiwa Station
+- None,Akaiwaguchi Station
+- あかぢ駅,Akaji Station
+- 赤倉温泉駅,Akakura-Onsen Station
+- 赤間駅,Akama Station
+- 赤目口駅,Akameguchi Station
+- 赤嶺駅,Akamine Station
+- 赤水駅,Akamizu Station
+- 赤野駅,Akano Station
+- あかおか駅,Akaoka Station
+- 赤坂見附駅,Akasaka-mitsuke Station
+- 赤坂駅 (福岡県),Akasaka Station (Fukuoka)
+- 赤坂駅 (群馬県),Akasaka Station (Gunma)
+- 赤坂駅 (東京都),Akasaka Station (Tokyo)
+- 赤坂駅 (山梨県),Akasaka Station (Yamanashi)
+- 赤坂田駅,Akasakata Station
+- 赤坂上駅,Akasakaue Station
+- None,Akasaki Station (Iwate)
+- 赤碕駅,Akasaki Station (Tottori)
+- None,Akasako Station
+- 赤瀬駅,Akase Station
+- 明石駅,Akashi Station
+- 明科駅,Akashina Station
+- 赤塚駅,Akatsuka Station (Ibaraki)
+- 明塚駅,Akatsuka Station (Shimane)
+- 暁学園前駅,Akatsukigakuenmae Station
+- 赤湯駅,Akayu Station
+- 曙橋駅,Akebonobashi Station
+- 明智駅 (岐阜県恵那市),Akechi Station (Ena, Gifu)
+- 明智駅 (岐阜県可児市),Akechi Station (Kani, Gifu)
+- 明野駅,Akeno Station
+- 明戸駅,Aketo Station
+- あき亀山駅,Aki-Kameyama Station
+- 安芸川尻駅,Aki-Kawajiri Station
+- 安芸長浜駅,Aki-Nagahama Station
+- 安芸長束駅,Aki-Nagatsuka Station
+- 安芸中野駅,Aki-Nakano Station
+- 安芸幸崎駅,Aki-Saizaki Station
+- あき総合病院前駅,Aki General Hospital Station
+- 安芸駅,Aki Station
+- 安芸阿賀駅,Akiaga Station
+- 秋川駅,Akigawa Station
+- 秋葉原駅,Akihabara Station
+- 昭島駅,Akishima Station
+- 秋田港駅,Akita Port Station
+- 秋田駅,Akita Station
+- None,Akitakamotsu Station
+- None,Akitakitakō Station
+- あきた白神駅,Akitashirakami Station
+- 安芸津駅,Akitsu Station (Hiroshima)
+- 秋津駅,Akitsu Station (Tokyo)
+- 安芸矢口駅,Akiyaguchi Station
+- 秋山駅,Akiyama Station
+- 厚岸駅,Akkeshi Station
+- 安子ケ島駅,Akogashima Station
+- 阿漕駅,Akogi Station
+- 鮎喰駅,Akui Station
+- 阿久根駅,Akune Station
+- 阿倉川駅,Akuragawa Station
+- 海士有木駅,Amaariki Station
+- 尼ヶ坂駅,Amagasaka Station
+- 尼崎センタープール前駅,Amagasaki Center Pool Mae Station
+- 尼崎駅 (阪神),Amagasaki Station (Hanshin)
+- 尼崎駅 (JR西日本),Amagasaki Station (JR West)
+- 天ケ瀬駅,Amagase Station
+- 尼ヶ辻駅,Amagatsuji Station
+- 甘木駅,Amagi Station
+- 尼子駅,Amago Station
+- 雨晴駅,Amaharashi Station
+- 甘地駅,Amaji Station
+- 天見駅,Amami Station
+- 天橋立駅,Amanohashidate Station
+- 余子駅,Amariko Station
+- 餘部駅,Amarube Station
+- 余目駅,Amarume Station
+- 天津駅,Amatsu Station
+- あまや駅,Amaya Station
+- 網野駅,Amino Station
+- 安茂里駅,Amori Station
+- 穴部駅,Anabe Station
+- 穴吹駅,Anabuki Station
+- 穴川駅 (千葉県),Anagawa Station (Chiba)
+- 穴川駅 (三重県),Anagawa Station (Mie)
+- 穴水駅,Anamizu Station
+- 穴守稲荷駅,Anamoriinari Station
+- 阿南駅,Anan Station
+- 穴内駅,Ananai Station
+- 穴山駅,Anayama Station
+- 安堂駅,Andō Station
+- 姉別駅,Anebetsu Station
+- 姉ケ崎駅,Anegasaki Station
+- 阿仁前田温泉駅,Ani-Maeda Onsen Station
+- 阿仁マタギ駅,Ani-Matagi Station
+- 阿仁合駅,Aniai Station
+- 兄畑駅,Anihata Station
+- 安針塚駅,Anjinzuka Station
+- 安城駅,Anjō Station
+- 安中駅,Annaka Station
+- 安中榛名駅,Annakaharuna Station
+- 安足間駅,Antaroma Station
+- 安善駅,Anzen Station
+- 穴生駅,Anō Station (Fukuoka)
+- 穴太駅 (三重県),Anō Station (Mie)
+- 穴太駅 (滋賀県),Anō Station (Shiga)
+- 粟生駅,Ao Station
+- 青葉通一番町駅,Aoba-dori Ichibancho Station
+- あおば通駅,Aoba-dōri Station
+- 青葉駅,Aoba Station
+- 青葉台駅,Aobadai Station
+- 青葉山駅,Aobayama Station
+- 青部駅,Aobe Station
+- 青原駅,Aohara Station
+- 青堀駅,Aohori Station
+- 青井駅,Aoi Station
+- 青井岳駅,Aoidake Station
+- 青倉駅,Aokura Station
+- 青海駅 (東京都),Aomi Station
+- 青物横丁駅,Aomono-yokochō Station
+- 青森駅,Aomori Station
+- 青野ケ原駅,Aonogahara Station
+- 青郷駅,Aonogō Station
+- 青野山駅,Aonoyama Station
+- 青沼駅,Aonuma Station
+- 青島駅,Aoshima Station
+- 青砥駅,Aoto Station
+- 青塚駅,Aotsuka Station
+- 青谷駅,Aoya Station
+- 青柳駅,Aoyagi Station
+- None,Aoyagichō Station
+- 青山一丁目駅,Aoyama-itchōme Station
+- 青山駅 (愛知県),Aoyama Station (Aichi)
+- 青山駅 (岩手県),Aoyama Station (Iwate)
+- 青山駅 (新潟県),Aoyama Station (Niigata)
+- 青山町駅,Aoyamachō Station
+- 青笹駅,Aozasa Station
+- 安比高原駅,Appikōgen Station
+- アプトいちしろ駅,Aputoichishiro Station
+- 荒河かしの木台駅,Aragakashinokidai Station
+- 荒浜駅,Arahama Station
+- 荒畑駅,Arahata Station
+- 荒井駅 (兵庫県),Arai Station (Hyogo)
+- 荒井駅 (宮城県),Arai Station (Miyagi)
+- 新井駅 (新潟県),Arai Station (Niigata)
+- 新井宿駅,Araijuku Station
+- 新居町駅,Araimachi Station
+- 新井薬師前駅,Araiyakushimae Station
+- 荒川一中前停留場,Arakawa-itchūmae Station
+- 荒川七丁目停留場,Arakawa-nanachōme Station
+- 荒川二丁目停留場,Arakawa-nichōme Station
+- 荒川車庫前停留場,Arakawa-shakomae Station
+- 荒川遊園地前停留場,Arakawa-yūenchimae Station
+- 荒川区役所前停留場,Arakawakuyakushomae Station
+- 荒川沖駅,Arakawaoki Station
+- 新木駅,Araki Station (Chiba)
+- 荒木駅,Araki Station (Fukuoka)
+- 名古屋臨海高速鉄道あおなみ線,Arako Station
+- 名古屋臨海高速鉄道あおなみ線,Arakogawa-kōen Station
+- 荒町駅,Aramachi Station (Miyagi)
+- None,Aramachi Station (Toyama)
+- 荒本駅,Aramoto Station
+- 荒尾駅 (岐阜県),Arao Station (Gifu)
+- 荒尾駅 (熊本県),Arao Station (Kumamoto)
+- 荒瀬駅,Arase Station
+- 荒島駅,Arashima Station
+- 嵐山駅 (阪急),Arashiyama Station (Hankyu)
+- 嵐山駅 (京福電気鉄道),Arashiyama Station (Keifuku)
+- 新瑞橋駅,Aratamabashi Station
+- 新野駅 (徳島県),Aratano Station
+- 荒砥駅,Arato Station
+- 荒屋新町駅,Araya-Shinmachi Station
+- 新屋駅 (秋田県),Araya Station (Akita)
+- 新屋駅 (群馬県),Araya Station (Gunma)
+- 荒谷前駅,Arayamae Station
+- 有明湯江駅,Ariake-Yue Station
+- 有明テニスの森駅,Ariake-tennis-no-mori Station
+- 有明駅 (長野県),Ariake Station (Nagano)
+- 有明駅 (東京都),Ariake Station (Tokyo)
+- 有畑駅,Arihata Station
+- 有井駅,Arii Station
+- 有井川駅,Ariigawa Station
+- 有壁駅,Arikabe Station
+- 有間川駅,Arimagawa Station
+- 有馬口駅,Arimaguchi Station
+- 有馬温泉駅,Arimaonsen Station
+- 有松駅,Arimatsu Station
+- 有峰口駅,Arimineguchi Station
+- 有岡駅,Arioka Station
+- 有佐駅,Arisa Station
+- 有栖川駅,Arisugawa Station
+- 有田駅,Arita Station
+- 有戸駅,Arito Station
+- 在良駅,Ariyoshi Station
+- 厚狭駅,Asa Station
+- 麻生駅,Asabu Station
+- 阿佐ケ谷駅,Asagaya Station
+- 朝霧駅,Asagiri Station (Hyōgo)
+- None,Asagiri Station (Kumamoto)
+- 浅岸駅,Asagishi Station
+- 旭駅 (千葉県),Asahi Station (Chiba)
+- 旭駅 (高知県),Asahi Station (Kochi)
+- 朝日駅,Asahi Station (Mie)
+- 朝陽駅,Asahi Station (Nagano)
+- 旭橋駅,Asahibashi Station
+- 旭ヶ丘駅 (宮城県),Asahigaoka Station (Miyagi)
+- 旭ケ丘駅 (宮崎県),Asahigaoka Station (Miyazaki)
+- 朝日ヶ丘駅,Asahigaoka Station (Shimane)
+- 旭ヶ丘停留場,Asahigaoka Station (Toyama)
+- None,Asahihama Station
+- 旭川駅,Asahikawa Station
+- 旭川四条駅,Asahikawayojō Station
+- 旭前駅,Asahimae Station
+- 朝日野駅,Asahino Station
+- 朝日大塚駅,Asahiōtsuka Station
+- 朝地駅,Asaji Station
+- 浅香駅,Asaka Station (Osaka)
+- 朝霞駅,Asaka Station (Saitama)
+- 朝霞台駅,Asakadai Station
+- 安積永盛駅,Asakanagamori Station
+- 浅川駅,Asakawa Station
+- 浅香山駅,Asakayama Station
+- 朝倉駅 (愛知県),Asakura Station (Aichi)
+- 朝倉駅 (高知県),Asakura Station (JR Shikoku)
+- 朝倉停留場,Asakura Station (Tosa Electric Railway)
+- 朝倉駅前駅,Asakuraekimae Station
+- 朝倉街道駅,Asakuragaidō Station
+- 浅草駅,Asakusa Station (Tokyo Metro, Toei, Tobu)
+- 浅草駅 (首都圏新都市鉄道),Asakusa Station (Tsukuba Express)
+- 浅草橋駅,Asakusabashi Station
+- 朝熊駅,Asama Station
+- 浅虫温泉駅,Asamushi-Onsen Station
+- 浅内駅,Asanai Station
+- 朝菜町駅,Asanamachi Station
+- 浅海駅,Asanami Station
+- 浅野駅,Asano Station
+- 朝里駅,Asari Station (Hokkaido)
+- 浅利駅,Asari Station (Shimane)
+- 朝潮橋駅,Asashiobashi Station
+- 安里駅,Asato Station
+- 安栖里駅,Aseri Station
+- 芦別駅,Ashibetsu Station
+- 足立駅,Ashidachi Station
+- 足滝駅,Ashidaki Station
+- 芦ヶ久保駅,Ashigakubo Station
+- 足柄駅 (神奈川県),Ashigara Station (Kanagawa)
+- 足柄駅 (静岡県),Ashigara Station (Shizuoka)
+- 足ケ瀬駅,Ashigase Station
+- 芦川駅 (山梨県),Ashigawa Station
+- 芦原駅,Ashihara Station
+- 芦原橋駅,Ashiharabashi Station
+- 芦原町駅,Ashiharachō Station
+- あしかがフラワーパーク駅,Ashikaga Flower Park Station
+- 足利駅,Ashikaga Station
+- 足利市駅,Ashikagashi Station
+- 海鹿島駅,Ashikajima Station
+- 足守駅,Ashimori Station
+- 芦野公園駅,Ashino-Kōen Station
+- 芦ノ牧温泉駅,Ashinomakionsen Station
+- 芦ノ牧温泉南駅,Ashinomakionsenminami Station
+- 足尾駅,Ashio Station
+- 芦沢駅,Ashisawa Station
+- 芦屋駅 (阪神),Ashiya Station (Hanshin)
+- 芦屋駅 (JR西日本),Ashiya Station (JR West)
+- 芦屋川駅,Ashiyagawa Station
+- 阿蘇下田城ふれあい温泉駅,Aso-Shimodajō-Fureai-Onsen Station
+- 阿蘇白川駅,Aso-Shirakawa Station
+- 阿蘇駅,Aso Station (Kumamoto)
+- 阿曽駅,Aso Station (Mie)
+- 朝来駅,Asso Station
+- 飛鳥駅,Asuka Station
+- 飛鳥山停留場,Asukayama Station
+- アスモ前駅,Asumomae Station
+- 近鉄四日市駅,Asunarou Yokkaichi Station
+- 足羽駅,Asuwa Station
+- 足羽山公園口駅,Asuwayama-Koenguchi Station
+- 吾桑駅,Asō Station
+- 浅水駅,Asōzu Station
+- 愛宕駅 (千葉県),Atago Station (Chiba)
+- 愛宕駅 (宮城県),Atago Station (Miyagi)
+- 愛宕橋駅,Atagobashi Station
+- 熱海駅,Atami Station
+- 新鹿駅,Atashika Station
+- 阿田和駅,Atawa Station
+- 左沢駅,Aterazawa Station
+- 安登駅,Ato Station
+- 厚保駅,Atsu Station
+- 厚別駅,Atsubetsu Station
+- 厚賀駅,Atsuga Station
+- 厚木駅,Atsugi Station
+- あつみ温泉駅,Atsumi Onsen Station
+- 厚内駅,Atsunai Station
+- 熱田駅,Atsuta Station
+- 厚床駅,Attoko Station
+- 阿波赤石駅,Awa-Akaishi Station
+- 安房天津駅,Awa-Amatsu Station
+- 阿波福井駅,Awa-Fukui Station
+- 阿波半田駅,Awa-Handa Station
+- 阿波池田駅,Awa-Ikeda Station
+- 阿波海南駅,Awa-Kainan Station
+- 阿波加茂駅,Awa-Kamo Station
+- 安房鴨川駅,Awa-Kamogawa Station
+- 安房勝山駅,Awa-Katsuyama Station
+- 阿波川端駅,Awa-Kawabata Station
+- 阿波川口駅,Awa-Kawaguchi Station
+- 阿波川島駅,Awa-Kawashima Station
+- 安房小湊駅,Awa-Kominato Station
+- 阿波中島駅,Awa-Nakashima Station
+- 阿波橘駅,Awa-Tachibana Station
+- 阿波富田駅,Awa-Tomida Station
+- 阿波山川駅,Awa-Yamakawa Station
+- 阿波大宮駅,Awa-Ōmiya Station
+- 阿波大谷駅,Awa-Ōtani Station
+- 安和駅,Awa Station
+- 粟ヶ崎駅,Awagasaki Station
+- 粟井駅,Awai Station
+- 淡路駅,Awaji Station
+- 淡路町駅,Awajichō Station
+- あわくら温泉駅,Awakuraonsen Station
+- 粟野駅,Awano Station
+- あわら湯のまち駅,Awara-Yunomachi Station
+- 芦原温泉駅,Awaraonsen Station
+- 粟屋駅,Awaya Station
+- 阿波座駅,Awaza Station
+- 粟津駅 (石川県),Awazu Station (Ishikawa)
+- 粟津駅 (滋賀県),Awazu Station (Shiga)
+- 綾部駅,Ayabe Station
+- 綾川駅,Ayagawa Station
+- あやめ公園駅,Ayame Kōen Station
+- 菖蒲池駅,Ayameike Station
+- None,Ayanochō Station
+- 綾織駅,Ayaori Station
+- 綾羅木駅,Ayaragi Station
+- 綾瀬駅,Ayase Station
+- 愛子駅,Ayashi Station
+- 鮎貝駅,Ayukai Station
+- 鮎川駅,Ayukawa Station
+- 麻布十番駅,Azabujūban Station
+- 阿左美駅,Azami Station
+- あざみ野駅,Azamino Station
+- 浅海井駅,Azamui Station
+- 安土駅,Azuchi Station
+- 吾妻駅,Azuma Station
+- None,Azumada-Sakaue Station
+- None,Azumada Station
+- 安曇沓掛駅,Azumi-Kutsukake Station
+- 安曇追分駅,Azumi-Oiwake Station
+- 梓橋駅,Azusabashi Station
+- 薊野駅,Azōno Station
+- 粟生津駅,Aōzu Station
+- 原爆ドーム前停留場,Hiroden Atomic Bomb Dome Station
+- 毘沙門台駅,Astram Bishamondai Station
+- 馬場崎町駅,Babasakichō Station
+- None,Bairin Station (Gifu)
+- 梅林駅 (広島県),Bairin Station (Hiroshima)
+- 梅津寺駅,Baishinji Station
+- 抜海駅,Bakkai Station
+- 馬喰町駅,Bakurochō Station
+- 馬喰横山駅,Bakuroyokoyama Station
+- 博労町駅,Bakurōmachi Station
+- バルーンさが駅,Balloon Saga Station
+- 万博記念公園駅 (茨城県),Bampaku-kinen-kōen Station (Ibaraki)
+- 万博記念公園駅,Bampaku-kinen-kōen Station (Osaka)
+- 番田駅 (神奈川県),Banda Station
+- 磐梯熱海駅,Bandai-Atami Station
+- 磐梯町駅,Bandaimachi Station
+- 番田駅 (福井県),Banden Station
+- 板東駅,Bandō Station
+- 阪東橋駅,Bandōbashi Station
+- 播州赤穂駅,Banshū-Akō Station
+- 原木中山駅,Baraki-Nakayama Station
+- 原木駅,Baraki Station
+- 馬車道駅,Bashamichi Station
+- None,Bayside Station (Japan)
+- 別府駅 (福岡県),Befu Station (Fukuoka)
+- 別府駅 (兵庫県),Befu Station (Hyogo)
+- ベル前駅,Bell-mae Station
+- 弁天橋駅,Bentembashi Station
+- 弁天町駅,Bentenchō Station
+- 弁天島駅,Bentenjima Station
+- 別保駅,Beppo Station
+- 別府大学駅,Beppu Daigaku Station
+- 別府駅 (大分県),Beppu Station
+- 別所温泉駅,Bessho-Onsen Station
+- 別所駅 (兵庫県),Bessho Station (Hyogo)
+- 別当賀駅,Bettoga Station
+- 美唄駅,Bibai Station
+- 美馬牛駅,Bibaushi Station
+- 美々信号場,Bibi Station
+- 美瑛駅,Biei Station
+- 美深駅,Bifuka Station
+- 美幌駅,Bihoro Station
+- 美術館図書館前駅,Bijutsukantoshokanmae Station
+- 備後赤坂駅,Bingo-Akasaka Station
+- 備後本庄駅,Bingo-Honjō Station
+- 備後三川駅,Bingo-Mikawa Station
+- 備後三日市駅,Bingo-Mikkaichi Station
+- 備後落合駅,Bingo-Ochiai Station
+- 備後西城駅,Bingo-Saijō Station
+- 備後庄原駅,Bingo-Shōbara Station
+- 備後矢野駅,Bingo-Yano Station
+- 備後安田駅,Bingo-Yasuda Station
+- 備後八幡駅,Bingo-Yawata Station
+- 美留和駅,Biruwa Station
+- 毘沙門駅,Bishamon Station
+- 美章園駅,Bishōen Station
+- 備中広瀬駅,Bitchū-Hirose Station
+- 備中川面駅,Bitchū-Kawamo Station
+- 備中呉妹駅,Bitchū-Kurese Station
+- 備中神代駅,Bitchū-Kōjiro Station
+- 備中箕島駅,Bitchū-Mishima Station
+- 備中高梁駅,Bitchū-Takahashi Station
+- 備中高松駅,Bitchū-Takamatsu Station
+- 枇杷島駅,Biwajima Station
+- びわ湖浜大津駅,Biwako-hamaotsu Station
+- 備前福河駅,Bizen-Fukukawa Station
+- 備前原駅,Bizen-Hara Station
+- 備前一宮駅,Bizen-Ichinomiya Station
+- 備前片上駅,Bizen-Katakami Station
+- 備前片岡駅,Bizen-Kataoka Station
+- 備前三門駅,Bizen-Mikado Station
+- 備前西市駅,Bizen-Nishiichi Station
+- 備前田井駅,Bizen-Tai Station
+- 母恋駅,Bokoi Station
+- 分倍河原駅,Bubaigawara Station
+- 豊後清川駅,Bungo-Kiyokawa Station
+- 豊後国分駅,Bungo-Kokubu Station
+- 豊後三芳駅,Bungo-Miyoshi Station
+- 豊後森駅,Bungo-Mori Station
+- 豊後中川駅,Bungo-Nakagawa Station
+- 豊後中村駅,Bungo-Nakamura Station
+- 豊後荻駅,Bungo-Ogi Station
+- 豊後竹田駅,Bungo-Taketa Station
+- 豊後豊岡駅,Bungo-Toyooka Station
+- 文化の森駅,Bunkanomori Station
+- 分水駅,Bunsui Station
+- バスセンター前駅,Bus Center Mae Station
+- 仏子駅,Bushi Station
+- 武州荒木駅,Bushū-Araki Station
+- 武州日野駅,Bushū-Hino Station
+- 武州唐沢駅,Bushū-Karasawa Station
+- 武州長瀬駅,Bushū-Nagase Station
+- 武州中川駅,Bushū-Nakagawa Station
+- 仏生山駅,Busshōzan Station
+- 豊前川崎駅,Buzen-Kawasaki Station
+- 豊前桝田駅,Buzen-Masuda Station
+- 豊前長洲駅,Buzen-Nagasu Station
+- 豊前松江駅,Buzen-Shōe Station
+- 豊前善光寺駅,Buzen-Zenkōji Station
+- 豊前大熊駅,Buzen-Ōkuma Station
+- 屏風浦駅,Byōbugaura Station
+- 貿易センター駅,Bōeki Center Station
+- 坊城駅,Bōjō Station
+- 石清水八幡宮駅,Cable-hachimangū-guchi Station
+- ケーブル八幡宮山上駅,Cable-hachimangū-sanjō Station
+- ケーブル延暦寺駅,Cable Enryakuji Station
+- None,Cable Hiei Station
+- ケーブル坂本駅,Cable Sakamoto Station
+- 能勢電鉄妙見の森ケーブル,Cable Sanjō Station
+- None,Cable Yase Station
+- センター北駅,Center Kita Station
+- センター南駅,Center Minami Station
+- 中部国際空港駅,Central Japan International Airport Station
+- 茶所駅,Chajo Station
+- 茶内駅,Chanai Station
+- 茶志内駅,Chashinai Station
+- 茶臼山駅,Chausuyama Station
+- 茶屋ヶ坂駅,Chayagasaka Station
+- 茶山駅 (福岡県),Chayama Station (Fukuoka)
+- 茶山駅 (京都府),Chayama Station (Kyoto)
+- 茶屋町駅,Chayamachi Station
+- 千葉中央駅,Chiba-Chūō Station
+- 千葉ニュータウン中央駅,Chiba New Town Chūō Station
+- 千葉駅,Chiba Station
+- 千葉寺駅,Chibadera Station
+- 千葉公園駅,Chibakōen Station
+- 千葉みなと駅,Chibaminato Station
+- 知波田駅,Chibata Station
+- 千曳駅,Chibiki Station
+- 千船駅,Chibune Station
+- 秩父駅,Chichibu Station
+- 千鳥駅,Chidori Station
+- 千鳥橋駅,Chidoribashi Station
+- 千鳥町駅 (東京都),Chidorichō Station
+- 智恵文駅,Chiebun Station
+- 千垣駅,Chigaki Station
+- 千金駅,Chigane Station
+- 茅ケ崎駅,Chigasaki Station
+- 稚子塚駅,Chigozuka Station
+- ちはら台駅,Chiharadai Station
+- 千早駅,Chihaya Station
+- 千早口駅,Chihayaguchi Station
+- 智北駅,Chihoku Station
+- 千路駅,Chiji Station
+- 近文駅,Chikabumi Station
+- 近川駅,Chikagawa Station
+- 近永駅,Chikanaga Station
+- 近田駅,Chikata Station
+- 地下鉄赤塚駅,Chikatetsu-Akatsuka Station
+- 地下鉄成増駅,Chikatetsu-Narimasu Station
+- 近津駅,Chikatsu Station
+- None,Chikkōchō Station
+- 地区センター駅,Chiku Center Station
+- 筑後船小屋駅,Chikugo-Funagoya Station
+- 筑後草野駅,Chikugo-Kusano Station
+- 筑後吉井駅,Chikugo-Yoshii Station
+- 筑後大石駅,Chikugo-Ōishi Station
+- 筑豊香月駅,Chikuhō-Katsuki Station
+- 筑豊中間駅,Chikuhō-Nakama Station
+- 筑豊直方駅,Chikuhō-Nōgata Station
+- 千曲駅,Chikuma Station
+- 千国駅,Chikuni Station
+- 千倉駅,Chikura Station
+- 千種駅,Chikusa Station
+- 筑紫駅,Chikushi Station
+- 筑前大分駅,Chikuzen-Daibu Station
+- 筑前深江駅,Chikuzen-Fukae Station
+- 筑前垣生駅,Chikuzen-Habu Station
+- 筑前岩屋駅,Chikuzen-Iwaya Station
+- 筑前前原駅,Chikuzen-Maebaru Station
+- 筑前庄内駅,Chikuzen-Shōnai Station
+- 筑前内野駅,Chikuzen-Uchino Station
+- 筑前植木駅,Chikuzen-Ueki Station
+- 筑前山家駅,Chikuzen-Yamae Station
+- 筑前山手駅,Chikuzen-Yamate Station
+- 茅野駅,Chino Station
+- 秩父別駅,Chippubetsu Station
+- 知来乙駅,Chiraiotsu Station
+- 知立駅,Chiryū Station
+- 千里駅 (三重県),Chisato Station (Mie)
+- 千里駅 (富山県),Chisato Station (Toyama)
+- 千城台北駅,Chishirodai-Kita Station
+- 千城台駅,Chishirodai Station
+- 知多半田駅,Chita-Handa Station
+- 知多奥田駅,Chita-Okuda Station
+- 知多武豊駅,Chita-Taketoyo Station
+- None,Chitetsubirumae Station
+- 千歳船橋駅,Chitose-Funabashi Station
+- 千歳烏山駅,Chitose-Karasuyama Station
+- 千年駅,Chitose Station (Aomori)
+- 千歳駅 (千葉県),Chitose Station (Chiba)
+- 千歳駅 (北海道),Chitose Station (Hokkaido)
+- 智東駅,Chitō Station
+- 知和駅,Chiwa Station
+- 千綿駅,Chiwata Station
+- 千代県庁口駅,Chiyo-Kenchōguchi Station
+- 千代駅,Chiyo Station
+- 千代田駅,Chiyoda Station
+- 千代ヶ岡駅,Chiyogaoka Station
+- 千代川駅,Chiyokawa Station
+- 千代崎駅,Chiyozaki Station
+- 智頭駅,Chizu Station
+- 直別信号場,Chokubetsu Station
+- 勅旨駅,Chokushi Station
+- 調布駅,Chōfu Station (Tokyo)
+- 長府駅,Chōfu Station (Yamaguchi)
+- 長後駅,Chōgo Station
+- 長者原駅,Chōjabaru Station
+- 長者ヶ浜潮騒はまなす公園前駅,Chōjagahama Shiosai Hamanasu Kōenmae Station
+- 長者町駅,Chōjamachi Station
+- 彫刻の森駅,Chōkokunomori Station
+- 長門峡駅,Chōmonkyō Station
+- 長楽寺駅,Chōrakuji Station
+- 帖佐駅,Chōsa Station
+- 銚子駅,Chōshi Station
+- 銚子口信号場,Chōshiguchi Station
+- 長陽駅,Chōyō Station
+- 中部天竜駅,Chūbu-Tenryū Station
+- 中田駅 (徳島県),Chūden Station
+- 中学校駅,Chūgakkō Station
+- 中国勝山駅,Chūgoku-Katsuyama Station
+- 中郡駅,Chūgun Station
+- 中京競馬場前駅,Chūkyōkeibajōmae Station
+- 中書島駅,Chūshojima Station
+- 中央弘前駅,Chūō-Hirosaki Station
+- 中央前橋駅,Chūō-Maebashi Station
+- 中央林間駅,Chūō-Rinkan Station
+- 中央大学・明星大学駅,Chūōdaigaku Meiseidaigaku Station
+- 中央市場前駅,Chūōichibamae Station
+- コスモスクエア駅,Cosmosquare Station
+- 大安駅 (三重県),Daian Station
+- 大安寺駅,Daianji Station
+- 大場駅,Daiba Station (Shizuoka)
+- 台場駅,Daiba Station (Tokyo)
+- だいどう豊里駅,Daidō-Toyosato Station
+- 大道駅,Daidō Station
+- 大同町駅,Daidōchō Station
+- 大福駅,Daifuku Station
+- 大学駅,Daigaku Station
+- 大学前駅 (長野県),Daigakumae Station (Nagano)
+- 大学前駅 (滋賀県),Daigakumae Station (Shiga)
+- None,Daigakumae Station (Toyama)
+- 醍醐駅 (秋田県),Daigo Station (Akita)
+- 醍醐駅 (京都府),Daigo Station (Kyoto)
+- 大行司駅,Daigyōji Station
+- 大宝駅,Daihō Station
+- 第一通り駅,Daiichidōri Station
+- 大神宮下駅,Daijingūshita Station
+- 大開駅,Daikai Station
+- 代官山駅,Daikan-yama Station
+- 代官町駅,Daikanchō Station
+- 大国町駅,Daikokucho Station
+- 大門駅 (愛知県),Daimon Station (Aichi)
+- 大門駅 (広島県),Daimon Station (Hiroshima)
+- 大門駅 (東京都),Daimon Station (Tokyo)
+- 大物駅,Daimotsu Station
+- 大日駅,Dainichi Station
+- 台原駅,Dainohara Station
+- 大入駅,Dainyū Station
+- 大山口駅,Daisenguchi Station
+- 大川寺駅,Daisenji Station
+- 大釈迦駅,Daishaka Station
+- 大師橋駅,Daishibashi Station
+- 大師前駅,Daishimae Station
+- 大聖寺駅,Daishōji Station
+- 代田橋駅,Daitabashi Station
+- None,Daitembōdai Station
+- 大塔駅,Daitō Station
+- 大谷向駅,Daiyamukō Station
+- 大雄山駅,Daiyūzan Station
+- 大善寺駅,Daizenji Station
+- 段駅,Dan Station
+- 駄科駅,Dashina Station
+- 伊達紋別駅,Date-Mombetsu Station
+- 伊達駅,Date Station
+- 太宰府駅,Dazaifu Station
+- 出来島駅,Dekijima Station
+- 出町柳駅,Demachiyanagi Station
+- 伝法駅,Dempō Station
+- 田園調布駅,Den-en-chōfu Station
+- 電鉄石田駅,Dentetsu Ishida Station
+- 出雲市駅,Dentetsu Izumoshi Station
+- 電鉄黒部駅,Dentetsu Kurobe Station
+- 富山駅,Dentetsu Toyama Station
+- 電鉄魚津駅,Dentetsu Uozu Station
+- デンテツターミナルビル前停留場,Dentetsutāminarubiru-mae Station
+- 出戸駅,Deto Station
+- 出戸浜駅,Detohama Station
+- 出屋敷駅,Deyashiki Station
+- 土合駅,Doai Station
+- 土橋駅 (愛媛県),Dobashi Station (Ehime)
+- 土深井駅,Dobukai Station
+- 動物園前駅,Dobutsuen-mae Station
+- 道後山駅,Dogoyama Station
+- 土井駅,Doi Station (Fukuoka)
+- 土居駅,Doi Station (Osaka)
+- 土市駅,Doichi Station
+- 土居田駅,Doida Station
+- 獨協大学前駅,Dokkyodaigakumae Station
+- ドーム前千代崎駅,Dome-mae Chiyozaki Station
+- ドーム前千代崎駅,Dome-mae Station
+- 轟駅,Domeki Station
+- 土本駅,Domoto Station
+- 土底浜駅,Dosokohama Station
+- 動物園駅 (愛知県犬山市),Dōbutsuen Station
+- 動物公園駅,Dōbutsukōen Station
+- None,Dōgo-Onsen Station
+- None,Dōgokōen Station
+- 道法寺駅,Dōhōji Station
+- 堂島駅,Dōjima Station
+- 道場南口駅,Dōjō-minamiguchi Station
+- 道場駅,Dōjō Station
+- 道成寺駅,Dōjōji Station
+- 道明寺駅,Dōmyōji Station
+- 洞泉駅,Dōsen Station
+- 同志社前駅,Dōshishamae Station
+- None,Dōshokubutsuen-iriguchi Station
+- 道徳駅,Dōtoku Station
+- 土橋停留場,Hiroden Dobashi Station
+- 荏原中延駅,Ebara-Nakanobu Station
+- 江原駅,Ebara Station
+- 荏原町駅,Ebaramachi Station
+- 江端駅,Ebata Station
+- 江部乙駅,Ebeotsu Station
+- 江別駅,Ebetsu Station
+- 江尾駅,Ebi Station
+- 海老江駅,Ebie Station
+- 海老名駅,Ebina Station
+- えびの飯野駅,Ebino-Iino Station
+- えびの上江駅,Ebino-Uwae Station
+- えびの駅,Ebino Station
+- 恵比島駅,Ebishima Station
+- 恵比須駅,Ebisu Station (Hyogo)
+- 恵比寿駅,Ebisu Station (Tokyo)
+- 恵美須町駅,Ebisuchō Station (Osaka)
+- 海老津駅,Ebitsu Station
+- 愛知川駅,Echigawa Station
+- 越後赤塚駅,Echigo-Akatsuka Station
+- 越後早川駅,Echigo-Hayakawa Station
+- 越後広瀬駅,Echigo-Hirose Station
+- 越後広田駅,Echigo-Hirota Station
+- 越後堀之内駅,Echigo-Horinouchi Station
+- 越後石山駅,Echigo-Ishiyama Station
+- 越後岩沢駅,Echigo-Iwasawa Station
+- 越後岩塚駅,Echigo-Iwatsuka Station
+- 越後金丸駅,Echigo-Kanamaru Station
+- 越後寒川駅,Echigo-Kangawa Station
+- 越後片貝駅,Echigo-Katakai Station
+- 越後川口駅,Echigo-Kawaguchi Station
+- 越後水沢駅,Echigo-Mizusawa Station
+- 越後中里駅,Echigo-Nakazato Station
+- 越後鹿渡駅,Echigo-Shikawatari Station
+- 越後下関駅,Echigo-Shimoseki Station
+- 越後曽根駅,Echigo-Sone Station
+- 越後須原駅,Echigo-Suhara Station
+- 越後滝谷駅,Echigo-Takiya Station
+- 越後田中駅,Echigo-Tanaka Station
+- 越後田沢駅,Echigo-Tazawa Station
+- 越後湯沢駅,Echigo-Yuzawa Station
+- 越後大島駅,Echigo-Ōshima Station
+- えちご押上ひすい海岸駅,Echigo Oshiage Hisui Kaigan Station
+- 越前花堂駅,Echizen-Hanandō Station
+- 越前開発駅,Echizen-Kaihotsu Station
+- 越前野中駅,Echizen-Nonaka Station
+- 越前島橋駅,Echizen-Shimabashi Station
+- 越前下山駅,Echizen-Shimoyama Station
+- 越前新保駅,Echizen-Shinbo Station
+- 越前高田駅,Echizen-Takada Station
+- 越前武生駅,Echizen-Takefu Station (Fukui Railway)
+- 越前竹原駅,Echizen-Takehara Station
+- 越前田野駅,Echizen-Tano Station
+- 越前富田駅,Echizen-Tomida Station
+- 越前東郷駅,Echizen-Tōgō Station
+- 越前薬師駅,Echizen-Yakushi Station
+- 越前大宮駅,Echizen-Ōmiya Station
+- 越前大野駅,Echizen-Ōno Station
+- 江田駅 (福島県),Eda Station (Fukushima)
+- 江田駅 (神奈川県),Eda Station (Kanagawa)
+- 枝川駅,Edagawa Station
+- 枝光駅,Edamitsu Station
+- 江戸橋駅,Edobashi Station
+- 江戸川駅,Edogawa Station
+- 江戸川橋駅,Edogawabashi Station
+- 江戸川台駅,Edogawadai Station
+- 絵笛駅,Efue Station
+- 恵我ノ荘駅,Eganoshō Station
+- 江木駅,Egi Station
+- 江吉良駅,Egira Station
+- 江口駅,Eguchi Station
+- 頴娃大川駅,Ei-Ōkawa Station
+- 頴娃駅,Ei Station
+- 永福町駅,Eifukuchō Station
+- 江井ヶ島駅,Eigashima Station
+- 永平寺口駅,Eiheijiguchi Station
+- 永犬丸駅,Einomaru Station
+- 永和駅,Eiwa Station
+- 江島駅,Ejima Station
+- 永覚駅,Ekaku Station
+- 江川崎駅,Ekawasaki Station
+- None,Ekimae-Ōdōri Station
+- 駅前停留場,Ekimae Station
+- 駅家駅,Ekiya Station
+- 江古田駅,Ekoda Station
+- 江見駅,Emi Station
+- 円町駅,Emmachi Station
+- 江迎鹿町駅,Emukae-Shikamachi Station
+- 恵那駅,Ena Station
+- 榎井駅,Enai Station
+- 円田駅,Enden Station
+- 渕東駅,Endō Station
+- 遠軽駅,Engaru Station
+- 円行寺口駅,Engyōjiguchi Station
+- 恵庭駅,Eniwa Station
+- 榎戸駅 (愛知県),Enokido Station (Aichi)
+- 榎戸駅 (千葉県),Enokido Station (Chiba)
+- 榎町駅,Enokimachi Station
+- None,Enokimoto Station
+- 江ノ島駅,Enoshima Station
+- 江の浦駅,Enoura Station
+- 遠州岩水寺駅,Enshū-Gansuiji Station
+- 曳馬駅,Enshū-Hikuma Station
+- 上島駅 (静岡県),Enshū-Kamijima Station
+- 遠州小林駅,Enshū-Kobayashi Station
+- 遠州小松駅,Enshū-Komatsu Station
+- 遠州森駅,Enshū-Mori Station
+- 遠州西ヶ崎駅,Enshū-Nishigasaki Station
+- 遠州芝本駅,Enshū-Shibamoto Station
+- 遠州病院駅,Enshū-byōin Station
+- 延徳駅,Entoku Station
+- 円座駅,Enza Station
+- 塩山駅,Enzan Station
+- 恵良駅,Era Station
+- 襟野々駅,Erinono Station
+- 江坂駅,Esaka Station
+- 江崎駅,Esaki Station
+- 江差駅,Esashi Station
+- 江曽島駅,Esojima Station
+- 江住駅,Esumi Station
+- 越中大門駅,Etchū-Daimon Station
+- 越中荏原駅,Etchū-Ebara Station
+- 越中舟橋駅,Etchū-Funahashi Station
+- 越中泉駅,Etchū-Izumi Station
+- 越中国分駅,Etchū-Kokubu Station
+- 越中宮崎駅,Etchū-Miyazaki Station
+- 越中中川駅,Etchū-Nakagawa Station
+- 越中中島駅,Etchū-Nakajima Station
+- 越中中村駅,Etchū-Nakamura Station
+- 越中三郷駅,Etchū-Sangō Station
+- 越中山田駅,Etchū-Yamada Station
+- 越中八尾駅,Etchū-Yatsuo Station
+- 越中島駅,Etchūjima Station
+- 江釣子駅,Ezuriko Station
+- 江波停留場,Hiroden Eba Station
+- 胡町停留場,Hiroden Ebisu-cho Station
+- 猿猴橋町停留場,Hiroden Enkobashi-cho Station
+- 不動院前駅,Astram Fudoin-mae Station
+- 古市駅 (広島県),Astram Furuichi Station
+- ファミリー公園前駅,Family-Kōemmae Station
+- フェリーターミナル駅,Ferry Terminal Station
+- フラワータウン駅,Flower Town Station
+- フルーツパーク駅,Fruit Park Station
+- 文挟駅,Fubasami Station
+- 渕高駅,Fuchidaka Station
+- 淵垣駅,Fuchigaki Station
+- 淵野辺駅,Fuchinobe Station
+- 府中本町駅,Fuchū-Hommachi Station
+- 婦中鵜坂駅,Fuchū-Usaka Station
+- 府中駅 (広島県),Fuchū Station (Hiroshima)
+- None,Fuchū Station (Kyoto)
+- 府中駅 (東京都),Fuchū Station (Tokyo)
+- 府中競馬正門前駅,Fuchūkeiba-Seimon-mae Station
+- 布田駅,Fuda Station
+- 普代駅,Fudai Station
+- 不動前駅,Fudōmae Station
+- 不動の沢駅,Fudōnosawa Station
+- 富士駅,Fuji Station
+- 藤江駅,Fujie Station
+- 藤枝駅,Fujieda Station
+- 富士フイルム前駅,Fujifilm-mae Station
+- 藤が丘駅 (愛知県),Fujigaoka Station (Aichi)
+- 藤が丘駅 (神奈川県),Fujigaoka Station (Kanagawa)
+- 藤井駅,Fujii Station
+- 藤井寺駅,Fujiidera Station
+- 藤川駅,Fujikawa Station (Aichi)
+- 富士川駅,Fujikawa Station (Shizuoka)
+- 不二越駅,Fujikoshi Station
+- 富士急ハイランド駅,Fujikyu Highland Station
+- 富士松駅,Fujimatsu Station
+- 富士見駅,Fujimi Station
+- 富士見町駅 (神奈川県),Fujimichō Station (Kanagawa)
+- 富士見町駅 (鳥取県),Fujimichō Station (Tottori)
+- 富士見台駅,Fujimidai Station
+- 富士見ヶ丘駅,Fujimigaoka Station
+- ふじみ野駅,Fujimino Station
+- 藤浪駅,Fujinami Station (Aichi)
+- 藤並駅,Fujinami Station (Wakayama)
+- 藤根駅,Fujine Station (Iwate)
+- 富士根駅,Fujine Station (Shizuoka)
+- 藤野駅,Fujino Station
+- 藤ノ木駅,Fujinoki Station
+- 富士宮駅,Fujinomiya Station
+- 藤森駅,Fujinomori Station
+- 藤の牛島駅,Fujinoushijima Station
+- 富士岡駅,Fujioka Station (Shizuoka)
+- 藤岡駅,Fujioka Station (Tochigi)
+- 藤阪駅,Fujisaka Station
+- 藤崎駅 (青森県),Fujisaki Station (Aomori)
+- 藤崎駅 (福岡県),Fujisaki Station (Fukuoka)
+- 藤崎宮前駅,Fujisakigū-mae Station
+- 富士山駅,Fujisan Station
+- 藤沢本町駅,Fujisawa-Hommachi Station
+- 藤沢駅,Fujisawa Station
+- 藤島駅,Fujishima Station
+- 藤代駅,Fujishiro Station
+- 藤田駅,Fujita Station
+- 藤棚駅,Fujitana Station
+- フジテック前駅,Fujitec-mae Station
+- 藤山駅,Fujiyama Station
+- 富士山下駅,Fujiyamashita Station
+- 藤生駅,Fujū Station
+- 深戸駅,Fukado Station
+- 深江駅 (兵庫県),Fukae Station (Hyōgo)
+- 深江橋駅,Fukaebashi Station
+- 深川駅,Fukagawa Station
+- 深井駅,Fukai Station
+- 深溝駅,Fukamizo Station
+- 深田駅,Fukata Station
+- 深浦駅,Fukaura Station
+- ふかや花園駅,Fukaya Hanazono Station
+- 深谷駅,Fukaya Station
+- 深日町駅,Fukechō Station
+- 深日港駅,Fukekō Station
+- 富貴駅,Fuki Station
+- 吹上駅 (愛知県),Fukiage Station (Aichi)
+- 吹上駅 (埼玉県),Fukiage Station (Saitama)
+- 吹越駅,Fukkoshi Station
+- 福工大前駅,Fukkōdaimae Station
+- 福駅,Fuku Station
+- 福部駅,Fukube Station
+- 福地駅,Fukuchi Station
+- 福知山市民病院口駅,Fukuchiyama-shimin-byōin-guchi Station
+- 福知山駅,Fukuchiyama Station
+- 福大前西福井駅,Fukudaimae Nishi-Fukui Station
+- 福大前駅,Fukudaimae Station
+- 福田町駅,Fukudamachi Station
+- 福江駅,Fukue Station
+- 福神駅,Fukugami Station
+- 福川駅,Fukugawa Station
+- 福原駅,Fukuhara Station
+- 福井駅 (福井県),Fukui-eki Station
+- 福井城址大名町駅,Fukui Castle Ruins-daimyomachi Station
+- 福井駅 (福井県),Fukui Station (Fukui)
+- 福井駅 (岡山県),Fukui Station (Okayama)
+- 福居駅,Fukui Station (Tochigi)
+- 福井口駅,Fukuiguchi Station
+- 福間駅,Fukuma Station
+- 福光駅,Fukumitsu Station
+- 福野駅 (岐阜県),Fukuno Station (Gifu)
+- 福野駅 (富山県),Fukuno Station (Toyama)
+- None,Fukuoka Kamotsu Terminal Station
+- 福岡駅,Fukuoka Station
+- 福岡空港駅,Fukuokakūkō Station
+- 福音寺駅,Fukuonji Station
+- 吹浦駅,Fukura Station
+- 袋駅 (熊本県),Fukuro Station
+- 袋田駅,Fukuroda Station
+- 袋倉駅,Fukurogura Station
+- 袋井駅,Fukuroi Station
+- 福崎駅,Fukusaki Station
+- 福島今町駅,Fukushima-Imamachi Station
+- 福島高松駅,Fukushima-Takamatsu Station
+- 福島駅 (福島県),Fukushima Station (Fukushima)
+- 福島駅 (大阪府),Fukushima Station (Osaka)
+- 福島学院前駅,Fukushimagakuin-mae Station
+- 福島口駅,Fukushimaguchi Station
+- 福俵駅,Fukutawara Station
+- 福浦駅,Fukuura Station
+- 福渡駅,Fukuwatari Station
+- 福山駅,Fukuyama Station
+- 福吉駅,Fukuyoshi Station
+- 福用駅,Fukuyō Station
+- 福住駅,Fukuzumi Station
+- 深郷田駅,Fukōda Station
+- 文の里駅,Fuminosato Station
+- 船橋法典駅,Funabashi-Hōten Station
+- 船橋競馬場駅,Funabashi-Keibajō Station
+- 船橋日大前駅,Funabashi-Nichidaimae Station
+- 船橋駅,Funabashi Station
+- 船堀駅,Funabori Station
+- 舟形駅,Funagata Station
+- 船平山駅,Funahirayama Station
+- 船越駅,Funakoshi Station
+- 船町駅,Funamachi Station
+- 船町口駅,Funamachiguchi Station
+- 船尾駅,Funao Station (Fukuoka)
+- None,Funao Station (Osaka)
+- 船岡駅 (京都府),Funaoka Station (Kyoto)
+- 船岡駅 (宮城県),Funaoka Station (Miyagi)
+- 船佐駅,Funasa Station
+- 船戸駅,Funato Station
+- 船津駅 (三重県紀北町),Funatsu Station (Kihoku, Mie)
+- 船津駅 (三重県鳥羽市),Funatsu Station (Toba, Mie)
+- 船引駅,Funehiki Station
+- 富良野駅,Furano Station
+- ふれあい生力駅,Fureai-Shōriki Station
+- 古高松駅,Furu-Takamatsu Station
+- 古館駅,Furudate Station
+- 古国府駅,Furugō Station
+- 古市駅 (兵庫県),Furuichi Station (Hyōgo)
+- 古市駅 (大阪府),Furuichi Station (Osaka)
+- 古市橋駅,Furuichibashi Station
+- 古島駅,Furujima Station
+- 古川駅,Furukawa Station
+- 古川橋駅,Furukawabashi Station
+- 古口駅,Furukuchi Station
+- 古間駅,Furuma Station
+- 古山駅,Furusan Station
+- ふるさと公園駅,Furusatokōen Station
+- 古瀬信号場,Furuse Station
+- 古庄駅,Furushō Station
+- 古高松南駅,Furutakamatsu-Minami Station
+- 古津駅,Furutsu Station
+- 布佐駅,Fusa Station
+- 総元駅,Fusamoto Station
+- 房前駅,Fusazaki Station
+- 布施駅,Fuse Station
+- 伏石駅,Fuseishi Station
+- 伏木駅,Fushiki Station
+- 伏見稲荷駅,Fushimi-Inari Station
+- 伏見桃山駅,Fushimi-Momoyama Station
+- 伏見駅 (愛知県),Fushimi Station (Aichi)
+- 伏見駅 (京都府),Fushimi Station (Kyoto)
+- 伏屋駅,Fushiya Station
+- 福生駅,Fussa Station
+- 扶桑駅,Fusō Station
+- 双葉駅,Futaba Station
+- 二田駅,Futada Station
+- 二川駅,Futagawa Station
+- 二子駅,Futago Station
+- 双岩駅,Futaiwa Station
+- 二島駅,Futajima Station
+- 二子新地駅,Futako-Shinchi Station
+- 二子玉川駅,Futako-Tamagawa Station
+- 二俣本町駅,Futamata-Hommachi Station
+- 二俣新町駅,Futamata-Shimmachi Station
+- 二股駅,Futamata Station (Hokkaido)
+- 二俣駅,Futamata Station (Kyoto)
+- 二俣川駅,Futamatagawa Station
+- 二俣尾駅,Futamatao Station
+- 二見浦駅,Futaminoura Station
+- 二名駅,Futana Station
+- 二ツ井駅,Futatsui Station
+- 二ツ杁駅,Futatsuiri Station
+- 二塚駅,Futatsuka Station
+- 二和向台駅,Futawa-Mukōdai Station
+- 富戸駅,Futo Station
+- 太海駅,Futomi Station (Chiba)
+- 太美駅,Futomi Station (Hokkaido)
+- 二日市駅,Futsukaichi Station
+- 不破一色駅,Fuwa-Ishiki Station
+- 府屋駅,Fuya Station
+- 附属中学前駅,Fuzokuchūgakumae Station
+- 風連駅,Fūren Station
+- 袋町停留場,Hiroden Fukuro-machi Station
+- 福島町停留場,Hiroden Fukushima-cho Station
+- 舟入本町停留場,Hiroden Funairi-hon-machi Station
+- 舟入川口町停留場,Hiroden Funairi-kawaguchi-cho Station
+- 舟入町停留場,Hiroden Funairi-machi Station
+- 舟入南停留場,Hiroden Funairi-minami-machi Station
+- 舟入幸町停留場,Hiroden Funairi-saiwai-cho Station
+- 古江駅,Hiroden Furue Station
+- 外苑前駅,Gaienmae Station
+- 学研北生駒駅,Gakken Kita-Ikoma Station
+- 学研奈良登美ヶ丘駅,Gakken Nara-Tomigaoka Station
+- 学校前駅,Gakkōmae Station
+- 学駅,Gaku Station
+- 楽田駅,Gakuden Station (Aichi)
+- 学田駅,Gakuden Station (Hokkaido)
+- 学園通り駅,Gakuen-dōri Station
+- 学園前駅 (千葉県),Gakuen-mae Station (Chiba)
+- 学園前駅 (北海道),Gakuen-mae Station (Hokkaido)
+- 学園前駅 (奈良県),Gakuen-mae Station (Nara)
+- 学園都市駅,Gakuentoshi Station
+- 学芸大学駅,Gakugeidaigaku Station
+- 学門駅,Gakumon Station
+- 岳南江尾駅,Gakunan-Enoo Station
+- 岳南富士岡駅,Gakunan-Fujioka Station
+- 岳南原田駅,Gakunan-Harada Station
+- 学習院下停留場,Gakushūin-shita Station
+- ガーラ湯沢駅,Gala-Yuzawa Station
+- 蒲郡競艇場前駅,Gamagōri-kyōteijō-mae Station
+- 蒲郡駅,Gamagōri Station
+- 蒲生四丁目駅,Gamō-yonchōme Station
+- 蒲生駅,Gamō Station
+- 感田駅,Ganda Station
+- 雁ノ巣駅,Gannosu Station
+- 岩水寺駅,Gansuiji Station
+- 勝木駅,Gatsugi Station
+- 下馬駅,Geba Station
+- 猊鼻渓駅,Geibikei Station
+- 芸大通駅,Geidaidōri Station
+- 下条駅,Gejō Station
+- 月江寺駅,Gekkōji Station
+- 玄武洞駅,Gembudō Station
+- 源道寺駅,Gendōji Station
+- 源じいの森駅,Genjiinomori Station
+- 原生花園駅,Genseikaen Station
+- 下呂駅,Gero Station
+- 儀保駅,Gibo Station
+- 岐阜羽島駅,Gifu-Hashima Station
+- 岐阜駅,Gifu Station
+- 義塾高校前駅,Gijukukōkōmae Station
+- 岐南駅,Ginan Station
+- 銀水駅,Ginsui Station
+- 銀座一丁目駅,Ginza-itchōme Station
+- 銀座駅,Ginza Station
+- 銀山駅,Ginzan Station
+- 祇園四条駅,Gion-Shijō Station
+- 祇園新橋北駅,Gion-shimbashikita Station
+- 祇園駅 (千葉県),Gion Station (Chiba)
+- 祇園駅 (福岡県),Gion Station (Fukuoka)
+- 御坊駅,Gobō Station
+- 御着駅,Gochaku Station
+- 五知駅,Gochi Station
+- 後台駅,Godai Station
+- 呉服町駅,Gofukumachi Station (Fukuoka)
+- None,Gofukumachi Station (Kumamoto)
+- 五百川駅,Gohyakugawa Station
+- 五百羅漢駅,Gohyakurakan Station
+- 五井駅,Goi Station
+- 五位堂駅,Goidō Station
+- 五位野駅,Goino Station
+- 五十石駅,Gojikkoku Station
+- 五条駅 (京都府),Gojō Station (Kyoto)
+- 五条駅 (奈良県),Gojō Station (Nara)
+- 後閑駅,Gokan Station
+- 五箇荘駅,Gokashō Station
+- 御器所駅,Gokiso Station
+- 護国寺駅,Gokokuji Station
+- 極楽橋駅,Gokurakubashi Station
+- 極楽寺駅,Gokurakuji Station
+- 五香駅,Gokō Station
+- 胡麻駅,Goma Station
+- 後免駅,Gomen Station
+- 後免町駅,Gomenmachi Station
+- 権堂駅,Gondō Station
+- 権現前駅,Gongenmae Station
+- 衣浦臨海鉄道碧南線,Gongenzaki Station
+- 五ノ三駅,Gonosan Station
+- 五農校前駅,Gonōkōmae Station
+- 御領駅 (広島県),Goryō Station (Hiroshima)
+- 御領駅 (鹿児島県),Goryō Station (Kagoshima)
+- 五稜郭駅,Goryōkaku Station
+- None,Goryōmae Station
+- 五郎駅,Gorō Station
+- 五郎丸駅,Gorōmaru Station
+- 後三年駅,Gosannen Station
+- 御所駅,Gose Station
+- 五泉駅,Gosen Station
+- 五社駅,Gosha Station
+- 五所川原駅,Goshogawara Station
+- 五反田駅,Gotanda Station
+- 五反野駅,Gotanno Station
+- 御殿場駅,Gotemba Station
+- 御殿山駅,Gotenyama Station
+- 後藤駅,Gotō Station
+- 御油駅,Goyu Station
+- 具同駅,Gudō Station
+- 郡上八幡駅,Gujō-Hachiman Station
+- 郡上大和駅,Gujō-Yamato Station
+- 公庄駅,Gujō Station
+- 求名駅,Gumyō Station
+- 弘明寺駅 (京急),Gumyōji Station (Keikyu)
+- 弘明寺駅 (横浜市営地下鉄),Gumyōji Station (Yokohama Subway)
+- 郡中港駅,Gunchū Port Station
+- 郡中駅,Gunchū Station
+- 群馬藤岡駅,Gunma-Fujioka Station
+- 群馬原町駅,Gunma-Haramachi Station
+- 群馬総社駅,Gunma-Sōja Station
+- 群馬八幡駅,Gunma-Yawata Station
+- 群馬大津駅,Gunma-Ōtsu Station
+- 玉桂寺前駅,Gyokukeijimae Station
+- 行田駅,Gyōda Station
+- 行田市駅,Gyōdashi Station
+- 行徳駅,Gyōtoku Station
+- 郷原駅,Gōbara Station
+- 江平駅,Gōbira Station
+- 郷戸駅,Gōdo Station (Fukushima)
+- 顔戸駅,Gōdo Station (Gifu)
+- 神戸駅 (群馬県),Gōdo Station (Gunma)
+- 合格駅,Gōkaku Station
+- 豪渓駅,Gōkei Station
+- 強羅駅,Gōra Station
+- 郷沢駅,Gōsawa Station
+- 剛志駅,Gōshi Station
+- 豪徳寺駅,Gōtokuji Station
+- 江津駅,Gōtsu Station
+- 江津本町駅,Gōtsuhommachi Station
+- 原爆ドーム前停留場,Hiroden Genbaku Dome-mae Station
+- 白島駅,Astram Hakushima Station
+- 羽場駅 (岐阜県),Haba Station (Gifu)
+- 羽場駅 (長野県),Haba Station (Nagano)
+- 埴生駅,Habu Station
+- 鉢形駅,Hachigata Station
+- 八浜駅,Hachihama Station
+- 八本松駅,Hachihommatsu Station
+- 八軒駅,Hachiken Station
+- 八幡駅 (静岡県),Hachiman Station
+- 八幡前駅 (京都府),Hachimanmae Station (Kyoto)
+- 八幡前駅 (和歌山県),Hachimanmae Station (Wakayama)
+- 八幡平駅,Hachimantai Station
+- 八幡山駅,Hachimanyama Station
+- 八森駅,Hachimori Station
+- 八戸駅,Hachinohe Station
+- 八戸貨物駅,Hachinohekamotsu Station
+- 八郎潟駅,Hachirōgata Station
+- 蓮駅,Hachisu Station
+- 八王子みなみ野駅,Hachiōji-Minamino Station
+- 八王子駅,Hachiōji Station
+- 羽立駅,Hadachi Station
+- 波高島駅,Hadakajima Station
+- 秦野駅,Hadano Station
+- 波田須駅,Hadasu Station
+- 南風崎駅,Haenosaki Station
+- 半家駅,Hage Station
+- 萩駅,Hagi Station
+- 萩原天神駅,Hagiharatenjin Station
+- 萩野駅,Hagino Station
+- 萩ノ茶屋駅,Haginochaya Station
+- 萩の台駅,Haginodai Station
+- None,Hagiurashōgakkō-mae Station
+- 萩原駅 (愛知県),Hagiwara Station (Aichi)
+- 萩原駅 (福岡県),Hagiwara Station (Fukuoka)
+- 萩山駅,Hagiyama Station
+- 羽衣駅,Hagoromo Station
+- 羽倉崎駅,Hagurazaki Station
+- 波久礼駅,Hagure Station
+- 羽黒駅 (愛知県),Haguro Station (Aichi)
+- 羽黒駅 (茨城県),Haguro Station (Ibaraki)
+- 羽黒下駅,Haguroshita Station
+- 萩生駅,Hagyū Station
+- 榛原駅,Haibara Station
+- 拝島駅,Haijima Station
+- 早岐駅,Haiki Station
+- 羽犬塚駅,Hainuzuka Station
+- 土師駅,Haji Station
+- 土師ノ里駅,Hajinosato Station
+- 計石駅,Hakariishi Station
+- 博多駅,Hakata Station
+- 博多南駅,Hakataminami Station
+- 波川駅,Hakawa Station
+- 八景水谷駅,Hakenomiya Station
+- 葉木駅,Haki Station
+- 八景島駅,Hakkeijima Station
+- 函館駅,Hakodate Station
+- 箱石駅,Hakoishi Station
+- 箱根板橋駅,Hakone-Itabashi Station
+- 箱根湯本駅,Hakone-Yumoto Station
+- 箱根ケ崎駅,Hakonegasaki Station
+- 箱作駅,Hakotsukuri Station
+- 箱崎九大前駅,Hakozaki-Kyūdaimae Station
+- 箱崎宮前駅,Hakozaki-Miyamae Station
+- 箱崎駅,Hakozaki Station
+- 白馬大池駅,Hakuba-Ōike Station
+- 白馬駅,Hakuba Station
+- 羽咋駅,Hakui Station
+- 柏農高校前駅,Hakunōkōkōmae Station
+- 白楽駅,Hakuraku Station
+- 柏林台駅,Hakurindai Station
+- 白山駅 (新潟県),Hakusan Station (Niigata)
+- 白山駅 (東京都),Hakusan Station (Tokyo)
+- 白山長滝駅,Hakusannagataki Station
+- 柏矢町駅,Hakuyachō Station
+- 柏陽駅,Hakuyō Station
+- 浜厚真駅,Hama-Atsuma Station
+- 浜金谷駅,Hama-Kanaya Station
+- 浜川崎駅,Hama-Kawasaki Station
+- 浜小清水駅,Hama-Koshimizu Station
+- None,Hama Station
+- 浜町駅,Hamachō Station
+- 浜田駅,Hamada Station
+- 浜田山駅,Hamadayama Station
+- None,Hamaderaekimae Station
+- 浜寺公園駅,Hamaderakōen Station
+- 浜河内駅,Hamagōchi Station
+- 浜原駅,Hamahara Station
+- 浜加積駅,Hamakazumi Station
+- 浜北駅,Hamakita Station
+- 浜松駅,Hamamatsu Station
+- 浜松町駅,Hamamatsuchō Station
+- 常葉大学前駅,Hamamatsudaigakumae Station
+- 浜村駅,Hamamura Station
+- 浜中駅,Hamanaka Station
+- 浜名湖佐久米駅,Hamanako-Sakume Station
+- 浜野駅,Hamano Station
+- 浜の宮駅,Hamanomiya Station
+- 浜坂駅,Hamasaka Station
+- 浜崎駅,Hamasaki Station
+- 浜田浦駅,Hamataura Station
+- 浜山公園北口駅,Hamayamakōen-Kitaguchi Station
+- 浜吉田駅,Hamayoshida Station
+- 羽村駅,Hamura Station
+- 花畑駅,Hanabatake Station
+- 花泉駅,Hanaizumi Station
+- 花小金井駅,Hanakoganei Station
+- 花隈駅,Hanakuma Station
+- 花巻駅,Hanamaki Station
+- 花巻空港駅,Hanamakikūkō Station
+- 波並駅,Hanami Station
+- はなみずき通駅,Hanamizukidōri Station
+- 花水坂駅,Hanamizuzaka Station
+- 花堂駅,Hanandō Station
+- 花咲駅,Hanasaki Station (Hokkaido)
+- 花崎駅,Hanasaki Station (Saitama)
+- 花白温泉駅,Hanashiro Station
+- None,Hanataguchi Station
+- 放出駅,Hanaten Station
+- 花輪駅,Hanawa Station
+- 花山駅,Hanayama Station
+- 花園駅 (香川県),Hanazono Station (Kagawa)
+- 花園駅 (京都府),Hanazono Station (Kyoto)
+- 花園町駅,Hanazonochō Station
+- 半田駅,Handa Station
+- 衣浦臨海鉄道半田線,Handafutō Station
+- 半田口駅,Handaguchi Station
+- 阪大病院前駅,Handaibyōinmae Station
+- 波根駅,Hane Station
+- 羽田空港第1ターミナル駅,Haneda Airport Terminal 1 Station
+- 羽田空港第1・第2ターミナル駅,Haneda Airport Terminal 1·2 Station
+- 羽田空港第2ターミナル駅,Haneda Airport Terminal 2 Station
+- 羽田空港第3ターミナル駅,Haneda Airport Terminal 3 Station
+- 羽根尾駅,Haneo Station
+- 母野駅,Hanno Station (Gifu)
+- 飯能駅,Hannō Station
+- 羽ノ浦駅,Hanoura Station
+- 阪神国道駅,Hanshin-Kokudō Station
+- 羽貫駅,Hanuki Station
+- 羽生駅,Hanyū Station
+- 羽生田駅,Hanyūda Station
+- 半蔵門駅,Hanzōmon Station
+- 羽帯駅,Haobi Station
+- 原駅 (愛知県),Hara Station (Aichi)
+- 原駅 (香川県),Hara Station (Kagawa)
+- 原駅 (静岡県),Hara Station (Shizuoka)
+- 原田駅 (静岡県),Harada Station
+- 原市駅,Haraichi Station
+- 払川駅,Haraigawa Station
+- 原宿駅,Harajuku Station
+- 原水駅,Haramizu Station
+- 原向駅,Haramukō Station
+- 原野駅,Harano Station
+- 原ノ町駅,Haranomachi Station
+- 原谷駅,Haranoya Station
+- 腹帯駅,Haratai Station
+- 原当麻駅,Harataima Station
+- ハーバーランド駅,Harborland Station
+- はりま勝原駅,Harima-Katsuhara Station
+- 播磨下里駅,Harima-Shimosato Station
+- 播磨新宮駅,Harima-Shingū Station
+- 播磨高岡駅,Harima-Takaoka Station
+- 播磨徳久駅,Harima-Tokusa Station
+- 播磨横田駅,Harima-Yokota Station
+- 播磨駅,Harima Station
+- 播磨町駅,Harimachō Station
+- はりまや橋停留場,Harimayabashi Station
+- 針中野駅,Harinakano Station
+- None,Hariusu Station
+- ハーモニーホール駅,Harmony Hall Station
+- 原田駅 (福岡県),Haruda Station
+- 春江駅,Harue Station
+- はるひ野駅,Haruhino Station
+- 春賀駅,Haruka Station
+- 春木駅,Haruki Station
+- 春木場駅,Harukiba Station
+- 原町駅,Harumachi Station
+- 春田駅,Haruta Station
+- 春立駅,Harutachi Station
+- 晴山駅,Haruyama Station
+- 飯山満駅,Hasama Station
+- 長谷駅 (兵庫県),Hase Station (Hyogo)
+- 長谷駅 (神奈川県),Hase Station (Kanagawa)
+- 長谷寺駅,Hasedera Station
+- 波子駅,Hashi Station
+- 箸別駅,Hashibetsu Station
+- 波止浜駅,Hashihama Station
+- 階上駅,Hashikami Station
+- 箸蔵駅,Hashikura Station
+- 羽島市役所前駅,Hashimashiyakushomae Station
+- 橋本駅 (福岡県),Hashimoto Station (Fukuoka)
+- 橋本駅 (神奈川県),Hashimoto Station (Kanagawa)
+- 橋本駅 (京都府),Hashimoto Station (Kyoto)
+- 橋本駅 (和歌山県),Hashimoto Station (Wakayama)
+- 箸尾駅,Hashio Station
+- 端岡駅,Hashioka Station
+- 柱野駅,Hashirano Station
+- 発寒中央駅,Hassamu-Chūō Station
+- 発寒駅,Hassamu Station
+- 発寒南駅,Hassamuminami Station
+- 蓮田駅,Hasuda Station
+- 蓮ケ池駅,Hasugaike Station
+- None,Hasumachi Station
+- 蓮根駅,Hasune Station
+- 蓮沼駅,Hasunuma Station
+- 葉多駅,Hata Station (Hyogo)
+- 波田駅,Hata Station (Nagano)
+- 幡生駅,Hatabu Station
+- 畑田駅,Hatada Station
+- 波多江駅,Hatae Station
+- 幡ヶ谷駅,Hatagaya Station
+- 畠田駅,Hatakeda Station
+- 八多喜駅,Hataki Station
+- 端間駅,Hatama Station
+- 旗の台駅,Hatanodai Station
+- 波多浦駅,Hataura Station
+- 幡屋駅,Hataya Station
+- 八丁堀駅,Hatchōbori Station (Tokyo)
+- 八丁牟田駅,Hatchōmuta Station
+- 八丁畷駅,Hatchōnawate Station
+- 鳩ヶ谷駅,Hatogaya Station
+- 鳩ノ巣駅,Hatonosu Station
+- 羽鳥駅,Hatori Station
+- 初台駅,Hatsudai Station
+- 初石駅,Hatsuishi Station
+- 廿日市市役所前駅,Hatsukaichi-shiyakusho-mae Station
+- 廿日市駅,Hatsukaichi Station
+- 初狩駅,Hatsukari Station
+- 初野駅,Hatsuno Station
+- 初芝駅,Hatsushiba Station
+- 初島駅,Hatsushima Station
+- 初富駅,Hatsutomi Station
+- 八田駅,Hatta Station
+- 初田牛駅,Hattaushi Station
+- 服部天神駅,Hattori-tenjin Station
+- 服部駅 (岡山県),Hattori Station (Okayama)
+- 服部川駅,Hattorigawa Station
+- 八東駅,Hattō Station
+- 芳養駅,Haya Station
+- 隼駅,Hayabusa Station
+- 早通駅,Hayadōri Station
+- 早口駅,Hayaguchi Station
+- 速星駅,Hayahoshi Station
+- 早川駅,Hayakawa Station
+- 早来駅,Hayakita Station
+- 早瀬駅,Hayase Station
+- 林駅,Hayashi Station
+- 早島駅,Hayashima Station
+- 林道駅,Hayashimichi Station
+- 林野駅,Hayashino Station
+- 林崎松江海岸駅,Hayashisaki-Matsuekaigan Station
+- 林崎駅,Hayashizaki Station
+- 早戸駅,Hayato Station (Fukushima)
+- 隼人駅,Hayato Station (Kagoshima)
+- 早月加積駅,Hayatsukikazumi Station
+- 羽床駅,Hayuka Station
+- 迫川駅,Hazakawa Station
+- 羽間駅,Hazama Station (Kagawa)
+- 狭間駅,Hazama Station (Tokyo)
+- 羽沢横浜国大駅,Hazawa yokohama-kokudai Station
+- 波瀬駅,Haze Station
+- 蛇田駅,Hebita Station
+- 辺川駅,Hegawa Station
+- 平群駅,Heguri Station
+- 平安通駅,Heiandōri Station
+- 平城駅,Heijō Station
+- 平成駅,Heisei Station
+- 平田駅 (岩手県),Heita Station
+- 平和駅,Heiwa Station
+- 平和台駅 (千葉県),Heiwadai Station (Chiba)
+- 平和台駅 (東京都),Heiwadai Station (Tokyo)
+- None,Heiwadōri-Itchōme Station
+- 平和通駅,Heiwadōri Station
+- 平和島駅,Heiwajima Station
+- 平津駅,Heizu Station
+- 碧海古井駅,Hekikai-Furui Station
+- 碧南中央駅,Hekinan-Chūō Station
+- 碧南駅,Hekinan Station
+- 逸見駅,Hemi Station
+- 艫作駅,Henashi Station
+- 戸坂駅,Hesaka Station
+- 戸田駅 (山口県),Heta Station
+- 陽羽里駅,Hibari Station
+- 雲雀丘花屋敷駅,Hibarigaoka-Hanayashiki Station
+- ひばりが丘駅,Hibarigaoka Station (Hokkaido)
+- ひばりヶ丘駅,Hibarigaoka Station (Tokyo)
+- 比婆山駅,Hibayama Station
+- 日比野駅 (愛知県愛西市),Hibino Station (Aisai, Aichi)
+- 日比野駅 (名古屋市),Hibino Station (Nagoya, Aichi)
+- 日比谷駅,Hibiya Station
+- 飛騨古川駅,Hida-Furukawa Station
+- 飛騨萩原駅,Hida-Hagiwara Station
+- 飛騨細江駅,Hida-Hosoe Station
+- 飛騨一ノ宮駅,Hida-Ichinomiya Station
+- 飛騨金山駅,Hida-Kanayama Station
+- 飛騨国府駅,Hida-Kokufu Station
+- 飛騨宮田駅,Hida-Miyada Station
+- 飛騨小坂駅,Hida-Osaka Station
+- 日高幌別駅,Hidaka-Horobetsu Station
+- 日高三石駅,Hidaka-Mitsuishi Station
+- 日高門別駅,Hidaka-Mombetsu Station
+- 日高東別駅,Hidaka-Tōbetsu Station
+- 左石駅,Hidariishi Station
+- 左堰駅,Hidariseki Station
+- 日出塩駅,Hideshio Station
+- 日出谷駅,Hideya Station
+- 比土駅,Hido Station
+- 比延駅,Hie Station
+- 比叡山坂本駅,Hieizan-Sakamoto Station
+- 東我孫子駅,Higashi-Abiko Station
+- 東吾野駅,Higashi-Agano Station
+- 東相内駅,Higashi-Ainonai Station
+- 東赤坂駅,Higashi-Akasaka Station
+- 東秋留駅,Higashi-Akiru Station
+- 東甘木駅,Higashi-Amagi Station
+- 東青原駅,Higashi-Aohara Station
+- 東青森駅,Higashi-Aomori Station
+- 東青山駅,Higashi-Aoyama Station
+- 東旭川駅,Higashi-Asahikawa Station
+- 東あずま駅,Higashi-Azuma Station
+- 東別府駅,Higashi-Beppu Station
+- 東枇杷島駅,Higashi-Biwajima Station
+- 東千葉駅,Higashi-Chiba Station
+- 東府中駅,Higashi-Fuchū Station
+- 東藤島駅,Higashi-Fujishima Station
+- 東藤原駅,Higashi-Fujiwara Station
+- 東福間駅,Higashi-Fukuma Station
+- 東福島駅,Higashi-Fukushima Station
+- 東福山駅,Higashi-Fukuyama Station
+- 東船橋駅,Higashi-Funabashi Station
+- 東船岡駅,Higashi-Funaoka Station
+- 東総元駅,Higashi-Fusamoto Station
+- 東伏見駅,Higashi-Fushimi Station
+- 東福生駅,Higashi-Fussa Station
+- 東二見駅,Higashi-Futami Station
+- 東下条駅,Higashi-Gejō Station
+- 東銀座駅,Higashi-Ginza Station
+- 東行田駅,Higashi-Gyōda Station
+- 東八森駅,Higashi-Hachimori Station
+- 東萩駅,Higashi-Hagi Station
+- 東羽衣駅,Higashi-Hagoromo Station
+- 東白楽駅,Higashi-Hakuraku Station
+- 東花輪駅,Higashi-Hanawa Station
+- 東花園駅,Higashi-Hanazono Station
+- 東飯能駅,Higashi-Hannō Station
+- 東觜崎駅,Higashi-Hashisaki Station
+- None,Higashi-Hatchō Station
+- 東幡豆駅,Higashi-Hazu Station
+- 東比恵駅,Higashi-Hie Station
+- 東姫路駅,Higashi-Himeji Station
+- 東広島駅,Higashi-Hiroshima Station
+- None,Higashi-Horonuka Station
+- 東市来駅,Higashi-Ichiki Station
+- 東池袋四丁目停留場,Higashi-Ikebukuro-Yonchōme Station
+- 東池袋駅,Higashi-Ikebukuro Station
+- 東生駒駅,Higashi-Ikoma Station
+- 東諫早駅,Higashi-Isahaya Station
+- 東石黒駅,Higashi-Ishiguro Station
+- 東一身田駅,Higashi-Ishinden Station
+- None,Higashi-Iwase Station
+- 東岩槻駅,Higashi-Iwatsuki Station
+- 東十条駅,Higashi-Jūjō Station
+- 東海神駅,Higashi-Kaijin Station
+- 東開聞駅,Higashi-Kaimon Station
+- 東貝塚駅,Higashi-Kaizuka Station
+- 東加古川駅,Higashi-Kakogawa Station
+- 東神奈川駅,Higashi-Kanagawa Station
+- 東金井駅,Higashi-Kanai Station
+- 東金沢駅,Higashi-Kanazawa Station
+- 東唐津駅,Higashi-Karatsu Station
+- 東刈谷駅,Higashi-Kariya Station
+- 東柏崎駅,Higashi-Kashiwazaki Station
+- 東桂駅,Higashi-Katsura Station
+- 東川口駅,Higashi-Kawaguchi Station
+- 東岸和田駅,Higashi-Kishiwada Station
+- 東北沢駅,Higashi-Kitazawa Station
+- 東清川駅,Higashi-Kiyokawa Station
+- 東小金井駅,Higashi-Koganei Station
+- 東粉浜停留場,Higashi-Kohama Station
+- 東小泉駅,Higashi-Koizumi Station
+- 東小倉駅,Higashi-Kokura Station
+- 東小諸駅,Higashi-Komoro Station
+- 東久根別駅,Higashi-Kunebetsu Station
+- 東久留米駅,Higashi-Kurume Station
+- 東釧路駅,Higashi-Kushiro Station
+- 東高円寺駅,Higashi-Kōenji Station
+- 東郡家駅,Higashi-Kōge Station
+- 東舞鶴駅,Higashi-Maizuru Station
+- 東松原駅,Higashi-Matsubara Station
+- 東松戸駅,Higashi-Matsudo Station
+- 東松江駅 (島根県),Higashi-Matsue Station (Shimane)
+- 東松江駅 (和歌山県),Higashi-Matsue Station (Wakayama)
+- 東松阪駅,Higashi-Matsusaka Station
+- 東松山駅,Higashi-Matsuyama Station
+- None,Higashi-Menda Station
+- 東美浜駅,Higashi-Mihama Station
+- 東三日市駅,Higashi-Mikkaichi Station
+- 東三国駅,Higashi-Mikuni Station
+- None,Higashi-Minato Station
+- 東水戸駅,Higashi-Mito Station
+- 東宮原駅,Higashi-Miyahara Station
+- 東水巻駅,Higashi-Mizumaki Station
+- 東門前駅,Higashi-Monzen Station
+- 東森駅,Higashi-Mori Station
+- 東毛呂駅,Higashi-Moro Station
+- 東向日駅,Higashi-Mukō Station
+- 東向島駅,Higashi-Mukōjima Station
+- 東村山駅,Higashi-Murayama Station
+- 東室蘭駅,Higashi-Muroran Station
+- 東長原駅,Higashi-Nagahara Station
+- 東長崎駅,Higashi-Nagasaki Station
+- 東長沢駅,Higashi-Nagasawa Station
+- 東名古屋港駅,Higashi-Nagoyakō Station
+- 東中神駅,Higashi-Nakagami Station
+- 東中間駅,Higashi-Nakama Station
+- 東中野駅,Higashi-Nakano Station
+- 東中津駅,Higashi-Nakatsu Station
+- 東中山駅,Higashi-Nakayama Station
+- 東滑川駅,Higashi-Namerikawa Station
+- 東成岩駅,Higashi-Narawa Station
+- 東成田駅,Higashi-Narita Station
+- 東鳴尾駅,Higashi-Naruo Station
+- 東根室駅,Higashi-Nemuro Station
+- 東日本橋駅,Higashi-Nihombashi Station
+- 東新潟駅,Higashi-Niigata Station
+- 東新津駅,Higashi-Niitsu Station
+- 東新川駅 (群馬県),Higashi-Nikkawa Station
+- 東野尻駅,Higashi-Nojiri Station
+- 東能代駅,Higashi-Noshiro Station
+- 東小浜駅,Higashi-Obama Station
+- 東追分信号場,Higashi-Oiwake Station
+- 東岡山駅,Higashi-Okayama Station
+- 東岡崎駅,Higashi-Okazaki Station
+- 東尾道駅,Higashi-Onomichi Station
+- 東林間駅,Higashi-Rinkan Station
+- 東六線駅,Higashi-Rokusen Station
+- 東犀川三四郎駅,Higashi-Saigawa-Sanshirō Station
+- 東酒田駅,Higashi-Sakata Station
+- 東三条駅,Higashi-Sanjō Station
+- 東佐野駅,Higashi-Sano Station
+- 東札幌駅,Higashi-Sapporo Station
+- 東仙台駅,Higashi-Sendai Station
+- 東鹿越駅,Higashi-Shikagoe Station
+- 東新木停留場,Higashi-Shingi Station
+- 東新宿駅,Higashi-Shinjuku Station
+- 東新庄駅,Higashi-Shinjō Station
+- 東新川駅 (山口県),Higashi-Shinkawa Station
+- 東新町駅,Higashi-Shinmachi Station
+- 東新湊駅,Higashi-Shinminato Station
+- 東塩釜駅,Higashi-Shiogama Station
+- 東白石駅,Higashi-Shiroishi Station
+- 東静内駅,Higashi-Shizunai Station
+- 東静岡駅,Higashi-Shizuoka Station
+- 東宿毛駅,Higashi-Sukumo Station
+- 東須磨駅,Higashi-Suma Station
+- 東総社駅,Higashi-Sōja Station
+- 東田平駅,Higashi-Tabira Station
+- 東田子の浦駅,Higashi-Tagonoura Station
+- 東高崎駅,Higashi-Takasaki Station
+- 東高須駅,Higashi-Takasu Station
+- 東滝川駅,Higashi-Takikawa Station
+- 東多久駅,Higashi-Taku Station
+- None,Higashi-Taragi Station
+- 東垂水駅,Higashi-Tarumi Station
+- 東天下茶屋停留場,Higashi-Tengachaya Station
+- 東所沢駅,Higashi-Tokorozawa Station
+- 東富岡駅,Higashi-Tomioka Station
+- None,Higashi-Tondendōri Station
+- 東戸塚駅,Higashi-Totsuka Station
+- 東富山駅,Higashi-Toyama Station
+- 東都農駅,Higashi-Tsuno Station
+- 東津山駅,Higashi-Tsuyama Station
+- 東都筑駅,Higashi-Tsuzuki Station
+- 東梅田駅,Higashi-Umeda Station
+- 東浦和駅,Higashi-Urawa Station
+- 東鷲宮駅,Higashi-Washinomiya Station
+- 東山北駅,Higashi-Yamakita Station
+- 東山梨駅,Higashi-Yamanashi Station
+- 東山代駅,Higashi-Yamashiro Station
+- 東山田駅,Higashi-Yamata Station
+- 東矢本駅,Higashi-Yamoto Station
+- 東八尾駅,Higashi-Yatsuo Station
+- 東淀川駅,Higashi-Yodogawa Station
+- 東横田駅,Higashi-Yokota Station
+- 東結城駅,Higashi-Yūki Station
+- 東逗子駅,Higashi-Zushi Station
+- 東尾久三丁目停留場,Higashi-ogu-sanchōme Station
+- 東大更駅,Higashi-Ōbuke Station
+- 東大館駅,Higashi-Ōdate Station
+- 東大垣駅,Higashi-Ōgaki Station
+- 東大島駅,Higashi-Ōjima Station
+- 東青梅駅,Higashi-Ōme Station
+- 東大宮駅,Higashi-Ōmiya Station
+- 東大崎駅,Higashi-Ōsaki Station
+- 東大手駅,Higashi-Ōte Station
+- 東別院駅,Higashibetsuin Station
+- 東町駅,Higashichō Station
+- 東館駅,Higashidate Station
+- 東浜駅,Higashihama Station
+- None,Higashihonganjimae Station
+- 東区役所前駅,Higashikuyakushomae Station
+- 東工業前停留場,Higashikōgyōmae Station
+- 東根駅,Higashine Station
+- 東野駅 (岐阜県),Higashino Station (Gifu)
+- 東野駅 (京都府),Higashino Station (Kyoto)
+- ひがし野団地駅,Higashinodanchi Station
+- 東園駅,Higashisono Station
+- 東浦駅,Higashiura Station
+- 東山駅 (北海道),Higashiyama Station (Hokkaido)
+- 東山駅 (京都府),Higashiyama Station (Kyoto)
+- 東山駅 (奈良県),Higashiyama Station (Nara)
+- None,Higashiyama Station (Okayama)
+- 東山公園駅 (愛知県),Higashiyamakōen Station (Aichi)
+- 東山公園駅 (鳥取県),Higashiyamakōen Station (Tottori)
+- 東大和市駅,Higashiyamatoshi Station
+- 干潟駅,Higata Station
+- 日切駅,Higiri Station
+- 肥後二見駅,Higo-Futami Station
+- 肥後伊倉駅,Higo-Ikura Station
+- 肥後高田駅,Higo-Kōda Station
+- 肥後長浜駅,Higo-Nagahama Station
+- None,Higo-Nishinomura Station
+- 肥後田浦駅,Higo-Tanoura Station
+- 肥後大津駅,Higo-Ōzu Station
+- 肥後橋駅,Higobashi Station
+- 樋越駅,Higoshi Station
+- ひぐち駅,Higuchi Station (Ibaraki)
+- 樋口駅,Higuchi Station (Saitama)
+- 日出駅,Hiji Station
+- 比地大駅,Hijidai Station
+- 聖高原駅,Hijirikōgen Station
+- 光駅,Hikari Station
+- 光が丘駅,Hikarigaoka Station
+- 光の森駅,Hikarinomori Station
+- 氷川台駅,Hikawadai Station
+- 引田駅,Hiketa Station
+- 曳舟駅,Hikifune Station
+- 引治駅,Hikiji Station
+- 蟇目駅,Hikime Station
+- ひこね芹川駅,Hikone-Serikawa Station
+- 彦根駅,Hikone Station
+- 彦根口駅,Hikoneguchi Station
+- 彦崎駅,Hikosaki Station
+- 彦山駅,Hikosan Station
+- 姫駅,Hime Station
+- ひめじ別所駅,Himeji-Bessho Station
+- 姫路駅,Himeji Station
+- None,Himejikamotsu Station
+- 姫島駅,Himejima Station
+- 姫川信号場,Himekawa Station (Hokkaido)
+- 姫川駅 (新潟県),Himekawa Station (Niigata)
+- None,Himematsu Station
+- 姫宮駅,Himemiya Station
+- 氷見駅,Himi Station
+- 比奈駅,Hina Station
+- 日長駅,Hinaga Station (Aichi)
+- 日永駅,Hinaga Station (Mie)
+- 日奈久温泉駅,Hinaguonsen Station
+- 日生駅,Hinase Station
+- 日当駅,Hinata Station
+- 日向和田駅,Hinatawada Station
+- 日当山駅,Hinatayama Station
+- 日根野駅,Hineno Station
+- 日野駅 (長野県),Hino Station (Nagano)
+- 日野駅 (滋賀県),Hino Station (Shiga)
+- 日野駅 (東京都),Hino Station (Tokyo)
+- 日登駅,Hinobori Station
+- 日の出駅,Hinode Station (Tokyo)
+- 日ノ出町駅,Hinodechō Station
+- 日野春駅,Hinoharu Station
+- 日御子駅,Hinomiko Station
+- 涸沼駅,Hinuma Station
+- 日岡駅,Hioka Station
+- 比良駅 (愛知県),Hira Station (Aichi)
+- 比良駅 (滋賀県),Hira Station (Shiga)
+- 平針駅,Hirabari Station
+- 平林駅 (新潟県),Hirabayashi Station (Niigata)
+- 平林駅 (大阪府),Hirabayashi Station (Osaka)
+- 比羅夫駅,Hirafu Station
+- 平福駅,Hirafuku Station
+- 平木駅,Hiragi Station
+- 平岸駅 (北海道赤平市),Hiragishi Station (Akabira, Hokkaido)
+- 平岸駅 (札幌市),Hiragishi Station (Sapporo, Hokkaido)
+- 平原駅,Hirahara Station
+- 平端駅,Hirahata Station
+- 平井駅 (愛媛県),Hirai Station (Ehime)
+- 平井駅 (東京都),Hirai Station (Tokyo)
+- 平石駅,Hiraishi Station
+- 平磯駅,Hiraiso Station
+- 平岩駅,Hiraiwa Station
+- 平泉駅,Hiraizumi Station
+- 平賀駅,Hiraka Station
+- 枚方公園駅,Hirakatakōen Station
+- 枚方市駅,Hirakatashi Station
+- 平川駅,Hirakawa Station
+- 開駅,Hiraki Station
+- 平木田駅,Hirakida Station
+- 平子駅,Hirako Station
+- 平倉駅,Hirakura Station
+- 平間駅,Hirama Station
+- 平松駅,Hiramatsu Station
+- 平内駅,Hiranai Station
+- ひらんだ駅,Hiranda Station
+- 平野駅 (福島県),Hirano Station (Fukushima)
+- 平野駅 (兵庫県),Hirano Station (Hyogo)
+- 平野駅 (JR西日本),Hirano Station (JR West)
+- 平野駅 (Osaka Metro),Hirano Station (Osaka Municipal Subway)
+- 平沼橋駅,Hiranumabashi Station
+- 平岡駅,Hiraoka Station (Nagano)
+- 枚岡駅,Hiraoka Station (Osaka)
+- 平田駅 (高知県),Hirata Station (Kochi)
+- 平田駅 (長野県),Hirata Station (Nagano)
+- 平田駅 (滋賀県),Hirata Station (Shiga)
+- 平田町駅,Hiratachō Station
+- 平滝駅,Hirataki Station
+- 平戸橋駅,Hirato-bashi Station
+- 平塚駅,Hiratsuka Station
+- 平津戸駅,Hiratsuto Station
+- 平山駅,Hirayama Station
+- 平山城址公園駅,Hirayamajōshikōen Station
+- 鰭ヶ崎駅,Hiregasaki Station
+- 広神戸駅,Hiro-Gōdo Station
+- 広駅,Hiro Station
+- 広大附属学校前停留場,Hirodaifuzokugakkō-mae Station
+- 広電阿品駅,Hiroden-ajina Station
+- 広電廿日市駅,Hiroden-hatsukaichi Station
+- 広電本社前停留場,Hiroden-honsha-mae Station
+- 広電五日市駅,Hiroden-itsukaichi Station
+- 広電宮島口駅,Hiroden-miyajima-guchi Station
+- 広電西広島駅,Hiroden-nishi-hiroshima Station
+- 白島停留場,Hiroden Hakushima Station
+- 八丁堀停留場,Hiroden Hatchobori Station
+- 比治山橋停留場,Hiroden Hijiyama-bashi Station
+- 比治山下停留場,Hiroden Hijiyama-shita Station
+- 広島港停留場,Hiroden Hiroshima Port Station
+- 広島駅,Hiroden Hiroshima Station
+- 本川町停留場,Hiroden Honkawa-cho Station
+- 広畑駅,Hirohata Station
+- 広川ビーチ駅,Hirokawa Beach Station
+- 広木駅,Hiroki Station
+- 広小路駅,Hirokōji Station (Mie)
+- 広小路停留場,Hirokōji Station (Toyama)
+- 弘高下駅,Hirokōshita Station
+- 広野ゴルフ場前駅,Hirono Golf-jō-mae Station
+- 広野駅 (福島県),Hirono Station (Fukushima)
+- 広野駅 (兵庫県),Hirono Station (Hyogo)
+- 広尾駅,Hiroo Station
+- 広丘駅,Hirooka Station
+- 弘前学院大前駅,Hirosaki-Gakuindai-mae Station
+- 弘前東高前駅,Hirosaki-Higashikōmae Station
+- 弘前駅,Hirosaki Station
+- ひろせ野鳥の森駅,Hirose-Yacho-no-Mori Station
+- 広瀬通駅,Hirose-dōri Station
+- 広島貨物ターミナル駅,Hiroshima Freight Terminal Station
+- 広島駅,Hiroshima Station
+- 広田駅,Hirota Station
+- 広戸駅,Hiroto Station
+- 広原駅,Hirowara Station
+- None,Hirui Station
+- 久居駅,Hisai Station
+- 久ノ浜駅,Hisanohama Station
+- 久屋大通駅,Hisaya-Ōdōri Station
+- 比島駅,Hishima Station
+- 日代駅,Hishiro Station
+- 日田駅,Hita Station
+- 常陸青柳駅,Hitachi-Aoyagi Station
+- 常陸大子駅,Hitachi-Daigo Station
+- 常陸鴻巣駅,Hitachi-Kōnosu Station
+- None,Hitachi-Ogawa Station
+- 常陸多賀駅,Hitachi-Taga Station
+- 常陸津田駅,Hitachi-Tsuda Station
+- 常陸大宮駅,Hitachi-Ōmiya Station
+- 常陸太田駅,Hitachi-Ōta Station
+- 日立駅,Hitachi Station
+- 比立内駅,Hitachinai Station
+- ひたち野うしく駅,Hitachino-Ushiku Station
+- 一日市場駅,Hitoichiba Station
+- 人丸駅,Hitomaru Station
+- 人丸前駅,Hitomarumae Station
+- 人見駅,Hitomi Station
+- 一橋学園駅,Hitotsubashigakuen Station
+- 一ツ木駅,Hitotsugi Station
+- 人吉駅,Hitoyoshi-Onsen Station
+- 人吉駅,Hitoyoshi Station
+- 比津駅,Hitsu Station
+- 日宇駅,Hiu Station
+- 緋牛内駅,Hiushinai Station
+- 日羽駅,Hiwa Station
+- 日和田駅,Hiwada Station
+- 日和佐駅,Hiwasa Station
+- 鵯越駅,Hiyodorigoe Station
+- 日吉本町駅,Hiyoshi-Honchō Station
+- 日吉駅 (神奈川県),Hiyoshi Station (Kanagawa)
+- 日吉駅 (京都府),Hiyoshi Station (Kyoto)
+- 日吉町駅,Hiyoshichō Station
+- 肥前旭駅,Hizen-Asahi Station
+- 肥前麓駅,Hizen-Fumoto Station
+- 肥前浜駅,Hizen-Hama Station
+- 肥前飯田駅,Hizen-Iida Station
+- 肥前鹿島駅,Hizen-Kashima Station
+- 肥前古賀駅,Hizen-Koga Station
+- 肥前久保駅,Hizen-Kubo Station
+- 肥前長野駅,Hizen-Nagano Station
+- 肥前長田駅,Hizen-Nagata Station
+- 肥前七浦駅,Hizen-Nanaura Station
+- 肥前竜王駅,Hizen-Ryūō Station
+- 肥前白石駅,Hizen-Shiroishi Station
+- 肥前大浦駅,Hizen-Ōura Station
+- 日詰駅,Hizume Station
+- 保原駅,Hobara Station
+- 保々駅,Hobo Station (Mie)
+- 保土ケ谷駅,Hodogaya Station
+- 程久保駅,Hodokubo Station
+- 北海道医療大学駅,Hokkaidō-Iryōdaigaku Station
+- 法華口駅,Hokkeguchi Station
+- 鉾田駅,Hokota Station
+- ほくほく大島駅,Hokuhoku-Ōshima Station
+- 北濃駅,Hokunō Station
+- 北星駅,Hokusei Station
+- 北勢中央公園口駅,Hokuseichūōkōenguchi Station
+- 金沢駅,Hokutetsu-Kanazawa Station
+- 保見駅,Homi Station
+- None,Hommachi-Gochōme Station
+- None,Hommachi-Rokuchōme Station
+- None,Hommachi-Sanchōme Station
+- None,Hommachi-Yonchōme Station
+- 本町駅,Hommachi Station
+- 本俣賀駅,Hommataga Station
+- None,Hommokufutō Station
+- 本厚木駅,Hon-Atsugi Station
+- 本千葉駅,Hon-Chiba Station
+- 本八戸駅,Hon-Hachinohe Station
+- 本諫早駅,Hon-Isahaya Station
+- 本石倉駅,Hon-Ishikura Station
+- 本川越駅,Hon-Kawagoe Station
+- 本駒込駅,Hon-Komagome Station
+- 本鵠沼駅,Hon-Kugenuma Station
+- 本黒田駅,Hon-Kuroda Station
+- 本牟田部駅,Hon-Mutabe Station
+- 本長篠駅,Hon-Nagashino Station
+- 本中野駅,Hon-Nakano Station
+- 本塩釜駅,Hon-Shiogama Station
+- 本竜野駅,Hon-Tatsuno Station
+- 本津幡駅,Hon-Tsubata Station
+- 本吉原駅,Hon-Yoshiwara Station
+- 本由良駅,Hon-Yura Station
+- 保内駅,Honai Station
+- 誉田駅,Honda Station
+- 本通駅,Hondōri Station (Astram Line)
+- 本通停留場,Hondōri Station (Hiroden)
+- 本郷三丁目駅,Hongō-Sanchōme Station
+- 本郷駅 (愛知県),Hongō Station (Aichi)
+- 本郷駅 (福岡県),Hongō Station (Fukuoka)
+- 本郷駅 (広島県),Hongō Station (Hiroshima)
+- 本郷駅 (長野県),Hongō Station (Nagano)
+- 本郷台駅,Hongōdai Station
+- 本宮駅 (富山県),Hongū Station
+- 本陣駅,Honjin Station
+- 本所吾妻橋駅,Honjo-Azumabashi Station
+- 本庄早稲田駅,Honjō-Waseda Station
+- 本荘駅,Honjō Station (Fukui)
+- 本城駅,Honjō Station (Fukuoka)
+- 本庄駅,Honjō Station (Saitama)
+- 本川内駅,Honkawachi Station
+- 本桐駅,Honkiri Station
+- 本名駅,Honna Station
+- 本納駅,Honnō Station
+- 甫嶺駅,Horei Station
+- 堀江駅,Horie Station
+- 堀米駅,Horigome Station
+- None,Horikawa-Koizumi Station
+- 堀川駅,Horikawa Station
+- 堀切菖蒲園駅,Horikiri-Shōbuen Station
+- 堀切駅,Horikiri Station
+- 堀内駅,Horinai Station
+- 堀ノ内駅,Horinouchi Station
+- 堀田駅 (名鉄),Horita Station (Meitetsu)
+- 堀田駅 (名古屋市営地下鉄),Horita Station (Nagoya Municipal Subway)
+- 堀内公園駅,Horiuchi-Kōen Station
+- 幌別駅,Horobetsu Station
+- 幌平橋駅,Horohirabashi Station
+- 幌向駅,Horomui Station
+- 幌延駅,Horonobe Station
+- 幌糠駅,Horonuka Station
+- 星田駅,Hoshida Station
+- 星ヶ丘駅 (愛知県),Hoshigaoka Station (Aichi)
+- 星ヶ丘駅 (大阪府),Hoshigaoka Station (Osaka)
+- 糒駅,Hoshii Station
+- 星川駅 (神奈川県),Hoshikawa Station (Kanagawa)
+- 星川駅 (三重県),Hoshikawa Station (Mie)
+- ほしみ駅,Hoshimi Station
+- None,Hoshino Station
+- 星置駅,Hoshioki Station
+- 布施屋駅,Hoshiya Station
+- 細畑駅,Hosobata Station
+- 細倉マインパーク前駅,Hosokura Mine Park Mae Station
+- 細野駅,Hosono Station
+- 細岡駅,Hosooka Station
+- 細呂木駅,Hosorogi Station
+- 細浦駅,Hosoura Station
+- 細谷駅 (群馬県),Hosoya Station (Gunma)
+- 細谷駅 (静岡県),Hosoya Station (Shizuoka)
+- 発坂駅,Hossaka Station
+- 保田駅 (千葉県),Hota Station (Chiba)
+- 保田駅 (福井県),Hota Station (Fukui)
+- 穂高駅,Hotaka Station
+- 螢田駅,Hotaruda Station
+- 蛍池駅,Hotarugaike Station
+- 布袋駅,Hotei Station
+- ほっとゆだ駅,Hottoyuda Station
+- 上枝駅,Hozue Station
+- 保津峡駅,Hozukyō Station
+- 穂積駅,Hozumi Station
+- ハウステンボス駅,Huis Ten Bosch Station
+- 兵庫駅,Hyōgo Station
+- 表木山駅,Hyōkiyama Station
+- 瓢箪山駅 (愛知県),Hyōtanyama Station (Aichi)
+- 瓢箪山駅 (大阪府),Hyōtanyama Station (Osaka)
+- 日向北方駅,Hyūga-Kitakata Station
+- 日向沓掛駅,Hyūga-Kutsukake Station
+- 日向前田駅,Hyūga-Maeda Station
+- 日向長井駅,Hyūga-Nagai Station
+- 日向新富駅,Hyūga-Shintomi Station
+- 日向庄内駅,Hyūga-Shōnai Station
+- 日向住吉駅,Hyūga-Sumiyoshi Station
+- 日向大束駅,Hyūga-Ōtsuka Station
+- 日向駅,Hyūga Station
+- 日向市駅,Hyūgashi Station
+- 宝達駅,Hōdatsu Station
+- 宝殿駅,Hōden Station
+- 蓬栄駅,Hōei Station
+- 防府貨物駅,Hōfu-Kamotsu Station
+- 防府駅,Hōfu Station
+- 宝木駅,Hōgi Station
+- 北条町駅,Hōjōmachi Station
+- 法界院駅,Hōkaiin Station
+- 伯耆大山駅,Hōki-Daisen Station
+- 伯耆溝口駅,Hōki-Mizoguchi Station
+- 方谷駅,Hōkoku Station
+- 方南町駅,Hōnanchō Station
+- 蓬萊駅,Hōrai Station
+- ほうらい丘駅,Hōraioka Station
+- 法隆寺駅,Hōryūji Station
+- 宝積寺駅,Hōshakuji Station
+- 宝珠山駅,Hōshuyama Station
+- 祝園駅,Hōsono Station
+- 豊水すすきの駅,Hōsui-Susukino Station
+- 保谷駅,Hōya Station
+- 宝山寺駅,Hōzanji Station
+- 法善寺駅,Hōzenji Station
+- 井原駅,Ibara Station
+- 井原市駅,Ibaraichi Station
+- 茨木市駅,Ibaraki-shi Station
+- 茨木駅,Ibaraki Station
+- 茨目駅,Ibarame Station
+- 揖斐駅,Ibi Station
+- 伊比井駅,Ibii Station
+- 動橋駅,Iburihashi Station
+- 指宿駅,Ibusuki Station
+- 市場駅 (福岡県),Ichiba Station (Fukuoka)
+- 市場駅 (JR西日本),Ichiba Station (JR West)
+- 市場駅 (神戸電鉄),Ichiba Station (Shintetsu)
+- 一畑口駅,Ichibataguchi Station
+- 市部駅,Ichibe Station
+- None,Ichibu Station (Kumamoto)
+- 一分駅,Ichibu Station (Nara)
+- 市振駅,Ichiburi Station
+- 市田駅,Ichida Station
+- 市が尾駅,Ichigao Station
+- 市ケ谷駅,Ichigaya Station
+- 市塙駅,Ichihana Station
+- 市原駅,Ichihara Station
+- None,Ichihashi Station
+- 市島駅,Ichijima Station
+- 一乗谷駅,Ichijōdani Station
+- 一乗寺駅,Ichijōji Station
+- 市川大門駅,Ichikawa-Daimon Station
+- 市川真間駅,Ichikawa-Mama Station
+- 市川大野駅,Ichikawa-Ono Station
+- 市川塩浜駅,Ichikawa-Shiohama Station
+- 市川本町駅,Ichikawa-hommachi Station
+- 市川駅,Ichikawa Station
+- 市来駅,Ichiki Station
+- 市波駅,Ichinami Station
+- 市辺駅,Ichinobe Station
+- 一之江駅,Ichinoe Station
+- 一戸駅,Ichinohe Station
+- 市ノ川駅,Ichinokawa Station
+- 一宮駅,Ichinomiya Station
+- 櫟本駅,Ichinomoto Station
+- 市ノ瀬駅,Ichinose Station
+- 一ノ関駅,Ichinoseki Station
+- 一の鳥居駅,Ichinotorii Station
+- 一ノ割駅,Ichinowari Station
+- 一の渡駅,Ichinowatari Station
+- 市布駅,Ichinuno Station
+- 市尾駅,Ichio Station
+- 市岡駅,Ichioka Station
+- 一志駅,Ichishi Station
+- 市城駅,Ichishiro Station
+- 市棚駅,Ichitana Station
+- 市坪駅,Ichitsubo Station
+- 井田川駅,Idagawa Station
+- 伊太祈曽駅,Idakiso Station
+- 猪田道駅,Idamichi Station
+- 井出駅,Ide Station
+- 出光美術館駅,Idemitsu Bijutsukan Station
+- 井戸駅,Ido Station
+- 井土ヶ谷駅,Idogaya Station
+- 家久駅,Iehisa Station
+- 家地川駅,Iejigawa Station
+- 家城駅,Ieki Station
+- 家中駅,Ienaka Station
+- 家山駅,Ieyama Station
+- 伊賀神戸駅,Iga-Kambe Station
+- 伊賀上津駅,Iga-Kōzu Station
+- 伊賀上野駅,Iga-Ueno Station
+- 伊賀駅,Iga Station
+- 伊上駅,Igami Station
+- 五十島駅,Igashima Station
+- 伊賀屋駅,Igaya Station
+- 居組駅,Igumi Station
+- None,Ihara Station
+- 井原里駅,Iharanosato Station
+- 伊保駅,Iho Station
+- 飯井駅,Ii Station
+- 飯羽間駅,Iibama Station
+- 飯田駅 (石川県),Iida Station (Ishikawa)
+- 飯田駅,Iida Station (Nagano)
+- 飯田橋駅,Iidabashi Station
+- 飯田岡駅,Iidaoka Station
+- 飯倉駅,Iigura Station
+- 飯島駅,Iijima Station
+- 飯森駅,Iimori Station
+- 飯浦駅,Iinoura Station
+- 飯沼駅,Iinuma Station
+- 飯岡駅,Iioka Station
+- 飯山駅,Iiyama Station
+- 飯坂温泉駅,Iizaka Onsen Station
+- 飯塚駅,Iizuka Station
+- 飯詰駅,Iizume Station
+- 井尻駅,Ijiri Station
+- 伊集院駅,Ijūin Station
+- 碇ケ関駅,Ikarigaseki Station
+- 伊香牛駅,Ikaushi Station
+- 井川さくら駅,Ikawa-Sakura Station
+- 井川駅,Ikawa Station
+- 伊川谷駅,Ikawadani Station
+- 伊賀和志駅,Ikawashi Station
+- 五十崎駅,Ikazaki Station
+- 池場駅,Ikeba Station
+- 池部駅,Ikebe Station
+- 池袋駅,Ikebukuro Station
+- 池田駅 (北海道),Ikeda Station (Hokkaido)
+- 池田駅 (熊本県),Ikeda Station (Kumamoto)
+- 池田駅 (大阪府),Ikeda Station (Osaka)
+- 池田園駅,Ikedaen Station
+- 池上駅,Ikegami Station
+- 池尻大橋駅,Ikejiri-Ōhashi Station
+- 池尻駅,Ikejiri Station
+- 池野駅,Ikeno Station
+- 池戸駅,Ikenobe Station
+- 池谷駅,Ikenotani Station
+- 池ノ上駅,Ikenoue Station
+- 池の浦シーサイド駅,Ikenoura Seaside Station
+- 池の浦駅,Ikenoura Station
+- 池下駅,Ikeshita Station
+- 池月駅,Ikezuki Station
+- 一貴山駅,Ikisan Station
+- いこいの広場駅,Ikoinohiroba Station
+- いこいの村駅,Ikoinomura Station
+- 生駒駅,Ikoma Station
+- 生駒山上駅,Ikomasanjō Station
+- 生地駅,Ikuji Station
+- 生野駅 (北海道),Ikuno Station (Hokkaido)
+- 生野駅 (兵庫県),Ikuno Station (Hyogo)
+- 生野屋駅,Ikunoya Station
+- 井倉駅,Ikura Station
+- 軍畑駅,Ikusabata Station
+- 生田駅 (神奈川県),Ikuta Station
+- 生田原駅,Ikutahara Station
+- 幾寅駅,Ikutora Station
+- 今治駅,Imabari Station
+- 今橋駅,Imabashi Station
+- 今別駅,Imabetsu Station
+- 今福駅,Imabuku Station
+- 今出川駅,Imadegawa Station
+- 今福鶴見駅,Imafuku-Tsurumi Station
+- 今川駅 (新潟県),Imagawa Station (Niigata)
+- 今川駅 (大阪府),Imagawa Station (Osaka)
+- 今川河童駅,Imagawakappa Station
+- 今隈駅,Imaguma Station
+- 今井駅,Imai Station
+- 今市駅,Imaichi Station
+- 今井浜海岸駅,Imaihamakaigan Station
+- 今池駅 (愛知県),Imaike Station (Aichi)
+- 今池駅 (福岡県),Imaike Station (Fukuoka)
+- None,Imaike Station (Osaka)
+- 今伊勢駅,Imaise Station
+- 今泉駅,Imaizumi Station
+- 今宿駅,Imajuku Station
+- 今庄駅,Imajō Station
+- 今宮駅,Imamiya Station
+- 今宮戎駅,Imamiyaebisu Station
+- 伊万里駅,Imari Station
+- 今山駅,Imayama Station
+- 今里駅 (近鉄),Imazato Station (Kintetsu)
+- 今里駅 (Osaka Metro),Imazato Station (Osaka Municipal Subway)
+- 今津駅 (兵庫県),Imazu Station (Hyogo)
+- 今津駅 (大分県),Imazu Station (Oita)
+- 印旛日本医大駅,Imba-Nihon-idai Station
+- 印場駅,Imba Station
+- 因原駅,Imbara Station
+- 伊部駅,Imbe Station
+- 伊奈中央駅,Ina-Chūō Station
+- 伊那福岡駅,Ina-Fukuoka Station
+- 伊那本郷駅,Ina-Hongō Station
+- 伊那上郷駅,Ina-Kamisato Station
+- 伊那北駅,Ina-Kita Station
+- 伊那小沢駅,Ina-Kozawa Station
+- 伊那松島駅,Ina-Matsushima Station
+- 伊那新町駅,Ina-Shimmachi Station
+- 伊那田島駅,Ina-Tajima Station
+- 伊那八幡駅,Ina-Yawata Station
+- 伊那大島駅,Ina-Ōshima Station
+- 伊奈駅,Ina Station
+- 因幡船岡駅,Inaba-Funaoka Station
+- 因幡社駅,Inaba-Yashiro Station
+- 稲田駅,Inada Station
+- 稲田堤駅,Inadazutsumi Station
+- 猪名寺駅,Inadera Station
+- 稲枝駅,Inae Station
+- 名古屋臨海高速鉄道あおなみ線,Inaei Station
+- 稲毛駅,Inage Station
+- 稲毛海岸駅,Inagekaigan Station
+- 稲城長沼駅,Inagi-Naganuma Station
+- 稲城駅,Inagi Station
+- 稲原駅,Inahara Station
+- 稲穂駅,Inaho Station
+- 田舎館駅,Inakadate Station
+- 依那古駅,Inako Station (Mie)
+- 稲子駅,Inako Station (Shizuoka)
+- 印南駅,Inami Station
+- 稲村ヶ崎駅,Inamuragasaki Station
+- 稲野駅,Inano Station
+- 稲尾駅,Inao Station
+- 稲荷町停留場,Inari-machi Station (Hiroshima)
+- 稲荷駅,Inari Station
+- 稲荷町駅 (東京都),Inarichō Station
+- 稲荷口駅,Inariguchi Station
+- 稲荷町駅 (富山県),Inarimachi Station (Toyama)
+- 稲荷山駅,Inariyama Station
+- 稲荷山公園駅,Inariyamakōen Station
+- 伊那市駅,Inashi Station
+- 稲士別駅,Inashibetsu Station
+- 稲戸井駅,Inatoi Station
+- 猪苗代駅,Inawashiro Station
+- 猪苗代湖畔駅,Inawashirokohan Station
+- 稲沢駅,Inazawa Station
+- 稲積公園駅,Inazumikōen Station
+- 稲梓駅,Inazusa Station
+- 院内駅,Innai Station
+- 院庄駅,Innoshō Station
+- 井野駅 (千葉県),Ino Station (Chiba)
+- 井野駅 (群馬県),Ino Station (Gunma)
+- 伊野駅,Ino Station (JR Shikoku)
+- 伊野停留場,Ino Station (Tosa Electric Railway)
+- 伊野駅前停留場,Inoekimae Station
+- 井の頭公園駅,Inokashira-kōen Station
+- 井口駅 (広島県),Inokuchi Station (Hiroshima)
+- 井口駅 (石川県),Inokuchi Station (Ishikawa)
+- 伊野灘駅,Inonada Station
+- 猪谷駅,Inotani Station
+- いのつき駅,Inotsuki Station
+- 国際センター駅 (宮城県),International Center Station
+- 犬吠駅,Inubō Station
+- 犬飼駅,Inukai Station
+- 犬川駅,Inukawa Station
+- 犬山遊園駅,Inuyama-yūen Station
+- 犬山駅,Inuyama Station
+- 犬山口駅,Inuyamaguchi Station
+- 犬塚駅,Inuzuka Station
+- 印西牧の原駅,Inzai-Makinohara Station
+- 伊納駅,Inō Station (Hokkaido)
+- 居能駅,Inō Station (Yamaguchi)
+- 井荻駅,Iogi Station
+- 医王寺前駅,Iohji-mae Station
+- 伊尾木駅,Ioki Station
+- 一本松駅 (福岡県),Ippommatsu Station (Fukuoka)
+- 一本松駅 (埼玉県),Ippommatsu Station (Saitama)
+- 五十川駅,Iragawa Station
+- 入地駅,Ireji Station
+- 伊里駅,Iri Station
+- 入明駅,Iriake Station
+- 入江岡駅,Irieoka Station
+- 杁ヶ池公園駅,Irigaikekōen Station
+- 入広瀬駅,Irihirose Station
+- いりなか駅,Irinaka Station
+- 入野駅 (鹿児島県),Irino Station
+- 入曽駅,Iriso Station
+- 入生田駅,Iriuda Station
+- 入谷駅 (神奈川県),Iriya Station (Kanagawa)
+- 入谷駅 (東京都),Iriya Station (Tokyo)
+- 入山瀬駅,Iriyamase Station
+- 入間市駅,Irumashi Station
+- 医療センター駅,Iryō Center Station
+- 石原駅 (京都府),Isa Station
+- 諫早東高校駅,Isahaya-higashi-kōkō Station
+- 諫早駅,Isahaya Station
+- 井細田駅,Isaida Station
+- 伊佐領駅,Isaryō Station
+- 石和温泉駅,Isawaonsen Station
+- 伊勢朝日駅,Ise-Asahi Station
+- 伊勢八太駅,Ise-Hata Station
+- 伊勢治田駅,Ise-Hatta Station
+- 伊勢石橋駅,Ise-Ishibashi Station
+- 伊勢鎌倉駅,Ise-Kamakura Station
+- 伊勢柏崎駅,Ise-Kashiwazaki Station
+- 伊勢川口駅,Ise-Kawaguchi Station
+- 伊勢川島駅,Ise-Kawashima Station
+- 伊勢松本駅,Ise-Matsumoto Station
+- 伊勢中川駅,Ise-Nakagawa Station
+- 伊勢中原駅,Ise-Nakahara Station
+- 伊勢奥津駅,Ise-Okitsu Station
+- 伊勢竹原駅,Ise-Takehara Station
+- 伊勢上野駅,Ise-Ueno Station
+- 伊勢若松駅,Ise-Wakamatsu Station
+- 伊勢八知駅,Ise-Yachi Station
+- 伊勢大井駅,Ise-Ōi Station
+- 伊勢田駅,Iseda Station
+- 井関駅,Isegi Station
+- 伊勢原駅,Isehara Station
+- 伊勢崎駅,Isesaki Station
+- 伊勢市駅,Iseshi Station
+- 伊勢佐木長者町駅,Isezakichōjamachi Station
+- 石場駅,Ishiba Station
+- 石橋駅 (栃木県),Ishibashi Station (Tochigi)
+- 石橋阪大前駅,Ishibashi handai-mae Station
+- 石部駅,Ishibe Station
+- 石仏駅,Ishibotoke Station
+- 石田駅 (福岡県),Ishida Station (Fukuoka)
+- 石田駅 (京都府),Ishida Station (Kyoto)
+- 石鳥谷駅,Ishidoriya Station
+- 石蟹駅,Ishiga Station
+- 石上駅,Ishigami Station
+- 石神前駅,Ishigamimae Station
+- 石下駅,Ishige Station
+- 石浜駅,Ishihama Station
+- 石原町駅,Ishiharamachi Station
+- 石井駅 (兵庫県),Ishii Station (Hyogo)
+- 石井駅 (徳島県),Ishii Station (Tokushima)
+- 石地駅,Ishiji Station
+- 石垣駅,Ishikaki Station
+- 石狩金沢駅,Ishikari-Kanazawa Station
+- 石狩沼田駅,Ishikari-Numata Station
+- 石狩月形駅,Ishikari-Tsukigata Station
+- 石川プール前駅,Ishikawa Pool Mae Station
+- 石川駅 (JR東日本),Ishikawa Station (JR East)
+- 石川駅 (弘南鉄道),Ishikawa Station (Kōnan Railway)
+- 石川町駅,Ishikawachō Station
+- 石川台駅,Ishikawadai Station
+- 石切駅,Ishikiri Station
+- 石越駅,Ishikoshi Station
+- 石倉駅,Ishikura Station
+- 石嶺駅,Ishimine Station
+- 一身田駅,Ishinden Station
+- 石野駅,Ishino Station
+- 石巻駅,Ishinomaki Station
+- 石巻あゆみ野駅,Ishinomakiayumino Station
+- 石岡駅,Ishioka Station
+- None,Ishiokaminamidai Station
+- 石手川公園駅,Ishitegawa Park Station
+- 石打ダム駅,Ishiuchi Dam Station
+- 石打駅,Ishiuchi Station
+- 石原駅 (埼玉県),Ishiwara Station
+- 石谷信号場,Ishiya Station
+- 石屋川駅,Ishiyagawa Station
+- 石山駅,Ishiyama Station
+- 石山寺駅,Ishiyamadera Station
+- 石才駅,Ishizai Station
+- 石津駅,Ishizu Station (Gifu)
+- None,Ishizu Station (Osaka)
+- 石鎚山駅,Ishizuchiyama Station
+- 石津川駅,Ishizugawa Station
+- アイランドセンター駅,Island Center Station
+- アイランド北口駅,Island Kitaguchi Station
+- 磯部駅 (群馬県),Isobe Station (Gunma)
+- 磯部駅 (石川県),Isobe Station (Ishikawa)
+- 磯分内駅,Isobunnai Station
+- 磯子駅,Isogo Station
+- 磯原駅,Isohara Station
+- 五十市駅,Isoichi Station
+- 磯ノ浦駅,Isonoura Station
+- 五十猛駅,Isotake Station
+- 磯山駅,Isoyama Station
+- 磯崎駅,Isozaki Station
+- 一社駅,Issha Station
+- 一勝地駅,Isshōchi Station
+- 石動駅,Isurugi Station
+- 五十鈴ケ丘駅,Isuzugaoka Station
+- 五十鈴川駅,Isuzugawa Station
+- 石生駅,Isō Station
+- 板橋本町駅,Itabashi-honchō Station
+- 板橋区役所前駅,Itabashi-kuyakusho-mae Station
+- 板橋駅,Itabashi Station
+- 飯給駅,Itabu Station
+- 井高野駅,Itakano Station
+- 潮来駅,Itako Station
+- 板倉東洋大前駅,Itakura-tōyōdaimae Station
+- 伊丹駅 (阪急),Itami Station (Hankyu)
+- 伊丹駅 (JR西日本),Itami Station (JR West)
+- 板持駅,Itamochi Station
+- 板野駅,Itano Station
+- 板谷駅,Itaya Station
+- 板宿駅,Itayado Station
+- 板柳駅,Itayanagi Station
+- 糸田駅,Itoda Station
+- 糸井駅,Itoi Station
+- 糸魚川駅,Itoigawa Station
+- 糸魚沢駅,Itoizawa Station
+- 糸貫駅,Itonuki Station
+- 糸島高校前駅,Itoshimakōkō-mae Station
+- 愛し野駅,Itoshino Station
+- 糸崎駅,Itozaki Station
+- 五日市駅,Itsukaichi Station
+- 五日町駅,Itsukamachi Station
+- 五橋駅,Itsutsubashi Station
+- 伊東駅,Itō Station
+- 岩館駅,Iwadate Station
+- 岩出駅,Iwade Station
+- 岩出山駅,Iwadeyama Station
+- 岩舟駅,Iwafune Station
+- 岩船町駅,Iwafunemachi Station
+- 岩鼻駅,Iwahana Station
+- 岩原駅,Iwahara Station
+- 岩井駅,Iwai Station
+- 岩泉小本駅,Iwaizumi-Omoto Station
+- 岩泉駅,Iwaizumi Station
+- 岩宿駅,Iwajuku Station
+- 磐城浅川駅,Iwaki-Asakawa Station
+- 磐城塙駅,Iwaki-Hanawa Station
+- 磐城石井駅,Iwaki-Ishii Station
+- 磐城石川駅,Iwaki-Ishikawa Station
+- 岩城みなと駅,Iwaki-Minato Station
+- 磐城守山駅,Iwaki-Moriyama Station
+- 磐城棚倉駅,Iwaki-Tanakura Station
+- 磐城常葉駅,Iwaki-Tokiwa Station
+- 磐城太田駅,Iwaki-Ōta Station
+- いわき駅,Iwaki Station (Fukushima)
+- 磐城駅,Iwaki Station (Nara)
+- 岩切駅,Iwakiri Station
+- 岩国駅,Iwakuni Station
+- 岩倉駅 (愛知県),Iwakura Station (Aichi)
+- 岩倉駅 (京都府),Iwakura Station (Kyoto)
+- 岩倉駅 (山口県),Iwakura Station (Yamaguchi)
+- 岩峅寺駅,Iwakuraji Station
+- 岩間駅,Iwama Station
+- 岩松駅,Iwamatsu Station
+- 石見福光駅,Iwami-Fukumitsu Station
+- 石見川越駅,Iwami-Kawagoe Station
+- 石見川本駅,Iwami-Kawamoto Station
+- 石見松原駅,Iwami-Matsubara Station
+- 石見津田駅,Iwami-Tsuda Station
+- 石見都賀駅,Iwami-Tsuga Station
+- 石見簗瀬駅,Iwami-Yanaze Station
+- 石見横田駅,Iwami-Yokota Station
+- 石見駅,Iwami Station (Nara)
+- 岩美駅,Iwami Station (Tottori)
+- 岩見沢駅,Iwamizawa Station
+- 岩本駅,Iwamoto Station
+- 岩本町駅,Iwamotochō Station
+- 岩村駅,Iwamura Station
+- 岩村田駅,Iwamurada Station
+- 岩室駅,Iwamuro Station
+- 岩波駅,Iwanami Station
+- 巌根駅,Iwane Station
+- 岩根橋駅,Iwanebashi Station
+- 岩野目駅,Iwanome Station
+- 岩ノ下駅,Iwanoshita Station
+- 岩沼駅,Iwanuma Station
+- 岩原スキー場前駅,Iwappara-Skiing Ground Station
+- 岩沢駅,Iwasawa Station
+- 岩瀬駅,Iwase Station
+- None,Iwasehama Station
+- 岩島駅,Iwashima Station
+- 石清水八幡宮駅,Iwashimizu-hachimangū Station
+- 岩代駅,Iwashiro Station
+- 岩代清水駅,Iwashiroshimizu Station
+- 磐田駅,Iwata Station (Shizuoka)
+- 岩田駅,Iwata Station (Yamaguchi)
+- 岩滝口駅,Iwatakiguchi Station
+- 岩手船越駅,Iwate-Funakoshi Station
+- 岩手二日町駅,Iwate-Futsukamachi Station
+- 岩手飯岡駅,Iwate-Iioka Station
+- 岩手上郷駅,Iwate-Kamigō Station
+- 岩手刈屋駅,Iwate-Kariya Station
+- 岩手川口駅,Iwate-Kawaguchi Station
+- いわて沼宮内駅,Iwate-Numakunai Station
+- 岩手和井内駅,Iwate-Wainai Station
+- 岩手大川駅,Iwate-Ōkawa Station
+- 石刀駅,Iwato Station
+- 岩塚駅,Iwatsuka Station
+- 岩槻駅,Iwatsuki Station
+- 岩屋駅 (兵庫県),Iwaya Station (Hyogo)
+- 岩屋駅 (佐賀県),Iwaya Station (Saga)
+- 岩山駅,Iwayama Station
+- 揖屋駅,Iya Station
+- 祖谷口駅,Iyaguchi Station
+- 伊予土居駅,Iyo-Doi Station
+- 伊予氷見駅,Iyo-Himi Station
+- 伊予平野駅,Iyo-Hirano Station
+- 伊予北条駅,Iyo-Hōjō Station
+- 伊予石城駅,Iyo-Iwaki Station
+- 伊予出石駅,Iyo-Izushi Station
+- 伊予亀岡駅,Iyo-Kameoka Station
+- 伊予上灘駅,Iyo-Kaminada Station
+- 伊予小松駅,Iyo-Komatsu Station
+- 伊予三島駅,Iyo-Mishima Station
+- 伊予宮野下駅,Iyo-Miyanoshita Station
+- 伊予三芳駅,Iyo-Miyoshi Station
+- 伊予長浜駅,Iyo-Nagahama Station
+- 伊予中山駅,Iyo-Nakayama Station
+- 伊予西条駅,Iyo-Saijō Station
+- 伊予桜井駅,Iyo-Sakurai Station
+- 伊予寒川駅,Iyo-Sangawa Station
+- 伊予白滝駅,Iyo-Shirataki Station
+- いよ立花駅,Iyo-Tachibana Station
+- 伊予立川駅,Iyo-Tachikawa Station
+- 伊予富田駅,Iyo-Tomita Station
+- 伊予和気駅,Iyo-Wake Station
+- 伊予横田駅,Iyo-Yokota Station
+- 伊予吉田駅,Iyo-Yoshida Station
+- 伊予大平駅,Iyo-Ōhira Station
+- 伊予大洲駅,Iyo-Ōzu Station
+- 伊与喜駅,Iyoki Station
+- 伊予市駅,Iyoshi Station
+- 伊豆熱川駅,Izu-Atagawa Station
+- 伊豆北川駅,Izu-Hokkawa Station
+- 伊豆稲取駅,Izu-Inatori Station
+- 伊豆長岡駅,Izu-Nagaoka Station
+- 伊豆仁田駅,Izu-Nitta Station
+- 伊豆多賀駅,Izu-Taga Station
+- 伊豆大川駅,Izu-Ōkawa Station
+- いずえ駅,Izue Station
+- 伊豆急下田駅,Izukyu Shimoda Station
+- 伊豆高原駅,Izukōgen Station
+- 出目駅,Izume Station
+- いずみ中央駅,Izumi-Chūō Station (Kanagawa)
+- 泉中央駅,Izumi-Chūō Station (Miyagi)
+- 和泉中央駅,Izumi-Chūō Station (Osaka)
+- 和泉府中駅,Izumi-Fuchū Station
+- 和泉橋本駅,Izumi-Hashimoto Station
+- 和泉大宮駅,Izumi-Omiya Station
+- 泉外旭川駅,Izumi-Sotoasahikawa Station
+- 和泉砂川駅,Izumi-Sunagawa Station
+- 泉体育館駅,Izumi-Taiikukan Station
+- 和泉多摩川駅,Izumi-Tamagawa Station
+- 和泉鳥取駅,Izumi-Tottori Station
+- 泉駅 (福島市),Izumi Station (Fukushima)
+- 泉駅 (福島県いわき市),Izumi Station (Iwaki)
+- 出水駅,Izumi Station (Kagoshima)
+- 泉ケ丘駅,Izumigaoka Station
+- 泉郷駅,Izumigō Station
+- いずみ野駅,Izumino Station
+- 泉大津駅,Izumiotsu Station
+- 泉佐野駅,Izumisano Station
+- 泉沢駅,Izumisawa Station
+- 泉田駅,Izumita Station
+- 泉崎駅,Izumizaki Station
+- 出馬駅,Izumma Station
+- 出雲大東駅,Izumo-Daitō Station
+- 出雲神西駅,Izumo-Jinzai Station
+- 出雲三成駅,Izumo-Minari Station
+- 出雲坂根駅,Izumo-Sakane Station
+- 出雲八代駅,Izumo-Yashiro Station
+- 出雲横田駅,Izumo-Yokota Station
+- 出雲科学館パークタウン前駅,Izumo Science Center Park Town Mae Station
+- 出雲大社前駅,Izumo Taisha-mae Station
+- 出雲市駅,Izumoshi Station
+- 出雲崎駅,Izumozaki Station
+- 城北駅,Astram Johoku Station
+- JA広島病院前駅,Hiroden JA Hiroshimabyoin-mae Station
+- 女学院前停留場,Hiroden Jogakuin-mae Station
+- Jヴィレッジ駅,J-Village Station
+- JR淡路駅,JR-Awaji Station
+- JR野江駅,JR-Noe Station
+- JR総持寺駅,JR-Sōjiji Station
+- JR藤森駅,JR Fujinomori Station
+- JR五位堂駅,JR Goidō Station
+- JR河内永和駅,JR Kawachi-Eiwa Station
+- JR三山木駅,JR Miyamaki Station
+- JR長瀬駅,JR Nagase Station
+- JR難波駅,JR Namba Station
+- JR小倉駅,JR Ogura Station
+- JR俊徳道駅,JR Shuntokumichi Station
+- ジヤトコ前駅,Jatco-mae Station
+- 自治医大駅,Jichi-idai Station
+- 自動車学校前駅,Jidōshagakkōmae Station
+- 自衛隊前駅,Jieitaimae Station
+- 地福駅,Jifuku Station
+- 慈眼寺駅,Jigenji Station
+- 地御前駅,Jigozen Station
+- 寺家駅,Jike Station
+- None,Jikkokutōge-Noboriguchi Station
+- None,Jikkokutōge Station
+- 陣場駅,Jimba Station
+- 神保原駅,Jimbohara Station
+- 神保町駅,Jimbōchō Station
+- 神町駅,Jimmachi Station
+- 神武寺駅,Jimmuji Station
+- 甚目寺駅,Jimokuji Station
+- 仁愛女子高校駅,Jin'ai Joshikōkō Station
+- None,Jin'aigurandomae Station
+- 地名駅,Jina Station
+- 神代駅 (秋田県),Jindai Station
+- 神宮丸太町駅,Jingū-Marutamachi Station
+- 神宮前駅,Jingū-mae Station
+- 神宮寺駅,Jingūji Station
+- 神宮西駅,Jingūnishi Station
+- 陣原駅,Jinnoharu Station
+- 神領駅,Jinryō Station
+- 治良門橋駅,Jiroenbashi Station
+- 次郎丸駅,Jirōmaru Station
+- 自由ヶ丘駅,Jiyūgaoka Station (Aichi)
+- 自由が丘駅,Jiyūgaoka Station (Tokyo)
+- 地蔵橋駅,Jizōbashi Station
+- 地蔵町駅,Jizōmachi Station
+- 女子大駅,Joshidai Station
+- 常永駅,Jōei Station
+- 上越国際スキー場前駅,Jōetsu-Kokusai Ski-jo-mae Station
+- 城ヶ崎海岸駅,Jōgasakikaigan Station
+- None,Jōgawara Station
+- 上下駅,Jōge Station
+- 上下浜駅,Jōgehama Station
+- 城端駅,Jōhana Station
+- 上戸駅 (福島県),Jōko Station
+- 定光寺駅,Jōkōji Station
+- 縄文小ヶ田駅,Jōmon-Ogata Station
+- 上毛高原駅,Jōmōkōgen Station
+- 城野駅 (JR九州),Jōno Station (JR Kyushu)
+- 城野駅 (北九州高速鉄道),Jōno Station (Kitakyushu Monorail)
+- 上呂駅,Jōro Station
+- 浄心駅,Jōshin Station
+- 上州福島駅,Jōshū-Fukushima Station
+- 上州一ノ宮駅,Jōshū-Ichinomiya Station
+- 上州七日市駅,Jōshū-Nanokaichi Station
+- 上州新屋駅,Jōshū-Niiya Station
+- 上州富岡駅,Jōshū-Tomioka Station
+- 浄水駅,Jōsui Station
+- 城東駅,Jōtō Station (Gunma)
+- 上道駅 (岡山県),Jōtō Station (Okayama)
+- 城陽駅,Jōyō Station
+- 十条駅 (近鉄),Jūjō Station (Kintetsu)
+- 十条駅 (京都市営地下鉄),Jūjō Station (Kyoto Municipal Subway)
+- 十条駅 (東京都),Jūjō Station (Tokyo)
+- 十九条駅,Jūkujō Station
+- 十文字駅,Jūmonji Station
+- 十二兼駅,Jūnikane Station
+- 十二湖駅,Jūniko Station
+- 十二橋駅,Jūnikyō Station
+- 十二所駅,Jūnisho Station
+- 十三駅,Jūsō Station
+- 十王駅,Jūō Station
+- 県庁前駅 (広島県),Astram Kencho-mae Station
+- 海岸通停留場,Hiroden Kaigan-dori Station
+- 紙屋町東停留場,Hiroden Kamiya-cho-higashi Station
+- 紙屋町西停留場,Hiroden Kamiya-cho-nishi Station
+- 銀山町停留場,Hiroden Kanayama-cho Station
+- 観音町停留場,Hiroden Kanon-machi Station
+- 家庭裁判所前停留場,Hiroden Katei Saibansho-mae Station
+- 小網町停留場,Hiroden Koami-cho Station
+- 草津南駅,Hiroden Kusatsu-minami Station
+- 草津駅 (広島県),Hiroden Kusatsu Station
+- 蒲池駅 (愛知県),Kabaike Station
+- 神畑駅,Kabatake Station
+- 可部駅,Kabe Station (Hiroshima)
+- 河辺駅,Kabe Station (Tokyo)
+- 兜駅,Kabuto Station (Fukushima)
+- 加太駅 (三重県),Kabuto Station (Mie)
+- 兜沼駅,Kabutonuma Station
+- かぶと山駅,Kabutoyama Station
+- 勝どき駅,Kachidoki Station
+- 勝川駅,Kachigawa Station
+- 加太駅 (和歌山県),Kada Station
+- 鹿渡駅,Kado Station
+- 門出駅,Kadode Station
+- 門川駅,Kadogawa Station
+- 勝原駅,Kadohara Station
+- 門真南駅,Kadomaminami Station
+- 門真市駅,Kadomashi Station
+- 門松駅,Kadomatsu Station
+- 角の浜駅,Kadonohama Station
+- 門沢橋駅,Kadosawabashi Station
+- 門島駅,Kadoshima Station
+- 替佐駅,Kaesa Station
+- 加布里駅,Kafuri Station
+- 加賀笠間駅,Kaga-Kasama Station
+- 香我美駅,Kagami Station
+- 各務ケ原駅,Kagamigahara Station
+- 鏡川橋停留場,Kagamigawabashi Station
+- 鏡石駅,Kagamiishi Station
+- 加賀温泉駅,Kagaonsen Station
+- 香登駅,Kagato Station
+- 蚊爪駅,Kagatsume Station
+- 香川駅,Kagawa Station (Kanagawa)
+- 嘉川駅,Kagawa Station (Yamaguchi)
+- 影森駅,Kagemori Station
+- 影野駅,Kageno Station
+- 花月総持寺駅,Kagetsu-sōjiji Station
+- 籠原駅,Kagohara Station
+- None,Kagoshima-chūō-eki-mae Station
+- 鹿児島中央駅,Kagoshima-chūō Station
+- None,Kagoshima-eki-mae Station
+- 鹿児島駅,Kagoshima Station
+- 神楽岡駅,Kaguraoka Station
+- 神楽坂駅,Kagurazaka Station
+- 香久山駅,Kaguyama Station
+- 甲斐岩間駅,Kai-Iwama Station
+- 甲斐小泉駅,Kai-Koizumi Station
+- 甲斐住吉駅,Kai-Sumiyoshi Station
+- 甲斐常葉駅,Kai-Tokiwa Station
+- 甲斐上野駅,Kai-Ueno Station
+- 甲斐大和駅,Kai-Yamato Station
+- 甲斐大泉駅,Kai-Ōizumi Station
+- 甲斐大島駅,Kai-Ōshima Station
+- 柏原駅 (兵庫県),Kaibara Station
+- 貝田駅,Kaida Station
+- 海部駅,Kaifu Station
+- 海岸寺駅,Kaiganji Station
+- 海浜幕張駅,Kaihimmakuhari Station
+- 開発駅,Kaihotsu Station
+- 海路駅,Kaiji Station
+- 海神駅,Kaijin Station
+- 蚕ノ社駅,Kaikonoyashiro Station
+- 開明駅,Kaimei Station
+- 開聞駅,Kaimon Station
+- 荷稲駅,Kaina Station
+- 海南駅,Kainan Station
+- 偕楽園駅,Kairakuen Station
+- 開成駅,Kaisei Station
+- 海田市駅,Kaitaichi Station
+- 海崎駅,Kaizaki Station
+- 海瀬駅,Kaize Station (Nagano)
+- 皆瀬駅,Kaize Station (Nagasaki)
+- 貝津駅,Kaizu Station
+- 貝塚市役所前駅,Kaizuka Shiyakushomae Station
+- 貝塚駅 (福岡県),Kaizuka Station (Fukuoka)
+- 貝塚駅 (大阪府),Kaizuka Station (Osaka)
+- 加治駅,Kaji Station
+- None,Kajigaya Kamotsu Terminal Station
+- 梶が谷駅,Kajigaya Station
+- 鰍沢口駅,Kajikazawaguchi Station
+- 加治木駅,Kajiki Station
+- 梶栗郷台地駅,Kajikuri-Gōdaichi Station
+- 梶田駅,Kajita Station
+- 梶原停留場,Kajiwara Station
+- 梶屋敷駅,Kajiyashiki Station
+- 各務原市役所前駅,Kakamigahara-shiyakusho-mae Station
+- 掛澗駅,Kakarima Station
+- 掛川市役所前駅,Kakegawa-shiyakusho-mae Station
+- 掛川駅,Kakegawa Station
+- 佳景山駅,Kakeyama Station
+- 柿平駅,Kakidaira Station
+- 柿ケ島駅,Kakigashima Station
+- 柿ノ木駅,Kakinoki Station
+- 柿生駅,Kakio Station
+- 柿下温泉口駅,Kakishitaonsenguchi Station
+- 柿崎駅,Kakizaki Station
+- 加古川駅,Kakogawa Station
+- 賀来駅,Kaku Station
+- 角田駅,Kakuda Station
+- 角茂谷駅,Kakumodani Station
+- 角館駅,Kakunodate Station
+- 覚王山駅,Kakuōzan Station
+- 釜淵駅,Kamabuchi Station
+- 蒲池駅 (福岡県),Kamachi Station
+- 釜戸駅,Kamado Station
+- 釜ヶ淵駅,Kamagafuchi Station
+- 鎌ヶ谷駅,Kamagaya Station
+- 鎌ヶ谷大仏駅,Kamagayadaibutsu Station
+- 釜石駅,Kamaishi Station
+- 鎌倉駅,Kamakura Station
+- 鎌倉高校前駅,Kamakurakōkō-mae Station
+- 釜ノ鼻駅,Kamanohana Station
+- 鎌瀬駅,Kamase Station
+- 蒲須坂駅,Kamasusaka Station
+- 鎌田駅,Kamata Station (Ehime)
+- 蒲田駅,Kamata Station (Tokyo)
+- 鎌手駅,Kamate Station
+- 鎌取駅,Kamatori Station
+- 釜谷駅,Kamaya Station
+- 竈山駅,Kamayama Station
+- 蒲原駅,Kambara Station
+- 神戸駅 (愛知県),Kambe Station
+- 亀有駅,Kameari Station
+- 亀田駅,Kameda Station
+- 亀嵩駅,Kamedake Station
+- 亀川駅,Kamegawa Station
+- 亀井駅,Kamei Station
+- 亀戸駅,Kameido Station
+- 亀戸水神駅,Kameidosuijin Station
+- 亀島駅,Kamejima Station
+- 亀甲駅,Kamenokō Station
+- 亀岡駅,Kameoka Station
+- 亀山駅 (兵庫県),Kameyama Station (Hyogo)
+- 亀山駅 (三重県),Kameyama Station (Mie)
+- 亀崎駅,Kamezaki Station
+- 上相浦駅,Kami-Ainoura Station
+- 上有住駅,Kami-Arisu Station
+- 上有田駅,Kami-Arita Station
+- 上芦別駅,Kami-Ashibetsu Station
+- 上麻生駅,Kami-Asō Station
+- 上厚内信号場,Kami-Atsunai Station
+- 上深川駅,Kami-Fukawa Station
+- 上福岡駅,Kami-Fukuoka Station
+- 上富良野駅,Kami-Furano Station
+- 上二田駅,Kami-Futada Station
+- 上強羅駅,Kami-Gōra Station
+- 上桧木内駅,Kami-Hinokinai Station
+- 上保原駅,Kami-Hobara Station
+- None,Kami-Hommachi Station
+- 上穂波駅,Kami-Honami Station
+- 上幌向駅,Kami-Horomui Station
+- 上幌延駅,Kami-Horonobe Station
+- 上星川駅,Kami-Hoshikawa Station
+- 上井草駅,Kami-Igusa Station
+- 上飯島駅,Kami-Iijima Station
+- 上伊集院駅,Kami-Ijūin Station
+- 上今井駅,Kami-Imai Station
+- 上今市駅,Kami-Imaichi Station
+- 上伊万里駅,Kami-Imari Station
+- 上伊田駅,Kami-Ita Station
+- 上板橋駅,Kami-Itabashi Station
+- 上石見駅,Kami-Iwami Station
+- 上嘉川駅,Kami-Kagawa Station
+- 上神梅駅,Kami-Kambai Station
+- 上金田駅,Kami-Kanada Station
+- None,Kami-Kasada Station
+- 上片桐駅,Kami-Katagiri Station
+- 上桂駅,Kami-Katsura Station
+- 上川立駅,Kami-Kawatachi Station
+- 上北沢駅,Kami-Kitazawa Station
+- 上古沢駅,Kami-Kosawa Station
+- 上熊谷駅,Kami-Kumagaya Station
+- 上熊本駅,Kami-Kumamoto Station
+- 上桑名川駅,Kami-Kuwanagawa Station
+- 上万場駅,Kami-Mamba Station
+- 上丸渕駅,Kami-Marubuchi Station
+- 上松川駅,Kami-Matsukawa Station
+- 上三緒駅,Kami-Mio Station
+- 上三田駅,Kami-Mita Station
+- 上盛岡駅,Kami-Morioka Station
+- 上諸江駅,Kami-Moroe Station
+- 上長瀞駅,Kami-Nagatoro Station
+- 上永谷駅,Kami-Nagaya Station
+- 上中里駅,Kami-Nakazato Station
+- 上野尻駅,Kami-Nojiri Station
+- 上野幌駅,Kami-Nopporo Station
+- 上尾幌駅,Kami-Oboro Station
+- 上小川駅,Kami-Ogawa Station
+- 上小田井駅,Kami-Otai Station
+- 上石神井駅,Kami-Shakujii Station
+- 上新庄駅,Kami-Shinjō Station
+- 上白滝駅,Kami-Shirataki Station
+- 上鹿折駅,Kami-Shishiori Station
+- 上菅谷駅,Kami-Sugaya Station
+- 上諏訪駅,Kami-Suwa Station
+- 上豊田駅,Kami-Toyota Station
+- 上臼杵駅,Kami-Usuki Station
+- 上宇和駅,Kami-Uwa Station
+- 上涌谷駅,Kami-Wakuya Station
+- 上八木駅,Kami-Yagi Station
+- 上夜久野駅,Kami-Yakuno Station
+- 上山口駅,Kami-Yamaguchi Station
+- 上横須賀駅,Kami-Yokosuka Station
+- 上米内駅,Kami-Yonai Station
+- 上湯沢駅,Kami-Yuzawa Station
+- 上野毛駅,Kami-noge Station
+- 上大井駅,Kami-Ōi Station
+- 上大岡駅,Kami-Ōoka Station
+- 上大月駅,Kami-Ōtsuki Station
+- 上川内駅,Kami Sendai Station
+- 加美駅,Kami Station
+- 上田浦駅,Kami Tanoura Station
+- 上滝駅,Kamidaki Station
+- 上郷駅,Kamigō Station
+- 上郡駅,Kamigōri Station
+- 上浜駅,Kamihama Station
+- 上本郷駅,Kamihongō Station
+- 上堀駅,Kamihori Station
+- 上市駅,Kamiichi Station
+- 上市場駅,Kamiichiba Station
+- None,Kamiichiman Station
+- 上飯田駅,Kamiiida Station
+- 上磯駅,Kamiiso Station
+- 上泉駅,Kamiizumi Station
+- 上条駅 (長野県),Kamijō Station (Nagano)
+- 上条駅 (新潟県),Kamijō Station (Niigata)
+- 上川駅,Kamikawa Station
+- 上川口駅,Kamikawaguchi Station
+- 上北町駅,Kamikitachō Station
+- 上北台駅,Kamikitadai Station
+- 上狛駅,Kamikoma Station
+- 上町駅,Kamimachi Station
+- 上前津駅,Kamimaezu Station
+- 上三依塩原温泉口駅,Kamimiyori-Shiobaraonsenguchi Station
+- 上溝駅,Kamimizo Station
+- 上牧駅 (群馬県),Kamimoku Station
+- 神村学園前駅,Kamimuragakuenmae Station
+- 上中駅,Kaminaka Station
+- 上野部駅,Kaminobe Station
+- 上の町駅,Kaminochō Station
+- 上之郷駅,Kaminogō Station
+- 上ノ国駅,Kaminokuni Station
+- 上野間駅,Kaminoma Station
+- 上野目駅,Kaminome Station
+- 上ノ庄駅,Kaminoshō Station
+- 上ノ太子駅,Kaminotaishi Station
+- かみのやま温泉駅,Kaminoyama Onsen Station
+- 神尾駅,Kamio Station
+- 上岡駅,Kamioka Station
+- 上栄町駅,Kamisakaemachi Station
+- 上境駅,Kamisakai Station
+- 神沢駅,Kamisawa Station (Aichi)
+- 上沢駅,Kamisawa Station (Hyōgo)
+- 神城駅,Kamishiro Station
+- 神栖駅,Kamisu Station
+- 上菅駅,Kamisuge Station
+- 上杉駅,Kamisugi Station (Akita)
+- 神杉駅,Kamisugi Station (Hiroshima)
+- 上鳥羽口駅,Kamitobaguchi Station
+- 上戸手駅,Kamitode Station
+- 上浦駅,Kamiura Station
+- 神谷駅,Kamiya Station
+- 神谷町駅,Kamiyachō Station
+- 神山駅,Kamiyama Station
+- 上社駅,Kamiyashiro Station
+- 上安駅,Kamiyasu Station
+- 上牧駅 (大阪府),Kammaki Station
+- 賀茂駅,Kamo Station (Fukuoka)
+- 加茂駅 (京都府),Kamo Station (Kyoto)
+- 加茂駅 (三重県),Kamo Station (Mie)
+- 加茂駅 (新潟県),Kamo Station (Niigata)
+- 鴨方駅,Kamogata Station
+- 鴨川駅,Kamogawa Station
+- 加茂郷駅,Kamogō Station
+- 鴨居駅,Kamoi Station
+- 鴨島駅,Kamojima Station
+- 加茂中駅,Kamonaka Station
+- 加茂野駅,Kamono Station
+- 鴨宮駅,Kamonomiya Station (Kanagawa)
+- 加茂宮駅,Kamonomiya Station (Saitama)
+- 冠着駅,Kamuriki Station
+- 学文路駅,Kamuro Station
+- 観音寺駅 (香川県),Kan'onji Station
+- 金田駅,Kanada Station
+- 鼎駅,Kanae Station
+- 神奈川新町駅,Kanagawa-Shinmachi Station
+- 神奈川駅,Kanagawa Station (Kanagawa)
+- 金川駅,Kanagawa Station (Okayama)
+- 金木駅,Kanagi Station
+- 金橋駅,Kanahashi Station
+- 金石原駅,Kanaishihara Station
+- 金町駅,Kanamachi Station
+- 要町駅,Kanamechō Station
+- 要田駅,Kanameta Station
+- 金指駅,Kanasashi Station
+- 金島駅 (群馬県),Kanashima Station
+- 金武駅,Kanatake Station
+- 金谷駅,Kanaya Station
+- 金谷川駅,Kanayagawa Station
+- 金山駅 (愛知県),Kanayama Station (Aichi)
+- 金山駅 (福岡県),Kanayama Station (Fukuoka)
+- 金山駅 (北海道),Kanayama Station (Hokkaido)
+- 金谷沢駅,Kanayasawa Station
+- 金沢文庫駅,Kanazawa-Bunko Station
+- 金沢八景駅,Kanazawa-Hakkei Station
+- 金沢駅,Kanazawa Station
+- 金塚駅,Kanazuka Station
+- 苅田駅,Kanda Station (Fukuoka)
+- 神田駅 (東京都),Kanda Station (Tokyo)
+- 関大前駅,Kandaimae Station
+- 神立駅,Kandatsu Station
+- 金上駅,Kaneage Station
+- 鐘ヶ淵駅,Kanegafuchi Station
+- 金ケ崎駅,Kanegasaki Station
+- 金浜駅,Kanehama Station
+- 金華信号場,Kanehana Station
+- 金子駅,Kaneko Station
+- 金丸駅,Kanemaru Station
+- 金手駅,Kanente Station
+- 金島駅 (福岡県),Kaneshima Station
+- 観月橋駅,Kangetsukyō Station
+- 可児駅,Kani Station
+- 蟹江駅,Kanie Station
+- 可児川駅,Kanigawa Station
+- None,Kanisawa Station
+- 蟹田駅,Kanita Station
+- 環状通東駅,Kanjōdōri-higashi Station
+- 韓々坂駅,Kankanzaka Station
+- 神俣駅,Kanmata Station
+- 関門海峡めかり駅,Kanmonkaikyō Mekari Station
+- 神辺駅,Kannabe Station
+- 関内駅,Kannai Station
+- 函南駅,Kannami Station
+- 神野駅,Kanno Station
+- 観音駅,Kannon Station
+- 観音寺駅 (愛知県),Kannonji Station
+- 観音町駅,Kannonmachi Station
+- 甲浦信号場,Kannoura Station
+- 神農原駅,Kanohara Station
+- 鹿又駅,Kanomata Station
+- 鹿瀬駅,Kanose Station
+- 甘露寺前駅,Kanrojimae Station
+- 関西空港駅,Kansai Airport Station
+- 干拓の里駅,Kantakunosato Station
+- 鹿沼駅,Kanuma Station
+- 歓遊舎ひこさん駅,Kanyūsha-Hikosan Station
+- 神前駅 (香川県),Kanzaki Station (Kagawa)
+- 神埼駅,Kanzaki Station (Saga)
+- 神崎川駅,Kanzakigawa Station
+- 閑蔵駅,Kanzō Station
+- 加納駅 (岐阜県),Kanō Station (Gifu)
+- 加納駅 (宮崎県),Kanō Station (Miyazaki)
+- 唐橋前駅,Karahashimae Station
+- 唐笠駅,Karakasa Station
+- 辛皮駅,Karakawa Station
+- 唐木田駅,Karakida Station
+- 唐崎駅,Karasaki Station
+- None,Karashimachō Station
+- 烏江駅,Karasue Station
+- 烏丸御池駅,Karasuma-Oike Station
+- 烏丸駅,Karasuma Station
+- 烏山駅,Karasuyama Station
+- 唐櫃台駅,Karatodai Station
+- 唐津駅,Karatsu Station
+- 嘉例川駅,Kareigawa Station
+- 狩場沢駅,Karibasawa Station
+- 狩川駅,Karikawa Station
+- 狩生駅,Kariu Station
+- 刈羽駅,Kariwa Station
+- 刈和野駅,Kariwano Station
+- 刈谷駅,Kariya Station
+- None,Kariyadomae Station
+- 刈谷市駅,Kariyashi Station
+- 苅安賀駅,Kariyasuka Station
+- 狩留家駅,Karuga Station
+- かるが浜駅,Karugahama Station
+- 軽井沢駅,Karuizawa Station
+- 苅藻駅,Karumo Station
+- 笠寺駅,Kasadera Station
+- 加佐登駅,Kasado Station
+- 笠上黒生駅,Kasagami-Kurohae Station
+- 笠置駅,Kasagi Station
+- 笠幡駅,Kasahata Station
+- 葛西臨海公園駅,Kasai-rinkai-kōen Station
+- 葛西駅,Kasai Station
+- 笠間駅,Kasama Station
+- 笠松駅,Kasamatsu Station (Gifu)
+- None,Kasamatsu Station (Kyoto)
+- 笠縫駅,Kasanui Station
+- 笠岡駅,Kasaoka Station
+- 笠師保駅,Kasashiho Station
+- 笠島駅,Kasashima Station
+- 嘉瀬駅,Kase Station (Aomori)
+- 加勢駅,Kase Station (Kumamoto)
+- 笠田駅,Kaseda Station
+- 禾生駅,Kasei Station
+- 香芝駅,Kashiba Station
+- 橿原神宮前駅,Kashiharajingū-mae Station
+- 橿原神宮西口駅,Kashiharajingū-nishiguchi Station
+- 香椎駅,Kashii Station
+- 香椎神宮駅,Kashiijingū Station
+- 香椎花園前駅,Kashiikaenmae Station
+- 香椎宮前駅,Kashiimiyamae Station
+- 賢島駅,Kashikojima Station
+- 鹿島旭駅,Kashima-Asahi Station
+- 鹿島大野駅,Kashima-Ōno Station
+- 鹿島サッカースタジアム駅,Kashima Soccer Stadium Station
+- 鹿島駅,Kashima Station (Fukushima)
+- 加島駅,Kashima Station (Osaka)
+- 鹿島田駅,Kashimada Station
+- 鹿島台駅,Kashimadai Station
+- 鹿島神宮駅,Kashimajingū Station
+- 鹿島灘駅,Kashimanada Station
+- 柏たなか駅,Kashiwa-Tanaka Station
+- 柏駅,Kashiwa Station
+- 柏原駅 (滋賀県),Kashiwabara Station
+- かしわ台駅,Kashiwadai Station
+- 柏木平駅,Kashiwagidaira Station
+- 柏森駅,Kashiwamori Station
+- 柏の葉キャンパス駅,Kashiwanoha Campus Station
+- 柏原南口駅,Kashiwara-minamiguchi Station
+- 柏原駅 (大阪府),Kashiwara Station
+- 柏崎駅,Kashiwazaki Station
+- 樫山駅,Kashiyama Station
+- 風合瀬駅,Kasose Station
+- 合戦場駅,Kassemba Station
+- 粕淵駅,Kasubuchi Station
+- 春日駅 (福岡県),Kasuga Station (Fukuoka)
+- 春日駅 (東京都),Kasuga Station (Tokyo)
+- 春日原駅,Kasugabaru Station
+- 春日町駅,Kasugachō Station
+- 春日川駅,Kasugagawa Station
+- 春日井駅 (JR東海),Kasugai Station (JR Central)
+- 春日井駅 (名鉄),Kasugai Station (Meitetsu)
+- 春日居町駅,Kasugaichō Station
+- 春日野道駅 (阪急),Kasuganomichi Station (Hankyu)
+- 春日野道駅 (阪神),Kasuganomichi Station (Hanshin)
+- 春日山駅,Kasugayama Station
+- 春日部駅,Kasukabe Station
+- 粕川駅,Kasukawa Station
+- 香住駅,Kasumi Station
+- 霞ヶ丘駅 (兵庫県),Kasumigaoka Station (Hyogo)
+- 霞ヶ丘駅 (奈良県),Kasumigaoka Station (Nara)
+- 霞ヶ関駅 (埼玉県),Kasumigaseki Station (Saitama)
+- 霞ケ関駅 (東京都),Kasumigaseki Station (Tokyo)
+- 霞ヶ浦駅,Kasumigaura Station
+- 烏森駅,Kasumori Station
+- 賀田駅,Kata Station
+- 帷子ノ辻駅,Katabiranotsuji Station
+- 片浜駅,Katahama Station
+- 形原駅,Katahara Station
+- 片原町駅,Kataharamachi Station (Kagawa)
+- 片原町停留場,Kataharamachi Station (Toyama)
+- 片貝駅,Katakai Station
+- 片倉駅,Katakura Station
+- 片倉町駅,Katakurachō Station
+- 潟町駅,Katamachi Station (Jōetsu)
+- 潟元駅,Katamoto Station
+- 片野駅,Katano Station
+- 交野市駅,Katanoshi Station
+- 片岡駅,Kataoka Station
+- 片瀬江ノ島駅,Katase-Enoshima Station
+- 片瀬白田駅,Katase-Shirata Station
+- 片瀬山駅,Kataseyama Station
+- 堅下駅,Katashimo Station
+- 堅田駅,Katata Station
+- 加斗駅,Kato Station
+- 香取駅,Katori Station
+- 勝間駅,Katsuma Station
+- 勝間田駅,Katsumada Station
+- 勝野駅,Katsuno Station
+- 勝沼ぶどう郷駅,Katsunuma-budōkyō Station
+- 桂駅,Katsura Station
+- 桂台駅,Katsuradai Station
+- 桂川駅 (北海道),Katsuragawa Station (Hokkaidō)
+- 桂川駅 (京都府),Katsuragawa Station (Kyoto)
+- 桂根駅,Katsurane Station
+- 桂岡駅,Katsuraoka Station
+- 桂瀬駅,Katsurase Station
+- 勝田駅,Katsuta Station
+- 勝田台駅,Katsutadai Station
+- 勝浦駅,Katsuura Station
+- 勝山駅,Katsuyama Station
+- None,Katsuyamachō Station
+- 川端駅,Kawabata Station
+- 川辺駅,Kawabe Station (Akita)
+- 川部駅,Kawabe Station (Aomori)
+- 川辺宿駅,Kawabejuku Station
+- 河辺の森駅,Kawabenomori Station
+- 川辺沖駅,Kawabeoki Station
+- 河内天美駅,Kawachi-Amami Station
+- 河内永和駅,Kawachi-Eiwa Station
+- 河内花園駅,Kawachi-Hanazono Station
+- 河内磐船駅,Kawachi-Iwafune Station
+- 河内堅上駅,Kawachi-Katakami Station
+- 河内国分駅,Kawachi-Kokubu Station
+- 河内小阪駅,Kawachi-Kosaka Station
+- 河内松原駅,Kawachi-Matsubara Station
+- 河内森駅,Kawachi-Mori Station
+- 河内山本駅,Kawachi-Yamamoto Station
+- 河内長野駅,Kawachinagano Station
+- 川戸駅,Kawado Station
+- 河芸駅,Kawage Station
+- 川桁駅,Kawageta Station
+- 川岸駅,Kawagishi Station
+- 川越駅,Kawagoe Station
+- 川越富洲原駅,Kawagoe Tomisuhara Station
+- 川越市駅,Kawagoeshi Station
+- 川口元郷駅,Kawaguchi-Motogō Station
+- 川口駅,Kawaguchi Station
+- 河口湖駅,Kawaguchiko Station
+- 河原駅,Kawahara Station
+- 川東駅 (福島県),Kawahigashi Station (Fukushima)
+- 川東駅 (佐賀県),Kawahigashi Station (Saga)
+- 川平駅,Kawahira Station
+- 川合高岡駅,Kawai-Takaoka Station
+- 河合駅,Kawai Station (Ibaraki)
+- 川井駅,Kawai Station (Tokyo)
+- 河合西駅,Kawainishi Station
+- 川治湯元駅,Kawaji-Yumoto Station
+- 川路駅,Kawaji Station
+- 川治温泉駅,Kawajionsen Station
+- 川角駅,Kawakado Station
+- 河毛駅,Kawake Station
+- 川倉駅,Kawakura Station
+- 川間駅,Kawama Station
+- 川前駅,Kawamae Station
+- 川俣駅,Kawamata Station
+- 川南駅,Kawaminami Station
+- 川宮駅,Kawamiya Station
+- 川村駅 (愛知県),Kawamura Station (Aichi)
+- 川村駅 (熊本県),Kawamura Station (Kumamoto)
+- 川名駅,Kawana Station (Aichi)
+- 川奈駅,Kawana Station (Shizuoka)
+- 川中島駅,Kawanakajima Station
+- 川根小山駅,Kawane-Koyama Station
+- 川根両国駅,Kawane-Ryōgoku Station
+- 川根温泉笹間渡駅,Kawaneonsen-Sasamado Station
+- 川西池田駅,Kawanishi-Ikeda Station
+- 川西能勢口駅,Kawanishi-noseguchi Station
+- 川西駅 (大阪府),Kawanishi Station (Osaka)
+- 川西駅 (山口県),Kawanishi Station (Yamaguchi)
+- 河曲駅,Kawano Station
+- 川之江駅,Kawanoe Station
+- 香春駅,Kawara Station
+- 河原田駅,Kawarada Station
+- 瓦ヶ浜駅,Kawaragahama Station
+- 香春口三萩野駅,Kawaraguchi-Mihagino Station
+- 川原石駅,Kawaraishi Station
+- 瓦町駅,Kawaramachi Station (Kagawa)
+- 川原町駅,Kawaramachi Station (Mie)
+- 河原町駅 (宮城県),Kawaramachi Station (Miyagi)
+- 川原湯温泉駅,Kawarayuonsen Station
+- 河佐駅,Kawasa Station
+- 川崎大師駅,Kawasaki-Daishi Station
+- 川崎新町駅,Kawasaki-shinmachi Station
+- 川崎駅,Kawasaki Station
+- 河崎口駅,Kawasakiguchi Station
+- 河瀬駅,Kawase Station
+- 川島駅,Kawashima Station
+- 川尻駅,Kawashiri Station
+- 川田駅,Kawata Station
+- 川渡温泉駅,Kawatabi-Onsen Station
+- 川棚駅,Kawatana Station
+- 川棚温泉駅,Kawatanaonsen Station
+- 川跡駅,Kawato Station
+- 川内駅 (岩手県),Kawauchi Station (Iwate)
+- 川内駅 (宮城県),Kawauchi Station (Miyagi)
+- 川和町駅,Kawawachō Station
+- 河山駅,Kawayama Station
+- 川湯温泉駅,Kawayuonsen Station
+- 川添駅,Kawazoe Station
+- 河津駅,Kawazu Station
+- 茅場町駅,Kayabachō Station
+- 萱草駅,Kayakusa Station
+- 栢山駅,Kayama Station
+- None,Kayamachi Rokuchōme Station
+- 茅町駅,Kayamachi Station
+- 茅沼駅,Kayanuma Station
+- 萱島駅,Kayashima Station
+- 風早駅,Kazahaya Station
+- 風祭駅,Kazamatsuri Station
+- 挿頭丘駅,Kazashigaoka Station
+- 加須駅,Kazo Station
+- 鹿妻駅,Kazuma Station
+- 鹿角花輪駅,Kazuno-Hanawa Station
+- 上総東駅,Kazusa-Azuma Station
+- 上総一ノ宮駅,Kazusa-Ichinomiya Station
+- 上総亀山駅,Kazusa-Kameyama Station
+- 上総川間駅,Kazusa-Kawama Station
+- 上総清川駅,Kazusa-Kiyokawa Station
+- 上総久保駅,Kazusa-Kubo Station
+- 上総松丘駅,Kazusa-Matsuoka Station
+- 上総湊駅,Kazusa-Minato Station
+- 上総三又駅,Kazusa-Mitsumata Station
+- 上総村上駅,Kazusa-Murakami Station
+- 上総中川駅,Kazusa-Nakagawa Station
+- 上総中野駅,Kazusa-Nakano Station
+- 上総興津駅,Kazusa-Okitsu Station
+- 上総鶴舞駅,Kazusa-Tsurumai Station
+- 上総牛久駅,Kazusa-Ushiku Station
+- 上総山田駅,Kazusa-Yamada Station
+- 上総大久保駅,Kazusa-Ōkubo Station
+- 蹴上駅,Keage Station
+- 花原市駅,Kebaraichi Station
+- 毛賀駅,Kega Station
+- 競馬場前駅 (福岡県),Keibajōmae Station
+- 京阪大津京駅,Keihan-otsukyo Station
+- None,Keihan Ishiyama Station
+- 山科駅,Keihan Yamashina Station
+- 京阪膳所駅,Keihan Zeze Station
+- 京急東神奈川駅,Keikyū Higashi-kanagawa Station
+- 京急蒲田駅,Keikyū Kamata Station
+- 京急川崎駅,Keikyū Kawasaki Station
+- 京急久里浜駅,Keikyū Kurihama Station
+- 京急長沢駅,Keikyū Nagasawa Station
+- 京急新子安駅,Keikyū Shinkoyasu Station
+- 京急田浦駅,Keikyū Taura Station
+- 京急富岡駅,Keikyū Tomioka Station
+- 京急鶴見駅,Keikyū Tsurumi Station
+- 京急大津駅,Keikyū Ōtsu Station
+- None,Keirinjōmae Station (Aichi)
+- None,Keirinjōmae Station (Toyama)
+- 計算科学センター駅,Keisan Kagaku Center Station
+- None,Keisatsushomae Station
+- 京成千葉駅,Keisei Chiba Station
+- 京成船橋駅,Keisei Funabashi Station
+- 京成曳舟駅,Keisei Hikifune Station
+- 京成稲毛駅,Keisei Inage Station
+- 京成金町駅,Keisei Kanamachi Station
+- 京成小岩駅,Keisei Koiwa Station
+- 京成幕張駅,Keisei Makuhari Station
+- 幕張本郷駅,Keisei Makuharihongō Station
+- 京成中山駅,Keisei Nakayama Station
+- 京成成田駅,Keisei Narita Station
+- 京成西船駅,Keisei Nishifuna Station
+- 京成佐倉駅,Keisei Sakura Station
+- 京成関屋駅,Keisei Sekiya Station
+- 京成酒々井駅,Keisei Shisui Station
+- 京成高砂駅,Keisei Takasago Station
+- 京成立石駅,Keisei Tateishi Station
+- 京成津田沼駅,Keisei Tsudanuma Station
+- 京成上野駅,Keisei Ueno Station
+- 京成臼井駅,Keisei Usui Station
+- 京成八幡駅,Keisei Yawata Station
+- 京成大久保駅,Keisei Ōkubo Station
+- 京成大和田駅,Keisei Ōwada Station
+- 桂川駅 (福岡県),Keisen Station
+- 京王八王子駅,Keiō Hachiōji Station
+- 京王堀之内駅,Keiō Horinouchi Station
+- 京王稲田堤駅,Keiō Inadazutsumi Station
+- 京王片倉駅,Keiō Katakura Station
+- 永山駅 (東京都),Keiō Nagayama Station
+- 多摩センター駅,Keiō Tama Center Station
+- 京王多摩川駅,Keiō Tamagawa Station
+- 京王よみうりランド駅,Keiō Yomiuri Land Station
+- 剣淵駅,Kembuchi Station
+- 検見川駅,Kemigawa Station
+- 検見川浜駅,Kemigawahama Station
+- 県総合運動場駅,Ken-sōgō-undōjō Station
+- 県庁前駅 (千葉県),Kenchō-mae Station (Chiba)
+- None,Kenchō-mae Station (Ehime)
+- 県庁前駅 (兵庫県),Kenchō-mae Station (Hyōgo)
+- None,Kenchō-mae Station (Toyama)
+- 研究学園駅,Kenkyū-gakuen Station
+- 県立大学駅,Kenritsu Daigaku Station
+- 県立美術館前駅,Kenritsubijutsukanmae Station
+- 剣吉駅,Kenyoshi Station
+- 気仙沼駅,Kesennuma Station
+- けやき台駅,Keyakidai Station
+- 欅平駅,Keyakidaira Station
+- 木場駅,Kiba Station
+- 木花駅,Kibana Station
+- 吉備真備駅,Kibinomakibi Station
+- 吉備津駅,Kibitsu Station
+- 貴生川駅,Kibukawa Station
+- 貴船口駅,Kibuneguchi Station
+- 希望ヶ丘駅,Kibōgaoka Station
+- 希望が丘高校前駅,Kibōgaokakōkōmae Station
+- 吉祥寺駅,Kichijōji Station
+- 木田駅,Kida Station
+- 城戸南蔵院前駅,Kido-Nanzōinmae Station
+- 木戸駅,Kido Station
+- 気賀駅,Kiga Station
+- 紀伊有田駅,Kii-Arita Station
+- 紀伊御坊駅,Kii-Gobō Station
+- 紀伊日置駅,Kii-Hiki Station
+- 紀伊姫駅,Kii-Hime Station
+- 紀伊細川駅,Kii-Hosokawa Station
+- 紀伊市木駅,Kii-Ichigi Station
+- 紀伊井田駅,Kii-Ida Station
+- 紀伊神谷駅,Kii-Kamiya Station
+- 紀伊勝浦駅,Kii-Katsuura Station
+- 紀伊宮原駅,Kii-Miyahara Station
+- 紀伊長島駅,Kii-Nagashima Station
+- 紀伊長田駅,Kii-Nagata Station
+- 紀伊中ノ島駅,Kii-Nakanoshima Station
+- 紀伊小倉駅,Kii-Ogura Station
+- 紀伊佐野駅,Kii-Sano Station
+- 紀伊清水駅,Kii-Shimizu Station
+- 紀伊新庄駅,Kii-Shinjō Station
+- 紀伊田原駅,Kii-Tahara Station
+- 紀伊田辺駅,Kii-Tanabe Station
+- 紀伊天満駅,Kii-Tenma Station
+- 紀伊富田駅,Kii-Tonda Station
+- 紀伊内原駅,Kii-Uchihara Station
+- 紀伊浦神駅,Kii-Uragami Station
+- 紀伊山田駅,Kii-Yamada Station
+- 紀伊由良駅,Kii-Yura Station
+- 紀伊駅,Kii Station
+- 喜入駅,Kiire Station
+- 木岐駅,Kiki Station
+- 喜々津駅,Kikitsu Station
+- 木古内駅,Kikonai Station
+- 企救丘駅,Kikugaoka Station
+- 菊川駅 (静岡県),Kikugawa Station
+- 菊川駅 (東京都),Kikukawa Station
+- 菊間駅,Kikuma Station
+- 菊名駅,Kikuna Station
+- 菊水駅,Kikusui Station
+- 喜久田駅,Kikuta Station
+- 桔梗駅,Kikyō Station
+- 桔梗が丘駅,Kikyōgaoka Station
+- 来待駅,Kimachi Station
+- 木見駅,Kimi Station
+- 君ヶ浜駅,Kimigahama Station
+- 紀三井寺駅,Kimiidera Station
+- 君津駅,Kimitsu Station
+- 紀見峠駅,Kimitōge Station
+- 鬼無駅,Kinashi Station
+- 名古屋臨海高速鉄道あおなみ線,Kinjō-futō Station
+- 錦江駅,Kinkō Station
+- 欽明路駅,Kinmeiji Station
+- 金野駅,Kinno Station
+- 木野駅,Kino Station
+- None,Kinoe Station
+- 紀ノ川駅,Kinokawa Station
+- 来宮駅,Kinomiya Station
+- 木ノ本駅,Kinomoto Station
+- 城崎温泉駅,Kinosakionsen Station
+- 木ノ下駅,Kinoshita Station
+- 木野山駅,Kinoyama Station
+- 錦糸町駅,Kinshichō Station
+- 金田一温泉駅,Kintaichi-Onsen Station
+- 近鉄八田駅,Kintetsu-Hatta Station
+- 近鉄御所駅,Kintetsu Gose Station
+- 近鉄蟹江駅,Kintetsu Kanie Station
+- 近鉄郡山駅,Kintetsu Koriyama Station
+- 近鉄宮津駅,Kintetsu Miyazu Station
+- 近鉄長島駅,Kintetsu Nagashima Station
+- 近鉄名古屋駅,Kintetsu Nagoya Station
+- 近鉄奈良駅,Kintetsu Nara Station
+- 近鉄日本橋駅,Kintetsu Nippombashi Station
+- 近鉄下田駅,Kintetsu Shimoda Station
+- 近鉄新庄駅,Kintetsu Shinjō Station
+- 近鉄丹波橋駅,Kintetsu Tambabashi Station
+- 近鉄富田駅,Kintetsu Tomida Station
+- 近鉄八尾駅,Kintetsu Yao Station
+- 近鉄弥富駅,Kintetsu Yatomi Station
+- 近鉄四日市駅,Kintetsu Yokkaichi Station
+- 衣笠駅,Kinugasa Station
+- 鬼怒川公園駅,Kinugawakōen Station
+- 鬼怒川温泉駅,Kinugawaonsen Station
+- 絹延橋駅,Kinunobebashi Station
+- 衣山駅,Kinuyama Station
+- 木下駅,Kioroshi Station
+- 吉良吉田駅,Kira-Yoshida Station
+- 喜連瓜破駅,Kire-Uriwari Station
+- 吉礼駅,Kire Station
+- 切通駅,Kiridōshi Station
+- 桐原駅 (長野県),Kirihara Station (Nagano)
+- 桐原駅 (新潟県),Kirihara Station (Niigata)
+- 切石駅,Kiriishi Station
+- 吉里吉里駅,Kirikiri Station
+- 切目駅,Kirime Station
+- 霧島神宮駅,Kirishimajingū Station
+- 霧島温泉駅,Kirishimaonsen Station
+- 木路原駅,Kirohara Station
+- 桐生球場前駅,Kiryū-Kyūjō-Mae Station
+- 桐生駅,Kiryū Station
+- 吉舎駅,Kisa Station
+- 私市駅,Kisaichi Station
+- 象潟駅,Kisakata Station
+- 木更津駅,Kisarazu Station
+- 喜志駅,Kishi Station (Osaka)
+- 貴志駅,Kishi Station (Wakayama)
+- 岸辺駅,Kishibe Station
+- 鬼子母神前停留場,Kishibojinmae Station
+- 岸本駅,Kishimoto Station
+- 岸根公園駅,Kishine-kōen Station
+- 岸里玉出駅,Kishinosato-Tamade Station
+- 岸里駅,Kishinosato Station
+- 岸和田駅,Kishiwada Station
+- 木曽福島駅,Kiso-Fukushima Station
+- 木曽平沢駅,Kiso-Hirasawa Station
+- 木曽川駅,Kisogawa Station
+- 木曽川堤駅,Kisogawazutsumi Station
+- 木次駅,Kisuki Station
+- 北上尾駅,Kita-Ageo Station
+- 北赤羽駅,Kita-Akabane Station
+- 北余目駅,Kita-Amarume Station
+- 北安城駅,Kita-Anjō Station
+- 北新井駅,Kita-Arai Station
+- None,Kita-Arima Station
+- 北朝霞駅,Kita-Asaka Station
+- 北綾瀬駅,Kita-Ayase Station
+- 北美瑛駅,Kita-Biei Station
+- 北茅ケ崎駅,Kita-Chigasaki Station
+- 北秩父別駅,Kita-Chippubetsu Station
+- 北府中駅,Kita-Fuchū Station
+- 北藤岡駅,Kita-Fujioka Station
+- 北舟岡駅,Kita-Funaoka Station
+- 北五泉駅,Kita-Gosen Station
+- 北神戸駅,Kita-Gōdo Station
+- 北八王子駅,Kita-Hachioji Station
+- 北初富駅,Kita-Hatsutomi Station
+- 木太東口駅,Kita-Higashiguchi Station
+- 北日ノ出駅,Kita-Hinode Station
+- 北広島駅,Kita-Hiroshima Station
+- 北堀之内駅,Kita-Horinouchi Station
+- 北細野駅,Kita-Hosono Station
+- 北一已駅,Kita-Ichiyan Station
+- 北飯山駅,Kita-Iiyama Station
+- 北池袋駅,Kita-Ikebukuro Station
+- 北池野駅,Kita-Ikeno Station
+- 北伊丹駅,Kita-Itami Station
+- 北伊予駅,Kita-Iyo Station
+- 北鎌倉駅,Kita-Kamakura Station
+- 北金岡駅,Kita-Kanaoka Station
+- 北金ケ沢駅,Kita-Kanegasawa Station
+- 北鹿沼駅,Kita-Kanuma Station
+- 北柏駅,Kita-Kashiwa Station
+- 北春日部駅,Kita-Kasukabe Station
+- 北剣淵駅,Kita-Kembuchi Station
+- 北小金駅,Kita-Kogane Station
+- 北国分駅,Kita-Kokubun Station
+- 北小松駅,Kita-Komatsu Station
+- 北越谷駅,Kita-Koshigaya Station
+- 北熊本駅,Kita-Kumamoto Station
+- 北久里浜駅,Kita-Kurihama Station
+- 北楠駅,Kita-Kusu Station
+- 北鴻巣駅,Kita-Kōnosu Station
+- 北丸森駅,Kita-Marumori Station
+- 北松戸駅,Kita-Matsudo Station
+- 北松本駅,Kita-Matsumoto Station
+- 北水海道駅,Kita-Mitsukaidō Station
+- 北真岡駅,Kita-Mōka Station
+- 北長野駅,Kita-Nagano Station
+- 北永野田駅,Kita-Naganoda Station
+- 北長岡駅,Kita-Nagaoka Station
+- 北長瀬駅,Kita-Nagase Station
+- 北永山駅,Kita-Nagayama Station
+- 北中込駅,Kita-Nakagomi Station
+- 北習志野駅,Kita-Narashino Station
+- 北延岡駅,Kita-Nobeoka Station
+- 北野辺地駅,Kita-Noheji Station
+- 北能代駅,Kita-Noshiro Station
+- 北岡崎駅,Kita-Okazaki Station
+- 北小谷駅,Kita-Otari Station
+- 北比布駅,Kita-Pippu Station
+- 北鯖江駅,Kita-Sabae Station
+- 北佐世保駅,Kita-Sasebo Station
+- 北仙台駅,Kita-Sendai Station
+- 北千住駅,Kita-Senju Station
+- 北千里駅,Kita-Senri Station
+- 北千束駅,Kita-Senzoku Station
+- 北新横浜駅,Kita-Shin-Yokohama Station
+- 北品川駅,Kita-Shinagawa Station
+- 北白川駅,Kita-Shirakawa Station
+- 北助松駅,Kita-Sukematsu Station
+- 北須坂駅,Kita-Suzaka Station
+- 北高岩駅,Kita-Takaiwa Station
+- 北高崎駅,Kita-Takasaki Station
+- 北田辺駅,Kita-Tanabe Station
+- 北巽駅,Kita-Tatsumi Station
+- 北戸田駅,Kita-Toda Station
+- 北常盤駅,Kita-Tokiwa Station
+- 北豊津信号場,Kita-Toyotsu Station
+- 北浦和駅,Kita-Urawa Station
+- 北宇和島駅,Kita-Uwajima Station
+- 北山田駅 (大分県),Kita-Yamada Station
+- 北山形駅,Kita-Yamagata Station
+- 北山田駅 (神奈川県),Kita-Yamata Station
+- 北四番丁駅,Kita-Yobanchō Station
+- 北与野駅,Kita-Yono Station
+- 北吉田駅,Kita-Yoshida Station
+- 北吉原駅,Kita-Yoshihara Station
+- 北大垣駅,Kita-Ōgaki Station
+- 北大石田駅,Kita-Ōishida Station
+- 北大町駅,Kita-Ōmachi Station
+- 北大曲駅,Kita-Ōmagari Station
+- 北大宮駅,Kita-Ōmiya Station
+- 北大野駅,Kita-Ōno Station
+- 喜多駅,Kita Station
+- None,Kitabatake Station
+- 木太町駅,Kitachō Station
+- 北埠頭駅,Kitafutō Station
+- 北方真桑駅,Kitagata-Makuwa Station
+- 北方駅 (福岡県),Kitagata Station (Fukuoka)
+- 北方駅 (佐賀県),Kitagata Station (Saga)
+- 北川駅,Kitagawa Station
+- 北河内駅 (徳島県),Kitagawachi Station
+- 北府駅,Kitago Station
+- 北郷駅,Kitagō Station
+- 北河内駅 (山口県),Kitagōchi Station
+- 北浜駅 (北海道),Kitahama Station (Hokkaido)
+- 北浜駅 (大阪府),Kitahama Station (Osaka)
+- 北花田駅,Kitahanada Station
+- 北原駅,Kitahara Station
+- 北条駅,Kitajō Station
+- 北18条駅,Kitajūhachijō Station
+- 北12条駅,Kitajūnijō Station
+- 北13条東駅,Kitajūsanjō-higashi Station
+- 北加賀屋駅,Kitakagaya Station
+- 北上駅,Kitakami Station
+- 喜多方駅,Kitakata Station
+- 北久米駅,Kitakume Station
+- 北九州貨物ターミナル駅,Kitakyushu Kamotsu Terminal Station
+- 北間駅,Kitama Station
+- 北俣駅,Kitamata Station
+- 北見駅,Kitami Station (Hokkaido)
+- 喜多見駅,Kitami Station (Tokyo)
+- 北森駅,Kitamori Station
+- 北本駅,Kitamoto Station
+- 喜多灘駅,Kitanada Station
+- 北新・松本大学前駅,Kitanii-Matsumotodaigakumae Station
+- 北24条駅,Kitanijūyojō Station
+- 北野白梅町駅,Kitano-Hakubaichō Station
+- 北野桝塚駅,Kitano-Masuzuka Station
+- 北野駅 (福岡県),Kitano Station (Fukuoka)
+- 北野駅 (東京都),Kitano Station (Tokyo)
+- 北野田駅,Kitanoda Station
+- 北参道駅,Kitasandō Station
+- 北三条駅,Kitasanjo Station
+- 北34条駅,Kitasanjūyojō Station
+- 北新地駅,Kitashinchi Station
+- 北新川駅,Kitashinkawa Station
+- 北信太駅,Kitashinoda Station
+- 北殿駅,Kitatono Station
+- 北宇智駅,Kitauchi Station
+- 北浦停留場,Kitaura Station (Kōchi)
+- 北浦駅,Kitaura Station (Miyagi)
+- 北浦湖畔駅,Kitaurakohan Station
+- 喜多山駅 (愛知県),Kitayama Station (Aichi)
+- 喜多山駅 (愛媛県),Kitayama Station (Ehime)
+- 北山駅 (京都府),Kitayama Station (Kyoto)
+- 北山駅 (宮城県),Kitayama Station (Miyagi)
+- 北山駅 (栃木県),Kitayama Station (Tochigi)
+- 北大路駅,Kitaōji Station
+- 杵築駅,Kitsuki Station
+- 狐ヶ崎駅,Kitsunegasaki Station
+- 紀和駅,Kiwa Station (Wakayama)
+- 岐波駅,Kiwa Station (Yamaguchi)
+- 黄波戸駅,Kiwado Station
+- None,Kiyachō Station
+- 気山駅,Kiyama Station (Fukui)
+- 基山駅,Kiyama Station (Saga)
+- 木与駅,Kiyo Station
+- 清畠駅,Kiyohata Station
+- 清川駅,Kiyokawa Station
+- 清川口駅,Kiyokawaguchi Station
+- 清水五条駅,Kiyomizu-Gojō Station
+- 清音駅,Kiyone Station
+- 清里駅,Kiyosato Station
+- 清里町駅,Kiyosatocho Station
+- 清瀬駅,Kiyose Station
+- 清荒神駅,Kiyoshikōjin Station
+- 清洲駅,Kiyosu Station
+- 清澄白河駅,Kiyosumi-Shirakawa Station
+- 清武駅,Kiyotake Station
+- None,Kiyotaki Station
+- 木崎駅,Kizaki Station
+- 木津駅 (兵庫県),Kizu Station (Hyogo)
+- 木津駅 (京都府),Kizu Station (Kyoto)
+- 木津川駅,Kizugawa Station
+- 木津川台駅,Kizugawadai Station
+- 木造駅,Kizukuri Station
+- 衣摺加美北駅,Kizuri-Kamikita Station
+- 小塙駅,Kobana Station
+- 木場茶屋駅,Kobanchaya Station
+- 小針駅,Kobari Station
+- 木幡駅 (兵庫県),Kobata Station
+- 小波渡駅,Kobato Station
+- 小林駅 (千葉県),Kobayashi Station (Chiba)
+- 小林駅 (宮崎県),Kobayashi Station (Miyazaki)
+- 三宮駅,Kobe-sannomiya Station
+- 神戸空港駅,Kobe Airport Station
+- 神戸駅 (兵庫県),Kobe Station (Hyogo)
+- 古部駅,Kobe Station (Nagasaki)
+- 古井駅,Kobi Station
+- 小歩危駅,Koboke Station
+- 河堀口駅,Koboreguchi Station
+- 小幌駅,Koboro Station
+- 小渕駅,Kobuchi Station (Akita)
+- 古淵駅,Kobuchi Station (Kanagawa)
+- 小淵沢駅,Kobuchizawa Station
+- 小舟渡駅,Kobunato Station
+- 木知原駅,Kochibora Station
+- 小平駅,Kodaira Station
+- 児玉駅,Kodama Station
+- 小伝馬町駅,Kodenmachō Station
+- こどもの国駅 (愛知県),Kodomonokuni Station (Aichi)
+- こどもの国駅 (神奈川県),Kodomonokuni Station (Kanagawa)
+- 子供の国駅,Kodomonokuni Station (Miyazaki)
+- 古賀駅,Koga Station (Fukuoka)
+- 古河駅,Koga Station (Ibaraki)
+- None,Kogagorufujōmae Station
+- 古賀茶屋駅,Koganchaya Station
+- 黄金駅 (愛知県),Kogane Station (Aichi)
+- 黄金駅 (北海道),Kogane Station (Hokkaido)
+- 黄金町駅,Koganechō Station
+- 小金井駅,Koganei Station
+- 小金城趾駅,Koganejōshi Station
+- 小金沢駅,Koganezawa Station
+- 小川原駅,Kogawara Station
+- 近義の里駅,Koginosato Station
+- 小牛田駅,Kogota Station
+- 小栗山駅,Koguriyama Station
+- 小串駅,Kogushi Station
+- 蚕桑駅,Koguwa Station
+- 粉浜駅,Kohama Station
+- 木幡駅 (JR西日本),Kohata Station
+- 湖北駅,Kohoku Station
+- 広電西広島駅,Koi Station
+- 小出駅,Koide Station
+- 恋ヶ窪駅,Koigakubo Station
+- 鯉川駅,Koikawa Station (Akita)
+- 小井川駅,Koikawa Station (Yamanashi)
+- 小池駅,Koike Station
+- 恋し浜駅,Koishihama Station
+- 漕代駅,Koishiro Station
+- 小岩駅,Koiwa Station
+- 小岩川駅,Koiwagawa Station
+- 小岩井駅,Koiwai Station
+- 恋山形駅,Koiyamagata Station
+- 古泉駅,Koizumi Station (Ehime)
+- 小泉駅,Koizumi Station (Gifu)
+- 小泉町駅,Koizumimachi Station
+- 児島駅,Kojima Station
+- 小島新田駅,Kojimashinden Station
+- 虎杖浜駅,Kojōhama Station
+- 粉河駅,Kokawa Station
+- 苔縄駅,Kokenawa Station
+- 小絹駅,Kokinu Station
+- 国会議事堂前駅,Kokkai-gijidō-mae Station
+- 古虎渓駅,Kokokei Station
+- 九重駅,Kokonoe Station
+- 国母駅,Kokubo Station
+- 国分駅 (香川県),Kokubu Station (Kagawa)
+- 国分駅 (鹿児島県),Kokubu Station (Kagoshima)
+- 国分寺駅,Kokubunji Station
+- 国道駅,Kokudō Station
+- 国府多賀城駅,Kokufu-Tagajō Station
+- 国府駅 (兵庫県),Kokufu Station
+- 小倉駅 (福岡県),Kokura Station
+- 国立競技場駅,Kokuritsu Kyōgijō Station
+- 国領駅,Kokuryō Station
+- 国際展示場駅,Kokusai-Tenjijō Station
+- 国際センター駅 (愛知県),Kokusai Center Station
+- 国際会館駅,Kokusaikaikan Station
+- 高麗駅,Koma Station (Saitama)
+- 駒場東大前駅,Komaba-Tōdaimae Station
+- 古町駅,Komachi Station
+- 小町屋駅,Komachiya Station
+- 狛田駅,Komada Station
+- 狛江駅,Komae Station
+- 駒ヶ林駅,Komagabayashi Station
+- 駒ケ嶺駅,Komagamine Station
+- 駒ケ根駅,Komagane Station
+- 駒形駅,Komagata Station
+- 駒ヶ岳駅,Komagatake Station
+- 駒ヶ谷駅,Komagatani Station
+- 駒川中野駅,Komagawa-Nakano Station
+- 高麗川駅,Komagawa Station
+- 駒込駅,Komagome Station
+- 小舞子駅,Komaiko Station
+- 小牧駅,Komaki Station
+- 小牧口駅,Komakiguchi Station
+- 小牧原駅,Komakihara Station
+- 駒鳴駅,Komanaki Station
+- 駒野駅,Komano Station
+- 小松駅,Komatsu Station
+- 小松川駅,Komatsukawa Station
+- 駒沢大学駅,Komazawa-Daigaku Station
+- 米野駅,Komeno Station
+- 米野木駅,Komenoki Station
+- 米ノ津駅,Komenotsu Station
+- 古見駅 (愛知県),Komi Station (Aichi)
+- 古見駅 (岡山県),Komi Station (Okayama)
+- 小湊駅,Kominato Station
+- 小宮駅,Komiya Station
+- 菰野駅,Komono Station
+- 小森江駅,Komorie Station
+- 子守唄の里高屋駅,Komoriutanosato-Takaya Station
+- 小諸駅,Komoro Station
+- 小本駅,Komoto Station
+- 小室駅,Komuro Station
+- 小長井駅,Konagai Station
+- 小中駅,Konaka Station
+- 小中野駅,Konakano Station
+- 小梨駅,Konashi Station
+- 今羽駅,Konba Station
+- 昆布駅,Konbu Station
+- 昆布盛駅,Konbumori Station
+- 金剛駅,Kongō Station
+- None,Konkou Station
+- 木尾駅,Konno Station
+- 木葉駅,Konoha Station
+- 金浦駅,Konoura Station
+- 金比羅前駅,Konpiramae Station
+- 金蔵寺駅,Konzōji Station
+- 是政駅,Koremasa Station
+- 古里駅 (東京都),Kori Station
+- 小砂川駅,Kosagawa Station
+- 小佐越駅,Kosagoe Station
+- 小佐野駅,Kosano Station
+- 越部駅,Koshibe Station
+- 越戸駅,Koshido Station
+- 越ケ浜駅,Koshigahama Station
+- 越谷レイクタウン駅,Koshigaya-Laketown Station
+- 越谷駅,Koshigaya Station
+- 腰越駅,Koshigoe Station
+- 越水駅,Koshimizu Station
+- 小菅駅,Kosuge Station
+- 小杉駅 (富山県射水市),Kosugi Station (Imizu, Toyama)
+- 小杉駅 (富山市),Kosugi Station (Toyama, Toyama)
+- 越河駅,Kosugō Station
+- 小竹向原駅,Kotake-Mukaihara Station
+- 小竹駅,Kotake Station
+- 小滝駅,Kotaki Station
+- 小手指駅,Kotesashi Station
+- 寿駅,Kotobuki Station
+- 琴電琴平駅,Kotoden-Kotohira Station
+- 琴電志度駅,Kotoden-Shido Station
+- 琴電屋島駅,Kotoden-Yashima Station
+- 琴平駅,Kotohira Station
+- 琴似駅 (JR北海道),Kotoni Station (JR Hokkaido)
+- 琴似駅 (札幌市営地下鉄),Kotoni Station (Sapporo Municipal Subway)
+- 琴芝駅,Kotoshiba Station
+- 古津賀駅,Kotsuka Station
+- 小繋駅,Kotsunagi Station
+- 木津用水駅,Kotsuyōsui Station
+- 特牛駅,Kottoi Station
+- 厚東駅,Kotō Station
+- 小内海駅,Kouchiumi Station
+- 小海駅,Koumi Station
+- 小浦駅 (長崎県),Koura Station
+- 小和田駅,Kowada Station
+- 小涌谷駅,Kowakidani Station
+- 小和清水駅,Kowashōzu Station
+- 木幡駅 (京阪),Kowata Station
+- 湖山駅,Koyama Station
+- 小谷松駅,Koyamatsu Station
+- 小柳駅 (青森県),Koyanagi Station
+- 小屋の畑駅,Koyanohata Station
+- 木屋瀬駅,Koyanose Station
+- 子安駅,Koyasu Station
+- 小屋浦駅,Koyaura Station
+- 子吉駅,Koyoshi Station
+- 湖遊館新駅駅,Koyūkan-Shineki Station
+- 古座駅,Koza Station
+- 小坂井駅,Kozakai Station
+- 小沢駅,Kozawa Station
+- 小机駅,Kozukue Station
+- 小鶴新田駅,Kozurushinden Station
+- 小鳥谷駅,Kozuya Station
+- 玖波駅,Kuba Station
+- 久原駅,Kubara Station
+- 頸城大野駅,Kubiki-Ōno Station
+- くびき駅,Kubiki Station
+- None,Kubochō Station
+- 窪川駅,Kubokawa Station
+- 久保田駅 (秋田県),Kubota Station (Akita)
+- 久保田駅 (佐賀県),Kubota Station (Saga)
+- 口羽駅,Kuchiba Station
+- 下松駅 (山口県),Kudamatsu Station
+- 九段下駅,Kudanshita Station
+- 九度山駅,Kudoyama Station
+- 玖珂駅,Kuga Station
+- 久我原駅,Kugahara Station (Chiba)
+- 久が原駅,Kugahara Station (Tokyo)
+- 久我山駅,Kugayama Station
+- 久下村駅,Kugemura Station
+- 鵠沼海岸駅,Kugenuma-Kaigan Station
+- 鵠沼駅,Kugenuma Station
+- 久下田駅,Kugeta Station
+- 久々原駅,Kuguhara Station
+- 久々野駅,Kuguno Station
+- 九品仏駅,Kuhombutsu Station
+- None,Kuhonjikōsaten Station
+- くいな橋駅,Kuinabashi Station
+- 杭瀬駅,Kuise Station
+- 久慈駅,Kuji Station (Iwate)
+- 久地駅,Kuji Station (Kanagawa)
+- 鯨波駅,Kujiranami Station
+- 九条駅 (京都府),Kujo Station (Kyoto)
+- 九条駅 (奈良県),Kujo Station (Nara)
+- 九条駅 (大阪府),Kujo Station (Osaka)
+- 九鬼駅,Kuki Station (Mie)
+- 久喜駅,Kuki Station (Saitama)
+- 熊ケ根駅,Kumagane Station
+- 熊川駅,Kumagawa Station
+- None,Kumagaya Kamotsu Terminal Station
+- 熊谷駅,Kumagaya Station
+- None,Kumamoto-eki-mae Station
+- None,Kumamoto Castle / City Hall Station
+- 熊本駅,Kumamoto Station
+- 熊本高専前駅,Kumamotokōsen-mae Station
+- 熊西駅,Kumanishi Station
+- 隈之城駅,Kumanojō Station
+- 熊野前駅,Kumanomae Station
+- 熊野市駅,Kumanoshi Station
+- 熊崎駅,Kumasaki Station
+- 熊取駅,Kumatori Station
+- 熊山駅,Kumayama Station
+- 久米駅,Kume Station
+- 久米田駅,Kumeda Station
+- 久米川駅,Kumegawa Station
+- 久美浜駅,Kumihama Station
+- 雲井駅,Kumoi Station
+- 公文明駅,Kumonmyō Station
+- 玖村駅,Kumura Station
+- 久那土駅,Kunado Station
+- 栗田駅,Kunda Station
+- 久根別駅,Kunebetsu Station
+- 国英駅,Kunifusa Station
+- 柴島駅,Kunijima Station
+- 国見駅 (高知県),Kunimi Station (Kochi)
+- 国見駅 (宮城県),Kunimi Station (Miyagi)
+- 国定駅,Kunisada Station
+- 国立駅,Kunitachi Station
+- 国谷駅,Kuniya Station
+- 国吉駅,Kuniyoshi Station
+- 国縫駅,Kunnui Station
+- くぬぎ山駅,Kunugiyama Station
+- 倉賀野駅,Kuragano Station
+- 倉橋駅,Kurahashi Station
+- 苦楽園口駅,Kurakuenguchi Station
+- 鞍馬駅,Kurama Station
+- 蔵前駅,Kuramae Station
+- 鞍馬口駅,Kuramaguchi Station
+- 倉見駅,Kurami Station
+- 倉本駅,Kuramoto Station (Nagano)
+- 蔵本駅,Kuramoto Station (Tokushima)
+- 倉永駅,Kuranaga Station
+- 倉敷駅,Kurashiki Station
+- 倉敷市駅,Kurashikishi Station
+- 鞍手駅,Kurate Station
+- 蔵内駅,Kurauchi Station
+- 倉吉駅,Kurayoshi Station
+- 呉ポートピア駅,Kure-Portopia Station
+- 呉駅,Kure Station
+- 呉羽駅,Kureha Station
+- 久里浜駅,Kurihama Station
+- 栗原田町駅,Kurihara Tamachi Station
+- 栗橋駅,Kurihashi Station
+- 栗平駅,Kurihira Station
+- 倶利伽羅駅,Kurikara Station
+- くりこま高原駅,Kurikoma-Kōgen Station
+- 栗駒駅,Kurikoma Station
+- 栗熊駅,Kurikuma Station
+- 栗野駅,Kurino Station
+- 栗丘駅,Kurioka Station
+- 栗沢駅,Kurisawa Station
+- 厨川駅,Kuriyagawa Station
+- 栗山駅,Kuriyama Station
+- 黒部宇奈月温泉駅,Kurobe-Unazukionsen Station
+- 黒部駅,Kurobe Station
+- 黒田駅 (愛知県),Kuroda Station (Aichi)
+- 黒田駅 (奈良県),Kuroda Station (Nara)
+- 黒田原駅,Kurodahara Station
+- 黒田庄駅,Kurodashō Station
+- 黒江駅,Kuroe Station
+- 黒子駅,Kurogo Station
+- 黒川駅 (佐賀県),Kurogō Station
+- 黒姫駅,Kurohime Station
+- 黒井駅 (兵庫県),Kuroi Station (Hyogo)
+- 黒井駅 (新潟県),Kuroi Station (Niigata)
+- 黒井村駅,Kuroimura Station
+- 黒石駅 (青森県),Kuroishi Station (Aomori)
+- 黒石駅 (熊本県),Kuroishi Station (Kumamoto)
+- 黒磯駅,Kuroiso Station
+- 黒岩駅,Kuroiwa Station
+- 黒髪町駅,Kurokamimachi Station
+- 黒川駅 (愛知県),Kurokawa Station (Aichi)
+- 能勢電鉄妙見の森ケーブル,Kurokawa Station (Hyogo)
+- 黒川駅 (香川県),Kurokawa Station (Kagawa)
+- 黒川駅 (神奈川県),Kurokawa Station (Kanagawa)
+- 黒松駅 (宮城県),Kuromatsu Station (Miyagi)
+- 黒松駅 (島根県),Kuromatsu Station (Shimane)
+- 黒松内駅,Kuromatsunai Station
+- 黒坂駅,Kurosaka Station
+- 黒崎駅,Kurosaki Station
+- None,Kurosakiekimae Station
+- 黒沢駅 (秋田県横手市),Kurosawa Station (Akita, Yokote)
+- 黒沢駅 (秋田県由利本荘市),Kurosawa Station (Yurihonjō, Akita)
+- 黒山駅,Kuroyama Station
+- 黒笹駅,Kurozasa Station
+- 車道駅,Kurumamichi Station
+- 車折神社駅,Kurumazaki-Jinja Station
+- 久留米高校前駅,Kurume-Kōkōmae Station
+- 久留米大学前駅,Kurume-daigaku-mae Station
+- 久留米駅,Kurume Station
+- 久留里駅,Kururi Station
+- 九郎原駅,Kurōbaru Station
+- 草江駅,Kusae Station
+- 日下駅,Kusaka Station
+- 朽網駅,Kusami Station
+- 草道駅,Kusamichi Station
+- 草薙駅 (JR東海),Kusanagi Station (JR Central)
+- 草薙駅 (静岡鉄道),Kusanagi Station (Shizuoka Railway)
+- 草野駅 (福島県),Kusano Station (Fukushima)
+- 草野駅 (兵庫県),Kusano Station (Hyogo)
+- 草津駅 (滋賀県),Kusatsu Station (Shiga)
+- 久世駅,Kuse Station
+- 串駅,Kushi Station
+- 櫛田駅,Kushida Station
+- 櫛ケ浜駅,Kushigahama Station
+- 串木野駅,Kushikino Station
+- 串間駅,Kushima Station
+- 串本駅,Kushimoto Station
+- 釧路駅,Kushiro Station (Hokkaido)
+- 久代駅,Kushiro Station (Shimane)
+- 釧路湿原駅,Kushiroshitsugen Station
+- 櫛原駅,Kushiwara Station
+- 楠駅,Kusu Station
+- 楠橋駅,Kusubashi Station
+- 久寿川駅,Kusugawa Station
+- 楠久駅,Kusuku Station
+- 薬水駅,Kusurimizu Station
+- 久谷駅,Kutani Station
+- 久田野駅,Kutano Station
+- 倶知安駅,Kutchan Station
+- 久手駅,Kute Station
+- 沓掛駅,Kutsukake Station
+- 久津川駅,Kutsukawa Station
+- 桑川駅,Kuwagawa Station
+- 桑町駅,Kuwamachi Station
+- 桑名駅,Kuwana Station
+- 桑名川駅,Kuwanagawa Station
+- 桑野駅,Kuwano Station
+- 区界駅,Kuzakai Station
+- 久崎駅,Kuzaki Station
+- 葛駅,Kuzu Station
+- 樟葉駅,Kuzuha Station
+- 久住駅,Kuzumi Station
+- 葛岡駅,Kuzuoka Station
+- 九頭竜湖駅,Kuzuryūko Station
+- 葛生駅,Kuzuu Station
+- 伽羅橋駅,Kyarabashi Station
+- 京橋駅 (大阪府),Kyobashi Station (Osaka)
+- 京橋駅 (東京都),Kyobashi Station (Tokyo)
+- 京セラ前駅,Kyocera-mae Station
+- 京都市役所前駅,Kyoto-Shiyakusho-mae Station
+- 京都河原町駅,Kyoto-kawaramachi Station
+- 京都精華大前駅,Kyoto Seikadai-mae Station
+- 京都駅,Kyoto Station
+- 経塚駅,Kyozuka Station
+- 京終駅,Kyōbate Station
+- 経田駅,Kyōden Station
+- 経堂駅,Kyōdō Station
+- 京ケ瀬駅,Kyōgase Station
+- 京口駅,Kyōguchi Station
+- 教育大前駅,Kyōikudaimae Station
+- 教会前駅,Kyōkaimae Station
+- 京町温泉駅,Kyōmachionsen Station
+- 孝子駅,Kyōshi Station
+- 京田辺駅,Kyōtanabe Station
+- 京丹後大宮駅,Kyōtango-Ōmiya Station
+- 競艇場前駅 (東京都),Kyōteijō-mae Station (Tokyo)
+- 共和駅,Kyōwa Station
+- 九大学研都市駅,Kyūdai-gakkentoshi Station
+- 久宝寺駅,Kyūhōji Station
+- 久宝寺口駅,Kyūhōjiguchi Station
+- 球場前駅 (高知県),Kyūjōmae Station (Kochi)
+- 球場前駅 (岡山県),Kyūjōmae Station (Okayama)
+- 急患医療センター前停留場,Kyūkan Iryō Center-mae Station
+- 旧居留地・大丸前駅,Kyūkyoryūchi-Daimarumae Station
+- 厳木駅,Kyūragi Station
+- 九産大前駅,Kyūsandaimae Station
+- 球泉洞駅,Kyūsendō Station
+- 旧白滝駅,Kyūshirataki Station
+- 九州工大前駅,Kyūshū-kōdai-mae Station
+- 九州鉄道記念館駅,Kyūshū Tetsudō Kinenkan Station
+- 国府駅 (愛知県),Kō Station (Aichi)
+- 府中駅 (徳島県),Kō Station (Tokushima)
+- None,Kōbe Kamotsu Terminal Station
+- None,Kōchi-ekimae Station
+- 河内駅,Kōchi Station (Hiroshima)
+- 高知駅,Kōchi Station (Kōchi)
+- 高知商業前駅,Kōchishōgyōmae Station
+- 幸田駅,Kōda Station (Aichi)
+- 高田駅 (長崎県),Kōda Station (Nagayo, Nagasaki)
+- None,Kōda Station (Saza, Nagasaki)
+- 河戸帆待川駅,Kōdo-Homachigawa Station
+- 河戸駅,Kōdo Station (Hiroshima)
+- 興戸駅,Kōdo Station (Kyoto)
+- 公園駅,Kōen Station
+- 公園東口駅,Kōenhigashiguchi Station
+- 高円寺駅,Kōenji Station
+- 公園上駅,Kōenkami Station
+- 公園西駅,Kōennishi Station
+- 公園下駅,Kōenshimo Station
+- 甲府駅,Kōfu Station
+- 光風台駅 (千葉県),Kōfūdai Station (Chiba)
+- 光風台駅 (大阪府),Kōfūdai Station (Osaka)
+- 郡家駅,Kōge Station
+- 工業団地駅,Kōgyōdanchi Station
+- 工業高校前駅,Kōgyōkōkō-mae Station
+- 港北駅,Kōhoku Station (Aichi)
+- 江北駅 (佐賀県),Kōhoku Station (Saga)
+- 江北駅 (東京都),Kōhoku Station (Tokyo)
+- 広域公園前駅,Kōikikōenmae Station
+- 麹町駅,Kōjimachi Station
+- 神代駅 (長崎県),Kōjiro Station (Nagasaki)
+- 神代駅 (山口県),Kōjiro Station (Yamaguchi)
+- 糀谷駅,Kōjiya Station
+- 甲賀駅,Kōka Station
+- None,Kōkandōmae Station
+- 工機前駅,Kōkimae Station
+- 航空公園駅,Kōkū-kōen Station
+- 好摩駅,Kōma Station (Iwate)
+- 神目駅,Kōme Station
+- 神海駅,Kōmi Station
+- 光明池駅,Kōmyōike Station
+- 光明寺駅,Kōmyōji Station
+- 甲南山手駅,Kōnan-Yamate Station
+- 港南中央駅,Kōnan-chūō Station
+- 江南駅 (愛知県),Kōnan Station (Aichi)
+- 甲南駅,Kōnan Station (Shiga)
+- 江南駅 (島根県),Kōnan Station (Shimane)
+- 港南台駅,Kōnandai Station
+- 国府台駅,Kōnodai Station
+- 河野原円心駅,Kōnohara-Enshin Station
+- 鴻池新田駅,Kōnoikeshinden Station
+- 高野川駅,Kōnokawa Station
+- 国府宮駅,Kōnomiya Station
+- 鴻巣駅,Kōnosu Station
+- コウノトリの郷駅,Kōnotori-no-sato Station
+- 鴻野山駅,Kōnoyama Station
+- 甲奴駅,Kōnu Station
+- 後楽園駅,Kōrakuen Station
+- 桑折駅,Kōri Station
+- 香里園駅,Kōrien Station
+- 郡元駅,Kōrimoto Station (JR Kyushu)
+- None,Kōrimoto Station (Kagoshima City Tram)
+- None,Kōritsubyōinmae Station
+- None,Kōriyama Kamotsu Terminal Station
+- 郡山駅 (福島県),Kōriyama Station (Fukushima)
+- 郡山駅 (奈良県),Kōriyama Station (Nara)
+- 郡山富田駅,Kōriyamatomita Station
+- 香呂駅,Kōro Station
+- 香櫨園駅,Kōroen Station
+- 甲西駅,Kōsei Station
+- 甲子園駅,Kōshien Station
+- 甲子園口駅,Kōshienguchi Station
+- 庚申塚停留場,Kōshinzuka Station
+- 神志山駅,Kōshiyama Station
+- 光珠内駅,Kōshunai Station
+- 甲州街道駅,Kōshūkaidō Station
+- 高速神戸駅,Kōsoku-Kōbe Station
+- 高速長田駅,Kōsoku-Nagata Station
+- 甲立駅,Kōtachi Station
+- 交通センター前駅,Kōtsū Center mae Station
+- None,Kōtsūkyokumae Station
+- 勾当台公園駅,Kōtōdai-Kōen Station
+- 甲東園駅,Kōtōen Station
+- 河和駅,Kōwa Station
+- 河和口駅,Kōwaguchi Station
+- 幸谷駅,Kōya Station (Chiba)
+- 高野駅 (東京都),Kōya Station (Tokyo)
+- 荒野台駅,Kōyadai Station
+- 高野口駅,Kōyaguchi Station
+- 高野山駅,Kōyasan Station
+- 高野下駅,Kōyashita Station
+- 香淀駅,Kōyodo Station
+- 光洋台駅,Kōyōdai Station
+- 甲陽園駅,Kōyōen Station
+- 高座渋谷駅,Kōza-Shibuya Station
+- 香西駅,Kōzai Station
+- 神前駅 (和歌山県),Kōzaki Station (Wakayama)
+- 幸崎駅,Kōzaki Station (Ōita)
+- 光善寺駅,Kōzenji Station
+- 国府津駅,Kōzu Station (Kanagawa)
+- 郡津駅,Kōzu Station (Osaka)
+- 上月駅,Kōzuki Station
+- 公津の杜駅,Kōzunomori Station
+- 高蔵寺駅,Kōzōji Station
+- 空港通り駅,Kūkō-dōri Station
+- ラベンダー畑駅,Lavender Farm Station
+- 的場町停留場,Hiroden Matoba-cho Station
+- 南区役所前停留場,Hiroden Minami-kuyakusho-mae Station
+- 皆実町二丁目停留場,Hiroden Minami-machi 2-chome Station
+- 皆実町六丁目停留場,Hiroden Minami-machi 6-chome Station
+- 御幸橋停留場,Hiroden Miyuki-bashi Station
+- 馬橋駅,Mabashi Station
+- 馬堀海岸駅,Mabori-Kaigan Station
+- 町田駅,Machida Station (JR East)
+- 町田駅,Machida Station (Odakyu)
+- 町方駅,Machikata Station
+- 町屋駅,Machiya-ekimae Station
+- 町屋二丁目停留場,Machiya-nichōme Station
+- 町屋駅,Machiya Station
+- 馬田駅,Mada Station
+- 前原駅,Maebara Station
+- 前橋大島駅,Maebashi-Ōshima Station
+- 前橋駅,Maebashi Station
+- 前田南駅,Maedaminami Station
+- 前郷駅,Maegō Station
+- 前浜駅,Maehama Station
+- 前平公園駅,Maehirakōen Station
+- 前川駅 (新潟県),Maekawa Station
+- 前之浜駅,Maenohama Station
+- 前沢駅,Maesawa Station
+- 前谷地駅,Maeyachi Station
+- 前山駅,Maeyama Station
+- 前空駅,Maezora Station
+- 馬替駅,Magae Station
+- 勾金駅,Magarikane Station
+- 曲沢駅,Magarisawa Station
+- 馬込駅,Magome Station
+- 馬込沢駅,Magomezawa Station
+- 真倉駅,Magura Station
+- 米原駅,Maibara Station
+- 馬出九大病院前駅,Maidashi Kyūdaibyōin-mae Station
+- 舞浜駅,Maihama Station
+- 舞子駅,Maiko Station
+- 舞子公園駅,Maikokōen Station
+- 舞松原駅,Maimatsubara Station
+- 舞岡駅,Maioka Station
+- 舞阪駅,Maisaka Station
+- 蒔田駅,Maita Station (Kanagawa)
+- 舞田駅,Maita Station (Nagano)
+- 馬路駅,Maji Station
+- 間島駅,Majima Station
+- 牧駅 (京都府),Maki Station (Kyoto)
+- 巻駅,Maki Station (Niigata)
+- 牧駅 (大分県),Maki Station (Oita)
+- 巻向駅,Makimuku Station
+- 牧野駅,Makino Station (Osaka)
+- マキノ駅,Makino Station (Shiga)
+- 牧之郷駅,Makinokō Station
+- 牧落駅,Makiochi Station
+- 牧志駅,Makishi Station
+- 牧山駅,Makiyama Station
+- 真駒内駅,Makomanai Station
+- 幕別駅,Makubetsu Station
+- 幕張駅,Makuhari Station
+- 幕張本郷駅,Makuharihongō Station
+- 枕崎駅,Makurazaki Station
+- 馬来田駅,Makuta Station
+- 間々田駅,Mamada Station
+- 万場駅,Mamba Station
+- 真室川駅,Mamurogawa Station
+- 馬流駅,Managashi Station
+- 万能倉駅,Managura Station
+- 間内駅,Manai Station
+- 真鶴駅,Manazuru Station
+- 万願寺駅,Manganji Station
+- 万ケ塚駅,Mangatsuka Station
+- 万石浦駅,Mangoku-Ura Station
+- 馬庭駅,Maniwa Station
+- 万世橋駅,Manseibashi Station
+- 万富駅,Mantomi Station
+- 万座・鹿沢口駅,Manza-Kazawaguchi Station
+- 馬下駅,Maoroshi Station
+- 真布駅,Mappu Station
+- 稀府駅,Mareppu Station
+- マリンパーク駅,Marine Park Station
+- 丸渕駅,Marubuchi Station
+- 丸亀駅,Marugame Station
+- 丸森駅,Marumori Station
+- 丸ノ内駅,Marunouchi Station (Kiyosu)
+- 丸の内駅,Marunouchi Station (Nagoya, Aichi)
+- None,Marunouchi Station (Toyama)
+- 丸尾駅,Maruo Station
+- 丸岡駅,Maruoka Station
+- 丸瀬布駅,Maruseppu Station
+- 丸太町駅,Marutamachi Station
+- 丸山駅 (兵庫県),Maruyama Station (Hyogo)
+- 丸山駅 (三重県),Maruyama Station (Mie)
+- 丸山駅 (埼玉県),Maruyama Station (Saitama)
+- 円山公園駅,Maruyamakōen Station
+- 丸山下駅,Maruyamashita Station
+- 松前駅,Masaki Station (Ehime)
+- 真幸駅,Masaki Station (Miyazaki)
+- 真申駅,Masaru Station
+- 増毛駅,Mashike Station
+- 益子駅,Mashiko Station
+- 摩周駅,Mashū Station
+- 益田駅,Masuda Station
+- 真菅駅,Masuga Station
+- 升形駅,Masukata Station
+- 増尾駅,Masuo Station (Chiba)
+- 益生駅,Masuo Station (Mie)
+- 鱒浦駅,Masuura Station
+- 鱒沢駅,Masuzawa Station
+- 真滝駅,Mataki Station
+- 的場駅,Matoba Station
+- 的形駅,Matogata Station
+- 松葉駅,Matsuba Station
+- 松原駅 (長崎県),Matsubara Station (Nagasaki)
+- 松原駅 (東京都),Matsubara Station (Tokyo)
+- 松原湖駅,Matsubarako Station
+- 松橋駅,Matsubase Station
+- 真土駅,Matsuchi Station
+- 松田駅,Matsuda Station
+- まつだい駅,Matsudai Station
+- 松戸新田駅,Matsudo-Shinden Station
+- 松戸駅,Matsudo Station
+- 松江イングリッシュガーデン前駅,Matsue English Garden Mae Station
+- 松江しんじ湖温泉駅,Matsue Shinjiko-onsen Station
+- 松江駅,Matsue Station
+- 松江フォーゲルパーク駅,Matsue Vogel Park Station
+- 松ヶ崎駅 (京都府),Matsugasaki Station (Kyoto)
+- 松ヶ崎駅 (三重県),Matsugasaki Station (Mie)
+- 松ケ浦駅,Matsugaura Station
+- 松が谷駅,Matsugaya Station
+- 松岸駅,Matsugishi Station
+- 松飛台駅,Matsuhidai Station
+- 松久駅,Matsuhisa Station
+- 松井山手駅,Matsui-Yamate Station
+- 松井田駅,Matsuida Station
+- 松岩駅,Matsuiwa Station
+- 松神駅,Matsukami Station
+- 松川駅,Matsukawa Station
+- 松木平駅,Matsukitai Station
+- 松倉駅,Matsukura Station
+- 松草駅,Matsukusa Station
+- 松丸駅,Matsumaru Station
+- 松森駅,Matsumori Station
+- まつもと町屋駅,Matsumoto Machiya Station
+- 松本駅,Matsumoto Station
+- None,Matsumushi Station
+- 松永駅,Matsunaga Station
+- 松ノ馬場駅,Matsunobamba Station
+- 松ノ浜駅,Matsunohama Station
+- 松尾寺駅,Matsunoodera Station
+- 松尾八幡平駅,Matsuo-Hachimantai Station
+- 松尾大社駅,Matsuo-taisha Station
+- 松尾駅 (千葉県),Matsuo Station (Chiba)
+- 松尾駅 (三重県),Matsuo Station (Mie)
+- 松尾駅 (長崎県),Matsuo Station (Nagasaki)
+- 松岡駅,Matsuoka Station
+- 松阪駅,Matsusaka Station
+- 松島海岸駅,Matsushima-Kaigan Station
+- 松島二丁目駅,Matsushima-Nichōme Station
+- 松島駅,Matsushima Station
+- 松下駅,Matsushita Station
+- 松浦発電所前駅,Matsuura Hatsudensho-mae Station
+- 松浦駅,Matsuura Station
+- 松山町駅,Matsuyama-Machi Station (Miyagi)
+- None,Matsuyama-Machi Station (Nagasaki)
+- None,Matsuyama-ekimae Station
+- 松山駅 (愛媛県),Matsuyama Station (Ehime)
+- 松山駅 (福岡県),Matsuyama Station (Fukuoka)
+- 松屋町駅,Matsuyamachi Station
+- None,Matsuyamashi-ekimae Station
+- 松山市駅,Matsuyamashi Station
+- 松崎駅 (福岡県),Matsuzaki Station (Fukuoka)
+- 松崎駅 (鳥取県),Matsuzaki Station (Tottori)
+- 松塚駅,Matsuzuka Station
+- 松任駅,Mattō Station
+- 間藤駅,Matō Station
+- None,Maya Cable Station
+- 摩耶駅,Maya Station
+- 目出駅,Mede Station
+- 売布神社駅,Mefujinja Station
+- 妻鹿駅,Mega Station (Hyogo)
+- 女鹿駅,Mega Station (Yamagata)
+- 恵み野駅,Megumino Station
+- 目黒駅,Meguro Station
+- 明大前駅,Meidaimae Station
+- 名電赤坂駅,Meiden-Akasaka Station
+- 名電各務原駅,Meiden-Kakamigahara Station
+- 名電長沢駅,Meiden-Nagasawa Station
+- 名電山中駅,Meiden-Yamanaka Station
+- 明峰駅,Meihō Station
+- 明治神宮前駅,Meiji-Jingūmae Station
+- 名城公園駅,Meijōkōen Station
+- 姪浜駅,Meinohama Station
+- 名鉄岐阜駅,Meitetsu Gifu Station
+- 名鉄一宮駅,Meitetsu Ichinomiya Station
+- 名鉄名古屋駅,Meitetsu Nagoya Station
+- 目白駅,Mejiro Station
+- めじろ台駅,Mejirodai Station
+- 目白山下駅,Mejiroyamashita Station
+- 女満別駅,Memambetsu Station
+- 芽室駅,Memuro Station
+- 目名駅,Mena Station
+- 免田駅,Menden Station
+- 夫婦石駅,Meotoishi Station
+- 目時駅,Metoki Station
+- 美合駅,Miai Station
+- 壬生駅,Mibu Station
+- 道川駅,Michikawa Station
+- 道ノ尾駅,Michinoo Station
+- 道上駅,Michinoue Station
+- 箕田駅,Mida Station
+- 三代橋駅,Midaibashi Station
+- 美談駅,Midami Station
+- 乱川駅,Midaregawa Station
+- 水鳥駅,Midori Station (Gifu)
+- 緑駅,Midori Station (Hokkaidō)
+- 緑橋駅,Midoribashi Station
+- 緑町駅,Midorichō Station
+- みどり台駅,Midoridai Station
+- 緑が丘駅 (北海道),Midorigaoka Station (Hokkaido)
+- 緑が丘駅 (兵庫県),Midorigaoka Station (Hyogo)
+- 緑が丘駅 (東京都),Midorigaoka Station (Tokyo)
+- 緑井駅,Midorii Station
+- 緑川駅,Midorikawa Station
+- みどり湖駅,Midoriko Station
+- みどりの駅,Midorino Station
+- 御堂駅,Midō Station
+- 三会駅,Mie Station
+- 美栄橋駅,Miebashi Station
+- 美江寺駅,Mieji Station
+- 三重町駅,Miemachi Station
+- 美浜駅,Mihama Station
+- 美浜緑苑駅,Mihamaryokuen Station
+- 三原駅,Mihara Station
+- 見晴台駅,Miharashidai Station
+- 三春駅,Miharu Station
+- 美旗駅,Mihata Station
+- 三保三隅駅,Mihomisumi Station
+- 御井駅,Mii Station
+- 三井寺駅,Miidera Station
+- 三井野原駅,Miinohara Station
+- 三門駅,Mikado Station
+- 御門台駅,Mikadodai Station
+- 御影駅 (阪急),Mikage Station (Hankyu)
+- 御影駅 (阪神),Mikage Station (Hanshin)
+- 御影駅 (北海道),Mikage Station (Hokkaido)
+- 三柿野駅,Mikakino Station
+- 三加茂駅,Mikamo Station
+- 美加の台駅,Mikanodai Station
+- 三方駅,Mikata Station
+- 三河安城駅,Mikawa-Anjō Station
+- 三河知立駅,Mikawa-Chiryū Station
+- 三河一宮駅,Mikawa-Ichinomiya Station
+- 三河上郷駅,Mikawa-Kamigō Station
+- 三河鹿島駅,Mikawa-Kashima Station
+- 三河川合駅,Mikawa-Kawai Station
+- 三河槙原駅,Mikawa-Makihara Station
+- 三河三谷駅,Mikawa-Miya Station
+- 三河塩津駅,Mikawa-Shiotsu Station
+- 三河田原駅,Mikawa-Tahara Station
+- 三河高浜駅,Mikawa-Takahama Station
+- 三河鳥羽駅,Mikawa-Toba Station
+- 三河豊田駅,Mikawa-Toyota Station
+- 三河東郷駅,Mikawa-Tōgō Station
+- 三河八橋駅,Mikawa-Yatsuhashi Station
+- 三河大野駅,Mikawa-Ōno Station
+- 三河大塚駅,Mikawa-Ōtsuka Station
+- 三川駅 (北海道),Mikawa Station (Hokkaido)
+- 美川駅,Mikawa Station (Ishikawa)
+- 三川駅 (新潟県),Mikawa Station (Niigata)
+- 三河内駅,Mikawachi Station
+- 三河島駅,Mikawashima Station
+- 三ヶ山口駅,Mikayamaguchi Station
+- 三日月駅,Mikazuki Station
+- 三毛門駅,Mikekado Station
+- 三木上の丸駅,Miki-Uenomaru Station
+- 三木駅 (神戸電鉄),Miki Station
+- 三木里駅,Mikisato Station
+- 三ヶ日駅,Mikkabi Station
+- 三日市駅,Mikkaichi Station
+- 三日市町駅,Mikkaichichō Station
+- 三雲駅,Mikumo Station
+- 三国駅 (福井県),Mikuni Station (Fukui)
+- 三国駅 (大阪府),Mikuni Station (Osaka)
+- 三国が丘駅,Mikunigaoka Station (Fukuoka)
+- 三国ヶ丘駅,Mikunigaoka Station (Osaka)
+- 三国神社駅,Mikunijinja Station
+- 三国港駅,Mikuniminato Station
+- 御厨駅 (長崎県),Mikuriya Station (Nagasaki)
+- 御厨駅 (静岡県),Mikuriya Station (Shizuoka)
+- 御来屋駅,Mikuriya Station (Tottori)
+- 美作土居駅,Mimasaka-Doi Station
+- 美作江見駅,Mimasaka-Emi Station
+- 美作加茂駅,Mimasaka-Kamo Station
+- 美作河井駅,Mimasaka-Kawai Station
+- 美作落合駅,Mimasaka-Ochiai Station
+- 美作追分駅,Mimasaka-Oiwake Station
+- 美作千代駅,Mimasaka-Sendai Station
+- 美作滝尾駅,Mimasaka-Takio Station
+- 美作大崎駅,Mimasaka-Ōsaki Station
+- 三間坂駅,Mimasaka Station
+- 三股駅,Mimata Station
+- 耳成駅,Miminashi Station
+- 美々津駅,Mimitsu Station
+- 三厩駅,Mimmaya Station
+- 実籾駅,Mimomi Station
+- 三室戸駅,Mimurodo Station
+- 南部駅,Minabe Station
+- 美袋駅,Minagi Station
+- 水上駅,Minakami Station
+- 水口石橋駅,Minakuchi-Ishibashi Station
+- 水口城南駅,Minakuchi-Jōnan Station
+- 水口松尾駅,Minakuchi-Matsuo Station
+- 水口駅,Minakuchi Station
+- 水俣駅,Minamata Station
+- 南安城駅,Minami-Anjo Station
+- 南荒尾駅,Minami-Arao Station
+- 南阿佐ケ谷駅,Minami-Asagaya Station
+- 南美深駅,Minami-Bifuka Station
+- 南千歳駅,Minami-Chitose Station
+- 南大東駅,Minami-Daitō Station
+- 南出羽駅,Minami-Dewa Station
+- 南福岡駅,Minami-Fukuoka Station
+- 南福島駅,Minami-Fukushima Station
+- 南船橋駅,Minami-Funabashi Station
+- 南古谷駅,Minami-Furuya Station
+- 南御殿場駅,Minami-Gotemba Station
+- 南行徳駅,Minami-Gyōtoku Station
+- 南河内駅,Minami-Gōchi Station
+- 南羽咋駅,Minami-Hakui Station
+- 南羽生駅,Minami-Hanyū Station
+- 南橋本駅,Minami-Hashimoto Station
+- 南鳩ヶ谷駅,Minami-Hatogaya Station
+- 南彦根駅,Minami-Hikone Station
+- 南日永駅,Minami-Hinaga Station
+- 南平岸駅,Minami-Hiragishi Station
+- None,Minami-Horibata Station
+- 南幌延駅,Minami-Horonobe Station
+- 南日向駅,Minami-Hyūga Station
+- 南茨木駅,Minami-Ibaraki Station
+- 南生駒駅,Minami-Ikoma Station
+- 南今庄駅,Minami-Imajō Station
+- 南石下駅,Minami-Ishige Station
+- 南石井駅,Minami-Ishii Station
+- 南伊東駅,Minami-Ito Station
+- 南岩国駅,Minami-Iwakuni Station
+- 南伊予駅,Minami-Iyo Station
+- 南加木屋駅,Minami-Kagiya Station
+- 南鹿児島駅,Minami-Kagoshima Station
+- 南角田駅,Minami-Kakuda Station
+- 南神城駅,Minami-Kamishiro Station
+- 美並苅安駅,Minami-Kariyasu Station
+- 南柏駅,Minami-Kashiwa Station
+- 南気仙沼駅,Minami-Kesennuma Station
+- みなみ子宝温泉駅,Minami-Kodakaraonsen Station
+- 南小倉駅,Minami-Kokura Station
+- 南小松島駅,Minami-Komatsushima Station
+- 南越谷駅,Minami-Koshigaya Station
+- 南熊本駅,Minami-Kumamoto Station
+- 南栗橋駅,Minami-Kurihashi Station
+- 南久留米駅,Minami-Kurume Station
+- 南草津駅,Minami-Kusatsu Station
+- 南公園駅,Minami-Kōen Station
+- 南甲府駅,Minami-Kōfu Station
+- 南万騎が原駅,Minami-Makigahara Station
+- 南松本駅,Minami-Matsumoto Station
+- 南宮崎駅,Minami-Miyazaki Station
+- 南守谷駅,Minami-Moriya Station
+- 南長井駅,Minami-Nagai Station
+- 南長岡駅,Minami-Nagaoka Station
+- 南流山駅,Minami-Nagareyama Station
+- 南永山駅,Minami-Nagayama Station
+- 南中川駅,Minami-Nakagawa Station
+- 南中郷駅,Minami-Nakagō Station
+- 南延岡駅,Minami-Nobeoka Station
+- 南直方御殿口駅,Minami-Nōgata Gotenguchi Station
+- 南小野田駅,Minami-Onoda Station
+- 南小谷駅,Minami-Otari Station
+- 南小樽駅,Minami-Otaru Station
+- 南比布駅,Minami-Pippu Station
+- 南林間駅,Minami-Rinkan Station
+- 南寒河江駅,Minami-Sagae Station
+- 南酒出駅,Minami-Sakaide Station
+- 南桜井駅 (埼玉県),Minami-Sakurai Station (Saitama)
+- 南仙台駅,Minami-Sendai Station
+- 南千住駅,Minami-Senju Station
+- 南千里駅,Minami-Senri Station
+- 南瀬高駅,Minami-Setaka Station
+- 南摂津駅,Minami-Settsu Station
+- 南斜里駅,Minami-Shari Station
+- 南滋賀駅,Minami-Shiga Station
+- None,Minami-Shimabara Station
+- 南清水沢駅,Minami-Shimizusawa Station
+- None,Minami-Shimonuma Station
+- 南下徳富駅,Minami-Shimotoppu Station
+- 南宍道駅,Minami-Shinji Station
+- 南新宿駅,Minami-Shinjuku Station
+- 南新庄駅,Minami-Shinjō Station
+- 南酒々井駅,Minami-Shisui Station
+- 南吹田駅,Minami-Suita Station
+- 南砂町駅,Minami-Sunamachi Station
+- 南高田駅,Minami-Takada Station
+- 南高崎駅,Minami-Takasaki Station
+- 南多摩駅,Minami-Tama Station
+- 南田辺駅,Minami-Tanabe Station
+- 南巽駅,Minami-Tatsumi Station
+- 南弟子屈駅,Minami-Teshikaga Station
+- 南富山駅,Minami-Toyama Station
+- 南豊科駅,Minami-Toyoshina Station
+- 南魚崎駅,Minami-Uozaki Station
+- 南浦和駅,Minami-Urawa Station
+- 南宇都宮駅,Minami-Utsunomiya Station
+- 南若松駅,Minami-Wakamatsu Station
+- 南稚内駅,Minami-Wakkanai Station
+- 南矢代駅,Minami-Yashiro Station
+- 南四日市駅,Minami-Yokkaichi Station
+- 南米沢駅,Minami-Yonezawa Station
+- 南与野駅,Minami-Yono Station
+- 南吉田駅,Minami-Yoshida Station
+- 南由布駅,Minami-Yufu Station
+- 南行橋駅,Minami-Yukuhashi Station
+- 名古屋臨海高速鉄道あおなみ線,Minami-arako Station
+- 南町田グランベリーパーク駅,Minami-machida Grandberry Park Station
+- 南森町駅,Minami-morimachi Station
+- みなみ寄居駅,Minami-yorii Station
+- 南大高駅,Minami-Ōdaka Station
+- 南大分駅,Minami-Ōita Station
+- 南大町駅,Minami-Ōmachi Station
+- 南大嶺駅,Minami-Ōmine Station
+- 南大沢駅,Minami-Ōsawa Station
+- 南太田駅,Minami-Ōta Station
+- 南大塚駅,Minami-Ōtsuka Station
+- 南桜井駅 (愛知県),Minami Sakurai Station (Aichi)
+- 南ウッディタウン駅,Minami Woody Town Station
+- 南阿蘇白川水源駅,Minamiaso-Shirakawasuigen Station
+- 南阿蘇水の生まれる里白水高原駅,Minamiaso Mizu-no-Umareru-Sato Hakusui-Kōgen Station
+- 南鳥海駅,Minamichōkai Station
+- 南平駅,Minamidaira Station
+- 南が丘駅,Minamigaoka Station
+- 南三原駅,Minamihara Station
+- 南宿駅,Minamijuku Station
+- None,Minamikagoshima-ekimae Station
+- 南方駅 (宮崎県),Minamikata Station (Miyazaki)
+- 南方駅 (大阪府),Minamikata Station (Osaka)
+- None,Minamimachi Station
+- 南野駅,Minamino Station
+- 南栄駅,Minamisakae Station
+- None,Minamitoyama-ekimae Station
+- 皆野駅,Minano Station
+- 見奈良駅,Minara Station (Ehime)
+- 水無瀬駅,Minase Station
+- 港区役所駅,Minato Kuyakusho Station
+- 湊駅,Minato Station
+- 港町駅,Minatochō Station
+- 湊川駅,Minatogawa Station
+- 湊川公園駅,Minatogawakōen Station
+- みなとじま駅,Minatojima Station
+- みなとみらい駅,Minatomirai Station
+- みなと元町駅,Minatomotomachi Station
+- 港山駅,Minatoyama Station
+- 三縄駅,Minawa Station
+- 美祢駅,Mine Station
+- 峰延駅,Minenobu Station
+- 峰山駅,Mineyama Station
+- 峰吉川駅,Mineyoshikawa Station
+- 美濃赤坂駅,Mino-Akasaka Station
+- 美濃本郷駅,Mino-Hongō Station
+- 美濃川合駅,Mino-Kawai Station
+- 美濃松山駅,Mino-Matsuyama Station
+- 美乃坂本駅,Mino-Sakamoto Station
+- 美濃白鳥駅,Mino-Shirotori Station
+- 美濃高田駅,Mino-Takada Station
+- 美濃津屋駅,Mino-Tsuya Station
+- 美濃山崎駅,Mino-Yamazaki Station
+- 美濃青柳駅,Mino-Yanagi Station
+- None,Mino-Ōkubo Station
+- 美濃太田駅,Mino-Ōta Station
+- みの駅,Mino Station
+- 見能林駅,Minobayashi Station
+- 身延駅,Minobu Station
+- 美乃浜学園駅,Minohamagakuen Station
+- 箕面駅,Minoo Station
+- みのり台駅,Minoridai Station
+- 三野瀬駅,Minose Station
+- 美濃市駅,Minoshi Station
+- 箕島駅,Minoshima Station
+- 箕谷駅,Minotani Station
+- 箕浦駅,Minoura Station
+- 三ノ輪駅,Minowa Station
+- 三ノ輪橋停留場,Minowabashi Station
+- 見沼代親水公園駅,Minumadai-shinsuikōen Station
+- みらい平駅,Miraidaira Station
+- 三良坂駅,Mirasaka Station
+- 見老津駅,Mirozu Station
+- 三咲駅,Misaki Station (Chiba)
+- 御崎駅,Misaki Station (Hokkaido)
+- 美咲が丘駅,Misakigaoka Station
+- 三崎口駅,Misakiguchi Station
+- 御崎公園駅,Misakikōen Station (Hyogo)
+- みさき公園駅,Misakikōen Station (Osaka)
+- 水窪駅,Misakubo Station
+- 御陵駅,Misasagi Station
+- 美佐島駅,Misashima Station
+- 三里駅,Misato Station (Mie)
+- 美里駅,Misato Station (Nagano)
+- 三郷駅 (埼玉県),Misato Station (Saitama)
+- 三郷中央駅,Misatochūō Station
+- 三沢駅 (青森県),Misawa Station
+- 三瀬谷駅,Misedani Station
+- 三島二日町駅,Mishima-Futsukamachi Station
+- 三島広小路駅,Mishima-Hirokōji Station
+- 三島田町駅,Mishima-Tamachi Station
+- 三島駅,Mishima Station
+- 美薗中央公園駅,Misono-Chūōkōen Station
+- 美園駅,Misono Station
+- 三角駅,Misumi Station
+- 三田駅 (東京都),Mita Station
+- 三鷹駅,Mitaka Station
+- 三鷹台駅,Mitakadai Station
+- 御嵩駅,Mitake Station (Gifu)
+- 御嶽駅,Mitake Station (Tokyo)
+- None,Mitakedaira Station
+- 御岳堂駅,Mitakedō Station
+- 御嵩口駅,Mitakeguchi Station
+- None,Mitakesan Station
+- 三滝駅,Mitaki Station
+- 三谷駅 (岡山県),Mitani Station (Okayama)
+- 三谷駅 (山口県),Mitani Station (Yamaguchi)
+- 美田園駅,Mitazono Station
+- 御幣島駅,Mitejima Station
+- 水戸駅,Mito Station (Ibaraki)
+- 弥刀駅,Mito Station (Osaka)
+- 三苫駅,Mitoma Station
+- 三津駅,Mitsu Station
+- 三菱自工前駅,Mitsubishi-jikō-mae Station
+- 三津浜駅,Mitsuhama Station
+- 三ツ石駅,Mitsuishi Station (Kumamoto)
+- 三石駅,Mitsuishi Station (Okayama)
+- 水海道駅,Mitsukaidō Station
+- 見附駅,Mitsuke Station
+- 三越前駅,Mitsukoshimae Station
+- 三口駅,Mitsukuchi Station
+- 三ツ境駅,Mitsukyō Station
+- 三妻駅,Mitsuma Station
+- 三俣駅,Mitsumata Station
+- 三松駅,Mitsumatsu Station (Fukui)
+- 三ツ松駅,Mitsumatsu Station (Osaka)
+- 三峰口駅,Mitsumineguchi Station
+- 三岡駅,Mitsuoka Station
+- 三沢駅 (福岡県),Mitsusawa Station
+- 三関駅,Mitsuseki Station
+- 三つ峠駅,Mitsutōge Station
+- みつわ台駅,Mitsuwadai Station
+- 三ツ屋駅,Mitsuya Station
+- 三ツ沢上町駅,Mitsuzawa-Kamichō Station
+- 三ツ沢下町駅,Mitsuzawa-Shimochō Station
+- 三浦駅,Miura Station
+- 三浦海岸駅,Miurakaigan Station
+- 三輪駅,Miwa Station
+- 三輪崎駅,Miwasaki Station
+- 宮田駅,Miyada Station
+- 宮ケ浜駅,Miyagahama Station
+- 宮川駅,Miyagawa Station
+- 宮城野通駅,Miyagino-dori Station
+- 宮城野原駅,Miyaginohara Station
+- 宮口駅,Miyaguchi Station
+- 宮原駅,Miyahara Station
+- 宮地駅,Miyaji Station
+- 宮島ボートレース場駅,Miyajima Boat Race Jō Station
+- 宮島口駅,Miyajimaguchi Station
+- 三宅八幡駅,Miyake-Hachiman Station
+- 宮木駅,Miyaki Station
+- 宮古駅,Miyako Station
+- 都田駅,Miyakoda Station
+- 美夜古泉駅,Miyakoizumi Station
+- 都島駅,Miyakojima Station
+- 都城駅,Miyakonojō Station
+- 宮越駅,Miyakoshi Station
+- 美山駅,Miyama Station
+- 宮町駅,Miyamachi Station
+- 海山道駅,Miyamado Station
+- 宮前駅,Miyamae Station
+- 宮前平駅,Miyamaedaira Station
+- 三山木駅,Miyamaki Station
+- 宮守駅,Miyamori Station
+- 宮本武蔵駅,Miyamoto Musashi Station
+- 宮村駅,Miyamura Station
+- 宮野駅,Miyano Station
+- 宮ノ平駅,Miyanohira Station
+- 宮の陣駅,Miyanojin Station
+- 宮ノ越駅,Miyanokoshi Station
+- 宮ノ前停留場,Miyanomae Station
+- 宮之阪駅,Miyanosaka Station (Osaka)
+- 宮の坂駅,Miyanosaka Station (Tokyo)
+- 宮の沢駅,Miyanosawa Station
+- 宮ノ下駅,Miyanoshita Station
+- None,Miyashita Station
+- None,Miyatachō Station
+- 宮内駅 (広島県),Miyauchi Station (Hiroshima)
+- 宮内駅 (新潟県),Miyauchi Station (Niigata)
+- 宮内駅 (山形県),Miyauchi Station (Yamagata)
+- 宮内串戸駅,Miyauchikushido Station
+- None,Miyawaki Station
+- 宮山駅,Miyayama Station
+- 宮崎駅,Miyazaki Station
+- 宮崎台駅,Miyazakidai Station
+- 宮崎神宮駅,Miyazakijingū Station
+- 宮崎空港駅,Miyazakikūkō Station
+- 宮津駅,Miyazu Station
+- 三次駅,Miyoshi Station (Hiroshima)
+- 御代志駅,Miyoshi Station (Kumamoto)
+- 三好町駅,Miyoshichō Station
+- 三好ヶ丘駅,Miyoshigaoka Station
+- 御代田駅,Miyota Station
+- 御幸辻駅,Miyukitsuji Station
+- 溝口駅,Mizoguchi Station
+- 溝の口駅,Mizonokuchi Station
+- 瑞江駅,Mizue Station
+- 水橋駅,Mizuhashi Station
+- 瑞穂区役所駅,Mizuho-Kuyakusho Station
+- 瑞穂運動場東駅,Mizuho-Undōjō-Higashi Station
+- 瑞穂運動場西駅,Mizuho-Undōjō-Nishi Station
+- 瑞穂駅,Mizuho Station
+- みずほ台駅,Mizuhodai Station
+- 水居駅,Mizui Station
+- 水城駅,Mizuki Station
+- 水間観音駅,Mizuma Kannon Station
+- 三潴駅,Mizuma Station
+- 水巻駅,Mizumaki Station
+- 瑞浪駅,Mizunami Station
+- 水成川駅,Mizunarikawa Station
+- 水野駅,Mizuno Station
+- 水沼駅,Mizunuma Station
+- 水落駅,Mizuochi Station
+- 水沢江刺駅,Mizusawa-Esashi Station
+- 水沢駅,Mizusawa Station
+- 水島駅,Mizushima Station
+- 水尻駅,Mizushiri Station
+- 水田駅,Mizuta Station
+- 茂原駅,Mobara Station
+- 餅原駅,Mochibaru Station
+- 持田駅,Mochida Station
+- 用瀬駅,Mochigase Station
+- 用宗駅,Mochimune Station
+- 最上駅,Mogami Station
+- 百草園駅,Mogusaen Station
+- 茂辺地駅,Moheji Station
+- 茂市駅,Moichi Station
+- 門司駅,Moji Station
+- 門司港駅,Mojiko Station
+- 茂吉記念館前駅,Mokichi Kinenkan-mae Station
+- 藻琴駅,Mokoto Station
+- 樅山駅,Momiyama Station
+- 桃谷駅,Momodani Station
+- 桃川駅,Momonokawa Station
+- 桃内駅,Momouchi Station
+- None,Momoura Station
+- 桃山御陵前駅,Momoyama-Goryōmae Station
+- 桃山南口駅,Momoyama-Minamiguchi Station
+- 桃山駅,Momoyama Station
+- 桃山台駅,Momoyamadai Station
+- 桃園駅,Momozono Station
+- 紋穂内駅,Momponai Station
+- 門田駅,Monden Station
+- 門戸厄神駅,Mondoyakujin Station
+- 物井駅,Monoi Station
+- 浜松町駅,Monorail Hamamatsuchō Station
+- 門静駅,Monshizu Station
+- 門前仲町駅,Monzennakachō Station
+- 真岡駅,Mooka Station
+- モレラ岐阜駅,Morera-Gifu Station
+- 森宮野原駅,Mori-Miyanohara Station
+- 森駅 (北海道),Mori Station (Hokkaidō)
+- 森駅 (大阪府),Mori Station (Osaka)
+- 森口駅,Moriguchi Station (Nagano)
+- 守口駅,Moriguchi Station (Osaka)
+- 守口市駅,Moriguchishi Station
+- 森上駅,Morikami Station
+- 森町病院前駅,Morimachibyōin-mae Station
+- 森本駅,Morimoto Station
+- 茂林寺前駅,Morinjimae Station
+- 森ノ宮駅,Morinomiya Station
+- None,Morioka Kamotsu Terminal Station
+- 盛岡駅,Morioka Station
+- 杜せきのした駅,Morisekinoshita Station
+- 森下駅 (愛知県),Morishita Station (Aichi)
+- 森下駅 (福岡県),Morishita Station (Fukuoka)
+- 森下駅 (東京都),Morishita Station (Tokyo)
+- 森小路駅,Morishōji Station
+- 森田駅,Morita Station
+- 森岳駅,Moritake Station
+- 守恒駅,Moritsune Station
+- 守谷駅,Moriya Station
+- 守山自衛隊前駅,Moriyama-Jieitaimae Station
+- 金屋駅,Moriyama-Shiminbyōin Station
+- 守山駅 (愛知県),Moriyama Station (Aichi)
+- 森山駅,Moriyama Station (Nagasaki)
+- 守山駅 (滋賀県),Moriyama Station (Shiga)
+- 毛呂駅,Moro Station
+- 諸寄駅,Moroyose Station
+- 妹背牛駅,Moseushi Station
+- 茂尻駅,Moshiri Station
+- もたて山駅,Motateyama Station
+- 茂木駅,Motegi Station
+- 本銚子駅,Moto-Chōshi Station
+- 本星崎駅,Moto-Hoshizaki Station
+- 本笠寺駅,Moto-Kasadera Station
+- 本中小屋駅,Moto-Nakagoya Station
+- 本輪西駅,Moto-Wanishi Station
+- 本蓮沼駅,Motohasunuma Station
+- 本宿駅 (愛知県),Motojuku Station (Aichi)
+- 本宿駅 (群馬県),Motojuku Station (Gunma)
+- 元加治駅,Motokaji Station
+- 元町・中華街駅,Motomachi Chūkagai Station
+- 元町駅 (北海道),Motomachi Station (Hokkaido)
+- 元町駅 (兵庫県),Motomachi Station (Hyogo)
+- 本宮駅 (福島県),Motomiya Station
+- 元山上口駅,Motosanjōguchi Station
+- 本巣駅,Motosu Station
+- 元住吉駅,Motosumiyoshi Station
+- 元田中駅,Mototanaka Station
+- 本楯駅,Mototate Station
+- 本山駅 (愛知県),Motoyama Station (Aichi)
+- 元山駅 (千葉県),Motoyama Station (Chiba)
+- 本山駅 (香川県),Motoyama Station (Mitoyo)
+- 本山駅 (長崎県),Motoyama Station (Nagasaki)
+- 元山駅 (香川県),Motoyama Station (Takamatsu)
+- 本八幡駅,Motoyawata Station
+- 本吉駅,Motoyoshi Station
+- 元善光寺駅,Motozenkōji Station
+- 百舌鳥駅,Mozu Station
+- 百舌鳥八幡駅,Mozuhachiman Station
+- 富士山駅,Mt. Fuji Station
+- 六田駅,Muda Station
+- 務田駅,Muden Station
+- 牟岐駅,Mugi Station
+- 六日町駅,Muikamachi Station
+- 向能代駅,Mukai-Noshiro Station
+- 向井原駅,Mukaibara Station
+- 向市場駅,Mukaichiba Station
+- 向河原駅,Mukaigawara Station
+- None,Mukaihama Station
+- 向原駅,Mukaihara Station
+- 向島駅,Mukaijima Station
+- 向洋駅,Mukainada Station
+- 向之原駅,Mukainoharu Station
+- 向瀬上駅,Mukaisenoue Station
+- 向山駅,Mukaiyama Station
+- 鵡川駅,Mukawa Station
+- 武庫駅,Muko Station
+- 武庫川駅,Mukogawa Station
+- 武庫川団地前駅,Mukogawadanchimae Station
+- 武庫之荘駅,Mukonosō Station
+- 椋野駅,Mukuno Station
+- 向ヶ丘駅,Mukōgaoka Station
+- 向ヶ丘遊園駅,Mukōgaokayūen Station
+- 向原停留場,Mukōhara Station
+- 向日町駅,Mukōmachi Station
+- 村井駅,Murai Station
+- 村上駅 (千葉県),Murakami Station (Chiba)
+- 村上駅 (新潟県),Murakami Station (Niigata)
+- 村野駅,Murano Station
+- 紫駅,Murasaki Station
+- 村崎野駅,Murasakino Station
+- 村山駅 (長野県),Murayama Station (Nagano)
+- 村山駅 (山形県),Murayama Station (Yamagata)
+- 牟礼駅,Mure Station
+- 室駅,Muro Station
+- 室堂駅,Murodō Station
+- 室見駅,Muromi Station
+- 室蘭駅,Muroran Station
+- 室生口大野駅,Murōguchi-Ōno Station
+- 武佐駅 (北海道),Musa Station (Hokkaido)
+- 武佐駅 (滋賀県),Musa Station (Shiga)
+- 武蔵藤沢駅,Musashi-Fujisawa Station
+- 武蔵引田駅,Musashi-Hikida Station
+- 武蔵五日市駅,Musashi-Itsukaichi Station
+- 武蔵小金井駅,Musashi-Koganei Station
+- 武蔵小杉駅,Musashi-Kosugi Station
+- 武蔵小山駅,Musashi-Koyama Station
+- 武蔵増戸駅,Musashi-Masuko Station
+- 武蔵溝ノ口駅,Musashi-Mizonokuchi Station
+- 武蔵中原駅,Musashi-Nakahara Station
+- 武蔵新田駅,Musashi-Nitta Station
+- 武蔵嵐山駅,Musashi-Ranzan Station
+- 武蔵境駅,Musashi-Sakai Station
+- 武蔵関駅,Musashi-Seki Station
+- 武蔵新城駅,Musashi-Shinjō Station
+- 武蔵白石駅,Musashi-Shiraishi Station
+- 武蔵砂川駅,Musashi-Sunagawa Station
+- 武蔵高萩駅,Musashi-Takahagi Station
+- 武蔵浦和駅,Musashi-Urawa Station
+- 武蔵大和駅,Musashi-Yamato Station
+- 武蔵横手駅,Musashi-Yokote Station
+- 武蔵野台駅,Musashinodai Station
+- 武蔵塚駅,Musashizuka Station
+- 虫川大杉駅,Mushigawa-Ōsugi Station
+- 六十谷駅,Musota Station
+- 陸奥赤石駅,Mutsu-Akaishi Station
+- 陸奥市川駅,Mutsu-Ichikawa Station
+- 陸奥岩崎駅,Mutsu-Iwasaki Station
+- 陸奥湊駅,Mutsu-Minato Station
+- 陸奥森田駅,Mutsu-Morita Station
+- 陸奥沢辺駅,Mutsu-Sawabe Station
+- 陸奥白浜駅,Mutsu-Shirahama Station
+- 陸奥鶴田駅,Mutsu-Tsuruda Station
+- 陸奥柳田駅,Mutsu-Yanagita Station
+- 陸奥横浜駅,Mutsu-Yokohama Station
+- 六会日大前駅,Mutsuai-Nichidaimae Station
+- 六実駅,Mutsumi Station
+- 六名駅,Mutsuna Station
+- 六浦駅,Mutsuura Station
+- 撫養駅,Muya Station
+- 名谷駅,Myōdani Station
+- 妙典駅,Myōden Station
+- 茗荷谷駅,Myōgadani Station
+- 妙法寺駅 (兵庫県),Myōhōji Station (Hyogo)
+- 妙法寺駅 (新潟県),Myōhōji Station (Niigata)
+- 妙寺駅,Myōji Station
+- 明神駅,Myōjin Station
+- 明星駅,Myōjō Station
+- 明覚駅,Myōkaku Station
+- 妙見口駅,Myōkenguchi Station
+- 能勢電鉄妙見の森ケーブル,Myōkennomizu-Hirobamae Station
+- 能勢電鉄妙見の森ケーブル,Myōkensan Station
+- None,Myōkokujimae Station
+- 妙高高原駅,Myōkō-Kōgen Station
+- 妙興寺駅,Myōkōji Station
+- 妙音通駅,Myōondōri Station
+- 妙蓮寺駅,Myōrenji Station
+- 妙心寺駅,Myōshinji Station
+- 舞木駅,Mōgi Station
+- 西観音町停留場,Hiroden Nishi-kanon-machi Station
+- 名張駅,Nabari Station
+- 菜畑駅,Nabata Station
+- 鍋倉駅,Nabekura Station
+- 鍋原駅,Nabera Station
+- 鍋島駅,Nabeshima Station
+- 那智駅,Nachi Station
+- 灘駅,Nada Station
+- 名立駅,Nadachi Station
+- 苗穂駅,Naebo Station
+- 長江駅,Nagae Station
+- 長浜駅,Nagahama Station
+- 長原駅 (大阪府),Nagahara Station (Osaka)
+- 永原駅,Nagahara Station (Shiga)
+- 長原駅 (東京都),Nagahara Station (Tokyo)
+- 長堀橋駅,Nagahoribashi Station
+- 長居駅,Nagai Station (Osaka)
+- 長井駅,Nagai Station (Yamagata)
+- 長池駅,Nagaike Station
+- 長泉なめり駅,Nagaizumi-Nameri Station
+- 長久手古戦場駅,Nagakute-Kosenjō Station
+- 長町一丁目駅,Nagamachi-Itchōme Station
+- 長町南駅,Nagamachi-Minami Station
+- 長町駅,Nagamachi Station
+- 長峰駅,Nagamine Station
+- 長森駅,Nagamori Station
+- 長苗代駅,Naganawashiro Station
+- 長野駅,Nagano Station
+- 長野原草津口駅,Naganohara-Kusatsuguchi Station
+- 長沼駅 (静岡県),Naganuma Station (Shizuoka)
+- 長沼駅 (東京都),Naganuma Station (Tokyo)
+- 長尾駅 (香川県),Nagao Station (Kagawa)
+- 長尾駅 (大阪府),Nagao Station (Osaka)
+- 永尾駅,Nagao Station (Saga)
+- 長岡天神駅,Nagaoka-Tenjin Station
+- 長岡駅,Nagaoka Station
+- 長岡京駅,Nagaokakyō Station
+- 長柄駅,Nagara Station
+- 流山セントラルパーク駅,Nagareyama-centralpark Station
+- 流山駅,Nagareyama Station
+- 流山おおたかの森駅,Nagareyama Ōtakanomori Station
+- 流山温泉駅,Nagareyamaonsen Station
+- 長坂駅,Nagasaka Station
+- None,Nagasaki-daigakumae Station
+- 長崎駅,Nagasaki Station (Nagasaki)
+- None,Nagasakiekimae Station
+- 長里駅,Nagasato Station
+- 長沢駅,Nagasawa Station
+- 長瀬駅,Nagase Station
+- 長島ダム駅,Nagashima Dam Station
+- 長島駅,Nagashima Station
+- 長篠城駅,Nagashinojō Station
+- 長洲駅,Nagasu Station
+- 永田駅 (千葉県),Nagata Station (Chiba)
+- 長田駅 (神戸市営地下鉄),Nagata Station (Kobe Subway)
+- 長田駅 (大阪府),Nagata Station (Osaka)
+- 永田駅 (埼玉県),Nagata Station (Saitama)
+- 長田駅 (神戸電鉄),Nagata Station (Shintetsu)
+- 永田町駅,Nagatachō Station
+- 長滝駅,Nagataki Station
+- 長谷駅 (広島県),Nagatani Station
+- 長谷野駅,Nagatanino Station
+- 長門粟野駅,Nagato-Awano Station
+- 長門古市駅,Nagato-Furuichi Station
+- 長門二見駅,Nagato-Futami Station
+- 長門三隅駅,Nagato-Misumi Station
+- 長門本山駅,Nagato-Motoyama Station
+- 長門長沢駅,Nagato-Nagasawa Station
+- 長門大井駅,Nagato-Ōi Station
+- 長鳥駅,Nagatori Station
+- 長瀞駅,Nagatoro Station
+- 長門市駅,Nagatoshi Station
+- 長門湯本駅,Nagatoyumoto Station
+- 長津田駅,Nagatsuta Station
+- 長浦駅 (愛知県),Nagaura Station (Aichi)
+- 長浦駅 (千葉県),Nagaura Station (Chiba)
+- 長和駅,Nagawa Station
+- 長屋駅,Nagaya Station
+- 長山駅,Nagayama Station (Aichi)
+- 永山駅,Nagayama Station (Hokkaido)
+- 長与駅,Nagayo Station
+- 那岐駅,Nagi Station
+- 渚駅 (岐阜県),Nagisa Station (Gifu)
+- 渚駅 (長野県),Nagisa Station (Nagano)
+- 南木曽駅,Nagiso Station
+- 椥辻駅,Nagitsuji Station
+- 奈古駅,Nago Station
+- 長太ノ浦駅,Nagonoura Station
+- 名越駅,Nagose Station
+- None,Nagoya-Minato Station
+- ナゴヤドーム前矢田駅,Nagoya Dome-mae Yada Station
+- None,Nagoya Kamotsu Terminal Station
+- 名古屋駅,Nagoya Station
+- 名古屋大学駅,Nagoyadaigaku Station
+- 名古屋港駅 (名古屋市営地下鉄),Nagoyakō Station
+- 名草駅,Nagusa Station
+- 南桑駅,Naguwa Station
+- 那覇空港駅,Naha Airport Station
+- 市立病院前駅,Naha City Hospital Station
+- 奈半利駅,Nahari Station
+- 奈井江駅,Naie Station
+- 撫牛子駅,Naijōshi Station
+- 名島駅,Najima Station
+- 中強羅駅,Naka-Gōra Station
+- 中板橋駅,Naka-Itabashi Station
+- 中軽井沢駅,Naka-Karuizawa Station
+- 中菰野駅,Naka-Komono Station
+- 中目黒駅,Naka-Meguro Station
+- 中滑川駅,Naka-Namerikawa Station
+- 仲御徒町駅,Naka-Okachimachi Station
+- 中岡崎駅,Naka-Okazaki Station
+- 中新湊駅,Naka-Shimminato Station
+- 中菅谷駅,Naka-Sugaya Station
+- 中田平駅,Naka-Tabira Station
+- 中津幡駅,Naka-Tsubata Station
+- 中山香駅,Naka-Yamaga Station
+- 那加駅,Naka Station
+- 中愛別駅,Nakaaibetsu Station
+- 中荒井駅,Nakaarai Station
+- 中原駅,Nakabaru Station
+- 中田駅 (神奈川県),Nakada Station
+- 中深川駅,Nakafukawa Station
+- 中福良駅,Nakafukura Station
+- 中舟生駅,Nakafunyū Station
+- 中富良野駅,Nakafurano Station
+- 中埠頭駅,Nakafutō Station (Hyogo)
+- 中ふ頭駅,Nakafutō Station (Osaka)
+- 中神駅,Nakagami Station
+- 中川駅 (神奈川県),Nakagawa Station (Kanagawa)
+- 中川駅 (山形県),Nakagawa Station (Yamagata)
+- 中川原駅,Nakagawara Station (Mie)
+- 中河原駅,Nakagawara Station (Tokyo)
+- 中萱駅,Nakagaya Station
+- 中込駅,Nakagomi Station
+- 中小屋駅,Nakagoya Station
+- 中萩駅,Nakahagi Station
+- 中浜駅,Nakahama Station
+- 中判田駅,Nakahanda Station
+- 中畑駅 (広島県),Nakahata Station
+- 中井駅,Nakai Station
+- 中飯降駅,Nakaiburi Station
+- 中井侍駅,Nakaisamurai Station
+- 中泉駅,Nakaizumi Station
+- 中島駅 (愛知県),Nakajima Station
+- None,Nakajimafutō Station
+- None,Nakajimakōen-dōri Station
+- 中島公園駅,Nakajimakōen Station
+- 中条駅,Nakajō Station
+- 中川辺駅,Nakakawabe Station
+- 中加積駅,Nakakazumi Station
+- 中公園駅,Nakakōen Station
+- 中間駅,Nakama Station
+- 仲町台駅,Nakamachidai Station
+- 中松駅,Nakamatsu Station
+- 中松江駅,Nakamatsue Station
+- 那珂湊駅,Nakaminato Station
+- 中三田駅,Nakamita Station
+- 中三依温泉駅,Nakamiyori-Onsen Station
+- 中水野駅,Nakamizuno Station
+- 中百舌鳥駅,Nakamozu Station
+- 中村区役所駅,Nakamura Kuyakusho Station
+- 中村公園駅,Nakamura Kōen Station
+- 中村日赤駅,Nakamura Nisseki Station
+- 中村駅,Nakamura Station
+- 中村橋駅,Nakamurabashi Station
+- 中名駅,Nakamyō Station
+- 中根駅,Nakane Station
+- 中野富士見町駅,Nakano-Fujimicho Station
+- 中野松川駅,Nakano-Matsukawa Station
+- 中野坂上駅,Nakano-Sakaue Station
+- 中野駅 (群馬県),Nakano Station (Gunma)
+- 中野駅 (東京都),Nakano Station (Tokyo)
+- 中延駅,Nakanobu Station
+- 仲ノ町駅,Nakanochō Station
+- 中之郷駅,Nakanogō Station
+- 中野東駅,Nakanohigashi Station
+- 中之条駅,Nakanojō Station
+- 中野栄駅,Nakanosakae Station
+- 中ノ沢駅,Nakanosawa Station
+- 中の島駅,Nakanoshima Station (Hokkaido)
+- 中野島駅,Nakanoshima Station (Kanagawa)
+- 中之島駅,Nakanoshima Station (Osaka)
+- 中野新橋駅,Nakanoshinbashi Station
+- 中ノ庄駅,Nakanoshō Station
+- 中小国駅,Nakaoguni Station
+- 中小田井駅,Nakaotai Station
+- 中佐世保駅,Nakasasebo Station
+- 中里駅 (岩手県),Nakasato Station (Iwate)
+- 中佐都駅,Nakasato Station (Nagano)
+- 中沢駅,Nakasawa Station
+- 中瀬古駅,Nakaseko Station
+- 中斜里駅,Nakashari Station
+- 中島駅 (広島県),Nakashima Station
+- 中塩田駅,Nakashioda Station
+- 中庄駅,Nakashō Station
+- 中須田駅,Nakasuda Station
+- 中筋駅,Nakasuji Station
+- 中洲川端駅,Nakasukawabata Station
+- 中田駅 (青森県),Nakata Station
+- 中多久駅,Nakataku Station
+- None,Nakatoppu Station
+- 中豊駅,Nakatoyo Station
+- 中津駅 (阪急),Nakatsu Station (Hankyu)
+- 中津駅 (大分県),Nakatsu Station (Oita)
+- 中津駅 (Osaka Metro),Nakatsu Station (Osaka Municipal Subway)
+- 中土駅,Nakatsuchi Station
+- 中津川駅,Nakatsugawa Station
+- 中妻駅,Nakatsuma Station
+- 中角駅,Nakatsuno Station
+- 中浦駅,Nakaura Station
+- 中浦和駅,Nakaurawa Station
+- 中八木駅,Nakayagi Station
+- 中山観音駅,Nakayama-kannon Station
+- 中山駅 (神奈川県),Nakayama Station (Kanagawa)
+- 中山平温泉駅,Nakayamadaira-Onsen Station
+- 中山寺駅,Nakayamadera Station
+- 中山口駅,Nakayamaguchi Station
+- 中山宿駅,Nakayamajuku Station
+- 中崎町駅,Nakazakichō Station
+- 中里駅 (長崎県),Nakazato Station
+- 那古船形駅,Nakofunakata Station
+- 勿来駅,Nakoso Station
+- 生麦駅,Namamugi Station
+- 生瀬駅,Namaze Station
+- 鯰田駅,Namazuta Station
+- None,Namba Station
+- 南部市場駅,Nambu-shijō Station
+- 行川アイランド駅,Namegawa Island Station
+- 滑河駅,Namegawa Station
+- 滑川駅,Namerikawa Station
+- 滑津駅,Namezu Station
+- 浪江駅,Namie Station
+- 浪花駅,Namihana Station
+- 浪板海岸駅,Namiita-Kaigan Station
+- 波方駅,Namikata Station
+- 並河駅,Namikawa Station
+- 並木中央駅,Namiki-chūō Station
+- 並木北駅,Namikikita Station
+- 波野駅,Namino Station
+- 浪岡駅,Namioka Station
+- 南陽市役所駅,Nan'yō-Shiyakusho Station
+- 七飯駅,Nanae Station
+- 七重浜駅,Nanaehama Station
+- 七井駅,Nanai Station
+- 七久保駅,Nanakubo Station
+- 七隈駅,Nanakuma Station
+- 七光台駅,Nanakōdai Station
+- 七尾駅,Nanao Station
+- 七里駅,Nanasato Station
+- 七ヶ岳登山口駅,Nanatsugatake-Tozanguchi Station
+- 七塚駅,Nanatsuka Station
+- 七ツ屋駅,Nanatsuya Station
+- 七和駅,Nanawa Station
+- 南郷18丁目駅,Nangō Jūhatchōme Station
+- 南郷13丁目駅,Nangō Jūsanchōme Station
+- 南郷7丁目駅,Nangō Nanachōme Station
+- 南郷駅,Nangō Station
+- なにわ橋駅,Naniwabashi Station
+- 南蛇井駅,Nanjai Station
+- 南条駅,Nanjō Station
+- 南港口駅,Nankōguchi Station
+- 南港東駅,Nankōhigashi Station
+- 七日町駅,Nanukamachi Station
+- 直江駅,Naoe Station
+- 直江津駅,Naoetsu Station
+- 直川駅,Naokawa Station
+- 直見駅,Naomi Station
+- 奈良駅,Nara Station
+- 那良口駅,Naraguchi Station
+- 楢原駅,Narahara Station
+- 奈良井駅,Narai Station
+- 習志野駅,Narashino Station
+- 成岩駅,Narawa Station
+- 平城山駅,Narayama Station
+- 成増駅,Narimasu Station
+- 成田空港駅,Narita Airport Terminal 1 Station
+- 空港第2ビル駅,Narita Airport Terminal 2·3 Station
+- 成田駅,Narita Station
+- 成田湯川駅,Narita Yukawa Station
+- 成田山駅,Naritasan Station
+- 鳴石駅,Naruishi Station
+- 鳴子御殿湯駅,Naruko-Gotenyu Station
+- 鳴子温泉駅,Naruko-Onsen Station
+- 鳴子北駅,Naruko Kita Station
+- 鳴海駅,Narumi Station
+- 鳴尾・武庫川女子大前駅,Naruo - Mukogawajoshidai-Mae Station
+- 鳴沢駅,Narusawa Station
+- 成瀬駅,Naruse Station
+- 成島駅 (群馬県),Narushima Station (Gunma)
+- 成島駅 (山形県),Narushima Station (Yamagata)
+- 鳴滝駅,Narutaki Station
+- 鳴門駅,Naruto Station
+- 成東駅,Narutō Station
+- 那須塩原駅,Nasu-Shiobara Station
+- 奈多駅,Nata Station
+- 名手駅,Nate Station
+- 名取駅,Natori Station
+- 夏井駅,Natsui Station
+- 名和駅 (愛知県),Nawa Station (Aichi)
+- 名和駅 (鳥取県),Nawa Station (Tottori)
+- 名寄駅,Nayoro Station
+- 名寄高校駅,Nayorokōkō Station
+- 根府川駅,Nebukawa Station
+- 根知駅,Nechi Station
+- 根笠駅,Negasa Station
+- 根岸駅 (福島県),Negishi Station (Fukushima)
+- 根岸駅 (神奈川県),Negishi Station (Kanagawa)
+- 根小屋駅,Negoya Station
+- 根本駅,Nemoto Station
+- 根室駅,Nemuro Station
+- 熱郛駅,Neppu Station
+- 練馬春日町駅,Nerima-Kasugachō Station
+- 練馬高野台駅,Nerima-Takanodai Station
+- 練馬駅,Nerima Station
+- 根雨駅,Neu Station
+- 新千歳空港駅,New Chitose Airport Station
+- 寝屋川公園駅,Neyagawakōen Station
+- 寝屋川市駅,Neyagawashi Station
+- 根津駅,Nezu Station
+- 鼠ケ関駅,Nezugaseki Station
+- 丹生駅,Nibu Station
+- 仁豊野駅,Nibuno Station
+- 日原駅,Nichihara Station
+- 日南駅,Nichinan Station
+- 日前宮駅,Nichizengū Station
+- 贄川駅,Niekawa Station
+- 仁方駅,Nigata Station
+- 苦竹駅,Nigatake Station
+- 二月田駅,Nigatsuden Station
+- 仁川駅,Nigawa Station
+- 二木島駅,Nigishima Station
+- None,Nigiwaibashi Station
+- 仁保駅,Niho Station
+- 日本橋駅 (東京都),Nihombashi Station
+- 二本松駅,Nihommatsu Station
+- 日本へそ公園駅,Nihon-heso-kōen Station
+- 日本大通り駅,Nihon-ōdōri Station
+- 二本木駅,Nihongi Station
+- None,Nihongiguchi Station
+- 日本ライン今渡駅,Nihonrain-Imawatari Station
+- 仁保津駅,Nihozu Station
+- 新井駅 (兵庫県),Nii Station (Hyogo)
+- 新居駅,Nii Station (Mie)
+- 二井田駅,Niida Station (Fukushima)
+- 仁井田駅 (高知県),Niida Station (Kochi)
+- 新潟大学前駅,Niigata-daigaku-mae Station
+- 新潟駅,Niigata Station
+- 新居浜駅,Niihama Station
+- 新治駅,Niihari Station
+- 新冠駅,Niikappu Station
+- 新見駅,Niimi Station
+- 新村駅 (長野県),Niimura Station
+- 新野駅 (兵庫県),Niino Station
+- 新里駅 (群馬県),Niisato Station
+- 仁井田駅 (栃木県),Niita Station
+- 新津駅,Niitsu Station
+- 新月駅,Niitsuki Station
+- 新鶴駅,Niitsuru Station
+- 新谷駅,Niiya Station
+- None,Niiza Kamotsu Terminal Station
+- 新座駅,Niiza Station
+- 新崎駅,Niizaki Station
+- 新郷駅 (岡山県),Niizato Station
+- 二十軒駅,Nijikken Station
+- None,Nijino Station
+- 虹ノ松原駅,Nijinomatsubara Station
+- 二上神社口駅,Nijō-jinjaguchi Station
+- 二条駅,Nijō Station (Kyoto)
+- 二上駅,Nijō Station (Nara)
+- 二条城前駅,Nijōjōmae Station
+- 二上山駅,Nijōzan Station
+- 二重橋前駅,Nijūbashimae Station
+- 二十四軒駅,Nijūyonken Station
+- 仁賀保駅,Nikaho Station
+- 二階堂駅,Nikaidō Station
+- 二軒茶屋駅,Nikenchaya Station
+- None,Nikenjaya Station
+- 二軒屋駅,Nikenya Station
+- 仁木駅,Niki Station
+- 日華化学前駅,Nikkakagakumae Station
+- 新川駅 (群馬県),Nikkawa Station
+- 日光駅,Nikkō Station
+- 仁万駅,Nima Station
+- 人形町駅,Ningyōchō Station
+- 二戸駅,Ninohe Station
+- 新ノ口駅,Ninokuchi Station
+- 二宮駅,Ninomiya Station
+- 二ノ瀬駅,Ninose Station
+- 新羽駅,Nippa Station
+- 日本橋駅 (大阪府),Nippombashi Station
+- 日暮里駅,Nippori Station
+- 韮川駅,Niragawa Station
+- 韮崎駅,Nirasaki Station
+- 韮山駅,Nirayama Station
+- 楡木駅,Niregi Station
+- 楡原駅,Nirehara Station
+- 二里ヶ浜駅,Nirigahama Station
+- 二郎駅,Nirō Station
+- 新里駅 (青森県),Nisato Station
+- ニセコ駅,Niseko Station
+- 西阿知駅,Nishi-Achi Station
+- 西吾野駅,Nishi-Agano Station
+- 西相生駅,Nishi-Aioi Station
+- 西明石駅,Nishi-Akashi Station
+- 西青山駅,Nishi-Aoyama Station
+- 西有田駅,Nishi-Arita Station
+- 西海鹿島駅,Nishi-Ashikajima Station
+- 西粟倉駅,Nishi-Awakura Station
+- 西別院駅,Nishi-Betsuin Station
+- 西枇杷島駅,Nishi-Biwajima Station
+- 西千葉駅,Nishi-Chiba Station
+- 西調布駅,Nishi-Chōfu Station
+- 西頴娃駅,Nishi-Ei Station
+- 西永福駅,Nishi-Eifuku Station
+- 西江井ヶ島駅,Nishi-Eigashima Station
+- 西富士宮駅,Nishi-Fujinomiya Station
+- 西藤原駅,Nishi-Fujiwara Station
+- 西船橋駅,Nishi-Funabashi Station
+- 西古川駅,Nishi-Furukawa Station
+- 西二見駅,Nishi-Futami Station
+- 西岐阜駅,Nishi-Gifu Station
+- 西御坊駅,Nishi-Gobō Station
+- 西御料駅,Nishi-Goryō Station
+- 西八王子駅,Nishi-Hachiōji Station
+- 西浜田駅,Nishi-Hamada Station
+- None,Nishi-Hamanomachi Station
+- 西羽生駅,Nishi-Hanyū Station
+- 西幡豆駅,Nishi-Hazu Station
+- 西平内駅,Nishi-Hiranai Station
+- 西広島駅,Nishi-Hiroshima Station
+- 西人吉駅,Nishi-Hitoyoshi Station
+- None,Nishi-Horibata Station
+- 西這田駅,Nishi-Hōda Station
+- 西一宮駅,Nishi-Ichinomiya Station
+- 西諫早駅,Nishi-Isahaya Station
+- 西岩国駅,Nishi-Iwakuni Station
+- 西出水駅,Nishi-Izumi Station (Kagoshima)
+- 西出雲駅,Nishi-Izumo Station
+- 西神楽駅,Nishi-Kagura Station
+- 西鹿島駅,Nishi-Kajima Station
+- 西掛川駅,Nishi-Kakegawa Station
+- 西鎌倉駅,Nishi-Kamakura Station
+- 西金沢駅,Nishi-Kanazawa Station
+- 西可児駅,Nishi-Kani Station
+- None,Nishi-Karashimachō Station
+- 西唐津駅,Nishi-Karatsu Station
+- 西葛西駅,Nishi-Kasai Station
+- 西笠松駅,Nishi-Kasamatsu Station
+- 西笠田駅,Nishi-Kaseda Station
+- 西片上駅,Nishi-Katakami Station
+- 西勝間田駅,Nishi-Katsumada Station
+- 西川田駅,Nishi-Kawada Station
+- 西川越駅,Nishi-Kawagoe Station
+- 西川口駅,Nishi-Kawaguchi Station
+- 西加積駅,Nishi-Kazumi Station
+- 西気賀駅,Nishi-Kiga Station
+- 西衣山駅,Nishi-Kinuyama Station
+- 西桐生駅,Nishi-Kiryū Station
+- 西北見駅,Nishi-Kitami Station
+- 西木津駅,Nishi-Kizu Station
+- 西小林駅,Nishi-Kobayashi Station
+- 西小泉駅,Nishi-Koizumi Station
+- 西国分寺駅,Nishi-Kokubunji Station
+- 西小倉駅,Nishi-Kokura Station
+- 西小山駅,Nishi-Koyama Station
+- 西小坂井駅,Nishi-Kozakai Station
+- 西熊本駅,Nishi-Kumamoto Station
+- 西国立駅,Nishi-Kunitachi Station
+- 西栗栖駅,Nishi-Kurisu Station
+- 西黒崎駅,Nishi-Kurosaki Station
+- 西桑名駅,Nishi-Kuwana Station
+- 西前田駅,Nishi-Maeda Station
+- 西馬込駅,Nishi-Magome Station
+- 西舞子駅,Nishi-Maiko Station
+- 西舞鶴駅,Nishi-Maizuru Station
+- 西松井田駅,Nishi-Matsuida Station
+- 西松本駅,Nishi-Matsumoto Station
+- 西女満別駅,Nishi-Memambetsu Station
+- 西都城駅,Nishi-Miyakonojō Station
+- 西三次駅,Nishi-Miyoshi Station
+- 西瑞穂駅,Nishi-Mizuho Station
+- 西元町駅,Nishi-Motomachi Station
+- 西向日駅,Nishi-Mukō Station
+- 西長堀駅,Nishi-Nagahori Station
+- None,Nishi-Nakano Station
+- 西滑川駅,Nishi-Namerikawa Station
+- 西那須野駅,Nishi-Nasuno Station
+- 西日暮里駅,Nishi-Nippori Station
+- 西登戸駅,Nishi-Nobuto Station
+- 西野尻駅,Nishi-Nojiri Station
+- 西入善駅,Nishi-Nyūzen Station
+- 西帯広駅,Nishi-Obihiro Station
+- 西荻窪駅,Nishi-Ogikubo Station
+- 岡山貨物ターミナル駅,Nishi-Okayama Station
+- 西岡崎駅,Nishi-Okazaki Station
+- 西留辺蘂駅,Nishi-Rubeshibe Station
+- 西鯖江駅,Nishi-Sabae Station
+- 西寒河江駅,Nishi-Sagae Station
+- 西佐川駅,Nishi-Sakawa Station
+- 西様似駅,Nishi-Samani Station
+- 西三荘駅,Nishi-Sanso Station
+- 西聖和駅,Nishi-Seiwa Station
+- 西仙台ハイランド駅,Nishi-Sendai-Hairando Station
+- 西新発田駅,Nishi-Shibata Station
+- 西飾磨駅,Nishi-Shikama Station
+- 西新町駅,Nishi-Shimmachi Station
+- 西新宿五丁目駅,Nishi-Shinjuku Gochōme Station
+- 西新宿駅,Nishi-Shinjuku Station
+- 西塩釜駅,Nishi-Shiogama Station
+- 西白井駅,Nishi-Shiroi Station
+- 西庶路駅,Nishi-Shoro Station
+- 西添田駅,Nishi-Soeda Station
+- 西巣鴨駅,Nishi-Sugamo Station
+- 西鈴蘭台駅,Nishi-Suzurandai Station
+- 西田平駅,Nishi-Tabira Station
+- 西太刀洗駅,Nishi-Tachiarai Station
+- 西立川駅,Nishi-Tachikawa Station
+- 西太子堂駅,Nishi-Taishidō Station
+- 西高蔵駅,Nishi-Takakura Station
+- 西鷹巣駅,Nishi-Takanosu Station
+- 西高岡駅,Nishi-Takaoka Station
+- 西高島平駅,Nishi-Takashimadaira Station
+- 西高須停留場,Nishi-Takasu Station
+- 西高屋駅,Nishi-Takaya Station
+- 西田原本駅,Nishi-Tawaramoto Station
+- 西天下茶屋駅,Nishi-Tengachaya Station
+- 西所沢駅,Nishi-Tokorozawa Station
+- None,Nishi-Tomii Station
+- 西富岡駅,Nishi-Tomioka Station
+- 西取手駅,Nishi-Toride Station
+- 西富山駅,Nishi-Toyama Station
+- 西燕駅,Nishi-Tsubame Station
+- 西敦賀駅,Nishi-Tsuruga Station
+- 西上田駅,Nishi-Ueda Station
+- 西梅田駅,Nishi-Umeda Station
+- 西魚津駅,Nishi-Uozu Station
+- 西浦上駅,Nishi-Urakami Station
+- 西浦和駅,Nishi-Urawa Station
+- 西和田駅,Nishi-Wada Station
+- 西若松駅,Nishi-Wakamatsu Station
+- 西早稲田駅,Nishi-Waseda Station
+- 西焼津駅,Nishi-Yaizu Station
+- 西山名駅,Nishi-Yamana Station
+- 西横浜駅,Nishi-Yokohama Station
+- 西米沢駅,Nishi-Yonezawa Station
+- 西吉井駅,Nishi-Yoshii Station
+- 西相知駅,Nishi-Ōchi Station
+- 西大垣駅,Nishi-Ōgaki Station
+- 西大方駅,Nishi-Ōgata Station
+- 西大原駅,Nishi-Ōhara Station
+- 西大井駅,Nishi-Ōi Station
+- 西大分駅,Nishi-Ōita Station
+- 西大島駅,Nishi-Ōjima Station
+- 西大宮駅,Nishi-Ōmiya Station
+- 西大崎駅,Nishi-Ōsaki Station
+- 西大滝駅,Nishi-Ōtaki Station
+- 西大手駅,Nishi-Ōte Station
+- 西大塚駅,Nishi-Ōtsuka Station
+- 西大家駅,Nishi-Ōya Station
+- 西大山駅,Nishi-Ōyama Station
+- 西大洲駅,Nishi-Ōzu Station
+- None,Nishi Hatchōme Station
+- None,Nishi Jūgochōme Station
+- 西18丁目駅,Nishi Jūhatchōme Station
+- 西11丁目駅,Nishi Jūitchōme Station
+- 西28丁目駅,Nishi Nijūhatchōme Station
+- 西新湊駅,Nishi Shinminato Station
+- None,Nishi Yonchōme Station
+- 西新井駅,Nishiarai Station
+- 西新井大師西駅,Nishiaraidaishi-nishi Station
+- 西原駅 (徳島県),Nishibara Station
+- 西別所駅,Nishibessho Station
+- 西袋駅,Nishibukuro Station
+- 西分駅,Nishibun Station
+- None,Nishichō Station
+- 西代駅,Nishidai Station (Hyogo)
+- 西田井駅,Nishidai Station (Tochigi)
+- 西台駅,Nishidai Station (Tokyo)
+- 西府駅,Nishifu Station
+- 西ヶ原四丁目停留場,Nishigahara-yonchōme Station
+- 西ケ原駅,Nishigahara Station
+- 西ケ方駅,Nishigahō Station
+- None,Nishigawa Ryokudōkōen Station
+- 西川原駅,Nishigawara Station
+- 西岸駅,Nishigishi Station
+- 西原駅 (広島県),Nishihara Station
+- 西春駅,Nishiharu Station
+- 西春江ハートピア駅,Nishiharue Heartopia Station
+- 西畑駅,Nishihata Station
+- 西日野駅,Nishihino Station
+- 西泉駅,Nishiizumi Station (Ishikawa)
+- 西新駅,Nishijin Station
+- 西条駅 (長野県),Nishijō Station
+- 西方駅,Nishikata Station
+- 錦駅,Nishiki Station
+- 錦町駅,Nishikichō Station
+- 二色浜駅,Nishikinohama Station
+- 錦岡駅,Nishikioka Station
+- 西木場駅,Nishikoba Station
+- 西九条駅,Nishikujō Station
+- 西京極駅,Nishikyōgoku Station
+- 西目駅,Nishime Station
+- 西牟田駅,Nishimuta Station
+- 西灘駅,Nishinada Station
+- 西長田ゆりの里駅,Nishinagata Yurinosato Station
+- 西中駅,Nishinaka Station
+- 西中通駅,Nishinakadōri Station
+- 西中島南方駅,Nishinakajima-Minamigata Station
+- 西ノ口駅,Nishinokuchi Station
+- 西ノ京駅,Nishinokyō Station
+- 西宮名塩駅,Nishinomiya-Najio Station
+- 西宮北口駅,Nishinomiya-kitaguchi Station
+- 西宮駅 (阪神),Nishinomiya Station (Hanshin)
+- 西宮駅 (JR西日本),Nishinomiya Station (JR West)
+- 西ノ庄駅,Nishinoshō Station
+- 西尾駅,Nishio Station
+- 西麻植駅,Nishioe Station
+- 西尾口駅,Nishioguchi Station
+- 西里駅,Nishisato Station
+- None,Nishisen Jūichijō Station
+- None,Nishisen Jūrokujō Station
+- None,Nishisen Jūyojō Station
+- None,Nishisen Kujō Asahiyama-kōen-dōri Station
+- None,Nishisen Rokujō Station
+- 西滝沢駅,Nishitakisawa Station
+- 西田辺駅,Nishitanabe Station
+- 千早駅,Nishitetsu Chihaya Station
+- None,Nishitetsu Fukuma Station
+- 西鉄二日市駅,Nishitetsu Futsukaichi Station
+- 西鉄銀水駅,Nishitetsu Ginsui Station
+- 西鉄五条駅,Nishitetsu Gojō Station
+- 西鉄平尾駅,Nishitetsu Hirao Station
+- 西鉄香椎駅,Nishitetsu Kashii Station
+- None,Nishitetsu Koga Station
+- 西鉄久留米駅,Nishitetsu Kurume Station
+- 西鉄中島駅,Nishitetsu Nakashima Station
+- 西鉄小郡駅,Nishitetsu Ogōri Station
+- 西鉄新宮駅,Nishitetsu Shingū Station
+- 西鉄渡瀬駅,Nishitetsu Wataze Station
+- 西鉄柳川駅,Nishitetsu Yanagawa Station
+- 西浦駅,Nishiura Station
+- 西脇市駅,Nishiwakishi Station
+- 西谷駅,Nishiya Station
+- 西山駅 (福岡県),Nishiyama Station (Fukuoka)
+- 西山駅 (新潟県),Nishiyama Station (Niigata)
+- 西山天王山駅,Nishiyama Tennozan Station
+- 西山口駅,Nishiyamaguchi Station
+- 西山公園駅,Nishiyamakōen Station
+- 西屋敷駅,Nishiyashiki Station
+- 西大橋駅,Nishiōhashi Station
+- 西大路三条駅,Nishiōji-Sanjō Station
+- 西大路御池駅,Nishiōji Oike Station
+- 西大路駅,Nishiōji Station
+- 二升石駅,Nishōishi Station
+- 日生中央駅,Nissei-Chūō Station
+- 日赤病院前停留場,Nisseki-byōinmae Station
+- 日進駅 (愛知県),Nisshin Station (Aichi)
+- 日進駅 (北海道),Nisshin Station (Hokkaido)
+- 日進駅 (埼玉県),Nisshin Station (Saitama)
+- 似内駅,Nitanai Station
+- 新田駅 (福島県),Nitta Station (Fukushima)
+- 新田駅 (宮城県),Nitta Station (Miyagi)
+- 日立木駅,Nittaki Station
+- 新田野駅,Nittano Station
+- 新田塚駅,Nittazuka Station
+- 庭坂駅,Niwasaka Station
+- 庭瀬駅,Niwase Station
+- 仁山駅,Niyama Station
+- 延岡駅,Nobeoka Station
+- 野辺山駅,Nobeyama Station
+- 野蒜駅,Nobiru Station
+- 登別駅,Noboribetsu Station
+- 登戸駅,Noborito Station
+- 延方駅,Nobukata Station
+- 信木駅,Nobuki Station
+- 信砂駅,Nobusha Station
+- 野馳駅,Nochi Station
+- 野田新町駅,Noda-Shimmachi Station
+- 野田玉川駅,Noda-Tamagawa Station
+- 野田駅 (阪神),Noda Station (Hanshin)
+- 野田駅 (JR西日本),Noda Station (JR West)
+- 野田郷駅,Nodagō Station
+- 野田阪神駅,Nodahanshin Station
+- 野田城駅,Nodajō Station
+- 野田生駅,Nodaoi Station
+- 野田市駅,Nodashi Station
+- 野江内代駅,Noe-Uchindai Station
+- 野江駅,Noe Station
+- 野上駅,Nogami Station
+- 野上原駅,Nogamihara Station
+- 野方駅,Nogata Station
+- 乃木駅,Nogi Station (Shimane)
+- 野木駅,Nogi Station (Tochigi)
+- 野木沢駅,Nogisawa Station
+- 乃木坂駅,Nogizaka Station
+- 野辺地駅,Noheji Station
+- のいち駅,Noichi Station
+- 野島公園駅,Nojimakoen Station
+- 野尻駅,Nojiri Station
+- 野花南駅,Nokanan Station
+- 野芥駅,Noke Station
+- 野間駅,Noma Station
+- 野町駅,Nomachi Station
+- 能美根上駅,Nomineagari Station
+- 野内駅,Nonai Station
+- 野中駅,Nonaka Station
+- 野並駅,Nonami Station
+- のの岳駅,Nonodake Station
+- 野々市工大前駅,Nonoichi-Kōdaimae Station
+- 野々市駅 (北陸鉄道),Nonoichi Station (Hokuriku Railway)
+- 野々市駅 (JR西日本),Nonoichi Station (JR West)
+- 野々口駅,Nonokuchi Station
+- 野幌駅,Nopporo Station
+- ノーフォーク広場駅,Norfolk Hiroba Station
+- 能瀬駅,Nose Station
+- 名古屋臨海高速鉄道あおなみ線,Noseki Station
+- 野志駅,Noshi Station
+- 能代駅,Noshiro Station
+- 能登鹿島駅,Noto-Kashima Station
+- 能登中島駅,Noto-Nakajima Station
+- 能登二宮駅,Noto-Ninomiya Station
+- 能登部駅,Notobe Station
+- 能登川駅,Notogawa Station
+- 野矢駅,Noya Station
+- 野崎駅 (大阪府),Nozaki Station (Osaka)
+- 野崎駅 (栃木県),Nozaki Station (Tochigi)
+- 野里駅,Nozato Station
+- 野沢駅,Nozawa Station
+- 及位駅,Nozoki Station
+- 額住宅前駅,Nuka-Jūtakumae Station
+- 額田駅 (茨城県),Nukada Station
+- 糠南駅,Nukanan Station
+- 額田駅 (大阪府),Nukata Station
+- 糠沢駅,Nukazawa Station
+- 生見駅,Nukumi Station
+- 温田駅,Nukuta Station
+- 沼部駅,Numabe Station
+- 沼袋駅,Numabukuro Station
+- 沼久保駅,Numakubo Station
+- 沼ノ端駅,Numanohata Station
+- 沼ノ沢駅,Numanosawa Station
+- 沼田駅,Numata Station
+- 沼津駅,Numazu Station
+- 布部駅,Nunobe Station
+- 布原駅,Nunohara Station
+- 布市駅,Nunoichi Station
+- 布忍駅,Nunose Station
+- 布師田駅,Nunoshida Station
+- 布崎駅,Nunozaki Station
+- None,Nuttari Station
+- 壬生川駅,Nyūgawa Station (Ehime)
+- 丹生川駅,Nyūgawa Station (Mie)
+- 入野駅 (広島県),Nyūno Station
+- 入善駅,Nyūzen Station
+- 能生駅,Nō Station
+- 農学部前駅,Nōgakubumae Station
+- 直方駅,Nōgata Station
+- 能見台駅,Nōkendai Station
+- 能町駅,Nōmachi Station
+- 小浜駅,Obama Station
+- 小原駅,Obara Station
+- 小波瀬西工大前駅,Obase-Nishikōdai-mae Station
+- 姨捨駅,Obasute Station
+- 小幡駅,Obata Station (Aichi)
+- 小俣駅 (三重県),Obata Station (Mie)
+- 小幡緑地駅,Obataryokuchi Station
+- 小林駅 (兵庫県),Obayashi Station
+- 飫肥駅,Obi Station
+- 帯広駅,Obihiro Station
+- 帯織駅,Obiori Station
+- 帯解駅,Obitoke Station
+- 小櫃駅,Obitsu Station
+- 尾幌駅,Oboro Station
+- 小布施駅,Obuse Station
+- 男衾駅,Obusuma Station
+- 御茶ノ水駅,Ochanomizu Station
+- 落合南長崎駅,Ochiai-Minaminagasaki Station
+- 落合駅 (北海道),Ochiai Station (Hokkaido)
+- 落合駅 (東京都),Ochiai Station (Tokyo)
+- 落合川駅,Ochiaigawa Station
+- 落居駅,Ochii Station
+- 落石駅,Ochiishi Station
+- 小田駅 (岡山県),Oda Station (Okayama)
+- 小田駅 (島根県),Oda Station (Shimane)
+- 小田渕駅,Odabuchi Station
+- 大平駅,Odai Station
+- お台場海浜公園駅,Odaiba-kaihinkōen Station
+- 小高駅,Odaka Station
+- 永山駅 (東京都),Odakyū Nagayama Station
+- 小田急相模原駅,Odakyū Sagamihara Station
+- 多摩センター駅,Odakyū Tama Center Station
+- 小田栄駅,Odasakae Station
+- 小田原駅,Odawara Station
+- 踊場駅,Odoriba Station
+- 小江駅,Oe Station
+- 麻植塚駅,Oezuka Station
+- 於福駅,Ofuku Station
+- 男鹿駅,Oga Station
+- 小垣江駅,Ogakie Station
+- 苧ヶ瀬駅,Ogase Station
+- 緒方駅,Ogata Station (Oita)
+- 緒川駅,Ogawa Station (Aichi)
+- 小川駅 (熊本県),Ogawa Station (Kumamoto)
+- 小川駅 (東京都),Ogawa Station (Tokyo)
+- 小川郷駅,Ogawagō Station
+- None,Ogawakōkō-shita Station
+- 小川町駅 (埼玉県),Ogawamachi Station (Saitama)
+- 小川町駅 (東京都),Ogawamachi Station (Tokyo)
+- 小城駅,Ogi Station
+- 荻伏駅,Ogifushi Station
+- 荻川駅,Ogikawa Station
+- 荻窪駅,Ogikubo Station
+- 荻野駅,Ogino Station (Fukushima)
+- 荻布停留場,Ogino Station (Toyama)
+- 小木ノ城駅,Oginojō Station
+- 小木津駅,Ogitsu Station
+- 越生駅,Ogose Station
+- 小古曽駅,Ogoso Station
+- おごと温泉駅,Ogoto-onsen Station
+- 小国駅,Oguni Station
+- 小倉駅 (京都府),Ogura Station
+- 小倉台駅,Oguradai Station
+- 小串郷駅,Ogushigō Station
+- 荻生駅,Ogyū Station
+- 小郡駅,Ogōri Station
+- 御花畑駅,Ohanabatake Station
+- お花茶屋駅,Ohanajaya Station
+- 笈川駅,Oikawa Station
+- 大池遊園駅,Oikeyūen Station
+- 追良瀬駅,Oirase Station
+- 置賜駅,Oitama Station
+- 老津駅,Oitsu Station
+- 追分駅 (秋田県),Oiwake Station (Akita)
+- 追分駅 (北海道),Oiwake Station (Hokkaido)
+- 追分駅 (三重県),Oiwake Station (Mie)
+- 追分駅 (滋賀県),Oiwake Station (Shiga)
+- 追分口駅,Oiwakeguchi Station
+- 男鹿高原駅,Ojikakōgen Station
+- 小島谷駅,Ojimaya Station
+- 小千谷駅,Ojiya Station
+- 岡駅,Oka Station
+- 岡場駅,Okaba Station
+- 岡花駅,Okabana Station
+- 岡部駅,Okabe Station
+- 御徒町駅,Okachimachi Station
+- 岡田駅 (愛媛県),Okada Station (Ehime)
+- 岡田駅 (香川県),Okada Station (Kagawa)
+- 岡田浦駅,Okadaura Station
+- 岡寺駅,Okadera Station
+- None,Okadomekōfuku Station
+- 岡地駅 (天竜浜名湖鉄道),Okaji Station
+- 岡町駅,Okamachi Station
+- 岡見駅,Okami Station
+- 岡本駅 (兵庫県),Okamoto Station (Hyogo)
+- 岡本駅 (香川県),Okamoto Station (Kagawa)
+- 岡本駅 (栃木県),Okamoto Station (Tochigi)
+- 笑内駅,Okashinai Station
+- 岡谷駅,Okaya Station
+- 岡山駅,Okayama Station
+- None,Okayamaekimae Station
+- 岡崎駅,Okazaki Station
+- 岡崎公園前駅,Okazakikōenmae Station
+- 岡崎前駅,Okazakimae Station
+- 桶川駅,Okegawa Station
+- 沖松島駅,Oki-Matsushima Station
+- 翁島駅,Okinashima Station
+- 興津駅,Okitsu Station
+- 乙川駅,Okkawa Station
+- 大畑駅,Okoba Station
+- 大河端駅,Okobata Station
+- 奥新川駅,Oku-Nikkawa Station
+- 奥多摩駅,Oku-Tama Station
+- 邑久駅,Oku Station (Okayama)
+- 尾久駅,Oku Station (Tokyo)
+- 奥阿仁駅,Okuani Station
+- 奥町駅,Okuchō Station
+- 奥田駅,Okuda Station
+- 奥洞海駅,Okudōkai Station
+- 奥浜名湖駅,Okuhamanako Station
+- 奥泉駅,Okuizumi Station
+- 奥内駅,Okunai Station
+- 奥中山高原駅,Okunakayama-Kōgen Station
+- 奥野谷浜駅,Okunoyahama Station
+- 奥沢駅,Okusawa Station
+- 奥津軽いまべつ駅,Okutsugaru-Imabetsu Station
+- 奥大井湖上駅,Okuōikojō Station
+- 大町西公園駅,Omachi Nishi-koen Station
+- 小前田駅,Omaeda Station
+- 小俣駅 (栃木県),Omata Station
+- 尾松駅,Omatsu Station
+- 乙原駅 (島根県),Ombara Station
+- 音別駅,Ombetsu Station
+- 小見川駅,Omigawa Station
+- 大宮公園駅,Omiya-koen Station
+- おもちゃのまち駅,Omochanomachi Station
+- 思川駅,Omoigawa Station
+- 面影橋停留場,Omokagebashi Station
+- 尾盛駅,Omori Station (Shizuoka)
+- おもろまち駅,Omoromachi Station
+- 面白山高原駅,Omoshiroyama-Kōgen Station
+- 表参道駅,Omotesandō Station
+- 小村井駅,Omurai Station
+- 小村神社前駅,Omurajinjamae Station
+- 御室仁和寺駅,Omuro-Ninnaji Station
+- 尾奈駅,Ona Station
+- 女川駅,Onagawa Station
+- None,Onahama Station
+- 御成門駅,Onarimon Station
+- 恩田駅,Onda Station
+- 遠賀川駅,Ongagawa Station
+- 遠賀野駅,Ongano Station
+- 鬼瀬駅,Onigase Station
+- 鬼越駅,Onigoe Station
+- 鬼塚駅,Onizuka Station
+- 恩智駅,Onji Station
+- 御宿駅,Onjuku Station
+- 恩根内駅,Onnenai Station
+- 小野駅 (兵庫県),Ono Station (Hyogo)
+- 小野駅 (京都府),Ono Station (Kyoto)
+- 小野駅 (長野県),Ono Station (Nagano)
+- 小野駅 (長崎県),Ono Station (Nagasaki)
+- 小野駅 (滋賀県),Ono Station (Shiga)
+- 尾登駅,Onobori Station
+- 小野田駅,Onoda Station
+- 小野田港駅,Onodakō Station
+- 尾上高校前駅,Onoekōkōmae Station
+- 尾上の松駅,Onoenomatsu Station
+- 小野上駅,Onogami Station
+- 小野上温泉駅,Onogamionsen Station
+- 小野町駅,Onomachi Station
+- 尾道駅,Onomichi Station
+- 小野新町駅,Ononiimachi Station
+- 雄信内駅,Onoppunai Station
+- 小野屋駅,Onoya Station
+- 奥武山公園駅,Onoyama Park Station
+- 御嶽山駅,Ontakesan Station
+- 小奴可駅,Onuka Station
+- 追浜駅,Oppama Station
+- オレンジタウン駅,Orange Town Station
+- 織部駅,Oribe Station
+- 折口駅,Origuchi Station
+- 折原駅,Orihara Station
+- おりはた駅,Orihata Station
+- 折居駅,Orii Station
+- 折壁駅,Orikabe Station
+- 織笠駅,Orikasa Station
+- 折本駅,Orimoto Station
+- 折尾駅,Orio Station
+- 下立駅,Oritate Station
+- 下立口駅,Oritateguchi Station
+- 折渡駅,Oriwatari Station
+- 小禄駅,Oroku Station
+- 卸町駅 (福島県),Oroshimachi Station (Fukushima)
+- 卸町駅 (宮城県),Oroshimachi Station (Miyagi)
+- 折生迫駅,Oryūzako Station
+- 長駅,Osa Station
+- 長船駅,Osafune Station
+- 大阪天満宮駅,Osaka-Temmangu Station
+- 梅田地区の鉄道駅,Osaka-Umeda Station
+- 大阪国際空港,Osaka Airport Station
+- 大阪ビジネスパーク駅,Osaka Business Park Station
+- None,Osaka Freight Terminal Station
+- 大阪駅,Osaka Station
+- 刑部駅,Osakabe Station
+- 大阪城公園駅,Osakajōkōen Station
+- 納内駅,Osamunai Station
+- 筬島駅,Osashima Station
+- 長都駅,Osatsu Station
+- 於札内駅,Osatsunai Station
+- 長万部駅,Oshamambe Station
+- 押上駅,Oshiage Station
+- 押部谷駅,Oshibedani Station
+- 押角駅,Oshikado Station
+- 押切駅,Oshikiri Station
+- 渡島沼尻駅,Oshima-Numajiri Station
+- 渡島砂原駅,Oshima-Sawara Station
+- 渡島鶴岡駅,Oshima-Tsuruoka Station
+- 渡島当別駅,Oshima-Tōbetsu Station
+- 小島駅,Oshima Station
+- 忍海駅,Oshimi Station
+- 押野駅,Oshino Station
+- 小塩江駅,Oshioe Station
+- 尾白内駅,Oshironai Station
+- 晩生内駅,Osokinai Station
+- 小田林駅,Otabayashi Station
+- 小田井駅,Otai Station
+- 大楽毛駅,Otanoshike Station
+- 小樽駅,Otaru Station
+- 小樽築港駅,Otaruchikkō Station
+- None,Otobaru Station
+- 男川駅,Otogawa Station
+- 音威子府駅,Otoineppu Station
+- 乙丸駅,Otomaru Station
+- 乙女駅,Otome Station
+- None,Otomesaka Station
+- 小友駅,Otomo Station
+- 落部駅,Otoshibe Station
+- 音羽町駅,Otowachō Station
+- 音沢駅,Otozawa Station
+- 大津市役所前駅,Otsu-shiyakusho-mae Station
+- 乙供駅,Ottomo Station
+- 尾頭橋駅,Otōbashi Station
+- 大和田駅 (静岡県),Owada Station
+- 尾張星の宮駅,Owari-Hoshinomiya Station
+- 尾張一宮駅,Owari-Ichinomiya Station
+- 尾張森岡駅,Owari-Morioka Station
+- 尾張瀬戸駅,Owari-Seto Station
+- 尾張横須賀駅,Owari-Yokosuka Station
+- 尾張旭駅,Owariasahi Station
+- 尾鷲駅,Owase Station
+- 親鼻駅,Oyahana Station
+- 小山駅,Oyama Station
+- 小山田駅,Oyamada Station
+- 尾山台駅,Oyamadai Station
+- 小柳駅 (石川県),Oyanagi Station
+- 親不知駅,Oyashirazu Station
+- おゆみ野駅,Oyumino Station
+- 尾崎駅,Ozaki Station
+- 小作駅,Ozaku Station
+- 尾関山駅,Ozekiyama Station
+- 小月駅,Ozuki Station
+- 比布駅,Pippu Station
+- ポートターミナル駅,Port Terminal Station
+- ポートタウン東駅,Port Town-higashi Station
+- ポートタウン西駅,Port Town-nishi Station
+- 県庁前駅 (沖縄県),Prefectural Office Station
+- 大阿太駅,Ōada Station
+- 大網駅,Ōami Station
+- 大洗駅,Ōarai Station
+- 大麻駅,Ōasa Station
+- 大麻生駅,Ōasō Station
+- 黄檗駅,Ōbaku Station
+- 大羽根園駅,Ōbaneen Station
+- 大原駅 (広島県),Ōbara Station
+- 大張野駅,Ōbarino Station
+- 大畠駅,Ōbatake Station
+- 大歩危駅,Ōboke Station
+- 大府駅,Ōbu Station
+- 大更駅,Ōbuke Station
+- 大袋駅,Ōbukuro Station
+- 相知駅,Ōchi Station
+- 網田駅,Ōda Station (Kumamoto)
+- 麻生田駅,Ōda Station (Mie)
+- 大平駅,Ōdai Station
+- 大高駅,Ōdaka Station
+- 大多羅駅,Ōdara Station
+- 大田市駅,Ōdashi Station
+- 大館駅,Ōdate Station
+- 大泊駅,Ōdomari Station
+- 大富駅,Ōdomi Station
+- 大土呂駅,Ōdoro Station
+- 大戸瀬駅,Ōdose Station
+- 大通駅,Ōdōri Station
+- 大堂津駅,Ōdōtsu Station
+- 大江山口内宮駅,Ōe-Yamaguchi-naiku Station
+- 大江高校前駅,Ōe-kōkōmae Station
+- 大江駅 (愛知県),Ōe Station (Aichi)
+- 大江駅 (京都府),Ōe Station (Kyoto)
+- 大江橋駅,Ōebashi Station
+- 大船駅,Ōfuna Station
+- 大船渡駅,Ōfunato Station
+- 大神駅,Ōga Station
+- 大垣駅,Ōgaki Station
+- 大金駅,Ōgane Station
+- 大形駅,Ōgata Station
+- 大河原駅 (宮城県),Ōgawara Station
+- 扇大橋駅,Ōgi-ōhashi Station
+- 青木駅,Ōgi Station (Hyōgo)
+- 大木駅,Ōgi Station (Saga)
+- 扇町駅 (神奈川県),Ōgimachi Station (Kanagawa)
+- 扇町駅 (大阪府),Ōgimachi Station (Osaka)
+- 扇田駅,Ōgita Station
+- 大胡駅,Ōgo Station
+- 大越駅,Ōgoe Station
+- 大口駅,Ōguchi Station
+- 大原駅 (千葉県),Ōhara Station (Chiba)
+- 大原駅 (岡山県),Ōhara Station (Okayama)
+- 大橋駅 (福岡県),Ōhashi Station
+- 大平台駅,Ōhiradai Station
+- 大平下駅,Ōhirashita Station
+- 大仁駅,Ōhito Station
+- 大保駅,Ōho Station
+- 大堀駅,Ōhori Station
+- 大濠公園駅,Ōhorikōen Station
+- 大井競馬場前駅,Ōi Keibajō Mae Station
+- 太市駅,Ōichi Station
+- 大池いこいの森駅,Ōike Ikoinomori Station
+- 大井町駅,Ōimachi Station
+- 大石駅,Ōishi Station
+- 大石田駅,Ōishida Station
+- 大磯駅,Ōiso Station
+- 大分大学前駅,Ōita-daigaku-mae Station
+- 大分駅,Ōita Station
+- 大板井駅,Ōitai Station
+- 大岩駅,Ōiwa Station
+- 大泉駅 (福島県),Ōizumi Station (Fukushima)
+- 大泉駅 (三重県),Ōizumi Station (Mie)
+- 大泉駅 (富山県),Ōizumi Station (Toyama)
+- 大泉学園駅,Ōizumigakuen Station
+- 大蛇駅,Ōja Station
+- 王子神谷駅,Ōji-Kamiya Station
+- 王寺駅,Ōji Station (Nara)
+- 王子駅,Ōji Station (Tokyo)
+- 王子公園駅,Ōjikōen Station
+- 大島駅 (東京都),Ōjima Station
+- 相可駅,Ōka Station
+- None,Ōkaidō Station
+- 大釜駅,Ōkama Station
+- 大狩部駅,Ōkaribe Station
+- 大川ダム公園駅,Ōkawa Dam kōen Station
+- 大川駅,Ōkawa Station
+- 大河内駅,Ōkawachi Station
+- 大川平駅,Ōkawadai Station
+- 大川野駅,Ōkawano Station
+- 大河原駅 (京都府),Ōkawara Station
+- 大城駅,Ōki Station
+- 大岸駅,Ōkishi Station
+- 大久保駅 (秋田県),Ōkubo Station (Akita)
+- 大久保駅 (兵庫県),Ōkubo Station (Hyogo)
+- 大久保駅 (京都府),Ōkubo Station (Kyoto)
+- 大久保駅 (東京都),Ōkubo Station (Tokyo)
+- 大久喜駅,Ōkuki Station
+- 逢隈駅,Ōkuma Station
+- 大蔵谷駅,Ōkuradani Station
+- 大倉山駅 (兵庫県),Ōkurayama Station (Hyogo)
+- 大倉山駅 (神奈川県),Ōkurayama Station (Kanagawa)
+- 大草駅,Ōkusa Station
+- 大桑駅 (長野県),Ōkuwa Station (Nagano)
+- 大桑駅 (栃木県),Ōkuwa Station (Tochigi)
+- 大間駅,Ōma Station
+- 大町駅 (広島県),Ōmachi Station (Astram Line)
+- 大町駅 (千葉県),Ōmachi Station (Chiba)
+- 大町駅 (広島県),Ōmachi Station (Hiroshima)
+- 大町駅 (香川県),Ōmachi Station (Kagawa)
+- 大町駅 (佐賀県),Ōmachi Station (Saga)
+- None,Ōmachi Station (Toyama)
+- 大前駅,Ōmae Station
+- 大曲駅 (秋田県),Ōmagari Station (Akita)
+- 大曲駅 (青森県),Ōmagari Station (Aomori)
+- 大間越駅,Ōmagoshi Station
+- 大間々駅,Ōmama Station
+- 青梅駅,Ōme Station
+- 青梅街道駅,Ōmekaidō Station
+- 近江八幡駅,Ōmi-Hachiman Station
+- 近江今津駅,Ōmi-Imazu Station
+- 近江舞子駅,Ōmi-Maiko Station
+- 近江長岡駅,Ōmi-Nagaoka Station
+- 近江中庄駅,Ōmi-Nakashō Station
+- 近江塩津駅,Ōmi-Shiotsu Station
+- 近江高島駅,Ōmi-Takashima Station
+- 大海駅,Ōmi Station (Aichi)
+- 青海駅 (新潟県),Ōmi Station (Niigata)
+- 青海川駅,Ōmigawa Station
+- 近江神宮前駅,Ōmijingūmae Station
+- 大甕駅,Ōmika Station
+- 大湊駅,Ōminato Station
+- 大三東駅,Ōmisaki Station
+- 大三駅,Ōmitsu Station
+- 大宮駅 (京都府),Ōmiya Station (Kyoto)
+- 大宮駅 (埼玉県),Ōmiya Station (Saitama)
+- 大溝駅,Ōmizo Station
+- 大森・金城学院前駅,Ōmori-Kinjōgakuin-mae Station
+- 大森駅 (静岡県),Ōmori Station (Shizuoka)
+- 大森駅 (東京都),Ōmori Station (Tokyo)
+- 大森台駅,Ōmoridai Station
+- 大森海岸駅,Ōmorikaigan Station
+- 大森町駅,Ōmorimachi Station
+- 大元駅,Ōmoto Station
+- None,Ōmura Rail Yard Station
+- 大村駅 (兵庫県),Ōmura Station (Hyogo)
+- 大村駅 (長崎県),Ōmura Station (Nagasaki)
+- 大牟田駅,Ōmuta Station
+- 大中駅,Ōnaka Station
+- 大中山駅,Ōnakayama Station
+- 大西駅,Ōnishi Station
+- 大庭駅,Ōniwa Station
+- 大野駅,Ōno Station (Fukushima)
+- 大野台駅,Ōnodai Station
+- 多ノ郷駅,Ōnogō Station
+- 大野原駅,Ōnohara Station
+- 大野城駅,Ōnojō Station
+- 大野町駅,Ōnomachi Station
+- 大乗駅,Ōnori Station
+- 大野下駅,Ōnoshimo Station
+- 大野浦駅,Ōnoura Station
+- 大貫駅,Ōnuki Station
+- 大沼駅,Ōnuma Station
+- 大沼公園駅,Ōnumakōen Station
+- 大岡駅 (宮城県),Ōoka Station (Miyagi)
+- 大岡駅 (静岡県),Ōoka Station (Shizuoka)
+- 大岡小前駅,Ōokashōmae Station
+- 大岡山駅,Ōokayama Station
+- 大阪教育大前駅,Ōsaka-Kyōikudai-mae Station
+- 大阪阿部野橋駅,Ōsaka Abenobashi Station
+- 大阪難波駅,Ōsaka Namba Station
+- 大阪上本町駅,Ōsaka Uehommachi Station
+- 大阪城北詰駅,Ōsakajō-kitazume Station
+- 大阪港駅,Ōsakakō Station
+- 大阪狭山市駅,Ōsakasayamashi Station
+- 大崎広小路駅,Ōsaki-Hirokōji Station
+- 大崎駅,Ōsaki Station
+- 大佐倉駅,Ōsakura Station
+- 大里駅,Ōsato Station
+- 大沢駅 (新潟県),Ōsawa Station (Niigata)
+- 大沢駅 (山形県),Ōsawa Station (Yamagata)
+- 大志田駅,Ōshida Station
+- 大島駅 (岐阜県),Ōshima Station
+- 大清水駅,Ōshimizu Station
+- 大篠津町駅,Ōshinozuchō Station
+- 王子保駅,Ōshio Station (Fukui)
+- 大塩駅,Ōshio Station (Hyogo)
+- 大白川駅,Ōshirakawa Station
+- 大庄駅,Ōshō Station
+- None,Ōshōji Station
+- 大曽根浦駅,Ōsoneura Station
+- 大杉駅,Ōsugi Station
+- 大須観音駅,Ōsukannon Station
+- 大隅夏井駅,Ōsumi-Natsui Station
+- 大隅横川駅,Ōsumi-Yokogawa Station
+- 大隅大川原駅,Ōsumi-Ōkawara Station
+- 大住駅,Ōsumi Station
+- 太田駅 (群馬県),Ōta Station (Gunma)
+- 太田駅 (香川県),Ōta Station (Kagawa)
+- 太田部駅,Ōtabe Station
+- 太田川駅,Ōtagawa Station
+- 大田切駅,Ōtagiri Station
+- 大田口駅,Ōtaguchi Station
+- 大田郷駅,Ōtagō Station
+- 大竹駅,Ōtake Station
+- 大滝温泉駅,Ōtaki-Onsen Station
+- 大多喜駅,Ōtaki Station (Chiba)
+- 大滝駅,Ōtaki Station (Yamagata)
+- 大谷駅 (滋賀県),Ōtani Station (Shiga)
+- 大谷駅 (和歌山県),Ōtani Station (Wakayama)
+- 大手町駅 (愛媛県),Ōtemachi Station (Ehime)
+- 大手町駅 (東京都),Ōtemachi Station (Tokyo)
+- 大寺駅,Ōtera Station
+- 大戸駅,Ōto Station
+- 大鳥羽駅,Ōtoba Station (Fukui)
+- 大外羽駅,Ōtoba Station (Gifu)
+- 鳳駅,Ōtori Station
+- 大鳥居駅,Ōtorii Station
+- 大歳駅,Ōtoshi Station
+- 大津駅,Ōtsu Station
+- 大槌駅,Ōtsuchi Station
+- 大塚・帝京大学駅,Ōtsuka-Teikyōdaigaku Station
+- None,Ōtsuka-eki-mae Station
+- 大塚駅 (東京都),Ōtsuka Station
+- 大月駅,Ōtsuki Station
+- 大津京駅,Ōtsukyō Station
+- 大津港駅,Ōtsukō Station
+- 大津町駅,Ōtsumachi Station
+- 大鶴駅,Ōtsuru Station
+- 大内駅,Ōuchi Station
+- 大内山駅,Ōuchiyama Station
+- 大浦駅,Ōura Station
+- 大和田駅 (北海道),Ōwada Station (Hokkaido)
+- 大輪田駅,Ōwada Station (Nara)
+- 大和田駅 (大阪府),Ōwada Station (Osaka)
+- 大和田駅 (埼玉県),Ōwada Station (Saitama)
+- 大鰐温泉駅,Ōwani Station
+- 大鰐温泉駅,Ōwanionsen Station
+- 大谷海岸駅,Ōya-Kaigan Station
+- 大矢駅,Ōya Station (Gifu)
+- 大屋駅,Ōya Station (Nagano)
+- 大藪駅,Ōyabu Station
+- 大谷地駅,Ōyachi Station (Hokkaido)
+- 大矢知駅,Ōyachi Station (Mie)
+- None,Ōyama Cable Station
+- 大山駅 (鹿児島県),Ōyama Station (Kagoshima)
+- 大山駅 (東京都),Ōyama Station (Tokyo)
+- None,Ōyamadera Station
+- 大山崎駅,Ōyamazaki Station
+- 大在駅,Ōzai Station
+- 大沢内駅,Ōzawanai Station
+- 大関駅,Ōzeki Station (Fukui)
+- 大堰駅,Ōzeki Station (Fukuoka)
+- 大曽根駅,Ōzone Station
+- 大嵐駅,Ōzore Station
+- 大塚駅 (広島県),Ōzuka Station
+- 楽々園駅,Hiroden Rakurakuen Station
+- 礼拝駅,Raihai Station
+- 来迎寺駅,Raikōji Station
+- 洛西口駅,Rakusaiguchi Station
+- None,Rakutenchishita Station
+- None,Rakutenchiue Station
+- 嵐電嵯峨駅,Randen-Saga Station
+- 嵐電天神川駅,Randen-Tenjingawa Station
+- 蘭越駅,Rankoshi Station
+- 蘭留駅,Ranru Station
+- 蘭島駅,Ranshima Station
+- 礼文駅,Rebun Station
+- 霊丘公園体育館駅,Reikyūkōen Taiikukan Station
+- 令和コスタ行橋駅,Reiwa Costa Yukuhashi Station
+- 連坊駅,Rembo Station
+- 蓮台寺駅,Rendaiji Station
+- 蓮花寺駅,Rengeji Station
+- 舞浜リゾートラインディズニーリゾートライン,Resort Gateway Station
+- 礼受駅,Reuke Station
+- 利府駅,Rifu Station
+- 陸中門崎駅,Rikuchū-Kanzaki Station
+- 陸中川井駅,Rikuchū-Kawai Station
+- 陸中松川駅,Rikuchū-Matsukawa Station
+- 陸中中野駅,Rikuchū-Nakano Station
+- 陸中夏井駅,Rikuchū-Natsui Station
+- 陸中野田駅,Rikuchū-Noda Station
+- 陸中折居駅,Rikuchū-Orii Station
+- 陸中宇部駅,Rikuchū-Ube Station
+- 陸中八木駅,Rikuchū-Yagi Station
+- 陸中山田駅,Rikuchū-Yamada Station
+- 陸中大橋駅,Rikuchū-Ōhashi Station
+- 陸中大里駅,Rikuchū-Ōsato Station
+- 陸前赤井駅,Rikuzen-Akai Station
+- 陸前赤崎駅,Rikuzen-Akasaki Station
+- 陸前浜田駅,Rikuzen-Hamada Station
+- 陸前原ノ町駅,Rikuzen-Haranomachi Station
+- 陸前階上駅,Rikuzen-Hashikami Station
+- 陸前稲井駅,Rikuzen-Inai Station
+- 陸前小泉駅,Rikuzen-Koizumi Station
+- 陸前港駅,Rikuzen-Minato Station
+- 陸前落合駅,Rikuzen-Ochiai Station
+- 陸前小野駅,Rikuzen-Ono Station
+- 陸前山王駅,Rikuzen-Sannō Station
+- 陸前白沢駅,Rikuzen-Shirasawa Station
+- 陸前高砂駅,Rikuzen-Takasago Station
+- 陸前高田駅,Rikuzen-Takata Station
+- 陸前戸倉駅,Rikuzen-Togura Station
+- 陸前富山駅,Rikuzen-Tomiyama Station
+- 陸前豊里駅,Rikuzen-Toyosato Station
+- 陸前谷地駅,Rikuzen-Yachi Station
+- 陸前矢作駅,Rikuzen-Yahagi Station
+- 陸前山下駅,Rikuzen-Yamashita Station
+- 陸前横山駅,Rikuzen-Yokoyama Station
+- 陸前大塚駅,Rikuzen-Ōtsuka Station
+- 梨郷駅,Ringō Station
+- 林間田園都市駅,Rinkanden'entoshi Station
+- りんくう常滑駅,Rinkū-Tokoname Station
+- りんくうタウン駅,Rinkū Town Station
+- 栗林駅,Ritsurin Station
+- 栗林公園北口駅,Ritsurinkōen Kitaguchi Station
+- None,Ritsurinkōen Station
+- 栗東駅,Rittō Station
+- 芦花公園駅,Rokakōen Station
+- 六軒駅 (岐阜県),Rokken Station (Gifu)
+- 六軒駅 (三重県),Rokken Station (Mie)
+- None,Rokkō Cable-shita Station
+- 六甲駅,Rokkō Station
+- 六甲道駅,Rokkōmichi Station
+- None,Rokkōsanjō Station
+- 六番町駅,Rokubanchō Station
+- 六丁の目駅,Rokuchonome Station
+- 六町駅,Rokuchō Station
+- 六合駅,Rokugō Station
+- 六郷土手駅,Rokugōdote Station
+- 六原駅,Rokuhara Station
+- 六地蔵駅,Rokujizō Station
+- 六条駅,Rokujō Station
+- 六万寺駅,Rokumanji Station
+- 六反地駅,Rokutanji Station
+- 六輪駅,Rokuwa Station
+- 鹿王院駅,Rokuōin Station
+- None,Ropeway Iriguchi Station
+- 六本木一丁目駅,Roppongi-itchōme Station
+- 六本木駅,Roppongi Station
+- 六本松駅,Ropponmatsu Station
+- ロイズタウン駅,Royce' Town Station
+- 留辺蘂駅,Rubeshibe Station
+- 留萌駅,Rumoi Station
+- 緑地公園駅,Ryokuchikōen Station
+- 緑園都市駅,Ryokuentoshi Station
+- 龍安寺駅,Ryōanji Station
+- 両国駅,Ryōgoku Station
+- 両石駅,Ryōishi Station
+- 綾里駅,Ryōri Station
+- 竜ケ水駅,Ryūgamizu Station
+- 竜ヶ崎駅,Ryūgasaki Station
+- 龍ケ崎市駅,Ryūgasakishi Station
+- 龍谷大前深草駅,Ryūkokudai-mae-fukakusa Station
+- 竜舞駅,Ryūmai Station
+- 流通センター駅,Ryūtsū Center Station
+- 竜王駅,Ryūō Station
+- 龍王峡駅,Ryūōkyō Station
+- 市役所前停留場 (広島県),Hiroden Shiyakusho-mae Station
+- 鯖江駅,Sabae Station
+- 鯖石駅,Sabaishi Station
+- 佐羽根駅,Sabane Station
+- 鯖瀬駅,Sabase Station
+- 幸浦駅,Sachiura Station
+- 貞光駅,Sadamitsu Station
+- 佐土原駅,Sadowara Station
+- 左通駅,Sadōri Station
+- 佐伯区役所前駅,Saeki-Kuyakushomae Station
+- 嵯峨嵐山駅,Saga-Arashiyama Station
+- 佐賀公園駅,Saga-Kōen Station
+- 佐賀駅,Saga Station
+- 寒河江駅,Sagae Station
+- 相模金子駅,Sagami-Kaneko Station
+- 相模沼田駅,Sagami-Numata Station
+- 相模大野駅,Sagami-Ōno Station
+- 相模大塚駅,Sagami-Ōtsuka Station
+- 相模原駅,Sagamihara Station
+- 相模湖駅,Sagamiko Station
+- さがみ野駅,Sagamino Station
+- 相良藩願成寺駅,Sagarahan-Ganjōji Station
+- さぎの宮駅,Saginomiya Station (Shizuoka)
+- 鷺ノ宮駅,Saginomiya Station (Tokyo)
+- 鷺沼駅,Saginuma Station
+- 砂越駅,Sagoshi Station
+- 西院駅,Sai Station
+- 最知駅,Saichi Station
+- 西大寺駅,Saidaiji Station
+- 採銅所駅,Saidōsho Station
+- 西金駅,Saigane Station
+- 犀潟駅,Saigata Station
+- 犀川駅,Saigawa Station
+- 西郷駅,Saigō Station
+- 西院駅,Saiin Station
+- 西条駅 (広島県),Saijō Station
+- 佐伯駅,Saiki Station
+- 斎宮駅,Saikū Station
+- 西明寺駅,Saimyōji Station
+- 再春医療センター前駅,Saishun Iryo Center Mae Station
+- さいたま新都心駅,Saitama-Shintoshin Station
+- 彩都西駅,Saito-Nishi Station
+- 西戸崎駅,Saitozaki Station
+- 幸駅,Saiwai Station
+- 坂駅,Saka Station
+- 坂部駅,Sakabe Station
+- 酒殿駅,Sakado Station (Fukuoka)
+- 坂戸駅 (茨城県),Sakado Station (Ibaraki)
+- 坂戸駅,Sakado Station (Saitama)
+- 栄駅 (愛知県),Sakae Station (Aichi)
+- 栄駅 (兵庫県),Sakae Station (Hyogo)
+- 栄駅 (岡山県),Sakae Station (Okayama)
+- 栄町駅 (千葉県),Sakaechō Station (Chiba)
+- 栄町停留場 (東京都),Sakaechō Station (Tokyo)
+- 栄町駅 (愛知県),Sakaemachi Station (Aichi)
+- 栄町駅 (札幌市),Sakaemachi Station (Hokkaido)
+- 栄町駅 (富山県),Sakaemachi Station (Toyama)
+- 坂祝駅,Sakahogi Station
+- 堺東駅,Sakai-Higashi Station
+- 堺駅,Sakai Station
+- None,Sakaibashi Station
+- 堺田駅,Sakaida Station
+- 坂出駅,Sakaide Station
+- 境町駅,Sakaimachi Station
+- 境松駅,Sakaimatsu Station
+- 境港駅,Sakaiminato Station
+- 堺市駅,Sakaishi Station
+- 堺筋本町駅,Sakaisuji-Hommachi Station
+- 坂上駅,Sakakami Station
+- 坂城駅,Sakaki Station
+- 榊原温泉口駅,Sakakibara-Onsenguchi Station
+- 坂北駅,Sakakita Station
+- 坂町駅,Sakamachi Station
+- 坂本比叡山口駅,Sakamoto-hieizanguchi Station
+- 坂本駅 (熊本県),Sakamoto Station (Kumamoto)
+- 坂元駅,Sakamoto Station (Miyagi)
+- 坂根駅,Sakane Station
+- 坂ノ市駅,Sakanoichi Station
+- 坂之上駅,Sakanoue Station
+- 酒折駅,Sakaori Station
+- 盛駅,Sakari Station
+- 逆井駅,Sakasai Station
+- 逆瀬川駅,Sakasegawa Station
+- 坂下駅,Sakashita Station
+- 坂田駅,Sakata Station (Shiga)
+- 酒田駅,Sakata Station (Yamagata)
+- 佐川駅,Sakawa Station
+- 崎平駅,Sakidaira Station
+- 咲花駅,Sakihana Station
+- 崎守駅,Sakimori Station
+- 崎山駅,Sakiyama Station
+- 咲来駅,Sakkuru Station
+- 佐古駅,Sako Station
+- 佐古木駅,Sakogi Station
+- 坂越駅,Sakoshi Station
+- 佐久広瀬駅,Saku-Hirose Station
+- 佐久海ノ口駅,Saku-Uminokuchi Station
+- 佐久駅,Saku Station
+- 佐久平駅,Sakudaira Station
+- 作木口駅,Sakugiguchi Station
+- 佐久間駅,Sakuma Station
+- 作並駅,Sakunami Station
+- 桜新町駅,Sakura-Shinmachi Station
+- さくら夙川駅,Sakura Shukugawa Station
+- 桜駅 (愛知県),Sakura Station (Aichi)
+- 佐倉駅,Sakura Station (Chiba)
+- 桜駅 (三重県),Sakura Station (Mie)
+- 桜橋駅 (静岡県),Sakurabashi Station (Shizuoka)
+- None,Sakurabashi Station (Toyama)
+- 桜台駅 (福岡県),Sakuradai Station (Fukuoka)
+- 桜台駅 (東京都),Sakuradai Station (Tokyo)
+- 桜田門駅,Sakuradamon Station
+- 桜ヶ丘駅,Sakuragaoka Station
+- 桜川駅 (大阪府),Sakuragawa Station (Osaka)
+- 桜川駅 (滋賀県),Sakuragawa Station (Shiga)
+- 桜木駅 (千葉県),Sakuragi Station (Chiba)
+- 桜木駅 (静岡県),Sakuragi Station (Shizuoka)
+- 桜木町駅,Sakuragichō Station
+- 桜本町駅,Sakurahommachi Station
+- 桜井駅 (愛知県),Sakurai Station (Aichi)
+- 桜井駅 (奈良県),Sakurai Station (Nara)
+- 桜井駅 (大阪府),Sakurai Station (Osaka)
+- 桜島駅,Sakurajima Station
+- 桜上水駅,Sakurajōsui Station
+- 桜街道駅,Sakurakaidō Station
+- 桜町駅,Sakuramachi Station (Nagano)
+- None,Sakuramachi Station (Nagasaki)
+- 桜町前駅,Sakuramachimae Station
+- さくらんぼ東根駅,Sakurambo Higashine Station
+- 桜水駅,Sakuramizu Station
+- 桜ノ宮駅,Sakuranomiya Station
+- 桜岡駅,Sakuraoka Station
+- 桜沢駅 (長野県),Sakurasawa Station
+- 桜山駅,Sakurayama Station
+- 桜坂駅,Sakurazaka Station
+- 桜沢駅 (埼玉県),Sakurazawa Station
+- 作草部駅,Sakusabe Station
+- 左京山駅,Sakyōyama Station
+- 栄生駅,Sakō Station
+- 様似駅,Samani Station
+- とさでん交通桟橋線,Sambashi-Shakomae Station
+- とさでん交通桟橋線,Sambashidōri-Gochōme Station
+- 三本松駅 (香川県),Sambommatsu Station (Kagawa)
+- 三本松駅 (奈良県),Sambommatsu Station (Nara)
+- 三本松口駅,Sambommatsuguchi Station
+- 鮫駅,Same Station
+- 醒ケ井駅,Samegai Station
+- 鮫洲駅,Samezu Station
+- 佐味田川駅,Samitagawa Station
+- 三溝駅,Samizo Station
+- 三枚橋駅,Sammaibashi Station
+- 三見駅,Sammi Station
+- None,Sammon Station
+- 寒川駅,Samukawa Station
+- 侍浜駅,Samuraihama Station
+- 佐奈駅,Sana Station
+- 猿投駅,Sanage Station
+- 佐那具駅,Sanagu Station
+- 三田本町駅,Sanda-Hommachi Station
+- 三田駅 (兵庫県),Sanda Station
+- 山東駅,Sandō Station
+- 三ヶ森駅,Sangamori Station
+- 三ケ根駅,Sangane Station
+- 三軒茶屋駅,Sangenjaya Station
+- 産業振興センター駅,Sangyō Shinkō Center Station
+- 三郷駅 (愛知県),Sangō Station (Aichi)
+- 三郷駅 (奈良県),Sangō Station (Nara)
+- 参宮橋駅,Sangūbashi Station
+- 三条京阪駅,Sanjō-Keihan Station
+- None,Sanjō Station (Fukuoka)
+- 三条駅 (香川県),Sanjō Station (Kagawa)
+- 三条駅 (京都府),Sanjō Station (Kyoto)
+- 三条駅 (新潟県),Sanjō Station (Niigata)
+- 三十八社駅,Sanjūhassha Station
+- 三戸駅,Sannohe Station
+- 三宮・花時計前駅,Sannomiya-Hanadokeimae Station
+- 三宮駅,Sannomiya Station
+- 三ノ宮駅,Sannomiya Station (JR West)
+- 山王駅 (愛知県),Sannō Station (Aichi)
+- 山王駅 (福井県),Sannō Station (Fukui)
+- 佐野駅,Sano Station
+- 佐野のわたし駅,Sanonowatashi Station
+- 佐野市駅,Sanoshi Station
+- 三里木駅,Sanrigi Station
+- 三陸駅,Sanriku Station
+- None,Sanroku Station (Fukuoka)
+- 三才駅,Sansai Station
+- 讃岐相生駅,Sanuki-Aioi Station
+- 讃岐府中駅,Sanuki-Fuchū Station
+- 讃岐牟礼駅,Sanuki-Mure Station
+- 讃岐財田駅,Sanuki-Saida Station
+- 讃岐塩屋駅,Sanuki-Shioya Station
+- 讃岐白鳥駅,Sanuki-Shirotori Station
+- 讃岐津田駅,Sanuki-Tsuda Station
+- 龍ケ崎市駅,Sanuki Station
+- 佐貫町駅,Sanukimachi Station
+- 山陽網干駅,Sanyo Aboshi Station
+- 山陽明石駅,Sanyo Akashi Station
+- 山陽姫路駅,Sanyo Himeji Station
+- 山陽塩屋駅,Sanyo Shioya Station
+- 山陽曽根駅,Sanyo Sone Station
+- 山陽須磨駅,Sanyo Suma Station
+- 山陽垂水駅,Sanyo Tarumi Station
+- 山陽天満駅,Sanyo Temma Station
+- 山陽魚住駅,Sanyo Uozumi Station
+- 山陽女学園前駅,Sanyō-Joshidaimae Station
+- 三瀬駅,Sanze Station
+- 札比内駅,Sappinai Station
+- サッポロビール庭園駅,Sapporo Beer Teien Station
+- None,Sapporo Kamotsu Terminal Station
+- 札幌駅,Sapporo Station
+- さっぽろ駅,Sapporo Station (Sapporo Municipal Subway)
+- 佐良山駅,Sarayama Station
+- 佐里駅,Sari Station
+- 猿田駅,Saruda Station
+- 猿橋駅,Saruhashi Station
+- None,Saruiwa Station
+- 猿和田駅,Saruwada Station
+- 篠原駅 (愛知県),Sasabara Station
+- 笹原駅,Sasabaru Station
+- 笹部駅,Sasabe Station
+- 笹川駅,Sasagawa Station
+- 笹子駅,Sasago Station
+- 篠栗駅,Sasaguri Station
+- 笹原田駅,Sasaharada Station
+- 佐々木駅,Sasaki Station
+- 笹木野駅,Sasakino Station
+- ささしまライブ駅,Sasashima-raibu Station
+- 笹谷駅,Sasaya Station
+- 篠山口駅,Sasayamaguchi Station
+- 笹津駅,Sasazu Station
+- 笹塚駅,Sasazuka Station
+- 佐世保中央駅,Sasebo-Chūō Station
+- 佐世保駅,Sasebo Station
+- 佐敷駅,Sashiki Station
+- 刺巻駅,Sashimaki Station
+- 佐志生駅,Sashiu Station
+- 指扇駅,Sashiōgi Station
+- 里駅,Sato Station
+- 里見駅,Satomi Station
+- 里白石駅,Satoshiraishi Station
+- 里庄駅,Satoshō Station
+- 佐津駅,Satsu Station
+- 撮影所前駅,Satsueisho-mae Station
+- 札苅駅,Satsukari Station
+- 五月台駅,Satsukidai Station
+- さつき野駅,Satsukino Station
+- 薩摩今和泉駅,Satsuma-Imaizumi Station
+- 薩摩板敷駅,Satsuma-Itashiki Station
+- 薩摩川尻駅,Satsuma-Kawashiri Station
+- 薩摩松元駅,Satsuma-Matsumoto Station
+- 薩摩塩屋駅,Satsuma-Shioya Station
+- 薩摩高城駅,Satsuma-Taki Station
+- 薩摩大川駅,Satsuma-Ōkawa Station
+- 札内駅,Satsunai Station
+- 幸手駅,Satte Station
+- 札的駅,Satteki Station
+- 札弦駅,Sattsuru Station
+- 佐和駅,Sawa Station (Ibaraki)
+- 沢駅,Sawa Station (Nagano)
+- 沢辺駅,Sawabe Station
+- 沢田駅,Sawada Station
+- 沢谷駅,Sawadani Station
+- 沢井駅,Sawai Station
+- 沢尻駅,Sawajiri Station
+- 沢間駅,Sawama Station
+- 沢目駅,Sawame Station
+- 沢中山駅,Sawanakayama Station
+- 沢渡駅,Sawando Station
+- 沢ノ町駅,Sawanochō Station
+- 佐原駅,Sawara Station
+- 沢良宜駅,Sawaragi Station
+- 佐屋駅,Saya Station
+- 狭山駅,Sayama Station
+- 狭山ヶ丘駅,Sayamagaoka Station
+- 狭山市駅,Sayamashi Station
+- 佐用駅,Sayo Station
+- 佐々駅,Saza Station
+- スクリーン駅,Screen Station
+- 洗馬駅,Seba Station
+- 清児駅,Sechigo Station
+- 瀬越駅,Segoshi Station
+- 瀬辺地駅,Seheji Station
+- 聖愛中高前駅,Seiaichūkō-mae Station
+- 整備場駅,Seibijō Station
+- 西武秩父駅,Seibu Chichibu Station
+- 西武新宿駅,Seibu Shinjuku Station
+- 西武立川駅,Seibu Tachikawa Station
+- 西武柳沢駅,Seibu Yagisawa Station
+- 西武園ゆうえんち駅,Seibuen-yūenchi Station
+- 西武園駅,Seibuen Station
+- 西武球場前駅,Seibukyūjō-mae Station
+- 勢浜駅,Seihama Station
+- 清峰高校前駅,Seihōkōkōmae Station
+- 成城学園前駅,Seijōgakuen-Mae Station
+- None,Seikan Tunnel Kinenkan Station
+- None,Seikibashi Station
+- 清明駅,Seimei Station
+- 清流みはらし駅,Seiryū-Miharashi Station
+- 清流新岩国駅,Seiryū-Shin-Iwakuni Station
+- 聖蹟桜ヶ丘駅,Seiseki-Sakuragaoka Station
+- 西神中央駅,Seishin-Chūō Station
+- 西神南駅,Seishin-Minami Station
+- None,Seishūgakuenmae Station
+- 清和学園前停留場,Seiwagakuenmae Station
+- 関下有知駅,Seki-Shimouchi Station
+- 関市役所前駅,Seki-Shiyakushomae Station
+- 関富岡駅,Seki-Tomioka Station
+- 関駅 (岐阜県),Seki Station (Gifu)
+- 関駅 (三重県),Seki Station (Mie)
+- 関ケ原駅,Sekigahara Station
+- 関川駅,Sekigawa Station
+- 関口駅,Sekiguchi Station
+- None,Sekijūjibyōinmae Station
+- 赤十字前駅,Sekijūjimae Station
+- 関目成育駅,Sekime-Seiiku Station
+- 関目高殿駅,Sekime-Takadono Station
+- 関目駅,Sekime Station
+- 関根駅,Sekine Station
+- 関ノ宮駅,Sekinomiya Station
+- 積志駅,Sekishi Station
+- せきてらす前駅,Sekiterasumae Station
+- 関都駅,Sekito Station
+- 関屋駅 (奈良県),Sekiya Station (Nara)
+- 関屋駅 (新潟県),Sekiya Station (Niigata)
+- 関山駅,Sekiyama Station
+- 千林大宮駅,Sembayashi-Ōmiya Station
+- 千林駅,Sembayashi Station
+- 仙北町駅,Sembokuchō Station
+- 千本駅,Sembon Station
+- 瀬見温泉駅,Semi-Onsen Station
+- 瀬峰駅,Semine Station
+- 千丁駅,Senchō Station
+- 千旦駅,Senda Station
+- 千駄ケ谷駅,Sendagaya Station
+- 千駄木駅,Sendagi Station
+- None,Sendai-Kitakō Station
+- None,Sendai-Nishikō Station
+- 仙台空港駅,Sendai Airport Station
+- 川内駅 (鹿児島県),Sendai Station (Kagoshima)
+- 仙台駅,Sendai Station (Miyagi)
+- None,Sendaifutō Station
+- None,Sendaikō Station
+- 千平駅,Sendaira Station
+- 泉岳寺駅,Sengakuji Station
+- 仙川駅,Sengawa Station
+- 浅間町駅,Sengencho Station
+- せんげん台駅,Sengendai Station
+- 千石駅,Sengoku Station
+- 千住大橋駅,Senju-Ōhashi Station
+- 千丈駅,Senjō Station
+- 千畳敷駅 (青森県),Senjōjiki Station
+- 千川駅,Senkawa Station
+- 千厩駅,Senmaya Station
+- 瀬野駅,Seno Station
+- 妹尾駅,Senoo Station
+- 瀬上駅,Senoue Station
+- 泉福寺駅,Senpukuji Station
+- 千里中央駅,Senri-Chuo Station
+- 千里丘駅,Senrioka Station
+- 千里山駅,Senriyama Station
+- 潜竜ヶ滝駅,Senryūgataki Station
+- 千徳駅,Sentoku Station
+- 前栽駅,Senzai Station
+- 仙崎駅,Senzaki Station
+- 洗足池駅,Senzoku-Ike Station
+- 洗足駅,Senzoku Station
+- 千頭駅,Senzu Station
+- 節婦駅,Seppu Station
+- 世良田駅,Serada Station
+- 瀬々串駅,Sesekushi Station
+- 接岨峡温泉駅,Sessokyō-Onsen Station
+- 瀬田駅 (熊本県),Seta Station (Kumamoto)
+- 瀬田駅 (滋賀県),Seta Station (Shiga)
+- 世田谷代田駅,Setagaya-Daita Station
+- 世田谷駅,Setagaya Station
+- 瀬高駅,Setaka Station
+- 瀬戸市役所前駅,Seto-Shiyakushomae Station
+- 瀬戸駅,Seto Station
+- 瀬戸口駅,Setoguchi Station
+- 瀬戸石駅,Setoishi Station
+- 瀬戸瀬駅,Setose Station
+- 瀬戸市駅,Setoshi Station
+- 摂待駅,Settai Station
+- 摂津本山駅,Settsu-Motoyama Station
+- 摂津富田駅,Settsu-Tonda Station
+- 摂津市駅,Settsu-shi Station
+- 摂津駅,Settsu Station
+- 勢野北口駅,Seya-Kitaguchi Station
+- 瀬谷駅,Seya Station
+- 社台駅,Shadai Station
+- 舎熊駅,Shaguma Station
+- 社家駅,Shake Station
+- 尺別信号場,Shakubetsu Station
+- 尺土駅,Shakudo Station
+- 石神井公園駅,Shakujiikōen Station
+- 柴原阪大前駅,Shibahara Station
+- 柴橋駅,Shibahashi Station
+- 柴平駅,Shibahira Station
+- 柴宿駅,Shibajuku Station
+- 芝川駅,Shibakawa Station
+- 芝公園駅,Shibakōen Station
+- 柴又駅,Shibamata Station
+- 柴崎体育館駅,Shibasaki-Taiikukan Station
+- 柴崎駅,Shibasaki Station
+- 柴田駅,Shibata Station (Aichi)
+- 新発田駅,Shibata Station (Niigata)
+- 芝浦ふ頭駅,Shibaura-futō Station
+- 芝山千代田駅,Shibayama-Chiyoda Station
+- 柴山駅,Shibayama Station
+- 標茶駅,Shibecha Station
+- 士別駅,Shibetsu Station
+- 渋川駅,Shibukawa Station
+- 渋木駅,Shibuki Station
+- 志文駅,Shibun Station
+- 渋沢駅,Shibusawa Station
+- 志布志駅,Shibushi Station
+- 渋民駅,Shibutami Station
+- 渋谷駅,Shibuya Station
+- 七道駅,Shichidō Station
+- 七条駅,Shichijō Station
+- 七軒茶屋駅,Shichikenjaya Station
+- 七戸十和田駅,Shichinohe-Towada Station
+- 七里ヶ浜駅,Shichirigahama Station
+- 市大医学部駅,Shidai-igakubu Station
+- 志度駅,Shido Station
+- 志賀本通駅,Shiga-hondōri Station
+- 志賀駅,Shiga Station
+- 信楽駅,Shigaraki Station
+- 紫香楽宮跡駅,Shigarakigūshi Station
+- 滋賀里駅,Shigasato Station
+- 重原駅,Shigehara Station
+- 滋野駅,Shigeno Station
+- 重岡駅,Shigeoka Station
+- 重富駅,Shigetomi Station
+- 繁藤駅,Shigetō Station
+- 重安駅,Shigeyasu Station
+- 鴫野駅,Shigino Station
+- 信貴山口駅,Shigisanguchi Station
+- 信貴山下駅,Shigisanshita Station
+- 四郷駅,Shigō Station
+- 志井駅 (JR九州),Shii Station (JR Kyushu)
+- 志井駅 (北九州高速鉄道),Shii Station (Kitakyushu Monorail)
+- 椎田駅,Shiida Station
+- 志井公園駅,Shiikōen Station
+- 椎名町駅,Shiinamachi Station
+- 椎柴駅,Shiishiba Station
+- 志比堺駅,Shiizakai Station
+- 四十万駅,Shijima Station
+- 志染駅,Shijimi Station
+- 四十九駅,Shijuku Station
+- 四条大宮駅,Shijō-Ōmiya Station
+- 四条駅,Shijō Station
+- 市場前駅,Shijōmae Station
+- 四条畷駅,Shijōnawate Station
+- 鹿部駅,Shikabe Station
+- 鹿賀駅,Shikaga Station
+- 鹿家駅,Shikaka Station
+- 飾磨駅,Shikama Station
+- None,Shikamura Station
+- 鹿ノ谷駅,Shikanotani Station
+- 然別駅,Shikaribetsu Station
+- 鹿討駅,Shikauchi Station
+- 試験場前駅,Shikenjō-mae Station
+- 志紀駅,Shiki Station (Osaka)
+- 志木駅,Shiki Station (Saitama)
+- 敷戸駅,Shikido Station
+- 敷地駅,Shikiji Station
+- 式敷駅,Shikijiki Station
+- 敷浪駅,Shikinami Station
+- 四季の郷駅,Shikinosato Station
+- 敷島駅,Shikishima Station
+- 志久駅,Shiku Station
+- 志摩赤崎駅,Shima-Akasaki Station
+- 志摩磯部駅,Shima-Isobe Station
+- 志摩神明駅,Shima-Shimmei Station
+- 島氏永駅,Shima-Ujinaga Station
+- 志摩横山駅,Shima-Yokoyama Station
+- 島原船津駅,Shimabara-Funatsu Station
+- 島原駅,Shimabara Station
+- 島原港駅,Shimabarakō Station
+- 島田駅 (静岡県),Shimada Station
+- 島ケ原駅,Shimagahara Station
+- 島松駅,Shimamatsu Station
+- 島本駅,Shimamoto Station
+- 島越駅,Shimanokoshi Station
+- 島ノ関駅,Shimanoseki Station
+- 島ノ下信号場,Shimanoshita Station
+- 島尾駅,Shimao Station
+- 島田駅 (山口県),Shimata Station
+- 島高松駅,Shimatakamatsu Station
+- 島内駅,Shimauchi Station
+- 新馬場駅,Shimbamba Station
+- 新原駅,Shimbaru Station
+- 新橋駅,Shimbashi Station
+- 市民広場駅,Shimin Hiroba Station
+- None,Shiminbyōin-mae Station (Nagasaki)
+- 市民病院前停留場,Shiminbyōin-mae Station (Toyama)
+- 市民公園前駅,Shiminkōen-mae Station
+- 清水駅 (愛知県),Shimizu Station (Aichi)
+- 清水駅 (大阪府),Shimizu Station (Osaka)
+- 清水駅 (静岡県),Shimizu Station (Shizuoka)
+- 清水川駅,Shimizugawa Station
+- 清水原駅,Shimizuhara Station
+- 清水公園駅,Shimizukōen Station
+- None,Shimizumachi Station
+- 清水沢駅,Shimizusawa Station
+- 冷水浦駅,Shimizuura Station
+- 新町駅,Shimmachi Station (Gunma)
+- None,Shimmachi Station (Kumamoto)
+- 神明駅 (福井県),Shimmei Station (Fukui)
+- 神明駅 (北海道),Shimmei Station (Hokkaido)
+- None,Shimmeichō Station
+- 新森古市駅,Shimmori-Furuichi Station
+- 下赤塚駅,Shimo-Akatsuka Station
+- 下天津駅,Shimo-Amazu Station
+- 下麻生駅,Shimo-Asō Station
+- 下深川駅,Shimo-Fukawa Station
+- 下深谷駅,Shimo-Fukaya Station
+- 下祇園駅,Shimo-Gion Station
+- 下小代駅,Shimo-Goshiro Station
+- 下北条駅,Shimo-Hōjō Station
+- 下市田駅,Shimo-Ichida Station
+- 下井草駅,Shimo-Igusa Station
+- 下今市駅,Shimo-Imaichi Station
+- 下井阪駅,Shimo-Isaka Station
+- 下伊田駅,Shimo-Ita Station
+- 下板橋駅,Shimo-Itabashi Station
+- 下鴨生駅,Shimo-Kamoo Station
+- 下金山駅,Shimo-Kanayama Station
+- 下川辺駅,Shimo-Kawabe Station
+- 下川合駅,Shimo-Kawai Station
+- 下北沢駅,Shimo-Kitazawa Station
+- 下丸子駅,Shimo-Maruko Station
+- 下落合駅,Shimo-Ochiai Station
+- 下小川駅,Shimo-Ogawa Station
+- None,Shimo-Okui Station
+- 下小田井駅,Shimo-Otai Station
+- 下士別駅,Shimo-Shibetsu Station
+- 下志比駅,Shimo-Shii Station
+- 下新田駅,Shimo-Shinden Station
+- 下新庄駅,Shimo-Shinjō Station
+- 下神明駅,Shimo-Shinmei Station
+- 下白滝信号場,Shimo-Shirataki Station
+- 下曽我駅,Shimo-Soga Station
+- 下曽根駅,Shimo-Sone Station
+- 下菅谷駅,Shimo-Sugaya Station
+- 下諏訪駅,Shimo-Suwa Station
+- 下高井戸駅,Shimo-Takaido Station
+- 下宇和駅,Shimo-Uwa Station
+- 下和知駅,Shimo-Wachi Station
+- 下夜久野駅,Shimo-Yakuno Station
+- 下山口駅,Shimo-Yamaguchi Station
+- 下山門駅,Shimo-Yamato Station
+- 下吉田駅,Shimo-Yoshida Station
+- 下湯沢駅,Shimo-Yuzawa Station
+- 志茂駅,Shimo Station
+- 下部温泉駅,Shimobeonsen Station
+- 下田駅,Shimoda Station
+- 下平駅,Shimodaira Station
+- 下館二高前駅,Shimodate-Nikōmae Station
+- 下館駅,Shimodate Station
+- 下船渡駅,Shimofunato Station
+- 下切駅,Shimogiri Station
+- 下郡駅,Shimogōri Station
+- 下浜駅,Shimohama Station
+- 下兵庫こうふく駅,Shimohyogo Kofuku Station
+- 下兵庫駅,Shimohyōgo Station (Wakayama)
+- 下市駅,Shimoichi Station
+- 下市口駅,Shimoichiguchi Station
+- 下飯田駅,Shimoiida Station
+- 下泉駅,Shimoizumi Station
+- 下地駅,Shimoji Station
+- 下島駅 (長野県伊那市),Shimojima Station (Ina)
+- 下島駅 (長野県松本市),Shimojima Station (Matsumoto)
+- 下川沿駅,Shimokawazoi Station
+- 下北駅,Shimokita Station
+- 下狛駅,Shimokoma Station
+- 下古沢駅,Shimokosawa Station
+- 下久野駅,Shimokuno Station
+- 下府駅,Shimokō Station
+- 下松駅 (大阪府),Shimomatsu Station
+- 下溝駅,Shimomizo Station
+- 下灘駅,Shimonada Station
+- 下永谷駅,Shimonagaya Station
+- 下新駅,Shimonii Station
+- 下仁田駅,Shimonita Station
+- 下之郷駅,Shimonogō Station
+- 下野宮駅,Shimonomiya Station
+- 下関駅,Shimonoseki Station
+- 下野代駅,Shimonoshiro Station
+- 下庄駅,Shimonoshō Station
+- 下沼駅,Shimonuma Station
+- 下里駅,Shimosato Station
+- 下滝駅,Shimotaki Station
+- 下土狩駅,Shimotogari Station
+- 下徳富駅,Shimotoppu Station
+- 下津駅,Shimotsu Station
+- 下野花岡駅,Shimotsuke-Hanaoka Station
+- 下野大沢駅,Shimotsuke-Ōsawa Station
+- 下妻駅,Shimotsuma Station
+- 下浦駅,Shimoura Station
+- 下山駅 (高知県),Shimoyama Station (Kochi)
+- 下山駅 (京都府),Shimoyama Station (Kyoto)
+- 下山村駅,Shimoyamamura Station
+- 下油井駅,Shimoyui Station
+- 下唯野駅,Shimoyuino Station
+- 下大利駅,Shimoōri Station
+- 新府駅,Shimpu Station
+- 占冠駅,Shimukappu Station
+- 志村三丁目駅,Shimura Sanchome Station
+- 志村坂上駅,Shimurasakaue Station
+- 下総神崎駅,Shimōsa-Kōzaki Station
+- 下総松崎駅,Shimōsa-Manzaki Station
+- 下総中山駅,Shimōsa-Nakayama Station
+- 下総橘駅,Shimōsa-Tachibana Station
+- 下総豊里駅,Shimōsa-Toyosato Station
+- 新相ノ木駅,Shin-Ainoki Station
+- 新秋津駅,Shin-Akitsu Station
+- 新安城駅,Shin-Anjō Station
+- 新青森駅,Shin-Aomori Station
+- 新旭駅,Shin-Asahi Station
+- 新旭川駅,Shin-Asahikawa Station
+- 新千葉駅,Shin-Chiba Station
+- 新江古田駅,Shin-Egota Station
+- 新富士駅 (北海道),Shin-Fuji Station (Hokkaido)
+- 新富士駅 (静岡県),Shin-Fuji Station (Shizuoka)
+- 新藤原駅,Shin-Fujiwara Station
+- 新深江駅,Shin-Fukae Station
+- 新福井駅,Shin-Fukui Station
+- 新福島駅,Shin-Fukushima Station
+- 新船橋駅,Shin-Funabashi Station
+- 新函館北斗駅,Shin-Hakodate-Hokuto Station
+- 新白島駅,Shin-Hakushima Station
+- 新浜松駅,Shin-Hamamatsu Station
+- 新花巻駅,Shin-Hanamaki Station
+- 新羽島駅,Shin-Hashima Station
+- 新疋田駅,Shin-Hikida Station
+- 新平野駅,Shin-Hirano Station
+- 新広駅,Shin-Hiro Station
+- 新鉾田駅,Shin-Hokota Station
+- 新祝園駅,Shin-Hōsono Station
+- 新飯塚駅,Shin-Iizuka Station
+- 新今宮駅,Shin-Imamiya-Ekimae Station
+- 新今宮駅,Shin-Imamiya Station
+- 新井口駅,Shin-Inokuchi Station
+- 新伊勢崎駅,Shin-Isesaki Station
+- 新石切駅,Shin-Ishikiri Station
+- 新板橋駅,Shin-Itabashi Station
+- 新伊丹駅,Shin-Itami Station
+- 新岩国駅,Shin-Iwakuni Station
+- 新鎌ヶ谷駅,Shin-Kamagaya Station
+- 新蒲原駅,Shin-Kambara Station
+- 新加美駅,Shin-Kami Station
+- 新金岡駅,Shin-Kanaoka Station
+- 新金谷駅,Shin-Kanaya Station
+- 新可児駅,Shin-Kani Station
+- 新鹿沼駅,Shin-Kanuma Station
+- 新加納駅,Shin-Kanō Station
+- 新柏駅,Shin-Kashiwa Station
+- 新川崎駅,Shin-Kawasaki Station
+- 新検見川駅,Shin-Kemigawa Station
+- 新木場駅,Shin-Kiba Station
+- 新桐生駅,Shin-Kiryū Station
+- 新木曽川駅,Shin-Kisogawa Station
+- 新清洲駅,Shin-Kiyosu Station
+- 新神戸駅,Shin-Kobe Station
+- 新小平駅,Shin-Kodaira Station
+- 新古河駅,Shin-Koga Station
+- 新小金井駅,Shin-Koganei Station
+- 新小岩駅,Shin-Koiwa Station
+- 新越谷駅,Shin-Koshigaya Station
+- 新琴似駅,Shin-Kotoni Station
+- 新木屋瀬駅,Shin-Koyanose Station
+- 新子安駅,Shin-Koyasu Station
+- 新倉敷駅,Shin-Kurashiki Station
+- None,Shin-Kurobe Station
+- 新高円寺駅,Shin-Kōenji Station
+- 新庚申塚停留場,Shin-Kōshinzuka Station
+- 新前橋駅,Shin-Maebashi Station
+- 新舞子駅,Shin-Maiko Station
+- 新丸子駅,Shin-Maruko Station
+- 新松田駅,Shin-Matsuda Station
+- 新松戸駅,Shin-Matsudo Station
+- 新三河島駅,Shin-Mikawashima Station
+- 新水俣駅,Shin-Minamata Station
+- 新三郷駅,Shin-Misato Station
+- 新宮川駅,Shin-Miyakawa Station
+- 新茂原駅,Shin-Mobara Station
+- 新守谷駅,Shin-Moriya Station
+- 新守山駅,Shin-Moriyama Station
+- 新長田駅,Shin-Nagata Station
+- 新中野駅,Shin-Nakano Station
+- 新南陽駅,Shin-Nanyō Station
+- 新習志野駅,Shin-Narashino Station
+- 新日本橋駅,Shin-Nihombashi Station
+- None,Shin-Nishikanazawa Station
+- 新西脇駅,Shin-Nishiwaki Station
+- 新御茶ノ水駅,Shin-Ochanomizu Station
+- 新御徒町駅,Shin-Okachimachi Station
+- 新大久保駅,Shin-Okubo Station
+- 新尾道駅,Shin-Onomichi Station
+- 新大阪駅,Shin-Osaka Station
+- 新大楽毛駅,Shin-Otanoshike Station
+- 新小樽駅,Shin-Otaru Station
+- 新利府駅,Shin-Rifu Station
+- 新栄町駅 (愛知県),Shin-Sakaemachi Station (Aichi)
+- 新栄町駅 (福岡県),Shin-Sakaemachi Station (Fukuoka)
+- None,Shin-Sakaeno Station
+- 新桜台駅,Shin-Sakuradai Station
+- 新三田駅,Shin-Sanda Station
+- 新札幌駅,Shin-Sapporo Station (JR Hokkaido)
+- 新札幌駅,Shin-Sapporo Station (Sapporo City Subway)
+- 新狭山駅,Shin-Sayama Station
+- 新瀬戸駅,Shin-Seto Station
+- 新柴又駅,Shin-Shibamata Station
+- 新芝浦駅,Shin-Shibaura Station
+- 新島々駅,Shin-Shimashima Station
+- 新清水駅,Shin-Shimizu Station
+- 新下関駅,Shin-Shimonoseki Station
+- 新白河駅,Shin-Shirakawa Station
+- 新静岡駅,Shin-Shizuoka Station
+- 新杉田駅,Shin-Sugita Station
+- 新水前寺駅,Shin-Suizenji Station
+- 新須屋駅,Shin-Suya Station
+- None,Shin-Takahama Station
+- 新高岡駅,Shin-Takaoka Station
+- 新高島駅,Shin-Takashima Station
+- 新高島平駅,Shin-Takashimadaira Station
+- 新高徳駅,Shin-Takatoku Station
+- 新玉名駅,Shin-Tamana Station
+- 新田辺駅,Shin-Tanabe Station
+- 新田老駅,Shin-Tarō Station
+- 新栃木駅,Shin-Tochigi Station
+- 新所沢駅,Shin-Tokorozawa Station
+- 新取手駅,Shin-Toride Station
+- 新鳥栖駅,Shin-Tosu Station
+- 新十津川駅,Shin-Totsukawa Station
+- 新富山口駅,Shin-Toyamaguchi Station
+- 新豊橋駅,Shin-Toyohashi Station
+- 新豊洲駅,Shin-Toyosu Station
+- 新豊田駅,Shin-Toyota Station
+- 新豊津駅,Shin-Toyotsu Station
+- 新津田沼駅,Shin-Tsudanuma Station
+- None,Shin-Tsuruba Station
+- 新鵜沼駅,Shin-Unuma Station
+- None,Shin-Uozu Station
+- 新浦安駅,Shin-Urayasu Station
+- 新上挙母駅,Shin-Uwagoromo Station
+- 新八柱駅,Shin-Yahashira Station
+- 新八雲駅,Shin-Yakumo Station
+- 新山口駅,Shin-Yamaguchi Station
+- 新八代駅,Shin-Yatsushiro Station
+- 新横浜駅,Shin-Yokohama Station
+- 新吉野駅,Shin-Yoshino Station
+- 新百合ヶ丘駅,Shin-Yurigaoka Station
+- 新八日市駅,Shin-Yōkaichi Station
+- 新夕張駅,Shin-Yūbari Station
+- 新市駅,Shin-ichi Station
+- 新大平下駅,Shin-Ōhirashita Station
+- 王寺駅,Shin-Ōji Station
+- 新大宮駅,Shin-Ōmiya Station
+- 新大村駅,Shin-Ōmura Station
+- 新大牟田駅,Shin-Ōmuta Station
+- 新大津駅,Shin-Ōtsu Station
+- 新大塚駅,Shin-Ōtsuka Station
+- 新整備場駅,Shin Seibijō Station
+- 品川シーサイド駅,Shinagawa Seaside Station
+- 品川駅,Shinagawa Station
+- 品井沼駅,Shinainuma Station
+- 信濃荒井駅,Shinano-Arai Station
+- 信濃浅野駅,Shinano-Asano Station
+- 信濃川上駅,Shinano-Kawakami Station
+- 信濃川島駅,Shinano-Kawashima Station
+- 信濃木崎駅,Shinano-Kizaki Station
+- 信濃国分寺駅,Shinano-Kokubunji Station
+- 信濃松川駅,Shinano-Matsukawa Station
+- 信濃森上駅,Shinano-Moriue Station
+- 信濃追分駅,Shinano-Oiwake Station
+- 信濃境駅,Shinano-Sakai Station
+- 信濃白鳥駅,Shinano-Shiratori Station
+- 信濃平駅,Shinano-Taira Station
+- 信濃竹原駅,Shinano-Takehara Station
+- 信濃常盤駅,Shinano-Tokiwa Station
+- 信濃吉田駅,Shinano-Yoshida Station
+- 信濃大町駅,Shinano-Ōmachi Station
+- 信濃町駅,Shinanomachi Station
+- 新地駅,Shinchi Station
+- 新代田駅,Shindaita Station
+- 新田原駅,Shindembaru Station
+- 新田駅 (京都府),Shinden Station (Kyoto)
+- 新田駅 (埼玉県),Shinden Station (Saitama)
+- 新道東駅,Shindō-Higashi Station
+- 新堂駅,Shindō Station
+- 新改駅,Shingai Station
+- 新河岸駅,Shingashi Station
+- 新家駅,Shinge Station
+- 新木停留場,Shingi Station
+- 新郷駅 (埼玉県),Shingō Station
+- 新宮中央駅,Shingū-Chūō Station
+- 新宮駅,Shingū Station
+- 宍道駅,Shinji Station
+- 新所原駅,Shinjohara Station
+- 新宿西口駅,Shinjuku-Nishiguchi Station
+- 新宿御苑前駅,Shinjuku-gyoemmae Station
+- 新宿三丁目駅,Shinjuku Sanchōme Station
+- 新宿駅,Shinjuku Station
+- 新庄田中駅,Shinjō-Tanaka Station
+- 新庄駅,Shinjō Station
+- 新開地駅,Shinkaichi Station
+- 新川駅 (愛媛県),Shinkawa Station (Ehime)
+- 新川駅 (北海道),Shinkawa Station (Hokkaido)
+- 新川橋駅,Shinkawabashi Station
+- None,Shinkawachō Station
+- 新川町駅,Shinkawamachi Station
+- 鍼灸大学前駅,Shinkyūdaigakumae Station
+- 新町口駅,Shinmachiguchi Station
+- 新那加駅,Shinnaka Station
+- 新日鉄前駅,Shinnittetsumae Station
+- 新入駅,Shinnyū Station
+- 忍ケ丘駅,Shinobugaoka Station
+- 信太山駅,Shinodayama Station
+- 篠原停留場,Shinohara Station (Kochi)
+- 篠原駅 (滋賀県),Shinohara Station (Shiga)
+- 篠目駅,Shinome Station
+- 四宮駅,Shinomiya Station
+- 篠ノ井駅,Shinonoi Station
+- 東雲駅 (京都府),Shinonome Station (Kyoto)
+- 東雲駅 (東京都),Shinonome Station (Tokyo)
+- 篠路駅,Shinoro Station
+- 篠崎駅,Shinozaki Station
+- 篠塚駅,Shinozuka Station
+- 森林公園駅 (北海道),Shinrinkōen Station (Hokkaidō)
+- 森林公園駅 (埼玉県),Shinrinkōen Station (Saitama)
+- 心斎橋駅,Shinsaibashi Station
+- 新関駅,Shinseki Station
+- 池袋駅,Shinsen Ikebukuro Station
+- None,Shinsen Shinjuku Station
+- 神泉駅,Shinsen Station
+- 新白岡駅,Shinshiraoka Station
+- 新城駅,Shinshiro Station
+- 新正駅,Shinshō Station
+- 信州中野駅,Shinshū-Nakano Station
+- 神鉄道場駅,Shintetsu Dōjō Station
+- 神鉄六甲駅,Shintetsu Rokkō Station
+- 新得駅,Shintoku Station
+- 新富町駅,Shintomichō Station (Tokyo)
+- None,Shintomichō Station (Toyama)
+- しんざ駅,Shinza Station
+- 新在家駅,Shinzaike Station
+- 心臓血管センター駅,Shinzō-kekkan Center Station
+- 塩田町駅,Shiodamachi Station
+- 汐留駅,Shiodome Station
+- 塩釜駅,Shiogama Station
+- 塩釜口駅,Shiogamaguchi Station
+- 塩郷駅,Shiogō Station
+- 塩浜駅,Shiohama Station
+- 塩入駅,Shioiri Station (Kagawa)
+- 汐入駅,Shioiri Station (Kanagawa)
+- 塩尻駅,Shiojiri Station
+- 塩狩駅,Shiokari Station
+- 塩川駅,Shiokawa Station
+- 塩町駅,Shiomachi Station
+- 汐見駅,Shiomi Station (Hokkaido)
+- 潮見駅,Shiomi Station (Tokyo)
+- 汐見橋駅,Shiomibashi Station
+- 汐ノ宮駅,Shionomiya Station
+- 塩之沢駅,Shionosawa Station
+- None,Shiosawa Station
+- 四方津駅,Shiotsu Station
+- 塩塚駅,Shiotsuka Station
+- 塩谷駅,Shioya Station (Hokkaido)
+- 塩屋駅 (兵庫県),Shioya Station (Hyogo)
+- 塩屋駅 (香川県),Shioya Station (Kagawa)
+- 塩崎駅,Shiozaki Station
+- 七宝駅,Shippō Station
+- 白浜駅,Shirahama Station
+- 白浜の宮駅,Shirahamanomiya Station
+- 白市駅,Shiraichi Station
+- 白井海岸駅,Shiraikaigan Station
+- 白糸台駅,Shiraitodai Station
+- 白神岳登山口駅,Shirakamidake-Tozanguchi Station
+- 白河駅,Shirakawa Station
+- 白川口駅,Shirakawaguchi Station
+- 白木駅,Shiraki Station
+- 白木原駅,Shirakibaru Station
+- 白木山駅,Shirakiyama Station
+- 白庭台駅,Shiraniwadai Station
+- 白糠駅,Shiranuka Station
+- 白老駅,Shiraoi Station
+- 白岡駅,Shiraoka Station
+- 白鷺駅,Shirasagi Station
+- 白坂駅,Shirasaka Station
+- 白沢渓谷駅,Shirasawa-keikoku Station
+- 白沢駅 (愛知県),Shirasawa Station (Aichi)
+- 白沢駅 (秋田県),Shirasawa Station (Akita)
+- 白沢駅 (鹿児島県),Shirasawa Station (Kagoshima)
+- 白滝駅,Shirataki Station
+- 白塚駅,Shiratsuka Station
+- None,Shirayama Station
+- 知床斜里駅,Shiretoko-Shari Station
+- 湯の里知内信号場,Shiriuchi Station
+- 白銀駅,Shirogane Station
+- 白井駅,Shiroi Station
+- 白石蔵王駅,Shiroishi-Zaō Station
+- 白石駅 (JR北海道),Shiroishi Station (JR Hokkaidō)
+- 白石駅 (熊本県),Shiroishi Station (Kumamoto)
+- 白石駅 (宮城県),Shiroishi Station (Miyagi)
+- 白石駅 (札幌市営地下鉄),Shiroishi Station (Sapporo Subway)
+- 白金高輪駅,Shirokane-Takanawa Station
+- 白金台駅,Shirokanedai Station
+- 城北公園通駅,Shirokitakōendōri Station
+- 白子駅,Shiroko Station
+- 白久駅,Shiroku Station
+- 白丸駅 (東京都),Shiromaru Station
+- 城見ヶ丘駅,Shiromigaoka Station
+- 城西駅,Shironishi Station
+- None,Shiroshita Station (Nagano)
+- None,Shiroshita Station (Okayama)
+- 白鳥高原駅,Shirotori-Kōgen Station
+- 白兎駅,Shirousagi Station
+- 四郎ケ原駅,Shirōgahara Station
+- ししぶ駅,Shishibu Station
+- 宍戸駅,Shishido Station
+- 宍喰駅,Shishikui Station
+- 鹿折唐桑駅,Shishiori-Karakuwa Station
+- 四所駅,Shisho Station
+- 酒々井駅,Shisui Station
+- 下段駅,Shitadan Station
+- 下ノ江駅,Shitanoe Station
+- 舌山駅,Shitayama Station
+- 為栗駅,Shiteguri Station
+- 四天王寺前夕陽ヶ丘駅,Shitennoji-mae Yuhigaoka Station
+- 尻手駅,Shitte Station
+- 知手駅,Shitte Station (Ibaraki)
+- 紫波中央駅,Shiwa-Chūō Station
+- 志和地駅,Shiwachi Station
+- 志和口駅,Shiwaguchi Station
+- None,Shiyakusho-mae Station (Aichi)
+- 市役所前駅 (千葉県),Shiyakusho-mae Station (Chiba)
+- None,Shiyakusho-mae Station (Ehime)
+- None,Shiyakusho-mae Station (Hokkaido)
+- None,Shiyakusho-mae Station (Kagoshima)
+- None,Shiyakusho-mae Station (Kumamoto)
+- 市役所前駅 (長野県),Shiyakusho-mae Station (Nagano)
+- 市役所前駅 (和歌山県),Shiyakusho-mae Station (Wakayama)
+- 市役所駅,Shiyakusho Station
+- 自然園前駅,Shizen'en-mae Station
+- 志津駅,Shizu Station (Chiba)
+- 静駅,Shizu Station (Ibaraki)
+- 志津川駅,Shizugawa Station
+- 清水浜駅,Shizuhama Station
+- 静狩駅,Shizukari Station
+- 雫石駅,Shizukuishi Station
+- 静間駅,Shizuma Station
+- 志都美駅,Shizumi Station
+- 静内駅,Shizunai Station
+- None,Shizuoka Freight Station
+- 静岡駅,Shizuoka Station
+- 静和駅,Shizuwa Station
+- 勝幡駅,Shobata Station
+- 商工センター入口駅,Shoko Center-iriguchi Station
+- 商工会議所前駅,Shokokaigisho-mae Station
+- 庶路駅,Shoro Station
+- 昭和町駅 (大阪府),Showacho Station (Osaka)
+- 修大協創中高前駅,Shudaifuzoku-suzugamine-mae Station
+- 夙川駅,Shukugawa Station
+- 宿川原駅,Shukugawara Station (Aomori)
+- 宿河原駅,Shukugawara Station (Kanagawa)
+- None,Shukuin Station
+- 宿戸駅,Shukunohe Station
+- 朱文別駅,Shumombetsu Station
+- 俊徳道駅,Shuntokumichi Station
+- 首里駅,Shuri Station
+- 守内かさ神駅,Shuuchi-Kasagami Station
+- 修善寺駅,Shuzenji Station
+- 荘原駅,Shōbara Station
+- 生田駅 (秋田県),Shōden Station
+- 将軍山駅,Shōgunzan Station
+- 松陰神社前駅,Shōin-jinjamae Station
+- 正雀駅,Shōjaku Station
+- 小路駅,Shōji Station (Osaka, Osaka)
+- 少路駅,Shōji Station (Toyonaka, Osaka)
+- 正丸駅,Shōmaru Station
+- 庄内緑地公園駅,Shōnai-Ryokuchikōen Station
+- 庄内通駅,Shōnai-dōri Station
+- 庄内駅 (大分県),Shōnai Station (Oita)
+- 庄内駅 (大阪府),Shōnai Station (Osaka)
+- 湘南江の島駅,Shōnan-Enoshima Station
+- 湘南深沢駅,Shōnan-Fukasawa Station
+- 湘南町屋駅,Shōnan-Machiya Station
+- 湘南海岸公園駅,Shōnan-kaigan-kōen Station
+- 沼南駅,Shōnan Station
+- 湘南台駅,Shōnandai Station
+- 小天橋駅,Shōtenkyō Station
+- 昭和駅,Shōwa Station (Kanagawa)
+- 昭和町駅 (香川県),Shōwachō Station (Kagawa)
+- 昭和島駅,Shōwajima Station
+- None,Shōwamachi Station
+- 生山駅,Shōyama Station
+- 勝瑞駅,Shōzui Station
+- 修学院駅,Shūgakuin Station
+- 聚楽園駅,Shūrakuen Station
+- 曽波神駅,Sobanokami Station
+- ソシオ流通センター駅,Socio Distribution Center Station
+- 曽谷駅,Sodani Station
+- 袖ケ浦駅,Sodegaura Station
+- 袖崎駅,Sodesaki Station
+- 添田駅,Soeda Station
+- 蘇我駅,Soga Station
+- 蘇原駅,Sohara Station (Gifu)
+- 楚原駅,Sohara Station (Mie)
+- 磯鶏駅,Sokei Station
+- 曽根駅 (兵庫県),Sone Station (Hyogo)
+- 曽根駅 (大阪府),Sone Station (Osaka)
+- 曽根田駅,Soneda Station
+- 園駅,Sono Station
+- 園部駅,Sonobe Station
+- 園田駅,Sonoda Station
+- 彼杵駅,Sonogi Station
+- 曽山寺駅,Sosanji Station
+- 祖師ヶ谷大蔵駅,Soshigaya-Ōkura Station
+- スペースワールド駅,Space World Station
+- スポーツセンター駅,Sports Center Station (Chiba)
+- スポーツ公園駅,Sports Kōen Station
+- 隅田駅,Suda Station
+- 須津駅,Sudo Station
+- 須恵中央駅,Sue-Chūō Station
+- 須恵駅,Sue Station (Fukuoka)
+- 陶駅,Sue Station (Kagawa)
+- 末広駅,Suehiro Station
+- None,Suehirochō Station (Hokkaido)
+- None,Suehirochō Station (Kanagawa)
+- 末広町駅 (東京都),Suehirochō Station (Tokyo)
+- 末広町停留場 (富山県),Suehirochō Station (Toyama)
+- 末野原駅,Suenohara Station
+- すえたちばな駅,Suetachibana Station
+- 末続駅,Suetsugi Station
+- 末恒駅,Suetsune Station
+- 周布駅,Sufu Station
+- 巣鴨新田停留場,Sugamo-Shinden Station
+- 巣鴨駅,Sugamo Station
+- 菅野駅,Sugano Station
+- 菅尾駅,Sugao Station
+- 菅谷駅,Sugaya Station
+- 杉原駅,Sugihara Station
+- 杉橋駅,Sugihashi Station
+- 杉河内駅,Sugikawachi Station
+- 杉本町駅,Sugimotochō Station
+- 杉崎駅,Sugisaki Station
+- 杉田駅 (福島県),Sugita Station (Fukushima)
+- 杉田駅 (神奈川県),Sugita Station (Kanagawa)
+- 杉戸高野台駅,Sugito-Takanodai Station
+- 杉山駅,Sugiyama Station
+- 巣子駅,Sugo Station
+- 洲原駅,Suhara Station (Gifu)
+- 須原駅,Suhara Station (Nagano)
+- 水原駅,Suibara Station
+- 水道橋駅,Suidōbashi Station
+- None,Suidōchō Station
+- 水郷駅,Suigō Station
+- 吹田駅 (阪急),Suita Station (Hankyu)
+- 吹田駅 (JR西日本),Suita Station (JR West)
+- 水天宮前駅,Suitengūmae Station
+- 水前寺駅,Suizenji Station
+- None,Suizenjiekidōri Station
+- 須賀駅,Suka Station
+- 須賀川駅,Sukagawa Station
+- 須ヶ口駅,Sukaguchi Station
+- 助信駅,Sukenobu Station
+- 宿毛駅,Sukumo Station
+- 須磨海浜公園駅,Suma-Kaihinkōen Station
+- 須磨駅,Suma Station
+- 須磨寺駅,Sumadera Station
+- 須磨浦公園駅,Sumaurakōen Station
+- None,Sumidagawa Station
+- 澄川駅,Sumikawa Station
+- 住道駅,Suminodō Station
+- 住ノ江駅,Suminoe Station
+- 住之江公園駅,Suminoekōen Station
+- 住吉東駅,Sumiyoshi-Higashi Station
+- 住吉大社駅,Sumiyoshi-Kōen Station
+- 住吉大社駅,Sumiyoshi-Taisha Station
+- 住吉駅 (阪神),Sumiyoshi Station (Hanshin)
+- 住吉駅 (JR西日本・神戸新交通),Sumiyoshi Station (JR West)
+- 住吉駅 (熊本県),Sumiyoshi Station (Kumamoto)
+- None,Sumiyoshi Station (Nagasaki)
+- 住吉停留場 (大阪府),Sumiyoshi Station (Osaka)
+- 住吉駅 (東京都),Sumiyoshi Station (Tokyo)
+- 住吉町駅,Sumiyoshichō Station
+- 住吉通停留場,Sumiyoshidōri Station
+- 墨染駅,Sumizome Station
+- 砂田橋駅,Sunadabashi Station
+- 砂川七番駅,Sunagawa-Nanaban Station
+- 砂川駅,Sunagawa Station
+- 須波駅,Sunami Station
+- サンドーム西駅,Sundome Nishi Station
+- 寸座駅,Sunza Station
+- 摺沢駅,Surisawa Station
+- 駿河小山駅,Suruga-Oyama Station
+- 駿河徳山駅,Suruga-Tokuyama Station
+- 須佐駅,Susa Station
+- 須崎駅,Susaki Station
+- 周参見駅,Susami Station
+- 周船寺駅,Susenji Station
+- 裾野駅,Susono Station
+- すすきの駅,Susukino Station
+- 諏訪駅,Suwa Station
+- 諏訪町駅,Suwachō Station
+- None,Suwanokawara Station
+- 諏訪ノ森駅,Suwanomori Station
+- 諏訪ノ平駅,Suwanotaira Station
+- 須屋駅,Suya Station
+- 須坂駅,Suzaka Station
+- 洲先駅,Suzaki Station
+- 鈴鹿サーキット稲生駅,Suzuka Circuit Inō Station
+- 鈴鹿駅,Suzuka Station
+- すずかけ台駅,Suzukakedai Station
+- 鈴鹿市駅,Suzukashi Station
+- 鈴木町駅,Suzukichō Station
+- 雀田駅,Suzumeda Station
+- 雀宮駅,Suzumenomiya Station
+- 鈴蘭台西口駅,Suzurandai-Nishiguchi Station
+- 鈴蘭台駅,Suzurandai Station
+- すずらんの里駅,Suzurannosato Station
+- 周防花岡駅,Suō-Hanaoka Station
+- 周防久保駅,Suō-Kubo Station
+- 周防佐山駅,Suō-Sayama Station
+- 周防下郷駅,Suō-Shimogō Station
+- 周防高森駅,Suō-Takamori Station
+- 相武台前駅,Sōbudaimae Station
+- 相武台下駅,Sōbudaishita Station
+- 宗道駅,Sōdō Station
+- 桑園駅,Sōen Station
+- 寒河駅,Sōgo Station
+- 宗吾参道駅,Sōgosandō Station
+- 総合リハビリセンター駅,Sōgō Rihabiri Center Station
+- 総合運動公園駅,Sōgōundōkōen Station
+- 総社駅,Sōja Station
+- 総持寺駅,Sōjiji Station
+- 崇城大学前駅,Sōjōdaigakumae Station
+- 草加駅,Sōka Station
+- 相馬駅,Sōma Station
+- 沢入駅,Sōri Station
+- 宗太郎駅,Sōtarō Station
+- 早雲の里荏原駅,Sōunnosato-Ebara Station
+- 早雲山駅,Sōunzan Station
+- 崇禅寺駅,Sōzenji Station
+- 伴中央駅,Astram Tomo-chuo Station
+- 伴駅,Astram Tomo Station
+- 立町停留場,Hiroden Tate-machi Station
+- 天満町停留場,Hiroden Tenma-cho Station
+- 十日市町停留場,Hiroden Tokaichi-machi Station
+- 西鉄福岡（天神）駅,Nishitetsu Fukuoka (Tenjin) Station
+- 田原坂駅,Tabaruzaka Station
+- 田畑駅,Tabata Station (Nagano)
+- 田端駅,Tabata Station (Tokyo)
+- たびら平戸口駅,Tabira-Hiradoguchi Station
+- 田布施駅,Tabuse Station
+- 旅伏駅,Tabushi Station
+- 立会川駅,Tachiaigawa Station
+- 太刀洗駅,Tachiarai Station
+- 立花駅,Tachibana Station
+- 立飛駅,Tachihi Station
+- 立川北駅,Tachikawa-Kita Station
+- 立川南駅,Tachikawa-Minami Station
+- 立川駅,Tachikawa Station
+- 立木駅,Tachiki Station
+- 立小路駅,Tachikōji Station
+- 立間駅,Tachima Station
+- 館田駅,Tachita Station
+- 多田駅 (兵庫県),Tada Station (Hyogo)
+- 多田駅 (栃木県),Tada Station (Tochigi)
+- 田立駅,Tadachi Station
+- 只見駅,Tadami Station
+- 忠海駅,Tadanoumi Station
+- 忠岡駅,Tadaoka Station
+- 多度駅,Tado Station
+- 多度津駅,Tadotsu Station
+- 多賀城駅,Tagajō Station
+- 田神駅,Tagami Station (Gifu)
+- 田上駅,Tagami Station (Niigata)
+- 多賀大社前駅,Tagataishamae Station
+- 田県神社前駅,Tagatajinjamae Station
+- 田川後藤寺駅,Tagawa-Gotōji Station
+- 田川伊田駅,Tagawa-Ita Station
+- 田川市立病院駅,Tagawa Municipal Hospital Station
+- 田儀駅,Tagi Station
+- 田切駅,Tagiri Station
+- 田子倉駅,Tagokura Station
+- 田原駅,Tahara Station
+- None,Tahōtō Station
+- 泰澄の里駅,Taichō no Sato Station
+- 太平駅,Taihei Station
+- 太地駅,Taiji Station
+- None,Taikenkōdō Station
+- 当麻寺駅,Taimadera Station
+- 田井ノ浜駅,Tainohama Station
+- 田井ノ瀬駅,Tainose Station
+- 平館駅,Tairadate Station
+- 多比良駅,Tairamachi Station
+- 大山寺駅 (愛知県),Taisanji Station
+- 大成駅,Taisei Station
+- 太子橋今市駅,Taishibashi-Imaichi Station
+- 太子堂駅,Taishidō Station
+- 大正駅 (長崎県),Taishō Station (Nagasaki)
+- 大正駅 (大阪府),Taishō Station (Osaka)
+- 太東駅,Taitō Station
+- 大洋駅,Taiyō Station
+- 丹治部駅,Tajibe Station
+- 但馬駅,Tajima Station (Nara)
+- 田島駅,Tajima Station (Tochigi)
+- 田島高校前駅,Tajimakōkōmae Station
+- 多治見駅,Tajimi Station
+- 田尻駅,Tajiri Station
+- 高駅,Taka Station
+- 高畑駅,Takabata Station
+- 高茶屋駅,Takachaya Station
+- 高田駅 (奈良県),Takada Station (Nara)
+- 高田駅 (新潟県),Takada Station (Niigata)
+- 高田橋駅,Takadabashi Station
+- 高田本山駅,Takadahonzan Station
+- 高田の鉄橋駅,Takadano-tekkyō Station
+- 高田馬場駅,Takadanobaba Station
+- 高田市駅,Takadashi Station
+- 鷹狩駅,Takagari Station
+- 高木駅 (広島県),Takagi Station (Hiroshima)
+- 高儀駅,Takagi Station (Toyama)
+- 高城町駅,Takagimachi Station
+- 高萩駅,Takahagi Station
+- 高浜駅 (愛媛県),Takahama Station (Ehime)
+- 高浜駅 (茨城県),Takahama Station (Ibaraki)
+- 高浜駅 (島根県),Takahama Station (Shimane)
+- 高浜港駅,Takahamaminato Station
+- 高原駅,Takaharu Station
+- 高橋駅,Takahashi Station
+- 高幡不動駅,Takahata-Fudō Station
+- 高畠駅,Takahata Station
+- 高井田中央駅,Takaida-Chūō Station
+- 高井田駅 (大阪府東大阪市),Takaida Station (Higashiosaka, Osaka)
+- 高井田駅 (大阪府柏原市),Takaida Station (Kashiwara, Osaka)
+- 高井戸駅,Takaido Station
+- 高石駅,Takaishi Station
+- 高岩駅 (長野県),Takaiwa Station (Nagano)
+- 高岩駅 (長崎県),Takaiwa Station (Nagasaki)
+- 高城駅,Takajō Station
+- 高子駅,Takako Station
+- 高久駅,Takaku Station
+- 高松築港駅,Takamatsu-Chikkō Station
+- None,Takamatsu Freight Terminal Station
+- 高松駅 (石川県),Takamatsu Station (Ishikawa)
+- 高松駅 (香川県),Takamatsu Station (Kagawa)
+- 高松駅 (東京都),Takamatsu Station (Tokyo)
+- 高松町駅,Takamatsuchō Station
+- 高見ノ里駅,Takaminosato Station
+- 高光駅,Takamitsu Station
+- 高宮駅 (福岡県),Takamiya Station (Fukuoka)
+- 高宮駅 (滋賀県),Takamiya Station (Shiga)
+- 高水駅,Takamizu Station
+- 高森駅,Takamori Station
+- 高鍋駅,Takanabe Station
+- 高輪ゲートウェイ駅,Takanawa Gateway Station
+- 高輪台駅,Takanawadai Station
+- 高根木戸駅,Takanekido Station
+- 高根公団駅,Takanekōdan Station
+- 高野駅 (岡山県),Takano Station
+- 鷹の台駅,Takanodai Station
+- 高の原駅,Takanohara Station
+- 鷹ノ子駅,Takanoko Station
+- 高ノ宮駅,Takanomiya Station
+- 鷹ノ巣駅,Takanosu Station
+- 高尾駅 (岐阜県),Takao Station (Gifu)
+- 高尾駅 (東京都),Takao Station (Tokyo)
+- 高岡やぶなみ駅,Takaoka-Yabunami Station
+- 高岳駅,Takaoka Station (Aichi)
+- None,Takaoka Station (Manyosen)
+- 高岡駅,Takaoka Station (Toyama)
+- 高尾野駅,Takaono Station
+- None,Takaosan Station
+- 高尾山口駅,Takaosanguchi Station
+- 財部駅,Takarabe Station
+- 宝町駅,Takarachō Station
+- 宝ケ池駅,Takaragaike Station
+- 宝塚南口駅,Takarazuka-Minamiguchi Station
+- 宝塚駅,Takarazuka Station (Hankyu)
+- 宝塚駅,Takarazuka Station (JR West)
+- 高砂駅 (北海道),Takasago Station (Hokkaidō)
+- 高砂駅 (兵庫県),Takasago Station (Hyogo)
+- None,Takasagochō Station
+- 高坂駅,Takasaka Station
+- 高崎新田駅,Takasaki-Shinden Station
+- 高崎商科大学前駅,Takasaki-Shōka-Daigakumae Station
+- 高崎問屋町駅,Takasaki-Tonyamachi Station
+- 高崎駅,Takasaki Station
+- 高瀬駅 (香川県),Takase Station (Kagawa)
+- 高瀬駅 (山形県),Takase Station (Yamagata)
+- 高師駅,Takashi Station
+- 高島駅,Takashima Station (Okayama)
+- 高島町駅,Takashimachō Station
+- 高島平駅,Takashimadaira Station
+- 鷹島口駅,Takashimaguchi Station
+- 高科駅,Takashina Station
+- 高師浜駅,Takashinohama Station
+- 高須駅,Takasu Station (Hiroshima)
+- 高須停留場,Takasu Station (Kōchi)
+- None,Takasujinja Station
+- 高田駅 (福岡県),Takata Station (Fukuoka)
+- 高田駅 (香川県),Takata Station (Kagawa)
+- 高田駅 (神奈川県),Takata Station (Kanagawa)
+- 高滝駅,Takataki Station
+- 高擶駅,Takatama Station
+- 高取駅,Takatori Station (Hiroshima)
+- 鷹取駅,Takatori Station (Hyogo)
+- 高津駅 (神奈川県),Takatsu Station (Kanagawa)
+- 高津駅 (京都府),Takatsu Station (Kyoto)
+- 高塚駅,Takatsuka Station
+- 高槻市駅,Takatsuki-shi Station
+- 高槻駅,Takatsuki Station (Osaka)
+- 高月駅,Takatsuki Station (Shiga)
+- 高角駅,Takatsuno Station
+- 高遠原駅,Takatōbara Station
+- 高鷲駅,Takawashi Station
+- 高屋駅,Takaya Station
+- 高山駅,Takayama Station
+- 高柳駅,Takayanagi Station
+- 高安駅,Takayasu Station
+- 高安山駅,Takayasuyama Station
+- 高横須賀駅,Takayokosuka Station
+- 竹駅,Take Station
+- 竹橋駅,Takebashi Station
+- 建部駅,Takebe Station
+- 竹田駅 (兵庫県),Takeda Station (Hyogo)
+- 竹田駅 (京都府),Takeda Station (Kyoto)
+- 武田尾駅,Takedao Station
+- 武生駅,Takefu Station
+- 竹鼻駅,Takehana Station
+- 竹原駅,Takehara Station
+- 武川駅,Takekawa Station
+- 竹駒駅,Takekoma Station
+- 竹松駅,Takematsu Station
+- 竹村駅,Takemura Station
+- 竹中駅,Takenaka Station
+- 武並駅,Takenami Station
+- 竹野駅,Takeno Station
+- 竹ノ塚駅,Takenotsuka Station
+- 武雄温泉駅,Takeo-Onsen Station
+- 竹岡駅,Takeoka Station
+- 武里駅,Takesato Station
+- 武志駅,Takeshi Station
+- 竹芝駅,Takeshiba Station
+- 竹下駅,Takeshita Station
+- 武豊駅,Taketoyo Station
+- 竹浦駅,Takeura Station
+- 竹沢駅,Takezawa Station
+- 滝駅 (兵庫県),Taki Station (Hyogo)
+- 多気駅,Taki Station (Mie)
+- 滝駅 (栃木県),Taki Station (Tochigi)
+- 滝部駅,Takibe Station
+- 滝谷不動駅,Takidani-Fudō Station
+- 滝谷駅 (大阪府),Takidani Station
+- 滝不動駅,Takifudō Station
+- 多喜浜駅,Takihama Station
+- 滝原駅,Takihara Station
+- 滝井駅,Takii Station
+- 滝川駅,Takikawa Station
+- 滝水駅,Takimizu Station
+- None,Takimoto Station
+- 滝野駅,Takino Station
+- 滝の茶屋駅,Takinochaya Station
+- 滝野川一丁目停留場,Takinogawa-itchōme Station
+- 滝ノ間駅,Takinoma Station
+- 滝宮駅,Takinomiya Station
+- 滝ノ上駅,Takinoue Station
+- 滝尾駅,Takio Station
+- 滝谷駅 (福島県),Takiya Station
+- 滝山駅,Takiyama Station
+- 滝沢駅,Takizawa Station
+- 田子駅,Tako Station
+- 蛸地蔵駅,Takojizō Station
+- 多久駅,Taku Station
+- 拓北駅,Takuhoku Station
+- 詫間駅,Takuma Station
+- 田京駅,Takyō Station
+- 多摩動物公園駅,Tama-Dōbutsukōen Station
+- 多磨霊園駅,Tama-Reien Station
+- 多摩センター駅,Tama Center Station
+- たまプラーザ駅,Tama Plaza Station
+- 多磨駅,Tama Station
+- None,Tamachi Station (Okayama)
+- 田町駅,Tamachi Station (Tokyo)
+- 玉手駅,Tamade Station (Nara)
+- 玉出駅,Tamade Station (Osaka)
+- 玉戸駅,Tamado Station
+- 玉江駅,Tamae Station
+- 玉垣駅,Tamagaki Station
+- 玉柏駅,Tamagashi Station
+- 玉川駅 (岩手県),Tamagawa Station (Iwate)
+- 玉川駅 (大阪府),Tamagawa Station (Osaka)
+- 多摩川駅,Tamagawa Station (Tokyo)
+- 玉川学園前駅,Tamagawagakuen-mae Station
+- 玉川上水駅,Tamagawajōsui Station
+- 玉川村駅,Tamagawamura Station
+- 多摩湖駅,Tamako Station
+- 玉水駅,Tamamizu Station
+- 玉村駅,Tamamura Station
+- 玉名駅,Tamana Station
+- 玉野駅,Tamano Station
+- 玉之江駅,Tamanoe Station
+- 玉ノ井駅,Tamanoi Station
+- 玉来駅,Tamarai Station
+- None,Tamari Station
+- 田丸駅,Tamaru Station
+- 多摩境駅,Tamasakai Station
+- 玉造温泉駅,Tamatsukuri-Onsen Station
+- 玉造駅,Tamatsukuri Station
+- None,Tamatsukurimachi Station
+- 玉淀駅,Tamayodo Station
+- 丹波竹田駅,Tamba-Takeda Station
+- 丹波大山駅,Tamba-Ōyama Station
+- 丹波橋駅,Tambabashi Station
+- 丹波口駅,Tambaguchi Station
+- 溜池山王駅,Tameike-Sannō Station
+- 反町駅,Tammachi Station
+- 田本駅,Tamoto Station
+- 丹比駅,Tampi Station
+- 田村駅,Tamura Station
+- 田奈駅,Tana Station
+- 田辺駅,Tanabe Station
+- 棚方駅,Tanagata Station
+- 多奈川駅,Tanagawa Station
+- 田中駅,Tanaka Station
+- 田中口駅,Tanakaguchi Station
+- 棚倉駅,Tanakura Station
+- 田並駅,Tanami Station
+- 田無駅,Tanashi Station
+- 種市駅,Taneichi Station
+- 種差海岸駅,Tanesashi-kaigan Station
+- 旦過駅,Tanga Station
+- 丹後神崎駅,Tango-Kanzaki Station
+- 丹後由良駅,Tango-Yura Station
+- 谷上駅,Tanigami Station
+- 谷頭駅,Tanigashira Station
+- 谷汲口駅,Tanigumiguchi Station
+- 谷浜駅,Tanihama Station
+- 谷川駅,Tanikawa Station
+- 谷町九丁目駅,Tanimachi Kyuchome Station
+- 谷町六丁目駅,Tanimachi Rokuchome Station
+- 谷町四丁目駅,Tanimachi Yonchome Station
+- 谷之口駅,Taninokuchi Station
+- 谷山駅 (鹿児島県),Taniyama Station (JR Kyushu)
+- None,Taniyama Station (Kagoshima Municipal Tramway)
+- 誕生寺駅,Tanjōji Station
+- 端野駅,Tanno Station
+- 淡輪駅,Tannowa Station
+- 田野駅 (高知県),Tano Station (Kōchi)
+- 田野駅 (宮崎県),Tano Station (Miyazaki)
+- 田野畑駅,Tanohata Station
+- 田窪駅,Tanokubo Station
+- 田野口駅,Tanokuchi Station
+- 田野倉駅,Tanokura Station
+- たのうら御立岬公園駅,Tanoura-Otachimisaki-kōen Station
+- 丹荘駅,Tanshō Station
+- 田沼駅,Tanuma Station
+- 田主丸駅,Tanushimaru Station
+- 田尾寺駅,Taoji Station
+- 竜飛定点,Tappi-Kaitei Station
+- 多良駅,Tara Station
+- None,Taragi Station
+- 太郎丸エンゼルランド駅,Taromaru Angelland Station
+- 垂井駅,Tarui Station (Gifu)
+- 樽井駅,Tarui Station (Osaka)
+- 樽見駅,Tarumi Station (Gifu)
+- 垂水駅,Tarumi Station (Hyogo)
+- 田老駅,Tarō Station
+- 太郎坊宮前駅,Tarōbōgū-mae Station
+- 田代駅,Tashiro Station
+- 多々良駅,Tatara Station (Gunma)
+- 多田羅駅,Tatara Station (Tochigi)
+- 立場駅,Tateba Station
+- 館林駅,Tatebayashi Station
+- 竪堀駅,Tatebori Station
+- 立田駅,Tateda Station
+- 立ケ花駅,Tategahana Station
+- 立石駅,Tateishi Station
+- 立川目駅,Tatekawame Station
+- 館腰駅,Tatekoshi Station
+- 立野駅 (熊本県),Tateno Station (Kumamoto)
+- 立野駅 (佐賀県),Tateno Station (Saga)
+- 館山駅,Tateyama Station (Chiba)
+- 立山駅,Tateyama Station (Toyama)
+- 楯山駅,Tateyama Station (Yamagata)
+- 立江駅,Tatsue Station
+- 辰巳駅,Tatsumi Station
+- 立道駅,Tatsumichi Station
+- 巽ヶ丘駅,Tatsumigaoka Station
+- 竜野駅,Tatsuno Station (Hyōgo)
+- 辰野駅,Tatsuno Station (Nagano)
+- 龍岡城駅,Tatsuokajō Station
+- 田鶴浜駅,Tatsuruhama Station
+- 竜田駅,Tatsuta Station
+- 竜田川駅,Tatsutagawa Station
+- 竜田口駅,Tatsutaguchi Station
+- 田浦駅,Taura Station
+- 俵田駅,Tawarada Station
+- 田原町駅 (福井県),Tawaramachi Station (Fukui)
+- 田原町駅 (東京都),Tawaramachi Station (Tokyo)
+- 田原本駅,Tawaramoto Station
+- 多屋駅,Taya Station
+- 田山駅,Tayama Station
+- 多寄駅,Tayoro Station
+- 田吉駅,Tayoshi Station
+- 田沢駅,Tazawa Station
+- 田沢湖駅,Tazawako Station
+- 田添駅,Tazoe Station
+- 田津駅,Tazu Station
+- てだこ浦西駅,Tedako-Uranishi Station
+- 手柄駅,Tegara Station
+- 手原駅,Tehara Station
+- 手稲駅,Teine Station
+- 手力駅,Tejikara Station
+- テクノさかき駅,Tekuno-Sakaki Station
+- テレコムセンター駅,Telecom Center Station
+- 天満駅,Temma Station
+- 天満橋駅,Temmabashi Station
+- 伝馬町駅,Temmachō Station
+- 天拝山駅,Tempaizan Station
+- 天矢場駅,Ten-yaba Station
+- 天台駅,Tendai Station
+- 天童南駅,Tendō-Minami Station
+- 天童駅,Tendō Station
+- 天下茶屋駅,Tengachaya Station
+- 天神橋筋六丁目駅,Tenjimbashisuji Rokuchōme Station
+- 天神南駅,Tenjin-minami Station
+- 天神山駅,Tenjin-yama Station
+- 天神駅,Tenjin Station
+- 天神川駅,Tenjingawa Station
+- 天空橋駅,Tenkūbashi Station
+- 天王寺駅,Tennoji-eki-mae Station
+- 天王駅,Tennō Station (Akita)
+- 天応駅,Tennō Station (Hiroshima)
+- 天王町駅,Tennōchō Station
+- 天王台駅,Tennōdai Station
+- 天王寺駅,Tennōji Station
+- 天王宿駅,Tennōjuku Station
+- 天王洲アイル駅,Tennōzu Isle Station
+- 手ノ子駅,Tenoko Station
+- 天理駅,Tenri Station
+- 天竜二俣駅,Tenryū-Futamata Station
+- 天竜川駅,Tenryūgawa Station
+- 天竜峡駅,Tenryūkyō Station
+- 天道駅,Tentō Station
+- 天和駅,Tenwa Station
+- None,Teppōchō Station
+- 寺田駅 (京都府),Terada Station (Kyoto)
+- 寺田駅 (富山県),Terada Station (Toyama)
+- 寺田町駅,Teradachō Station
+- 寺泊駅,Teradomari Station
+- 寺原駅,Terahara Station
+- None,Terajichō Station
+- 寺前駅,Teramae Station
+- 寺本駅,Teramoto Station
+- 寺尾駅,Terao Station
+- 寺下駅,Terashita Station
+- 寺庄駅,Terashō Station
+- 寺内駅,Terauchi Station
+- 光岡駅,Teruoka Station
+- 天塩中川駅,Teshio-Nakagawa Station
+- 天塩川温泉駅,Teshiogawa-Onsen Station
+- 手樽駅,Tetaru Station
+- 鉄道博物館駅,Tetsudō-Hakubutsukan Station
+- 帝塚山駅,Tezukayama Station
+- 遠浅駅,Toasa Station
+- 鳥羽駅,Toba Station
+- 鳥羽街道駅,Tobakaidō Station
+- 鳥羽中駅,Tobanaka Station
+- 騰波ノ江駅,Tobanoe Station
+- 戸畑駅,Tobata Station
+- 戸部駅,Tobe Station
+- 飛田給駅,Tobitakyū Station
+- 東武ワールドスクウェア駅,Tobu World Square Station
+- 栃木駅,Tochigi Station
+- 栃原駅,Tochihara Station
+- 栃屋駅,Tochiya Station
+- 都庁前駅,Tochōmae Station
+- 戸田駅 (愛知県),Toda Station (Aichi)
+- 戸田駅 (埼玉県),Toda Station (Saitama)
+- 戸田小浜駅,Todakohama Station
+- 戸田公園駅,Todakōen Station
+- 戸手駅,Tode Station
+- 都電雑司ヶ谷停留場,Toden-Zōshigaya Station
+- 驫木駅,Todoroki Station (Aomori)
+- 等々力駅,Todoroki Station (Tokyo)
+- 都府楼前駅,Tofurō-mae Station
+- 都府楼南駅,Tofurō-minami Station
+- 栂・美木多駅,Toga-Mikita Station
+- 斗賀野駅,Togano Station
+- 戸狩野沢温泉駅,Togari-Nozawa-onsen Station
+- 戸頭駅,Togashira Station
+- 十川駅 (青森県),Togawa Station
+- 戸越銀座駅,Togoshi-Ginza Station
+- 戸越公園駅,Togoshi-kōen Station
+- 戸越駅,Togoshi Station
+- 戸倉駅,Togura Station
+- 砥堀駅,Tohori Station
+- 戸出駅,Toide Station
+- 問寒別駅,Toikambetsu Station
+- 十勝清水駅,Tokachi-Shimizu Station
+- 外川駅,Tokawa Station
+- 土気駅,Toke Station
+- 外城田駅,Tokida Station
+- 時又駅,Tokimata Station
+- 時庭駅,Tokiniwa Station
+- 土岐市駅,Tokishi Station (Gifu)
+- 常盤駅 (京都府),Tokiwa Station (Kyoto)
+- 常盤駅 (岡山県),Tokiwa Station (Okayama)
+- 常盤駅 (山口県),Tokiwa Station (Yamaguchi)
+- ときわ台駅 (大阪府),Tokiwadai Station (Osaka)
+- ときわ台駅 (東京都),Tokiwadai Station (Tokyo)
+- 常盤平駅,Tokiwadaira Station
+- 常滑駅,Tokoname Station
+- 床波駅,Tokonami Station
+- 所木駅,Tokorogi Station
+- 所沢駅,Tokorozawa Station
+- 徳庵駅,Tokuan Station
+- 徳田駅 (石川県),Tokuda Station (Ishikawa)
+- 徳田駅 (三重県),Tokuda Station (Mie)
+- 徳丸駅,Tokumaru Station
+- 徳益駅,Tokumasu Station
+- 徳満駅,Tokumitsu Station
+- 徳永駅,Tokunaga Station
+- 徳力嵐山口駅,Tokuriki-Arashiyamaguchi Station
+- 徳力公団前駅,Tokuriki-Kōdan-mae Station
+- 徳佐駅,Tokusa Station
+- 徳沢駅,Tokusawa Station
+- 徳重・名古屋芸大駅,Tokushige-Nagoyageidai Station
+- 徳重駅 (名古屋市),Tokushige Station
+- 徳島駅,Tokushima Station
+- 徳宿駅,Tokushuku Station
+- 徳和駅,Tokuwa Station
+- 徳山駅,Tokuyama Station
+- 東京ビッグサイト駅,Tokyo Big Sight Station
+- 舞浜リゾートラインディズニーリゾートライン,Tokyo Disney Sea Station
+- 舞浜リゾートラインディズニーリゾートライン,Tokyo Disneyland Station
+- 東京国際クルーズターミナル駅,Tokyo International Cruise Terminal Station
+- とうきょうスカイツリー駅,Tokyo Skytree Station
+- 東京駅,Tokyo Station
+- 東京テレポート駅,Tokyo Teleport Station
+- 苫米地駅,Tomabechi Station
+- 斗米駅,Tomai Station
+- 苫小牧駅,Tomakomai Station
+- トマム駅,Tomamu Station
+- 泊駅 (三重県),Tomari Station (Mie)
+- 泊駅 (鳥取県),Tomari Station (Tottori)
+- 泊駅 (富山県),Tomari Station (Toyama)
+- 富合駅,Tomiai Station
+- 富田駅 (三重県),Tomida Station
+- 富田浜駅,Tomidahama Station
+- 富原駅,Tomihara Station
+- 富加駅,Tomika Station
+- 富川駅,Tomikawa Station
+- 富根駅,Tomine Station
+- 富野駅,Tomino Station
+- 富雄駅,Tomio Station
+- 富岡駅,Tomioka Station
+- 富岡前駅,Tomiokamae Station
+- 十三里信号場,Tomisato Station
+- 富田駅 (栃木県),Tomita Station
+- 富浦駅 (千葉県),Tomiura Station (Chiba)
+- 富浦駅 (北海道),Tomiura Station (Hokkaidō)
+- 富吉駅,Tomiyoshi Station
+- 富沢駅,Tomizawa Station
+- 富水駅,Tomizu Station
+- 友部駅,Tomobe Station
+- 友江駅,Tomoe Station
+- None,Tomoegawa Station
+- 十村駅,Tomura Station
+- 砺波駅,Tonami Station
+- 富田駅 (大阪府),Tonda Station
+- 富田林西口駅,Tondabayashi-nishiguchi Station
+- 富田林駅,Tondabayashi Station
+- 舎人公園駅,Toneri-kōen Station
+- 舎人駅,Toneri Station
+- 富木駅,Tonoki Station
+- 富海駅,Tonomi Station
+- 富野荘駅,Tonoshō Station
+- 殿山駅,Tonoyama Station
+- 虎姫駅,Torahime Station
+- 東浪見駅,Torami Station
+- 虎ノ門ヒルズ駅,Toranomon Hills Station
+- 虎ノ門駅,Toranomon Station
+- 取手駅,Toride Station
+- 鳥形駅,Torigata Station
+- 鳥浜駅,Torihama Station
+- 鳥居駅,Torii Station (Aichi)
+- 生駒駅,Toriimae Station
+- 鳥居本駅,Toriimoto Station
+- 鳥ノ木駅,Torinoki Station
+- 鳥沢駅,Torisawa Station
+- 都立家政駅,Toritsu-Kasei Station
+- 都立大学駅,Toritsudaigaku Station
+- 土呂駅,Toro Station
+- トロッコ嵐山駅,Torokko Arashiyama Station
+- トロッコ保津峡駅,Torokko Hozukyō Station
+- トロッコ亀岡駅,Torokko Kameoka Station
+- トロッコ嵯峨駅,Torokko Saga Station
+- 土佐穴内駅,Tosa-Ananai Station
+- 土佐一宮駅,Tosa-Ikku Station
+- 土佐入野駅,Tosa-Irino Station
+- 土佐岩原駅,Tosa-Iwahara Station
+- 土佐上川口駅,Tosa-Kamikawaguchi Station
+- 土佐加茂駅,Tosa-Kamo Station
+- 土佐北川駅,Tosa-Kitagawa Station
+- 土佐久礼駅,Tosa-Kure Station
+- 土佐長岡駅,Tosa-Nagaoka Station
+- 土佐佐賀駅,Tosa-Saga Station
+- 土佐新荘駅,Tosa-Shinjō Station
+- 土佐白浜駅,Tosa-Shirahama Station
+- 土佐昭和駅,Tosa-Shōwa Station
+- 土佐大正駅,Tosa-Taishō Station
+- 土佐山田駅,Tosa-Yamada Station
+- 土佐大津駅,Tosa-Ōtsu Station
+- 利別駅,Toshibetsu Station
+- 豊島駅,Toshima Station
+- 豊島園駅,Toshimaen Station
+- None,Toso Station
+- 鳥栖駅,Tosu Station
+- 土々呂駅,Totoro Station
+- 戸塚駅,Totsuka Station
+- 鳥取駅,Tottori Station
+- 鳥取大学前駅,Tottoridaigaku-mae Station
+- 鳥取ノ荘駅,Tottorinoshō Station
+- 十和田南駅,Towada-Minami Station
+- 十和田市駅,Towadashi Station
+- 戸綿駅,Towata Station
+- 富山駅,Toyama Station
+- None,Toyamaekimae Station
+- None,Toyamaguchi Station
+- 鳥矢崎駅,Toyasaki Station
+- 豊明駅,Toyoake Station
+- 豊田駅,Toyoda Station
+- 豊田町駅,Toyodachō Station
+- 豊田本町駅,Toyodahommachi Station
+- 豊ヶ岡駅,Toyogaoka Station
+- 豊浜駅,Toyohama Station
+- 豊原駅,Toyohara Station
+- 豊春駅,Toyoharu Station
+- 豊橋駅,Toyohashi Station
+- None,Toyohashikōemmae Station
+- 豊平公園駅,Toyohirakōen Station
+- 豊幌駅,Toyohoro Station
+- 豊川駅 (愛知県),Toyokawa Station (Aichi)
+- 豊川駅 (大阪府),Toyokawa Station (Osaka)
+- 豊川稲荷駅,Toyokawainari Station
+- 豊頃駅,Toyokoro Station
+- 豊間根駅,Toyomane Station
+- 豊実駅,Toyomi Station
+- 豊永駅,Toyonaga Station
+- 豊中駅,Toyonaka Station
+- 豊野駅,Toyono Station
+- 豊沼駅,Toyonuma Station
+- 豊岡駅 (兵庫県),Toyooka Station (Hyogo)
+- 豊岡駅 (静岡県),Toyooka Station (Shizuoka)
+- 豊栄駅,Toyosaka Station
+- 豊郷駅 (北海道),Toyosato Station (Hokkaidō)
+- 豊郷駅 (滋賀県),Toyosato Station (Shiga)
+- 豊四季駅,Toyoshiki Station
+- 豊清水信号場,Toyoshimizu Station
+- 豊科駅,Toyoshina Station
+- 豊洲駅,Toyosu Station
+- 豊田市駅,Toyotashi Station
+- 豊富駅,Toyotomi Station
+- 豊津駅 (福岡県),Toyotsu Station (Fukuoka)
+- 豊津駅 (大阪府),Toyotsu Station (Osaka)
+- 豊津上野駅,Toyotsuueno Station
+- 豊浦駅,Toyoura Station
+- 戸沢駅,Tozawa Station
+- 戸塚安行駅,Tozuka-Angyō Station
+- トレードセンター前駅,Trade Center-mae Station
+- 津駅,Tsu Station
+- 椿駅,Tsubaki Station
+- 燕三条駅,Tsubame-Sanjō Station
+- 燕駅,Tsubame Station
+- 津幡駅,Tsubata Station
+- 壺川駅,Tsubogawa Station
+- 坪井駅,Tsuboi Station
+- 坪井川公園駅,Tsuboigawa-kōen Station
+- 坪尻駅,Tsubojiri Station
+- 津福駅,Tsubuku Station
+- 土橋駅 (愛知県),Tsuchihashi Station
+- 土樽駅,Tsuchitaru Station
+- 土浦駅,Tsuchiura Station
+- 土山駅,Tsuchiyama Station
+- 土崎駅,Tsuchizaki Station
+- 土沢駅,Tsuchizawa Station
+- 津田駅,Tsuda Station
+- 津田沼駅,Tsudanuma Station
+- 津田山駅,Tsudayama Station
+- 都賀駅,Tsuga Station
+- 津軽二股駅,Tsugaru-Futamata Station
+- 五所川原駅,Tsugaru-Goshogawara Station
+- 津軽浜名駅,Tsugaru-Hamana Station
+- 津軽飯詰駅,Tsugaru-Iizume Station
+- 奥津軽いまべつ駅,Tsugaru-Imabetsu Station
+- 津軽宮田駅,Tsugaru-Miyata Station
+- 津軽中里駅,Tsugaru-Nakasato Station
+- 津軽尾上駅,Tsugaru-Onoe Station
+- 津軽大沢駅,Tsugaru-Osawa Station
+- 津軽新城駅,Tsugaru-Shinjō Station
+- 津軽湯の沢駅,Tsugaru-Yunosawa Station
+- 津軽石駅,Tsugaruishi Station
+- 津川駅,Tsugawa Station
+- 柘植駅,Tsuge Station
+- 築城駅,Tsuiki Station
+- 辻駅,Tsuji Station
+- 辻堂駅,Tsujidō Station
+- 塚田駅,Tsukada Station
+- 塚口駅 (阪急),Tsukaguchi Station (Hankyu)
+- 塚口駅 (JR西日本),Tsukaguchi Station (JR West)
+- 塚原駅,Tsukahara Station
+- 塚本駅,Tsukamoto Station
+- 塚目駅,Tsukanome Station
+- 塚山駅,Tsukayama Station
+- 月田駅,Tsukida Station
+- 月ヶ岡駅,Tsukigaoka Station
+- 月ケ瀬口駅,Tsukigaseguchi Station
+- 築地駅,Tsukiji Station
+- None,Tsukijibashi Station
+- 築地口駅,Tsukijiguchi Station
+- 築地市場駅,Tsukijishijō Station
+- つきみ野駅,Tsukimino Station
+- 月見山駅,Tsukimiyama Station
+- 調川駅,Tsukinokawa Station
+- 槻木駅,Tsukinoki Station
+- つきのわ駅,Tsukinowa Station
+- 月岡駅 (新潟県),Tsukioka Station (Niigata)
+- 月岡駅 (富山県),Tsukioka Station (Toyama)
+- 月寒中央駅,Tsukisamu-Chūō Station
+- 月島駅,Tsukishima Station
+- 築山駅,Tsukiyama Station
+- 月崎駅,Tsukizaki Station
+- 津古駅,Tsuko Station
+- None,Tsukuba-Sancho Station
+- つくば駅,Tsukuba Station
+- 津久田駅,Tsukuda Station (Gunma)
+- 佃駅,Tsukuda Station (Tokushima)
+- 津久井浜駅,Tsukuihama Station
+- 津久見駅,Tsukumi Station
+- 津久毛駅,Tsukumo Station
+- 津久野駅,Tsukuno Station
+- つくし野駅,Tsukushino Station
+- 妻崎駅,Tsumazaki Station
+- 津守駅,Tsumori Station
+- 津奈木駅,Tsunagi Station
+- 津南駅,Tsunan Station
+- 綱島駅,Tsunashima Station
+- 常山駅,Tsuneyama Station
+- 常澄駅,Tsunezumi Station
+- 都農駅,Tsuno Station
+- 角川駅,Tsunogawa Station
+- 津ノ井駅,Tsunoi Station
+- 津ノ森駅,Tsunomori Station
+- 都野津駅,Tsunozu Station
+- 都留文科大学前駅,Tsuru-bunkadaigaku-mae Station
+- 鶴泊駅,Tsurudomari Station
+- 敦賀駅,Tsuruga Station
+- 鶴ヶ峰駅,Tsurugamine Station
+- 鶴ケ丘駅,Tsurugaoka Station
+- 鶴ケ坂駅,Tsurugasaka Station
+- 鶴ヶ島駅,Tsurugashima Station
+- 鶴形駅,Tsurugata Station
+- 鶴来駅,Tsurugi Station
+- 鶴原駅,Tsuruhara Station
+- 鶴橋駅,Tsuruhashi Station
+- 鶴居駅,Tsurui Station
+- 鶴川駅,Tsurukawa Station
+- 鶴間駅,Tsuruma Station
+- 鶴舞駅,Tsurumai Station
+- 鶴巻温泉駅,Tsurumakionsen Station
+- 鶴丸駅,Tsurumaru Station
+- 鶴見市場駅,Tsurumi-Ichiba Station
+- 鶴見小野駅,Tsurumi-Ono Station
+- 鶴見駅,Tsurumi Station
+- 鶴見緑地駅,Tsurumiryokuchi Station
+- 鶴沼駅,Tsurunuma Station
+- 鶴岡駅,Tsuruoka Station
+- 鶴崎駅,Tsurusaki Station
+- 鶴里駅,Tsurusato Station
+- 鶴瀬駅,Tsuruse Station
+- 都留市駅,Tsurushi Station
+- 鶴田駅,Tsuruta Station
+- 鶴羽駅,Tsuruwa Station
+- 津島駅,Tsushima Station
+- 津島ノ宮駅,Tsushimanomiya Station
+- 津新町駅,Tsushinmachi Station
+- 都住駅,Tsusumi Station
+- 筒井駅 (青森県),Tsutsui Station (Aomori)
+- 筒井駅 (奈良県),Tsutsui Station (Nara)
+- 筒石駅,Tsutsuishi Station
+- 榴ケ岡駅,Tsutsujigaoka Station (Miyagi)
+- つつじヶ丘駅,Tsutsujigaoka Station (Tokyo)
+- 津和野駅,Tsuwano Station
+- 津谷駅,Tsuya Station
+- 津山駅,Tsuyama Station
+- 津山口駅,Tsuyamaguchi Station
+- None,Tsuyazaki Station
+- 通津駅,Tsuzu Station
+- 都筑ふれあいの丘駅,Tsuzuki-Fureai-no-Oka Station
+- 都筑駅,Tsuzuki Station
+- 鼓滝駅,Tsuzumigataki Station
+- 鼓ヶ浦駅,Tsuzumigaura Station
+- 通洞駅,Tsūdō Station
+- 当別駅,Tōbetsu Station
+- 東武動物公園駅,Tōbu Dōbutsu Kōen Station
+- 東武和泉駅,Tōbu Izumi Station
+- 東武金崎駅,Tōbu Kanasaki Station
+- 東武練馬駅,Tōbu Nerima Station
+- 東武日光駅,Tōbu Nikkō Station
+- 東武竹沢駅,Tōbu Takezawa Station
+- 東武宇都宮駅,Tōbu Utsunomiya Station
+- 東部市場前駅,Tōbushijō-mae Station
+- 東大前駅,Tōdaimae Station
+- 塔寺駅,Tōdera Station
+- 東栄駅,Tōei Station
+- 東福寺駅,Tōfukuji Station
+- 十弗駅,Tōfutsu Station
+- 東金駅,Tōgane Station
+- 峠駅,Tōge Station
+- 桃源台駅,Tōgendai Station
+- 峠下駅,Tōgeshita Station
+- 東郷駅,Tōgō Station
+- 東北福祉大前駅,Tōhoku Fukushi-dai-mae Station
+- 東員駅,Tōin Station
+- 陶磁資料館南駅,Tōji-shiryōkan-minami Station
+- 東寺駅,Tōji Station
+- 等持院・立命館大学衣笠キャンパス前駅,Tōjiin Ritsumeikan University Station
+- 唐人町駅,Tōjimmachi Station
+- 東上駅,Tōjō Station (Aichi)
+- 東城駅,Tōjō Station (Hiroshima)
+- 東海大学前駅,Tōkai-daigaku-mae Station
+- 東海駅,Tōkai Station
+- 十日市場駅 (神奈川県),Tōkaichiba Station (Kanagawa)
+- 十日市場駅 (山梨県),Tōkaichiba Station (Yamanashi)
+- 東海通駅,Tōkaidōri Station
+- 東海学園前駅,Tōkaigakuenmae Station
+- 十日町駅,Tōkamachi Station
+- 十川駅 (高知県),Tōkawa Station
+- 東光寺駅,Tōkōji Station
+- 当麻駅,Tōma Station
+- 東名駅,Tōna Station
+- 唐丹駅,Tōni Station
+- 遠野駅,Tōno Station
+- 唐浜駅,Tōnohama Station
+- 唐の原駅,Tōnoharu Station
+- 塔のへつり駅,Tōnohetsuri Station
+- 塔ノ沢駅,Tōnosawa Station
+- None,Tōrichōsuji Station
+- 通谷駅,Tōritani Station
+- 塘路駅,Tōro Station
+- 十島駅,Tōshima Station
+- 東照宮駅,Tōshōgū Station
+- 遠江一宮駅,Tōtōmi-Ichinomiya Station
+- 東雲駅 (北海道),Tōun Station
+- 遠矢駅,Tōya Station (Kushiro, Hokkaidō)
+- 洞爺駅,Tōya Station (Tōyako, Hokkaidō)
+- 東葉勝田台駅,Tōyō Katsutadai Station
+- 東陽町駅,Tōyōchō Station
+- 広島港停留場,Hiroden Hiroshima Port Station
+- 姥堂駅,Ubadō Station
+- 鵜原駅,Ubara Station
+- 祖母島駅,Ubashima Station
+- 宇部新川駅,Ube-Shinkawa Station
+- 宇部駅,Ube Station
+- 宇部岬駅,Ubemisaki Station
+- 内田駅,Uchida Station
+- 打出駅,Uchide Station
+- 内ケ巻駅,Uchigamaki Station
+- 打越駅,Uchigoshi Station
+- 内郷駅,Uchigō Station
+- 内原駅,Uchihara Station
+- 内宿駅,Uchijuku Station
+- 内子駅,Uchiko Station
+- 内名駅,Uchina Station
+- 内灘駅,Uchinada Station
+- 内野西が丘駅,Uchino-Nishigaoka Station
+- 内野駅,Uchino Station
+- 内之田駅,Uchinoda Station
+- 内牧駅,Uchinomaki Station
+- 内幸町駅,Uchisaiwaichō Station
+- 打田駅,Uchita Station
+- 内海駅 (宮崎県),Uchiumi Station
+- 内山駅,Uchiyama Station
+- 鵜殿駅,Udono Station
+- 上林駅,Uebayashi Station
+- 植田駅 (名古屋市),Ueda Station (Aichi)
+- 植田駅 (福島県),Ueda Station (Fukushima)
+- 上田駅,Ueda Station (Nagano)
+- 上田原駅,Uedahara Station
+- 植大駅,Uedai Station
+- 植木駅,Ueki Station
+- 植松駅,Uematsu Station
+- 植村駅,Uemura Station
+- 植苗駅,Uenae Station
+- 上野広小路駅,Ueno-Hirokōji Station
+- 上野御徒町駅,Ueno-Okachimachi Station
+- None,Ueno Dōbutsuen Higashien Station
+- None,Ueno Dōbutsuen Nishien Station
+- 上野駅,Ueno Station
+- 上野原駅,Uenohara Station
+- 上野市駅,Uenoshi Station
+- 上野芝駅,Uenoshiba Station
+- 植田駅 (愛知県豊橋市),Ueta Station
+- 鵜方駅,Ugata Station
+- 有家駅 (岩手県),Uge Station
+- 羽後本荘駅,Ugo-Honjō Station
+- 羽後飯塚駅,Ugo-Iizuka Station
+- 羽後岩谷駅,Ugo-Iwaya Station
+- 羽後亀田駅,Ugo-Kameda Station
+- 羽後長野駅,Ugo-Nagano Station
+- 羽後長戸呂駅,Ugo-Nagatoro Station
+- 羽後中里駅,Ugo-Nakazato Station
+- 羽後境駅,Ugo-Sakai Station
+- 羽後牛島駅,Ugo-Ushijima Station
+- 羽後四ツ屋駅,Ugo-Yotsuya Station
+- 羽後太田駅,Ugo-Ōta Station
+- 鶯谷駅,Uguisudani Station
+- 鶯野駅,Uguisuno Station
+- 鶯の森駅,Uguisunomori Station
+- 鶯沢工業高校前駅,Uguisuzawa Kōgyōkōkō Mae Station
+- 鶯沢駅,Uguisuzawa Station
+- 鶯巣駅,Ugusu Station
+- 宇治駅 (JR西日本),Uji Station (JR West)
+- 宇治駅 (京阪),Uji Station (Keihan)
+- 氏家駅,Ujiie Station
+- 宇品二丁目停留場,Ujina 2-chōme Station
+- 宇品三丁目停留場,Ujina 3-chōme Station
+- 宇品四丁目停留場,Ujina 4-chōme Station
+- 宇品五丁目停留場,Ujina 5-chōme Station
+- 宇治山田駅,Ujiyamada Station
+- 宇賀本郷駅,Ukahongō Station
+- 鵜飼駅 (広島県),Ukai Station
+- 鵜川駅,Ukawa Station
+- 浮孔駅,Ukiana Station
+- 浮鞭駅,Ukibuchi Station
+- うきは駅,Ukiha Station
+- 浮間舟渡駅,Ukimafunado Station
+- None,Ukishimachō Station
+- 宇久井駅,Ukui Station
+- 馬堀駅,Umahori Station
+- 馬道駅,Umamichi Station
+- 馬立駅,Umatate Station
+- 梅林駅 (福岡県),Umebayashi Station
+- 梅田地区の鉄道駅,Umeda Station
+- 梅戸井駅,Umedoi Station
+- 梅ケ谷駅,Umegadani Station
+- 梅ヶ丘駅,Umegaoka Station
+- 梅ケ沢駅,Umegasawa Station
+- 梅ケ峠駅,Umegatō Station
+- 梅島駅,Umejima Station
+- 梅小路京都西駅,Umekōji-Kyōtonishi Station
+- 梅本駅,Umenomoto Station
+- 梅郷駅,Umesato Station
+- 梅坪駅,Umetsubo Station
+- 梅山駅,Umeyama Station
+- 梅屋敷駅 (奈良県),Umeyashiki Station (Nara)
+- 梅屋敷駅 (東京都),Umeyashiki Station (Tokyo)
+- 梅迫駅,Umezako Station
+- 宇美駅,Umi Station
+- 海尻駅,Umijiri Station
+- 海ノ口駅,Uminokuchi Station
+- 海の公園南口駅,Uminokōen Minamiguchi Station
+- 海の公園柴口駅,Uminokōen Shibaguchi Station
+- 海ノ中道駅,Uminonakamichi Station
+- 海浦駅,Uminoura Station
+- 海の王迎駅,Uminoōmukae Station
+- 海芝浦駅,Umishibaura Station
+- 宇奈月駅,Unazuki Station
+- 宇奈月温泉駅,Unazukionsen Station
+- 運動公園駅 (群馬県),Undōkōen Station (Gunma)
+- 運動公園駅 (宮崎県),Undōkōen Station (Miyazaki)
+- 運動公園前駅,Undōkōenmae Station (Aomori)
+- 有年駅,Une Station
+- 畝傍御陵前駅,Unebi-Goryōmae Station
+- 畝傍駅,Unebi Station
+- 畦野駅,Uneno Station
+- 運河駅,Unga Station
+- ユニバーサルシティ駅,Universal City Station
+- 宇野駅,Uno Station
+- 宇野辺駅,Unobe Station
+- 宇野気駅,Unoke Station
+- 鵜の木駅,Unoki Station
+- 卯之町駅,Unomachi Station
+- 宇島駅,Unoshima Station
+- 鵜住居駅,Unosumai Station
+- None,Unsenji Station
+- 雲州平田駅,Unshū-Hirata Station
+- 鵜沼駅,Unuma Station
+- 鵜沼宿駅,Unumajuku Station
+- 魚沼丘陵駅,Uonuma-Kyūryō Station
+- 魚沼中条駅,Uonuma-Nakajō Station
+- 魚沼田中駅,Uonuma-Tanaka Station
+- 魚崎駅,Uozaki Station
+- 魚津駅,Uozu Station
+- 魚住駅,Uozumi Station
+- 浦田駅,Urada Station (Okayama)
+- 浦賀駅,Uraga Station
+- うらがわら駅,Uragawara Station
+- 浦幌駅,Urahoro Station
+- 浦上駅,Urakami Station
+- None,Urakamiekimae Station
+- 浦河駅,Urakawa Station (Hokkaido)
+- 浦川駅,Urakawa Station (Shizuoka)
+- 浦本駅,Uramoto Station
+- 浦ノ崎駅,Uranosaki Station
+- 浦佐駅,Urasa Station
+- 浦宿駅,Urashuku Station
+- 浦添前田駅,Urasoe-Maeda Station
+- 浦田駅 (福岡県),Urata Station
+- 浦臼駅,Urausu Station
+- 浦和美園駅,Urawa-Misono Station
+- 浦和駅,Urawa Station
+- 浦山駅,Urayama Station
+- 浦山口駅,Urayamaguchi Station
+- 浦安駅 (千葉県),Urayasu Station (Chiba)
+- 浦安駅 (鳥取県),Urayasu Station (Tottori)
+- 嬉野温泉駅,Ureshino-onsen Station
+- 瓜連駅,Urizura Station
+- 漆山駅 (山形県),Urushiyama Station (Yamagata)
+- 宇佐駅,Usa Station
+- 宇佐美駅,Usami Station
+- 牛渕駅,Ushibuchi Station
+- 牛渕団地前駅,Ushibuchidanchi-mae Station
+- 牛田駅 (愛知県),Ushida Station (Aichi)
+- 牛田駅 (東京都),Ushida Station (Tokyo)
+- 牛込神楽坂駅,Ushigome-Kagurazaka Station
+- 牛込柳町駅,Ushigome-Yanagichō Station
+- 牛浜駅,Ushihama Station
+- 牛久駅,Ushiku Station
+- 牛久保駅,Ushikubo Station
+- 牛ノ浜駅,Ushinohama Station
+- 牛島駅,Ushinoshima Station
+- 牛ノ谷駅,Ushinoya Station
+- 潮駅,Ushio Station
+- 後潟駅,Ushirogata Station
+- 牛田駅 (広島県),Ushita Station
+- 牛山駅,Ushiyama Station
+- 牛津駅,Ushizu Station
+- 有珠駅,Usu Station
+- 臼田駅,Usuda Station
+- 鵜杉駅,Usugi Station
+- 宇宿駅,Usuki Station (Kagoshima)
+- 臼杵駅,Usuki Station (Oita)
+- 宇田郷駅,Utagō Station
+- 歌内駅,Utanai Station
+- 宇多野駅,Utano Station
+- 歌津駅,Utatsu Station
+- 宇多津駅,Utazu Station
+- 宇土駅,Uto Station
+- 鵜苫駅,Utoma Station
+- 内部駅,Utsube Station
+- 打保駅,Utsubo Station
+- 内船駅,Utsubuna Station
+- 打井川駅,Utsuigawa Station
+- 内海駅 (愛知県),Utsumi Station
+- None,Utsunomiya Kamotsu Terminal Station
+- 宇都宮駅,Utsunomiya Station
+- 現川駅,Utsutsugawa Station
+- 宇頭駅,Utō Station
+- 上挙母駅,Uwagoromo Station
+- 宇和島駅,Uwajima Station
+- 敬川駅,Uyagawa Station
+- 羽前千歳駅,Uzen-Chitose Station
+- 羽前金沢駅,Uzen-Kanezawa Station
+- 羽前小松駅,Uzen-Komatsu Station
+- 羽前松岡駅,Uzen-Matsuoka Station
+- 羽前水沢駅,Uzen-Mizusawa Station
+- 羽前長崎駅,Uzen-Nagasaki Station
+- 羽前中山駅,Uzen-Nakayama Station
+- 羽前成田駅,Uzen-Narita Station
+- 羽前沼沢駅,Uzen-Numazawa Station
+- 羽前高松駅,Uzen-Takamatsu Station
+- 羽前豊里駅,Uzen-Toyosato Station
+- 羽前椿駅,Uzen-Tsubaki Station
+- 羽前山辺駅,Uzen-Yamabe Station
+- 羽前前波駅,Uzen-Zennami Station
+- 羽前大山駅,Uzen-Ōyama Station
+- 宇都井駅,Uzui Station
+- 太秦広隆寺駅,Uzumasa-Kōryūji Station
+- 太秦駅,Uzumasa Station
+- 太秦天神川駅,Uzumasa Tenjingawa Station
+- 和渕駅,Wabuchi Station
+- 和深駅,Wabuka Station
+- 和知駅,Wachi Station
+- 和田駅,Wada Station
+- 和田河原駅,Wadagahara Station
+- 和田浜駅,Wadahama Station
+- 和田町駅,Wadamachi Station
+- 和田岬駅,Wadamisaki Station
+- 和田浦駅,Wadaura Station
+- 和田山駅,Wadayama Station
+- 和田塚駅,Wadazuka Station
+- 和戸駅,Wado Station
+- 和銅黒谷駅,Wadō Kuroya Station
+- 和食駅,Wajiki Station
+- 和白駅,Wajiro Station
+- 和賀仙人駅,Waka-Sennin Station
+- 若葉駅,Wakaba Station
+- 若葉台駅,Wakabadai Station
+- 若林駅 (愛知県),Wakabayashi Station (Aichi)
+- 若林駅 (東京都),Wakabayashi Station (Tokyo)
+- 若江岩田駅,Wakae-Iwata Station
+- 若栗駅,Wakaguri Station
+- 若井駅,Wakai Station
+- 若松河田駅,Wakamatsu-Kawada Station
+- 若松駅,Wakamatsu Station
+- 若宮駅,Wakamiya Station
+- 若狭有田駅,Wakasa-Arita Station
+- 若狭本郷駅,Wakasa-Hongō Station
+- 若狭高浜駅,Wakasa-Takahama Station
+- 若狭和田駅,Wakasa-Wada Station
+- 若桜駅,Wakasa Station
+- 和歌山駅,Wakayama Station
+- 和歌山大学前駅,Wakayamadaigakumae Station
+- 和歌山港駅,Wakayamakō Station
+- 和歌山市駅,Wakayamashi Station
+- 若柳駅,Wakayanagi Station
+- 和気駅,Wake Station
+- 和木駅,Waki Station
+- 掖上駅,Wakigami Station
+- 脇本駅,Wakimoto Station
+- None,Wakinoda Station
+- 脇ノ沢駅,Wakinosawa Station
+- 稚内駅,Wakkanai Station
+- 和倉温泉駅,Wakuraonsen Station
+- 涌谷駅,Wakuya Station
+- 和光市駅,Wakōshi Station
+- 和邇駅,Wani Station
+- 輪西駅,Wanishi Station
+- 蕨駅,Warabi Station
+- 蕨岱駅,Warabitai Station
+- 割出駅,Waridashi Station
+- 和佐駅,Wasa Station
+- 早稲田停留場,Waseda Station (Toden)
+- 早稲田駅,Waseda Station (Tokyo Metro)
+- 鷲別駅,Washibetsu Station
+- 鷲宮駅,Washinomiya Station
+- 鷲ノ巣信号場,Washinosu Station
+- 鷲津駅,Washizu Station
+- 鷲塚針原駅,Washizuka-Haribara Station
+- 和寒駅,Wassamu Station
+- 和多田駅,Watada Station
+- 渡辺橋駅,Watanabebashi Station
+- 渡辺通駅,Watanabedōri Station
+- 渡波駅,Watanoha Station
+- 渡瀬駅 (群馬県),Watarase Station
+- 渡駅,Watari Station (Kumamoto)
+- 亘理駅,Watari Station (Miyagi)
+- 渡川駅,Watarigawa Station
+- 渡瀬駅 (福岡県),Wataze Station
+- ウェスパ椿山駅,Wespa Tsubakiyama Station
+- ウッディタウン中央駅,Woody Town Chūō Station
+- 横川駅 (広島県),Hiroden Yokogawa Station
+- YRP野比駅,YRP Nobi Station
+- 矢場町駅,Yabachō Station
+- 矢原駅,Yabara Station
+- 八橋駅,Yabase Station
+- 八柱駅,Yabashira Station
+- 矢部駅,Yabe Station
+- 矢美津駅,Yabitsu Station
+- 養父駅,Yabu Station
+- 藪原駅,Yabuhara Station
+- 藪神駅,Yabukami Station
+- 矢吹駅,Yabuki Station
+- 藪塚駅,Yabuzuka Station
+- 谷地畑駅,Yachihata Station
+- 八千穂駅,Yachiho Station
+- 八街駅,Yachimata Station
+- 八千代中央駅,Yachiyo-Chūō Station
+- 八千代緑が丘駅,Yachiyo-Midorigaoka Station
+- 八千代台駅,Yachiyodai Station
+- 矢田駅 (愛知県),Yada Station
+- 矢田前駅,Yadamae Station
+- 八戸ノ里駅,Yaenosato Station
+- 矢賀駅,Yaga Station (Hiroshima)
+- 谷峨駅,Yaga Station (Kanagawa)
+- 矢神駅,Yagami Station
+- 矢川駅,Yagawa Station
+- 谷河原駅,Yagawara Station
+- 八木西口駅,Yagi-nishiguchi Station
+- 八木駅,Yagi Station
+- 八木原駅,Yagihara Station
+- 矢切駅,Yagiri Station
+- 八木崎駅,Yagisaki Station
+- 八木沢・宮古短大駅,Yagisawa Miyakotandai Station
+- 八木沢駅,Yagisawa Station
+- 八木山動物公園駅,Yagiyama Zoological Park Station
+- 矢越駅,Yagoshi Station
+- 弥五島駅,Yagoshima Station
+- 八事駅,Yagoto Station
+- 八事日赤駅,Yagotonisseki Station
+- 矢口渡駅,Yaguchinowatashi Station
+- やぐま台駅,Yagumadai Station
+- 矢倉駅,Yagura Station
+- 柳生駅,Yagyū Station
+- 柳生橋駅,Yagyūbashi Station
+- 矢幅駅,Yahaba Station
+- 矢作駅,Yahagi Station
+- 矢作橋駅,Yahagibashi Station
+- 八幡駅 (福岡県),Yahata Station
+- 弥彦駅,Yahiko Station
+- 八広駅,Yahiro Station
+- 谷保駅,Yaho Station
+- 八色駅,Yairo Station
+- 矢板駅,Yaita Station
+- 焼津駅,Yaizu Station
+- 八家駅,Yaka Station
+- 矢加部駅,Yakabe Station
+- 矢掛駅,Yakage Station
+- 八川駅,Yakawa Station
+- 焼石駅,Yakeishi Station
+- None,Yakimaki Station
+- 薬園台駅,Yakuendai Station
+- 薬院大通駅,Yakuin-ōdōri Station
+- 薬院駅,Yakuin Station
+- 厄神駅,Yakujin Station
+- 八雲駅,Yakumo Station
+- 八栗新道駅,Yakuri-Shinmichi Station
+- None,Yakuri-tozanguchi Station
+- 八栗駅,Yakuri Station
+- 八栗口駅,Yakuriguchi Station
+- None,Yakurisanjō Station
+- 八草駅,Yakusa Station
+- 薬師堂駅 (宮城県),Yakushido Station (Miyagi)
+- 薬師堂駅 (秋田県),Yakushidō Station (Akita)
+- 矢向駅,Yakō Station
+- 山部駅,Yamabe Station
+- 山吹駅,Yamabuki Station
+- 山田上口駅,Yamada-Kamiguchi Station
+- 山田西町駅,Yamada-Nishimachi Station
+- 山田駅 (岐阜県),Yamada Station (Gifu)
+- 山田駅 (大阪府),Yamada Station (Osaka)
+- 山田駅 (東京都),Yamada Station (Tokyo)
+- 山田川駅,Yamadagawa Station
+- 山谷駅,Yamadani Station
+- 山寺駅,Yamadera Station
+- 山家駅,Yamaga Station
+- 山形駅,Yamagata Station
+- 山方宿駅,Yamagatajuku Station
+- 山河内駅,Yamagawachi Station
+- 山岸駅,Yamagishi Station
+- 山口団地駅,Yamaguchi Danchi Station
+- 山口駅 (愛知県),Yamaguchi Station (Aichi)
+- 山口駅 (山口県),Yamaguchi Station (Yamaguchi)
+- 山隈駅,Yamaguma Station
+- None,Yamahana Jūkujō Station
+- None,Yamahana Kujō Station
+- 山城駅,Yamajō Station
+- 山川駅,Yamakawa Station
+- 山北駅,Yamakita Station
+- 山越駅,Yamakoshi Station
+- 山前駅,Yamamae Station
+- 山本駅 (兵庫県),Yamamoto Station (Hyogo)
+- 山本駅 (佐賀県),Yamamoto Station (Saga)
+- 山名駅,Yamana Station
+- 山中渓駅,Yamanakadani Station
+- 山梨市駅,Yamanashishi Station
+- 山西駅,Yamanishi Station
+- 山之口駅,Yamanokuchi Station
+- 山ノ目駅,Yamanome Station
+- 山の田駅,Yamanota Station
+- 山ノ内駅 (広島県),Yamanouchi Station (Hiroshima)
+- 山ノ内駅 (京都府),Yamanouchi Station (Kyoto)
+- 山岡駅,Yamaoka Station
+- 山崎駅 (北海道),Yamasaki Station
+- 山郷駅,Yamasato Station
+- 山瀬駅,Yamase Station
+- 山科駅,Yamashina Station
+- 山城青谷駅,Yamashiro-Aodani Station
+- 山城多賀駅,Yamashiro-Taga Station
+- 山下駅 (兵庫県),Yamashita Station (Hyogo)
+- 山下駅 (宮城県),Yamashita Station (Miyagi)
+- 山下駅 (東京都),Yamashita Station (Tokyo)
+- 山手駅,Yamate Station
+- 大和朝倉駅,Yamato-Asakura Station
+- 大和二見駅,Yamato-Futami Station
+- 大和上市駅,Yamato-Kamiichi Station
+- 大和小泉駅,Yamato-Koizumi Station
+- 大和西大寺駅,Yamato-Saidaiji Station
+- 大和新庄駅,Yamato-Shinjō Station
+- 大和高田駅,Yamato-Takada Station
+- 大和八木駅,Yamato-Yagi Station
+- 山都駅,Yamato Station (Fukushima)
+- 大和駅 (茨城県),Yamato Station (Ibaraki)
+- 大和駅 (神奈川県),Yamato Station (Kanagawa)
+- None,Yamatogawa Station
+- 矢祭山駅,Yamatsuriyama Station
+- 山崎駅 (愛知県),Yamazaki Station (Aichi)
+- 山崎駅 (京都府),Yamazaki Station (Kyoto)
+- 矢本駅,Yamoto Station
+- 止別駅,Yamubetsu Station
+- 谷村町駅,Yamuramachi Station
+- ヤナバスキー場前駅,Yanaba Ski-jō Mae Station
+- 簗場駅,Yanaba Station
+- やながわ希望の森公園前駅,Yanagawa-kibōnomori-kōen-mae Station
+- 梁川駅 (福島県),Yanagawa Station (Fukushima)
+- None,Yanagawa Station (Okayama)
+- 梁川駅 (山梨県),Yanagawa Station (Yamanashi)
+- 柳駅,Yanagi Station
+- 柳ケ浦駅,Yanagigaura Station
+- 柳原駅 (愛媛県),Yanagihara Station (Ehime)
+- 柳原駅 (岩手県),Yanagihara Station (Iwate)
+- 柳原駅 (長野県),Yanagihara Station (Nagano)
+- 柳小路駅,Yanagikōji Station
+- 柳本駅,Yanagimoto Station
+- 柳沢駅 (青森県),Yanagisawa Station
+- 柳田駅,Yanagita Station
+- 柳井駅,Yanai Station
+- 柳井港駅,Yanaiminato Station
+- 柳津駅 (岐阜県),Yanaizu Station (Gifu)
+- 柳津駅 (宮城県),Yanaizu Station (Miyagi)
+- 梁瀬駅,Yanase Station
+- 柳瀬川駅,Yanasegawa Station
+- 柳瀬駅,Yanaze Station
+- 矢野駅,Yano Station
+- 矢野口駅,Yanokuchi Station
+- 八尾駅,Yao Station
+- 八尾南駅,Yaominami Station
+- 八乙女駅,Yaotome Station
+- 鑓見内駅,Yariminai Station
+- 八坂駅 (岐阜県),Yasaka Station (Gifu)
+- 八坂駅 (東京都),Yasaka Station (Tokyo)
+- 八瀬比叡山口駅,Yasehieizanguchi Station
+- 矢島駅,Yashima Station (Akita)
+- 屋島駅,Yashima Station (Kagawa)
+- 八潮駅,Yashio Station
+- 屋代駅,Yashiro Station
+- 社町駅,Yashirochō Station
+- 矢代田駅,Yashiroda Station
+- 屋代高校前駅,Yashirokōkō-mae Station
+- 野州平川駅,Yashū-Hirakawa Station
+- 野州山辺駅,Yashū-Yamabe Station
+- 野州大塚駅,Yashū-Ōtsuka Station
+- 八十場駅,Yasoba Station
+- 夜須駅,Yasu Station (Kōchi)
+- 野洲駅,Yasu Station (Shiga)
+- 安田駅 (高知県),Yasuda Station (Kōchi)
+- 安田駅 (新潟県),Yasuda Station (Niigata)
+- 安来駅,Yasugi Station
+- 安東駅,Yasuhigashi Station
+- 安国駅,Yasukuni Station
+- None,Yasunoya Station
+- 安岡駅,Yasuoka Station
+- 安武駅,Yasutake Station
+- 安浦駅,Yasuura Station
+- 安牛駅,Yasuushi Station
+- 安塚駅,Yasuzuka Station
+- 矢田駅 (大阪府),Yata Station
+- 谷田川駅,Yatagawa Station
+- 矢岳駅,Yatake Station
+- 弥富駅,Yatomi Station
+- 八津駅,Yatsu Station (Akita)
+- 谷津駅,Yatsu Station (Chiba)
+- 八次駅,Yatsugi Station
+- 谷塚駅,Yatsuka Station
+- 八積駅,Yatsumi Station
+- 八ツ森駅,Yatsumori Station
+- 八ツ島駅,Yatsushima Station
+- 八幡駅 (愛知県),Yawata Station
+- 八幡浜駅,Yawatahama Station
+- 八幡宿駅,Yawatajuku Station
+- 八幡新田駅,Yawatashinden Station
+- 弥生駅,Yayoi Station
+- 弥生台駅,Yayoidai Station
+- 弥生が丘駅,Yayoigaoka Station
+- 谷在家駅,Yazaike Station
+- 八頭高校前駅,Yazukōkōmae Station
+- 夜明駅,Yoake Station
+- 余部駅,Yobe Station
+- 呼人駅,Yobito Station
+- 呼続駅,Yobitsugi Station
+- 呼野駅,Yobuno Station
+- 淀駅,Yodo Station
+- 淀江駅,Yodoe Station
+- 淀川駅,Yodogawa Station
+- 淀屋橋駅,Yodoyabashi Station
+- 余呉駅,Yogo Station
+- 余市駅,Yoichi Station
+- 四日市駅,Yokkaichi Station
+- 横堀駅,Yokobori Station
+- 横江駅,Yokoe Station
+- 横川駅 (広島県),Yokogawa Station
+- 横河原駅,Yokogawara Station
+- None,Yokohama-Hazawa Station
+- None,Yokohama-Honmoku Station
+- 横浜駅,Yokohama Station
+- 横磯駅,Yokoiso Station
+- 横川駅 (群馬県),Yokokawa Station
+- 横川目駅,Yokokawame Station
+- 横倉駅 (宮城県),Yokokura Station (Miyagi)
+- 横倉駅 (長野県),Yokokura Station (Nagano)
+- 横間駅,Yokoma Station
+- 横尾駅,Yokoo Station
+- 横芝駅,Yokoshiba Station
+- 横須賀中央駅,Yokosuka-Chūō Station
+- 横須賀駅,Yokosuka Station
+- 横田駅,Yokota Station
+- 横手駅,Yokote Station
+- 横屋駅,Yokoya Station
+- 横山駅 (兵庫県),Yokoyama Station (Hyogo)
+- 横山駅 (石川県),Yokoyama Station (Ishikawa)
+- 横瀬駅,Yokoze Station
+- 横堤駅,Yokozutsumi Station
+- 夜間瀬駅,Yomase Station
+- 読売ランド前駅,Yomiuri-Land-mae Station
+- 蓬田駅,Yomogita Station
+- 米子空港駅,Yonago Airport Station
+- 米子駅,Yonago Station
+- 米内沢駅,Yonaizawa Station
+- 米川駅,Yonekawa Station
+- 米山駅,Yoneyama Station
+- 米沢駅,Yonezawa Station
+- 米津駅,Yonezu Station
+- 与野駅,Yono Station
+- 与野本町駅,Yonohonmachi Station
+- 夜ノ森駅,Yonomori Station
+- 寄畑駅,Yorihata Station
+- 寄居駅,Yorii Station
+- 鎧駅,Yoroi Station
+- 与謝野駅,Yosano Station
+- 吉堀駅,Yoshibori Station
+- 吉田駅 (新潟県),Yoshida Station
+- 吉田口駅,Yoshidaguchi Station
+- 吉浜駅 (愛知県),Yoshihama Station (Aichi)
+- 吉浜駅 (岩手県),Yoshihama Station (Iwate)
+- 吉井駅 (群馬県),Yoshii Station (Gunma)
+- 吉井駅 (長崎県),Yoshii Station (Nagasaki)
+- 葭池温泉前駅,Yoshiike-onsenmae Station
+- 吉川美南駅,Yoshikawa-Minami Station
+- 良川駅,Yoshikawa Station (Ishikawa)
+- よしかわ駅,Yoshikawa Station (Kochi)
+- 吉川駅,Yoshikawa Station (Saitama)
+- 葭川公園駅,Yoshikawakōen Station
+- 吉松駅,Yoshimatsu Station
+- 吉見駅,Yoshimi Station
+- 吉見ノ里駅,Yoshiminosato Station
+- 吉水駅,Yoshimizu Station
+- 吉名駅,Yoshina Station
+- 吉永駅,Yoshinaga Station
+- 吉成駅,Yoshinari Station
+- 吉野駅 (福岡県),Yoshino Station (Fukuoka)
+- 吉野駅 (奈良県),Yoshino Station (Nara)
+- 吉野生駅,Yoshinobu Station
+- 吉野町駅,Yoshinochō Station
+- 吉野ケ里公園駅,Yoshinogarikōen Station
+- 吉野口駅,Yoshinoguchi Station
+- 吉野原駅,Yoshinohara Station
+- 吉野神宮駅,Yoshinojingū Station
+- 吉尾駅,Yoshio Station
+- 吉岡定点,Yoshioka-Kaitei Station
+- 吉田駅 (大阪府),Yoshita Station
+- 吉富駅 (福岡県),Yoshitomi Station (Fukuoka)
+- 吉富駅 (京都府),Yoshitomi Station (Kyoto)
+- 吉浦駅,Yoshiura Station
+- 吉原本町駅,Yoshiwara-honchō Station
+- 吉原駅,Yoshiwara Station
+- 吉沢駅,Yoshizawa Station
+- 吉塚駅,Yoshizuka Station
+- 四ツ橋駅,Yotsubashi Station
+- 四ツ木駅,Yotsugi Station
+- 四ツ小屋駅,Yotsugoya Station
+- 四街道駅,Yotsukaidō Station
+- 四ツ倉駅,Yotsukura Station
+- 四辻駅,Yotsutsuji Station
+- 四谷三丁目駅,Yotsuya-Sanchōme Station
+- 四ツ谷駅,Yotsuya Station
+- 榎原駅,Yowara Station
+- 代々木八幡駅,Yoyogi-Hachiman Station
+- 代々木公園駅,Yoyogi-Kōen Station
+- 代々木上原駅,Yoyogi-Uehara Station
+- 代々木駅,Yoyogi Station
+- 湯浅駅,Yuasa Station
+- 湯檜曽駅,Yubiso Station
+- ゆだ錦秋湖駅,Yudakinshūko Station
+- ゆだ高原駅,Yudakōgen Station
+- 湯田村駅,Yudamura Station
+- 湯田中駅,Yudanaka Station
+- 湯田温泉駅,Yudaonsen Station
+- 湯江駅,Yue Station
+- 由布院駅,Yufuin Station
+- 湯河原駅,Yugawara Station
+- 弓削駅,Yuge Station
+- 由比駅,Yui Station
+- 由比ヶ浜駅,Yuigahama Station
+- 行波駅,Yukaba Station
+- 湯川駅,Yukawa Station
+- 油木駅,Yuki Station (Hiroshima)
+- 由岐駅,Yuki Station (Tokushima)
+- 雪が谷大塚駅,Yukigaya-Ōtsuka Station
+- 行橋駅,Yukuhashi Station
+- ゆめが丘駅,Yumegaoka Station
+- ゆめみ野駅,Yumemino Station
+- 夢前川駅,Yumesakigawa Station
+- 弓ケ浜駅,Yumigahama Station
+- 湯本駅,Yumoto Station
+- 由仁駅,Yuni Station
+- 湯西川温泉駅,Yunishigawaonsen Station
+- 湯野駅,Yuno Station
+- 湯平駅,Yunohira Station
+- 湯の洞温泉口駅,Yunohora-Onsen-guchi Station
+- 湯野上温泉駅,Yunokamionsen Station
+- 柚木駅 (静岡県富士市),Yunoki Station (Fuji, Shizuoka)
+- 柚木駅 (静岡市),Yunoki Station (Shizuoka, Shizuoka)
+- 湯前駅,Yunomae Station
+- 湯之元駅,Yunomoto Station
+- 湯尾駅,Yunoo Station
+- 湯ノ岱駅,Yunotai Station
+- 温泉津駅,Yunotsu Station
+- 湯ノ峠駅,Yunotō Station
+- 湯浦駅,Yunoura Station
+- 湯の山温泉駅,Yunoyamaonsen Station
+- 由良駅,Yura Station
+- 百合が原駅,Yurigahara Station
+- 百合ヶ丘駅,Yurigaoka Station
+- 湯里駅,Yusato Station
+- 油島駅,Yushima Station (Iwate)
+- 湯島駅,Yushima Station (Tokyo)
+- 柳樹駅,Yusu station
+- 油須原駅,Yusubaru Station
+- 湯玉駅,Yutama Station
+- 湯谷温泉駅,Yuyaonsen Station
+- 遊佐駅,Yuza Station
+- 湯沢駅,Yuzawa Station
+- 湯瀬温泉駅,Yuze-Onsen Station
+- 用土駅,Yōdo Station
+- 用賀駅,Yōga Station
+- 余戸駅,Yōgo Station
+- 八鹿駅,Yōka Station
+- 八日市駅,Yōkaichi Station
+- 八日市場駅,Yōkaichiba Station
+- 遙堪駅,Yōkan Station
+- 暘谷駅,Yōkoku Station
+- 洋光台駅,Yōkōdai Station
+- 養老駅,Yōrō Station
+- 養老渓谷駅,Yōrōkeikoku Station
+- 養鱒公園駅,Yōsonkōen Station
+- 由宇駅,Yū Station
+- 夕張駅,Yūbari Station
+- 有備館駅,Yūbikan Station
+- 勇知駅,Yūchi Station
+- 勇払駅,Yūfutsu Station
+- 夕日ヶ浦木津温泉駅,Yūhigaura-Kitsu-onsen Station
+- ユーカリが丘駅,Yūkarigaoka Station
+- 結城駅,Yūki Station
+- 有楽町駅,Yūrakuchō Station
+- None,Yūtari Station
+- 祐天寺駅,Yūtenji Station
+- 結崎駅,Yūzaki Station
+- 財光寺駅,Zaikōji Station
+- 座間駅,Zama Station
+- 雑餉隈駅,Zasshonokuma Station
+- 蔵王駅,Zaō Station
+- 膳駅,Zen Station
+- 善導寺駅,Zendōji Station
+- 前後駅,Zengo Station
+- 善行駅,Zengyō Station
+- 銭函駅,Zenibako Station
+- 善師野駅,Zenjino Station
+- 善光寺駅,Zenkōji Station
+- 善光寺下駅,Zenkōjishita Station
+- 禅昌寺駅,Zenshōji Station
+- 善通寺駅,Zentsūji Station
+- 膳所駅,Zeze Station
+- 膳所本町駅,Zezehonmachi Station
+- 瑞光四丁目駅,Zuiko Yonchome Station
+- 逗子駅,Zushi Station
+- 逗子・葉山駅,Zushi·Hayama Station
+- 造田駅,Zōda Station
+- 雑司が谷駅,Zōshigaya Station
+- 雑色駅,Zōshiki Station
+- 蔵宿駅,Zōshuku Station
